@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
 
 // COLORS
 $primary-color: #B4DDC0;
@@ -14,5 +14,10 @@ $black-color: black;
 
 // FONTS
 
+$primary-font-family: 'Product Sans', sans-serif;
+$secondary-font-family: 'Inter', sans-serif;
 
-// FONT SIZE
+
+// Media queries
+$max-mobile-view: 420px;
+$max-tablet-view: 760px;
