@@ -1,14 +1,21 @@
 import React from 'react'
 import "./NavBar.scss"
-import "../../assets/icons/"
+
+import resources from "../../assets/icons/resources.svg";
+import home from "../../assets/icons/home.svg";
+import learning from "../../assets/icons/learning.svg";
+import profile from  "../../assets/icons/profile.svg";
+
 
 const NavBar = () => {
+
+
   return (
     <div className='nav-bar'>
-        <button className="nav-bar__buttons"><img src="" alt="Home icon" className="nav-bar__img" /></button>
-        <button className="nav-bar__buttons"><img src="" alt="Resources icon" className="nav-bar__img" /></button>
-        <button className="nav-bar__buttons"><img src="" alt="Learning Branch icon" className="nav-bar__img" /></button>
-        <button className="nav-bar__buttons"><img src="" alt="User Profile icon" className="nav-bar__img" /></button>
+        <button className="nav-bar__buttons"><img src={home} alt="Home icon" /></button>
+        <button className="nav-bar__buttons"><img src={resources} alt="Resources icon icon" /></button>
+        <button className="nav-bar__buttons"><img src={learning} alt="Learning Branch" /></button>
+        <button className="nav-bar__buttons"><img src={profile} alt="User Profile icon" /></button>
     </div>
   )
 }

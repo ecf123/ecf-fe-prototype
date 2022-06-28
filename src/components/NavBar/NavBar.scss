@@ -8,7 +8,6 @@
 .nav-bar{
     width: 420px;
     height: 100px;
-    background-color: red;
     display: flex;
     justify-content: space-between;
     padding: 10px;
@@ -16,7 +15,12 @@
     &__buttons {
         width: 50px;
         height: 50px;
+        background-color: transparent;
+        border: solid black 1px;
+        border-radius: 50px;
+        
     }
+
     &__img{
         width: 40px;
         height: 40px;
