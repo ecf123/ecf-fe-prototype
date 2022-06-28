@@ -1,0 +1,38 @@
+
+
+.search-bar {
+    width: 90vw;
+    height: 55px;
+    border-radius: 56px;
+    border: solid grey 1px;
+    display: grid;
+    grid-template-columns: 71px 1fr 35px;
+    align-self: center;
+    margin: 5px;
+    padding: px;
+
+    &:focus-within {
+        border: 1px solid black;
+    }
+
+
+    &__label {
+        display: none;
+    }
+    &__input {
+        border: none;
+        font-size: 14px;
+
+        &:focus {
+            outline: none;
+        }
+    }
+    &__image {
+        align-self: center;
+        height: 14.25px;
+        margin-left: 27px;
+        margin-right: 27px;
+
+    }
+
+}
