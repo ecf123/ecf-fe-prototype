@@ -1,21 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
 
 // COLORS
-$primary-color: #B4DDC0;
-$secondary-color: #005546;
-$tertiary-color: #F8F8F8;
-$quaternary-color: #2F2D53;
-$quinary-color: #AFCAC5;
-$senary-color: #2C2C2C;
-
-
+$primary-color-green: #B4DDC0;
+$primary-color-lilac: #B1B8CF;
+$primary-color-blue-gray: #7D92A5;
+$primary-color-navy:#3B5165;
+$secondary-color-light-green: #EFFEFB;
+$secondary-color-light-cream: #FBFBFB;
+$secondary-color-lilac: #BCC6CC;
 $white-color: white;
 $black-color: black;
 
 // FONTS
 
-$primary-font-family: 'Product Sans', sans-serif;
+$primary-font-family: 'Lexend Deca', sans-serif;
 $secondary-font-family: 'Inter', sans-serif;
+
+// Font sizes
+
+$font-size-heading-1: 2rem;
+$font-size-heading-2: 1.125rem;
+$font-size-heading-3-bold: 1rem;
+$font-size-heading-3-regular: 1rem;
+$font-size-heading-4: 0.8rem;
+$font-size-paragraph-large: 1rem;
+$font-size-paragraph-small: 0.8rem;
+$font-size-label: 0.8rem;
+
+// Font weight
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-bold:700;
+
+//Letter-spacing
+
+$letter-spacing: 160%;
 
 
 // Media queries
