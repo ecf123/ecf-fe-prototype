@@ -1,0 +1,73 @@
+[debug] [2022-06-28T14:14:18.806Z] ----------------------------------------------------------------------
+[debug] [2022-06-28T14:14:18.809Z] Command:       /Users/Mark/.nvm/versions/node/v16.14.0/bin/node /Users/Mark/.nvm/versions/node/v16.14.0/bin/firebase serve
+[debug] [2022-06-28T14:14:18.809Z] CLI Version:   11.1.0
+[debug] [2022-06-28T14:14:18.810Z] Platform:      darwin
+[debug] [2022-06-28T14:14:18.810Z] Node Version:  v16.14.0
+[debug] [2022-06-28T14:14:18.812Z] Time:          Tue Jun 28 2022 15:14:18 GMT+0100 (British Summer Time)
+[debug] [2022-06-28T14:14:18.812Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2022-06-28T14:14:18.940Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2022-06-28T14:14:18.940Z] > authorizing via signed-in user (walkonmars@gmail.com)
+[debug] [2022-06-28T14:14:18.941Z] [iam] checking project ecf-future-hub for permissions ["firebase.projects.get"]
+[debug] [2022-06-28T14:14:18.946Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecf-future-hub:testIamPermissions [none]
+[debug] [2022-06-28T14:14:18.947Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecf-future-hub:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-06-28T14:14:19.713Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecf-future-hub:testIamPermissions 200
+[debug] [2022-06-28T14:14:19.713Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/ecf-future-hub:testIamPermissions {"permissions":["firebase.projects.get"]}
+[debug] [2022-06-28T14:14:19.714Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ecf-future-hub [none]
+[debug] [2022-06-28T14:14:19.992Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ecf-future-hub 200
+[debug] [2022-06-28T14:14:19.992Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ecf-future-hub {"projectId":"ecf-future-hub","projectNumber":"424392930965","displayName":"ECF-Future-Hub","name":"projects/ecf-future-hub","resources":{"hostingSite":"ecf-future-hub","realtimeDatabaseInstance":"ecf-future-hub-default-rtdb","storageBucket":"ecf-future-hub.appspot.com","locationId":"europe-west"},"state":"ACTIVE"}
+[info] 
+[info] === Serving from '/Users/Mark/Development/niue-ecf'...
+[info] 
+[debug] [2022-06-28T14:14:20.000Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/ecf-future-hub/sites 
+[info] ✔  functions: Using node@16 from host. {"metadata":{"emulator":{"name":"functions"},"message":"Using node@16 from host."}}
+[debug] [2022-06-28T14:14:20.062Z] defaultcredentials: writing to file /Users/Mark/.config/firebase/walkonmars_gmail_com_application_default_credentials.json
+[debug] [2022-06-28T14:14:20.074Z] Setting GAC to /Users/Mark/.config/firebase/walkonmars_gmail_com_application_default_credentials.json {"metadata":{"emulator":{"name":"functions"},"message":"Setting GAC to /Users/Mark/.config/firebase/walkonmars_gmail_com_application_default_credentials.json"}}
+[debug] [2022-06-28T14:14:20.086Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ecf-future-hub/adminSdkConfig [none]
+[debug] [2022-06-28T14:14:20.571Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ecf-future-hub/adminSdkConfig 200
+[debug] [2022-06-28T14:14:20.572Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ecf-future-hub/adminSdkConfig {"projectId":"ecf-future-hub","databaseURL":"https://ecf-future-hub-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"ecf-future-hub.appspot.com","locationId":"europe-west"}
+[debug] [2022-06-28T14:14:21.069Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/ecf-future-hub/sites 200
+[debug] [2022-06-28T14:14:21.069Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/ecf-future-hub/sites {"sites":[{"name":"projects/ecf-future-hub/sites/ecf-future-hub","defaultUrl":"https://ecf-future-hub.web.app","appId":"1:424392930965:web:bc2c06888ee5b3b59e4d9c","type":"DEFAULT_SITE"}]}
+[debug] [2022-06-28T14:14:21.070Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/ecf-future-hub/webApps/1:424392930965:web:bc2c06888ee5b3b59e4d9c/config [none]
+[debug] [2022-06-28T14:14:21.942Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/ecf-future-hub/webApps/1:424392930965:web:bc2c06888ee5b3b59e4d9c/config 200
+[debug] [2022-06-28T14:14:21.942Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/ecf-future-hub/webApps/1:424392930965:web:bc2c06888ee5b3b59e4d9c/config {"projectId":"ecf-future-hub","appId":"1:424392930965:web:bc2c06888ee5b3b59e4d9c","databaseURL":"https://ecf-future-hub-default-rtdb.europe-west1.firebasedatabase.app","storageBucket":"ecf-future-hub.appspot.com","locationId":"europe-west","apiKey":"AIzaSyDqFVYVthpIozXOTZXcLrt-nSzxJPfaZWY","authDomain":"ecf-future-hub.firebaseapp.com","messagingSenderId":"424392930965","measurementId":"G-NGWLGV9EKK"}
+[info] i  functions: Watching "/Users/Mark/Development/niue-ecf/functions" for Cloud Functions... {"metadata":{"emulator":{"name":"functions"},"message":"Watching \"/Users/Mark/Development/niue-ecf/functions\" for Cloud Functions..."}}
+[info] i  hosting: Serving hosting files from: build {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mbuild\u001b[22m"}}
+[info] ✔  hosting: Local server: http://localhost:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://localhost:5000\u001b[22m\u001b[24m"}}
+[debug] [2022-06-28T14:14:22.191Z] Validating nodejs source
+[debug] [2022-06-28T14:14:25.987Z] > [functions] package.json contents: {
+  "name": "functions",
+  "description": "Cloud Functions for Firebase",
+  "scripts": {
+    "lint": "eslint .",
+    "serve": "firebase emulators:start --only functions",
+    "shell": "firebase functions:shell",
+    "start": "npm run shell",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "engines": {
+    "node": "16"
+  },
+  "main": "index.js",
+  "dependencies": {
+    "firebase-admin": "^10.0.2",
+    "firebase-functions": "^3.18.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.9.0",
+    "eslint-config-google": "^0.14.0",
+    "firebase-functions-test": "^0.2.0"
+  },
+  "private": true
+}
+[debug] [2022-06-28T14:14:25.988Z] Building nodejs source
+[debug] [2022-06-28T14:14:25.988Z] Analyzing nodejs backend spec
+[debug] [2022-06-28T14:14:25.995Z] Could not find functions.yaml. Must use http discovery
+[debug] [2022-06-28T14:14:26.770Z] Serving at port 9005
+
+[debug] [2022-06-28T14:14:26.962Z] Got response from /__/functions.yaml {"endpoints":{},"specVersion":"v1alpha1","requiredAPIs":[]}
+[debug] [2022-06-28T14:14:26.993Z] shutdown requested via /__/quitquitquit
+
+[info] i  hosting: 127.0.0.1 - - [28/Jun/2022:14:14:35 +0000] "GET / HTTP/1.1" 200 4596 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [28/Jun/2022:14:14:35 +0000] \"GET / HTTP/1.1\" 200 4596 \"-\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36\""}}
+[info] i  hosting: 127.0.0.1 - - [28/Jun/2022:14:14:36 +0000] "GET /__/firebase/init.js?useEmulator=true HTTP/1.1" 200 - "http://localhost:5000/" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36" {"metadata":{"emulator":{"name":"hosting"},"message":"127.0.0.1 - - [28/Jun/2022:14:14:36 +0000] \"GET /__/firebase/init.js?useEmulator=true HTTP/1.1\" 200 - \"http://localhost:5000/\" \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36\""}}
