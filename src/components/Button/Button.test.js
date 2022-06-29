@@ -11,14 +11,14 @@ describe("initial test for react button", () => {
     it("should render a primary button", () => {
         render(<Button isSecondary={false}/>);
         const button = screen.getByRole("button");
-        expect(button).not.toHaveClass("button__secondary")
+        expect(button).not.toHaveClass("button--secondary")
         expect(button).toHaveClass("button")
         expect(button).not.toBeNull()
     } )
     it("should render a secondary button", () => {
         render(<Button isSecondary={true}/>);
         const button = screen.getByRole("button");
-        expect(button).toHaveClass("button__secondary")
+        expect(button).toHaveClass("button--secondary")
         expect(button).toHaveClass("button")
         expect(button).not.toBeNull()
     } )

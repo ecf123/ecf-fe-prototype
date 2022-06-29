@@ -1,19 +1,15 @@
 @use "../../assets/sass/variables" as *;
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+
 .button {
   font-family: $secondary-font-family;
   background-color: $primary-color-green;
-  width: 300px;
+  width: 100%;
   height: 60px;
   border: none;
   border-radius: 17px;
   font-size: $font-size-small;
   font-weight: $font-weight-medium;
-  &__secondary {
+  &--secondary {
     background-color: $secondary-color-light-cream;
   }
 }
