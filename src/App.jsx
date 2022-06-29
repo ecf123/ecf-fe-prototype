@@ -1,4 +1,4 @@
-
+import LoginPage from "./components/LoginPage/LoginPage";
 
 const App = () => {
   const handleOnClick = () => {
@@ -7,6 +7,7 @@ const App = () => {
 
   return (
     <div className="App">
+            <LoginPage welcomeMessage="Welcome Back" />
     </div>
   );
 };
