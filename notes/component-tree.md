@@ -17,7 +17,7 @@ The project is broken down into
 - [Articles](#article)
 
 <h2>App</h2>
-## <img src="./images/component-tree-app.png" width="500px">
+<img src="./images/component-tree-app.png" width="500px">
 
 <h2 id="authentication">Authentication</h2>
 <img src="./images/component-tree-authen.png" width="500px">
