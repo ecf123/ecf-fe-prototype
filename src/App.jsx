@@ -1,5 +1,7 @@
 import Home from "./containers/Home/Home";
-import userIcon from "./assets/images/profile-picture.png";
+import userIcon from "./assets/images/profile-picture.svg";
+import "./App.scss";
+
 
 const App = () => {
   const userProfile = {

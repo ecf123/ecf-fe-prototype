@@ -1,4 +1,27 @@
+@use "../../assets/sass/mixins" as *;
+@use "../../assets/sass/variables" as *;
+
 .welcome-header {
     display: flex;
     justify-content: space-around;
+    
+
+    &__welcome-message{
+         border: 2px solid black;
+        
+        
+
+        &__title{
+          @include heading2;
+         color:$primary-color-blue-gray;
+        
+          
+        }
+
+        &__username{
+            @include heading1;
+            color: $primary-color-navy;
+            
+        }
+    }
 }
