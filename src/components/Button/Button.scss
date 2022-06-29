@@ -1,0 +1,19 @@
+@use "../../assets/sass/variables" as *;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+.button {
+  font-family: $secondary-font-family;
+  background-color: $primary-color-green;
+  width: 300px;
+  height: 60px;
+  border: none;
+  border-radius: 17px;
+  font-size: 0.8rem;
+  font-weight: $font-weight-regular;
+  &__secondary {
+    background-color: $secondary-color-light-cream;
+  }
+}
