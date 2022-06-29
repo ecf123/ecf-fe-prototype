@@ -14,7 +14,6 @@ const InputField = (props) => {
           type={inputType}
           name={inputName}
           placeholder={placeholder}
-          id=""
         />
       </div>
     </div>
