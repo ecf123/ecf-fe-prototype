@@ -4,7 +4,9 @@
   body {
     background-color: lightblue;
   }
+
   .input {
+    width: 100%;
     margin-top: 10px;
     display: flex;
     flex-direction: column;
@@ -17,6 +19,7 @@
     &__label {
       display: flex;
       justify-content: flex-start;
+      align-self: flex-start;
     }
 
     &__input {
@@ -24,7 +27,7 @@
       border-radius: 5px;
       padding: 10px;
       font-family: $primary-font-family;
-      width: 75vw;
+      width: 100%;
     }
   }
 }
