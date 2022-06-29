@@ -15,8 +15,13 @@ const NavBar = () => {
   
   
   const handleSelected = (event) => {
-    // console.log(event.target.classList);
-    console.log(event);
+    console.log(event.target.classList);
+    let classList = event.target.classList;
+    if(!classList.contains("nav-bar__test")){
+      classList.add("nav-bar__test");
+    } else {
+      classList.remove("nav-bar__test")
+    }
     
   }
 
@@ -24,7 +29,7 @@ const NavBar = () => {
 
     
     <div className='nav-bar'>
-        <Link to="/"><button onClick={handleSelected} className="nav-bar__buttons"><img className='nav-bar__test' src={home} alt="Home icon" /></button></Link>
+        <Link to="/"><button onClick={handleSelected} className="nav-bar__buttons"><img src={home} alt="Home icon" /></button></Link>
         <Link to="/Library"><button onClick={handleSelected} className="nav-bar__buttons"><img src={library} alt="Resources icon icon" /></button></Link>
         <Link to="/Branches"><button onClick={handleSelected} className="nav-bar__buttons"><img src={branches} alt="Learning Branch" /></button></Link>
         <Link to="/Profile"><button onClick={handleSelected} className="nav-bar__buttons"><img src={profile} alt="User Profile icon" /></button></Link>

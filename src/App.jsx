@@ -1,7 +1,12 @@
 import NavBar from './components/NavBar/NavBar';
 import Test from './components/Test/Test';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Button from "./components/Button/Button";
 const App = () => {
+  const handleOnClick = () => {
+    console.log(1);
+  };
+
   return (
     <Router>
       <div className="App">
