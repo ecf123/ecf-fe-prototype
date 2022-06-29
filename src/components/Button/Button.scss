@@ -11,8 +11,8 @@
   height: 60px;
   border: none;
   border-radius: 17px;
-  font-size: 0.8rem;
-  font-weight: $font-weight-regular;
+  font-size: $font-size-small;
+  font-weight: $font-weight-medium;
   &__secondary {
     background-color: $secondary-color-light-cream;
   }
