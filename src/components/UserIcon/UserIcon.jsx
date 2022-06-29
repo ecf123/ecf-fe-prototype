@@ -4,9 +4,8 @@ import React from 'react'
 
 const UserIcon = ({userIcon}) => {
 
-
   return (
-    <img  src={userIcon} alt="" />
+    <img className="user-icon" src={userIcon} alt="Image of user"/>
   )
 }
 

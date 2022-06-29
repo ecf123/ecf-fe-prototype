@@ -3,25 +3,24 @@
 
 .welcome-header {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     
-
     &__welcome-message{
-         border: 2px solid black;
+         
+         margin: 30px;
         
-        
-
         &__title{
-          @include heading2;
-         color:$primary-color-blue-gray;
-        
-          
+            font-size: 20px;
+            font-weight: lighter;
+            color:$primary-color-blue-gray;
+            padding-bottom: 7px;
+            font-family: $primary-font-family;
         }
 
         &__username{
             @include heading1;
             color: $primary-color-navy;
-            
+            font-family: $primary-font-family;
         }
     }
 }

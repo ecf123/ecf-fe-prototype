@@ -8,9 +8,7 @@ const App = () => {
     firstName: "Ellie",
     lastName: "Laken",
     userIcon: userIcon
-
   }
-  
   
   return (
     <div className="App">
