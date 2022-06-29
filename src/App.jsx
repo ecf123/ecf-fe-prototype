@@ -1,7 +1,7 @@
 import Home from "./containers/Home/Home";
 import userIcon from "./assets/images/profile-picture.svg";
 import "./App.scss";
-
+import Button from "./components/Button/Button";
 
 const App = () => {
   const userProfile = {
@@ -9,9 +9,6 @@ const App = () => {
     lastName: "Laken",
     userIcon: userIcon
   }
-  
-import Button from "./components/Button/Button";
-const App = () => {
   const handleOnClick = () => {
     console.log(1);
   };
