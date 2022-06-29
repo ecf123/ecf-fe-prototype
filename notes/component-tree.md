@@ -1,5 +1,12 @@
 # Component Tree
 
+Key
+
+- yellow = pages
+- blue = components
+
+---
+
 The project is broken down into
 
 - [Authentication](#authentication)
@@ -9,14 +16,8 @@ The project is broken down into
 - [Marketplace](#marketplace)
 - [Articles](#article)
 
+<h2>App</h2>
 ## <img src="./images/component-tree-app.png" width="500px">
-
-Key
-
-- yellow = pages
-- blue = components
-
----
 
 <h2 id="authentication">Authentication</h2>
 <img src="./images/component-tree-authen.png" width="500px">
