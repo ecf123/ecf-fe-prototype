@@ -5,11 +5,11 @@ const App = () => {
   
 
 
-  return (
-    <div className="App">
-      <h1>Mark is not a dummy!!</h1>
-    </div>
-  );
+    return (
+        <div className="App">
+            <SearchContainer title="Pathways"/>
+        </div>
+    );
 };
 
 export default App;
