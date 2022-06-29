@@ -1,14 +1,13 @@
 import SearchBar from "./components/SearchBar/SearchBar";
+import SearchContainer from "./containers/SearchContainer/SearchContainer";
 
 const App = () => {
   
-  const handleSearchChange = (event) => {
-    console.log(event.target.value)
-  }
+
 
   return (
     <div className="App">
-      <SearchBar handleChange={handleSearchChange}/>
+      <SearchContainer/>
     </div>
   );
 }
