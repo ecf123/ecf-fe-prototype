@@ -14,14 +14,13 @@ describe("initial tests for ECF client project input field component", () => {
   });
 
   it("should take a text input", () => {
-    render(<InputField input="label" />);
+    render(<InputField />);
 
     const input = screen.getByRole("textbox");
 
-    const inputText = userEvent.type(input, "hello world");
+    userEvent.type(input, "hello world");
 
     expect(input).toBeInTheDocument;
-
-    expect(screen.getByRole("textbox")).toHaveValue("hello world");
+    expect(input).toHaveValue("hello world");
   });
 });
