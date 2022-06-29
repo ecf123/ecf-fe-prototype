@@ -1,6 +1,4 @@
-* {
-  margin: 0;
-}
+@use "../../assets/sass/variables" as *;
 
 @media only screen and (max-width: 420px) {
   body {
@@ -12,6 +10,9 @@
     flex-direction: column;
     align-items: center;
     justify-content: flex-start;
+    font-family: $primary-font-family;
+    font-size: $font-size-small;
+
 
     &__label {
       display: flex;
@@ -21,7 +22,9 @@
     &__input {
       border: none;
       border-radius: 5px;
-      padding: 5px;
+      padding: 10px;
+      font-family: $primary-font-family;
+      width: 75vw;
     }
   }
 }
