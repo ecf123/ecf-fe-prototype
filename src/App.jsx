@@ -7,9 +7,9 @@ const App = () => {
 
   return (
     <div className="App">
-      <SearchContainer/>
+      <h1>Mark is not a dummy!!</h1>
     </div>
   );
-}
+};
 
 export default App;
