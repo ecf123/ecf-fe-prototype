@@ -13,8 +13,9 @@ const App = () => {
   return (
     <div className="App">
       <Home userProfile = {userProfile} />
+      <h1>Mark is not a dummy!!</h1>
     </div>
   );
-}
+};
 
 export default App;
