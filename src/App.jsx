@@ -6,7 +6,6 @@ const card = {header: "Financial Forest", topics: "Banking, Investments", percen
 const App = () => {
   return (
     <div className="App">
-      <h1>Mark is not a dummy!!</h1>
       <PathwaysCard card={card} />
     </div>
   );
