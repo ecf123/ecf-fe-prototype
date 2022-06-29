@@ -1,5 +1,6 @@
 import React from 'react'
 import InputField from "../InputField/InputField"
+import "./LoginPage.scss"
 
 const LoginPage = (props) => {
 
@@ -12,7 +13,7 @@ const LoginPage = (props) => {
       <InputField label="Email Address" placeholder="you@example.com" />
       <InputField label="Password" placeholder="Your password" />
       {/* <Button /> */}
-      <p>Sign in with</p>
+      <p className='login-page__divider'><span className='st'></span>Sign in with</p>
       {/* <Button buttonText={<svg width="28" height="29" viewBox="0 0 28 29" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clip-path="url(#clip0_376_902)">
           <path d="M27.4546 14.4043C27.4546 6.81042 21.3494 0.654343 13.8182 0.654343C6.28709 0.654343 0.181885 6.81042 0.181885 14.4043C0.181885 21.2674 5.16851 26.9558 11.6876 27.9873V18.379H8.22521V14.4043H11.6876V11.375C11.6876 7.92895 13.7234 6.02544 16.8382 6.02544C18.3302 6.02544 19.8907 6.29399 19.8907 6.29399V9.67778H18.1712C16.4772 9.67778 15.9489 10.7377 15.9489 11.8251V14.4043H19.7309L19.1263 18.379H15.9489V27.9873C22.468 26.9558 27.4546 21.2674 27.4546 14.4043Z" fill="#1877F2" />
