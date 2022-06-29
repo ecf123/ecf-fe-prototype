@@ -1,0 +1,26 @@
+@use "../../assets/sass/variables" as *;
+.card {
+    font-family: $primary-font-family;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    max-width: 180px;
+    background-color: $secondary-color-light-green;
+    border-radius: 11px;
+    &__progress {
+        position: absolute;
+        top: 12px;
+        right: 16px;
+    }
+    &__image {
+        max-width: 91px;
+    }
+    &__header {
+        @mixin heading2 {}
+        color: $primary-color-navy;
+    }
+    &__topics {
+        @mixin heading4 {}
+        color: $primary-color-blue-gray;
+    }
+}
