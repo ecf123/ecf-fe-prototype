@@ -1,0 +1,14 @@
+@use "../../assets/sass/variables" as *;
+
+.back {
+
+    align-self: flex-start;
+
+    &__button {
+        border-radius: 25px;
+        border: 1px solid $primary-color-blue-gray;
+        color: $primary-color-green;
+        width: 40px;
+        height: 40px;
+    }
+}
