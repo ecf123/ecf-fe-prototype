@@ -4,9 +4,10 @@ import UserIcon from '../UserIcon/UserIcon';
 
 
 const WelcomeHeader = ({ userProfile }) => {
-    const firstName = userProfile.firstName;
-    const lastName = userProfile.lastName;
-    const userIcon = userProfile.userIcon;
+
+    const {firstName, lastName, userIcon } = userProfile;
+
+
     return (
         <div className='welcome-header'>
             <div className='welcome-header__welcome-message'>
