@@ -1,6 +1,6 @@
 @use "../../assets/sass/variables" as *;
 
-@media only screen and (max-width: 420px) {
+@media only screen and (max-width: $max-mobile-view) {
   .login-page {
     font-family: $primary-font-family;
     display: flex;
