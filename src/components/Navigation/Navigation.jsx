@@ -14,8 +14,8 @@ const Navigation = () => {
     <section>
     <p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p>
     </section>
-    <div className='nav-bar'>
-        <NavLink to="/" className={({isActive})=> (isActive ? "nav-bar__link-active" : "nav-bar__link")}><img src={home} alt="Home icon" data-testid="home-icon"/></NavLink>
+    <div className='nav-bar' data-testid="navigation">
+        <NavLink to="/" className={({isActive})=> (isActive ? "nav-bar__link-active" : "nav-bar__link")}><img src={home} alt="Home icon"/></NavLink>
         <NavLink to="/Library" className={({isActive})=> (isActive ? "nav-bar__link-active" : "nav-bar__link")}><img src={library} alt="Resources icon" data-testid="library-icon" /></NavLink>
         <NavLink to="/Branches" className={({isActive})=> (isActive ? "nav-bar__link-active" : "nav-bar__link")}><img src={branches} alt="Learning Branch icon" data-testid="branches-icon" /></NavLink>
         <NavLink to="/Profile" className={({isActive})=> (isActive ? "nav-bar__link-active" : "nav-bar__link")}><img src={profile} alt="User Profile icon" data-testid="profile-icon" /></NavLink>

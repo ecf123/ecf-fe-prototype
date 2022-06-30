@@ -12,7 +12,11 @@ import Navigation from "./Navigation";
 
 
 describe("initial render test", () => {
-      
+      it("should render the navigation on the page", () => {
+        render(<Router><Navigation/></Router>);
+        const navigation = screen.getAllByDisplayValue(<Navigation/>)
+        expect(navigation).toBeInTheDocument()
+      }) 
     
     it("should render the icons in the navigation", () => {
         render(<Router><Navigation/></Router>);
