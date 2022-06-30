@@ -20,10 +20,7 @@
     }
 
     &-topics {
-      // NEED A VARIABLE FOR SMALLER SUB-HEADING AT 10PX / 400
-      //   @include heading4;
-      font-size: 10px;
-      font-weight: 400;
+      @include heading5;
       color: $primary-color-blue-gray;
       padding: 6px 0 25px 20px;
       margin: 0;

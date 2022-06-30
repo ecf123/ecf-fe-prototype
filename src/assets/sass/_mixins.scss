@@ -1,43 +1,48 @@
 @use "./variables" as *;
 
-@mixin heading1(){
-    font-size: $font-size-extra-large;
-    font-weight: $font-weight-bold;
+@mixin heading1() {
+  font-size: $font-size-extra-large;
+  font-weight: $font-weight-bold;
 }
 
-@mixin heading2(){
-    font-size: $font-size-large;
-    font-weight: $font-weight-medium;
+@mixin heading2() {
+  font-size: $font-size-large;
+  font-weight: $font-weight-medium;
 }
 
-@mixin heading3Bold(){
-    font-size: $font-size-medium;
-    font-weight: $font-weight-bold;
+@mixin heading3Bold() {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-bold;
 }
 
-@mixin heading3Regular(){
-    font-size: $font-size-medium;
-    font-weight: $font-weight-regular;
+@mixin heading3Regular() {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-regular;
 }
 
-@mixin heading4(){
-    font-size: $font-size-small;
-    font-weight: $font-weight-regular;
+@mixin heading4() {
+  font-size: $font-size-small;
+  font-weight: $font-weight-regular;
 }
 
-@mixin paragraghLarge(){
-    font-size: $font-size-medium;
-    font-weight: $font-weight-regular;
-    letter-spacing: $letter-spacing;
+@mixin heading5() {
+  font-size: $font-size-xsmall;
+  font-weight: $font-weight-regular;
 }
 
-@mixin paragraghSmall(){
-    font-size: $font-size-small;
-    font-weight: $font-weight-regular;
-    letter-spacing: $letter-spacing;
+@mixin paragraghLarge() {
+  font-size: $font-size-medium;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-spacing;
 }
 
-@mixin label(){
-    font-size: $font-size-small;
-    font-weight: $font-weight-regular;
+@mixin paragraghSmall() {
+  font-size: $font-size-small;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin label() {
+  font-size: $font-size-small;
+  font-weight: $font-weight-regular;
 }
