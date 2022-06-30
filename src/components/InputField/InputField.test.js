@@ -2,7 +2,7 @@ import InputField from "./InputField";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 
-describe("initial tests for ECF client project input field component", () => {
+describe("initial tests for input field component", () => {
   it("should render the form on the page", () => {
     render(<InputField label="label" />);
 
@@ -23,4 +23,5 @@ describe("initial tests for ECF client project input field component", () => {
     expect(input).toBeInTheDocument;
     expect(input).toHaveValue("hello world");
   });
+  // email verification needs to be tested once backend authentication has been implemented
 });
