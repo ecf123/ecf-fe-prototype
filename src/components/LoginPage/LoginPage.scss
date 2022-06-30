@@ -2,14 +2,36 @@
 
 @media only screen and (max-width: 420px) {
   .login-page {
+    font-family: $primary-font-family;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-  }
+    height: 100vh;
+    padding: 0px 30px;
 
-  .st {
-    text-decoration: line-through;
+    &__inputs {
+        width: 100%;
+    }
+
+    &__divider {
+        color: $primary-color-blue-gray;
+        width: 100%; 
+        text-align: center; 
+        border-bottom: 1px solid $primary-color-lilac; 
+        line-height: 0.1em;
+        margin: 10px 0 20px; 
+
+        &--text {
+            background:#fff; 
+            padding:0 10px; 
+        }
+    }
+
+    &__welcome {
+        font-size: $font-size-extra-large;
+        font-weight: $font-weight-regular;
+    }
   }
 }
 
