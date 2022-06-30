@@ -4,6 +4,7 @@ import userEvent from "@testing-library/user-event";
 import Navigation from "./Navigation";
 
 
+
     //whenever writing test follow the three A testing system
     // ARRANGE, ACT , ASSERT
     // ARRANGE - get everything we need to organize in order to be able to test
@@ -12,9 +13,10 @@ import Navigation from "./Navigation";
 
 
 describe("initial render test", () => {
-      it("should render the navigation on the page", () => {
+      
+    it("should render the navigation on the page", () => {
         render(<Router><Navigation/></Router>);
-        const navigation = screen.getAllByDisplayValue(<Navigation/>)
+        const navigation = screen.getByTestId("navigation")
         expect(navigation).toBeInTheDocument()
       }) 
     
@@ -26,5 +28,9 @@ describe("initial render test", () => {
         icons.forEach(icon => {
             expect(icon).toBeInTheDocument();
         })
+    })
+    it("should go to the correct page when clicked", () => {
+        render(<Router><Navigation/></Router>);
+
     })
 })
