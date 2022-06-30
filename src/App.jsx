@@ -1,14 +1,10 @@
 import Home from "./containers/Home/Home";
-import userIcon from "./assets/images/profile-picture.svg";
+import userProfile from "./assets/data/dummyUserData"
 import "./App.scss";
 import Button from "./components/Button/Button";
 
 const App = () => {
-  const userProfile = {
-    firstName: "Ellie",
-    lastName: "Laken",
-    userIcon: userIcon
-  }
+  
   const handleOnClick = () => {
     console.log(1);
   };
