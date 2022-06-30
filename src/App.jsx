@@ -7,7 +7,7 @@ const App = () => {
 
   return (
     <div className="App">
-            <LoginPage welcomeMessage="Welcome Back" />
+      <LoginPage welcomeMessage="Welcome Back" />
     </div>
   );
 };

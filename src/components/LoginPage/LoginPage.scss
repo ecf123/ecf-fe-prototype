@@ -1,14 +1,21 @@
 @use "../../assets/sass/variables" as *;
 
 @media only screen and (max-width: 420px) {
-    .login-page {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-    }
+  .login-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+  }
 
-    .st {
-        text-decoration: line-through;
-    }
+  .st {
+    text-decoration: line-through;
+  }
+}
+
+.login__page__login-buttons {
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
 }
