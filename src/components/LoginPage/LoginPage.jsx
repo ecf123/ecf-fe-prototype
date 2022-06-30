@@ -2,28 +2,31 @@ import React from "react";
 import InputField from "../InputField/InputField";
 import "./LoginPage.scss";
 import Button from "../Button/Button";
+import BackButton from "../BackButton/BackButton";
 import SocialLogin from "../SocialLogin/SocialLogin";
 
 const LoginPage = (props) => {
-  const { welcomeMessage, icon, onClick } = props;
+  const { welcomeMessage } = props;
 
   return (
     <div className="login-page">
-      <Button isSecondary={true} />
+      <BackButton linkTo="" />
       <h2 className="login-page__welcome">{welcomeMessage}</h2>
-      <InputField
-        inputType="email"
-        label="Email Address"
-        placeholder="you@example.com"
-      />
-      <InputField
-        inputType="password"
-        label="Password"
-        placeholder="Your password"
-      />
-      <Button buttonText="Login" />
+      <form className="login-page__inputs">
+        <InputField
+          inputType="email"
+          label="Email Address"
+          placeholder="you@example.com"
+        />
+        <InputField
+          inputType="password"
+          label="Password"
+          placeholder="Your password"
+        />
+      </form>
+      <Button buttonText="LOGIN" />
       <p className="login-page__divider">
-        <span className="st"></span>Sign in with
+        <span className="login-page__divider--text">Sign in with</span>
       </p>
       <div className="login__page__login-buttons">
         <SocialLogin
@@ -35,7 +38,7 @@ const LoginPage = (props) => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_376_902)">
+              <g clipPath="url(#clip0_376_902)">
                 <path
                   d="M27.4546 14.4043C27.4546 6.81042 21.3494 0.654343 13.8182 0.654343C6.28709 0.654343 0.181885 6.81042 0.181885 14.4043C0.181885 21.2674 5.16851 26.9558 11.6876 27.9873V18.379H8.22521V14.4043H11.6876V11.375C11.6876 7.92895 13.7234 6.02544 16.8382 6.02544C18.3302 6.02544 19.8907 6.29399 19.8907 6.29399V9.67778H18.1712C16.4772 9.67778 15.9489 10.7377 15.9489 11.8251V14.4043H19.7309L19.1263 18.379H15.9489V27.9873C22.468 26.9558 27.4546 21.2674 27.4546 14.4043Z"
                   fill="#1877F2"
@@ -67,7 +70,7 @@ const LoginPage = (props) => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_376_894)">
+              <g clipPath="url(#clip0_376_894)">
                 <path
                   d="M7.42153 22.7461V11.4714L3.89216 8.27248L0.727295 6.49731V20.7564C0.727295 21.8573 1.62761 22.7461 2.73561 22.7461H7.42153Z"
                   fill="#4285F4"
@@ -111,7 +114,7 @@ const LoginPage = (props) => {
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
             >
-              <g clip-path="url(#clip0_376_909)">
+              <g clipPath="url(#clip0_376_909)">
                 <path
                   d="M19.3543 15.2645C19.3233 11.7871 22.1709 10.1176 22.2997 10.0362C20.6973 7.67237 18.2036 7.34853 17.3139 7.31043C15.1928 7.09396 13.1731 8.56943 12.098 8.56943C11.0229 8.56943 9.36035 7.34161 7.60167 7.37624C5.28653 7.41088 3.15516 8.73222 1.96324 10.8207C-0.439488 15.0238 1.35011 21.253 3.68929 24.6645C4.83484 26.3322 6.1985 28.2112 7.99153 28.1419C9.71929 28.0727 10.3719 27.0163 12.4569 27.0163C14.5419 27.0163 15.1293 28.1419 16.955 28.109C18.8115 28.0727 19.9897 26.405 21.1267 24.7321C22.4388 22.796 22.9815 20.9222 23.0125 20.8235C22.9712 20.8061 19.392 19.4225 19.3543 15.2645Z"
                   fill="#B8B8B8"
