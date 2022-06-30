@@ -12,6 +12,9 @@
     justify-content: space-between;
     padding: 30px 30px;
     border-top: 1px solid #f8f8f8 ;
+    background-color: white;
+    position: sticky;
+    bottom: 0px;
 
 
     &__img{
@@ -20,5 +23,6 @@
     }
     &__link-active{
         filter: invert(63%) sepia(17%) saturate(1624%) hue-rotate(119deg) brightness(160%) contrast(96%);   
+        
     }
 }
