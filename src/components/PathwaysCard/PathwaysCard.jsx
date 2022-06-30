@@ -4,8 +4,8 @@ import "react-circular-progressbar/dist/styles.css";
 import "./PathwaysCard.scss";
 import image from "../../assets/images/financial-forest.svg";
 
-const PathwaysCard = ({card}) => {
-  const {header, topics, percentage} = card;
+const PathwaysCard = ({card, percentage}) => {
+  const {header, topics} = card;
 
   return (
     <div className="card">
@@ -14,10 +14,12 @@ const PathwaysCard = ({card}) => {
           className="card__progress-bar"
           value={percentage}
           text={percentage}
+          strokeWidth={10}
           styles={buildStyles({
             textColor: "#3b5165",
             pathColor: "#b4ddc0",
             trailColor: "#e9e9e9",
+            textSize: "22px",
           })}
         />
       </div>
