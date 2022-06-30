@@ -1,0 +1,45 @@
+@use "../../assets/sass/variables" as *;
+
+.search-bar {
+    width: 90vw;
+    height: 55px;
+    border-radius: 56px;
+    border: solid $primary-color-lilac 1px;
+    display: grid;
+    grid-template-columns: 71px 1fr 35px;
+    align-self: center;
+    margin: 5px;
+    margin-bottom: 44px;
+
+    &:focus-within {
+        border: 1px solid $primary-color-navy;
+    }
+
+
+    &__label {
+        display: none;
+    }
+    &__input {
+        border: none;
+        font-size: 14px;
+        color: $primary-color-navy;
+
+        
+
+        &:focus {
+            outline: none;
+        }
+    }
+    &__image {
+        align-self: center;
+        height: 14.25px;
+        margin-left: 27px;
+        margin-right: 27px;
+
+    }
+
+}
+
+::placeholder {
+    color: $primary-color-lilac;
+}
