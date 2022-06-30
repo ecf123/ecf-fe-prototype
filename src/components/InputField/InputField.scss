@@ -1,9 +1,6 @@
 @use "../../assets/sass/variables" as *;
 
 @media only screen and (max-width: 420px) {
-  body {
-    background-color: lightblue;
-  }
 
   .input {
     width: 100%;
@@ -28,6 +25,7 @@
       padding: 10px;
       font-family: $primary-font-family;
       width: 100%;
+      background-color: $secondary-color-light-cream;
     }
   }
 }
