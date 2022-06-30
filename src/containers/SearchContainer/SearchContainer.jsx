@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import "./SearchContainer.scss";
 
 const SearchContainer = ({ title }) => {
-  
+
   // dummy array
-  const arr = [
+  const dummyArray = [
     "apple",
     "orange",
     "banana",
@@ -16,38 +16,31 @@ const SearchContainer = ({ title }) => {
     "lemon",
     "lime",
     "watermelon",
-    "mango"
+    "mango",
   ];
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [arrayJsx, setArrayJsx] = useState(arr);
+  const [arr, setArr] = useState(dummyArray);
 
-  
-   
-      const fruitJsx = arrayJsx.map((element, index) => {
-        return <p key={index}>{element}</p>;
-      })
-  
-    
-
+  const arrayJsx = arr.map((element, index) => {
+    return <p key={index}>{element}</p>;
+  });
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.search.value);
     event.preventDefault();
-
-    const filterArray = arr.filter((element) => {
+    const filterArray = dummyArray.filter((element) => {
       return element
         .toLowerCase()
         .includes(event.target.search.value.toLowerCase());
     });
-
-    setArrayJsx(filterArray);
+    setArr(filterArray);
   };
 
   return (
     <div className="search-container">
       <SearchBar handleChange={handleSearchChange} />
-      {arrayJsx.length ? (
+      {arr.length ? (
         searchTerm ? (
           <h1 className="search-container__heading">
             Search results for "{searchTerm}"
@@ -63,7 +56,7 @@ const SearchContainer = ({ title }) => {
           Nothing matched your search.
         </h1>
       )}
-      <div className="search-container__list">{fruitJsx}</div>
+      <div className="search-container__list">{arrayJsx}</div>
     </div>
   );
 };
