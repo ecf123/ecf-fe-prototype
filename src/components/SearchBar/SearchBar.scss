@@ -1,18 +1,18 @@
-
+@use "../../assets/sass/variables" as *;
 
 .search-bar {
     width: 90vw;
     height: 55px;
     border-radius: 56px;
-    border: solid grey 1px;
+    border: solid $primary-color-lilac 1px;
     display: grid;
     grid-template-columns: 71px 1fr 35px;
     align-self: center;
     margin: 5px;
-    padding: px;
+    margin-bottom: 44px;
 
     &:focus-within {
-        border: 1px solid black;
+        border: 1px solid $primary-color-navy;
     }
 
 
@@ -22,6 +22,9 @@
     &__input {
         border: none;
         font-size: 14px;
+        color: $primary-color-navy;
+
+        
 
         &:focus {
             outline: none;
@@ -35,4 +38,8 @@
 
     }
 
+}
+
+::placeholder {
+    color: $primary-color-lilac;
 }
