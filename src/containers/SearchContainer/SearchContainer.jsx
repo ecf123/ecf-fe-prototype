@@ -3,6 +3,7 @@ import SearchBar from "../../components/SearchBar/SearchBar";
 import "./SearchContainer.scss";
 
 const SearchContainer = ({ title }) => {
+  
   // dummy array
   const arr = [
     "apple",
@@ -15,7 +16,7 @@ const SearchContainer = ({ title }) => {
     "lemon",
     "lime",
     "watermelon",
-    "mango",
+    "mango"
   ];
 
   const [searchTerm, setSearchTerm] = useState("");
@@ -27,7 +28,8 @@ const SearchContainer = ({ title }) => {
         return <p key={index}>{element}</p>;
       })
     );
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  },[]);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.search.value);
