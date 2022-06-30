@@ -8,26 +8,26 @@ const App = () => {
   
 
 
-    return (
-        <div className="App">
-            <SearchContainer title="Pathways"/>
+//     return (
+//         <div className="App">
+//             <SearchContainer title="Pathways"/>
           
-            <Button
-              buttonText="START PATHWAYS"
-              buttonType="submit"
-              isSecondary={false}
-              onClickButton={handleOnClick}
-            />
-            <Button
-              buttonText="SIGN IN"
-              buttonType="submit"
-              isSecondary={true}
-              onClickButton={handleOnClick}
-            />
-        </div>
+//             <Button
+//               buttonText="START PATHWAYS"
+//               buttonType="submit"
+//               isSecondary={false}
+//               onClickButton={handleOnClick}
+//             />
+//             <Button
+//               buttonText="SIGN IN"
+//               buttonType="submit"
+//               isSecondary={true}
+//               onClickButton={handleOnClick}
+//             />
+//         </div>
 
-    );
-}
+//     );
+// }
 
 
   return (
