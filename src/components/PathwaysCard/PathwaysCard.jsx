@@ -15,9 +15,9 @@ const PathwaysCard = ({card}) => {
           value={percentage}
           text={percentage}
           styles={buildStyles({
-            textColor: "red",
-            pathColor: "turquoise",
-            trailColor: "gold",
+            textColor: "#3b5165",
+            pathColor: "#b4ddc0",
+            trailColor: "#e9e9e9",
           })}
         />
       </div>
