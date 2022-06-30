@@ -20,16 +20,16 @@ const SearchContainer = ({ title }) => {
   ];
 
   const [searchTerm, setSearchTerm] = useState("");
-  const [arrayJsx, setArrayJsx] = useState([]);
+  const [arrayJsx, setArrayJsx] = useState(arr);
 
-  useEffect(() => {
-    setArrayJsx(
-      arr.map((element, index) => {
+  
+   
+      const fruitJsx = arrayJsx.map((element, index) => {
         return <p key={index}>{element}</p>;
       })
-    );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  },[]);
+  
+    
+
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.search.value);
@@ -41,11 +41,7 @@ const SearchContainer = ({ title }) => {
         .includes(event.target.search.value.toLowerCase());
     });
 
-    setArrayJsx(
-      filterArray.map((element, index) => {
-        return <p key={index}>{element}</p>;
-      })
-    );
+    setArrayJsx(filterArray);
   };
 
   return (
@@ -67,7 +63,7 @@ const SearchContainer = ({ title }) => {
           Nothing matched your search.
         </h1>
       )}
-      <div className="search-container__list">{arrayJsx}</div>
+      <div className="search-container__list">{fruitJsx}</div>
     </div>
   );
 };
