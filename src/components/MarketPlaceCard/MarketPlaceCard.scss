@@ -3,7 +3,7 @@
 
 .marketplace-card{
   width: 230px;
-  border: 2px solid black;
+
   position: relative;
 
   &__img-container {
@@ -34,7 +34,7 @@
       right: 0;
       width: 100%;
       height: 100%;
-      background: rgba(117, 117, 117, 0.219);
+      background: rgba(212, 212, 212, 0.336);
       border-radius: 8px;
       display: flex;
       justify-content: center;

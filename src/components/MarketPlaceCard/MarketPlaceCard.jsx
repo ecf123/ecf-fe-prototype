@@ -18,7 +18,6 @@ const MarketplaceCard = (props) => {
             </div> 
           : <div className='marketplace-card__img-container__overlay'></div>}
 
-        <div className='marketplace-card__img-container__overlay'></div>
         <img className='marketplace-card__img-container__img' src={img} alt={imgTitle}/>
       </div>
       
@@ -33,7 +32,7 @@ const MarketplaceCard = (props) => {
           <p className='marketplace-card__requirements__requirement__number'>{score}</p>
         </div>
       </div>
-      
+
     </div>
   )
 }

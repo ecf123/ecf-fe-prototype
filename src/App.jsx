@@ -14,7 +14,7 @@ const App = () => {
             
   return (
       <div className="App">
-            <MarketplaceCard title="Earn a £5 Adidas Gift Voucher" isLocked={true} score="10" trophies="5" img={image} imgTitle="Adidas gift voucher"/>
+            <MarketplaceCard title="Earn a £5 Adidas Gift Voucher" isLocked={false} score="10" trophies="5" img={image} imgTitle="Adidas gift voucher"/>
             <Home userProfile = {userProfile} />
             <SearchContainer title="Pathways"/>
           
