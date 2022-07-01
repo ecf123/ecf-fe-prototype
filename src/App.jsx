@@ -1,3 +1,6 @@
+import Home from "./containers/Home/Home";
+import userProfile from "./assets/data/dummyUserData"
+import "./App.scss";
 import SearchContainer from "./containers/SearchContainer/SearchContainer";
 import Button from "./components/Button/Button";
 import MarketplaceCard from "./components/MarketplaceCard/MarketplaceCard";
@@ -8,11 +11,11 @@ const App = () => {
     console.log(1);
   };
   
-
-
-    return (
-        <div className="App">
+            
+  return (
+      <div className="App">
             <MarketplaceCard title = "Adidas gift voucher" score = "10" trophies = "5" img = {image} imgTitle = "adidas gift voucher"/>
+            <Home userProfile = {userProfile} />
             <SearchContainer title="Pathways"/>
           
             <Button
@@ -31,7 +34,6 @@ const App = () => {
 
     );
 }
-
 
 
 export default App;
