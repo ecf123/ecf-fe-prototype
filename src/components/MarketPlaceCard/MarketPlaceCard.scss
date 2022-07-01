@@ -9,8 +9,39 @@
 
   }
   &__title{
-    @include paragraghLarge;
+    @include heading6;
+    color: $secondary-color-dark-grey;
+    padding-left: 10px;
 
+  }
+
+  &__requirements{
+    display: flex;
+    width: 110px;
+    justify-content: space-between;
+    padding: 10px;
+  
+    &__requirement{
+      display: flex;
+      width: 40px;
+      justify-content: space-around;
+      align-content: flex-start;
+        
+    
+      &__img{
+        width: 10.5px;
+
+      }
+      &__number{
+        color:$secondary-color-grey;
+        @include paragraph;
+        padding-bottom: 3px;
+  
+      }
+    
+      
+    }
+    
   }
 
 
