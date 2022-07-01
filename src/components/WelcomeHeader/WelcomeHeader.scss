@@ -4,11 +4,8 @@
 .welcome-header {
     display: flex;
     justify-content: space-between;
-    
     &__welcome-message{
-         
          margin: 30px;
-        
         &__title{
             font-size: 20px;
             font-weight: lighter;
@@ -16,7 +13,6 @@
             padding-bottom: 7px;
             font-family: $primary-font-family;
         }
-
         &__username{
             @include heading1;
             color: $primary-color-navy;
