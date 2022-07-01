@@ -28,7 +28,7 @@ const SignIn = (props) => {
       <p className="login-page__divider">
         <span className="login-page__divider--text">Sign in with</span>
       </p>
-      <div className="login__page__login-buttons">
+      <div className="login-page__login-buttons">
         <SocialLogin
           icon={
             <svg

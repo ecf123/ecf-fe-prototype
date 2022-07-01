@@ -5,8 +5,8 @@ const SocialLogin = (props) => {
   const { icon, onClick } = props;
 
   return (
-    <div>
-      <button className="social-btn" onClick={onClick}>
+    <div className="social-login">
+      <button className="social-login__button" onClick={onClick}>
         {icon}
       </button>
     </div>

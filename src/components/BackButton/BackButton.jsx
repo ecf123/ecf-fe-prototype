@@ -2,7 +2,6 @@ import React from 'react'
 import "./BackButton.scss"
 
 const BackButton = (props) => {
-
     // When routing is implemented, the button can be changed to a link component and the linkTo prop can be used to define which page the button will link to
     const { linkTo } = props;
 

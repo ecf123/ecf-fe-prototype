@@ -10,6 +10,13 @@
     height: 100vh;
     padding: 0px 30px;
 
+    &__login-buttons {
+      width: 70%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+    }
+
     &__inputs {
         width: 100%;
     }
@@ -33,11 +40,4 @@
         font-weight: $font-weight-regular;
     }
   }
-}
-
-.login__page__login-buttons {
-  width: 70%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
+};
