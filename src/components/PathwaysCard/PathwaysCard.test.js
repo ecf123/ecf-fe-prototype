@@ -1,4 +1,4 @@
-import {render} from "@testing-library/react";
+import {render, screen} from "@testing-library/react";
 import PathwaysCard from "./PathwaysCard";
 
 describe("basic tests for card component", () => {
@@ -7,4 +7,10 @@ describe("basic tests for card component", () => {
 
     render(<PathwaysCard card={card} />);
   });
+
+  // it("should render the progress bar", () => {
+  //   const card = {header: "Financial Forest", topics: "Banking, Investments"};
+
+  //   render(< PathwaysCard/>);
+  // });
 });

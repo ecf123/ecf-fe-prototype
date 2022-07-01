@@ -11,7 +11,7 @@ const card = {header: "Financial Forest", topics: "Banking, Investments"};
 //////////////////////////////
 
 const App = () => {
-  const [percentage, setPercentage] = useState(60);
+  const [percentage, setPercentage] = useState(80);
 
   const handleOnClick = () => {
     console.log(1);
