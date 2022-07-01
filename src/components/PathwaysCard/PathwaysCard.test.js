@@ -6,6 +6,8 @@ describe("basic tests for card component", () => {
     const card = {header: "Financial Forest", topics: "Banking, Investments"};
 
     render(<PathwaysCard card={card} />);
+    const div = screen.toHaveClass("card");
+    expect(div).toBeInTheDocument();
   });
 
   // it("should render the progress bar", () => {
