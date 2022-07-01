@@ -1,5 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { BrowserRouter as Router } from 'react-router-dom';
+import { customRender } from "../../test-utilities/test-utilities.test";
 import userEvent from "@testing-library/user-event";
 import Navigation from "./Navigation";
 
@@ -15,22 +16,26 @@ import Navigation from "./Navigation";
 describe("initial render test", () => {
       
     it("should render the navigation on the page", () => {
-        render(<Router><Navigation/></Router>);
-        const navigation = screen.getByTestId("navigation")
+
+        customRender(<Navigation/>)
+            const navigation = screen.getByTestId("navigation");
+
+        // render(<Router><Navigation/></Router>);
+        // const navigation = screen.getByTestId("navigation")
         expect(navigation).toBeInTheDocument()
       }) 
     
-    it("should render the icons in the navigation", () => {
-        render(<Router><Navigation/></Router>);
-        // const navigationImg = screen.getByRole("img")
-        const icons = screen.getAllByRole("img");
+    // it("should render the icons in the navigation", () => {
+    //     render(<Router><Navigation/></Router>);
+    //     // const navigationImg = screen.getByRole("img")
+    //     const icons = screen.getAllByRole("img");
         
-        icons.forEach(icon => {
-            expect(icon).toBeInTheDocument();
-        })
-    })
-    it("should go to the correct page when clicked", () => {
-        render(<Router><Navigation/></Router>);
+    //     icons.forEach(icon => {
+    //         expect(icon).toBeInTheDocument();
+    //     })
+    // })
+    // it("should go to the correct page when clicked", () => {
+    //     render(<Router><Navigation/></Router>);
 
-    })
+    // })
 })
