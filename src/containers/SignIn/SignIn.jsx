@@ -10,7 +10,7 @@ const SignIn = (props) => {
 
   return (
     <div className="login-page">
-      <BackButton linkTo="" />
+      <BackButton linkTo="/splash" />
       <h2 className="login-page__welcome">{welcomeMessage}</h2>
       <form className="login-page__inputs">
         <InputField
