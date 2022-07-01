@@ -8,4 +8,4 @@ describe("initial test for back button", () => {
         expect(button).toBeInTheDocument()
         expect(button).not.toBeNull()
     });
-})
+});
