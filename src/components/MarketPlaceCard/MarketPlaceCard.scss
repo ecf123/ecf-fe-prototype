@@ -1,0 +1,18 @@
+@use "./../../assets/sass/variables" as *;
+@use "./../../assets/sass/mixins" as *;
+
+.marketplace-card{
+  width: 230px;
+  border: 2px solid black;
+  &__img{
+    width: 100%;
+
+  }
+  &__title{
+    @include paragraghLarge;
+
+  }
+
+
+
+}
