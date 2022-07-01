@@ -1,4 +1,4 @@
-import {useState} from "react";
+// import {useState} from "react";
 import "./App.scss";
 import Button from "./components/Button/Button";
 import SearchContainer from "./containers/SearchContainer/SearchContainer";
@@ -11,7 +11,9 @@ const card = {header: "Financial Forest", topics: "Banking, Investments"};
 //////////////////////////////
 
 const App = () => {
-  const [percentage, setPercentage] = useState(80);
+  // useState is to be used in later development
+  // const [percentage, setPercentage] = useState(80);
+  const percentage = 80;
 
   const handleOnClick = () => {
     console.log(1);
