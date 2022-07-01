@@ -2,7 +2,8 @@
 
 Key
 
-- yellow = pages
+- pink = nodes
+- yellow = container
 - blue = components
 
 ---
@@ -32,7 +33,7 @@ The project is broken down into
 <img src="./image/component-tree-course.png" width="500px">
 
 <h2 id="marketplace">Marketplace</h2>
-<img src="./image/component-tree-marketplace.png" width="500px">
+<img src="./image/component-tree-market.png" width="500px">
 
 <h2 id="article">Article</h2>
 <img src="./image/component-tree-articles.png" width="500px">
