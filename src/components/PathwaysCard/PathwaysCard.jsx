@@ -1,4 +1,5 @@
-import React from "react";
+import {React, useState} from "react";
+import {NavLink} from "react-router-dom";
 import {CircularProgressbar, buildStyles} from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./PathwaysCard.scss";
@@ -8,8 +9,8 @@ const PathwaysCard = ({card, percentage}) => {
   const {header, topics} = card;
 
   return (
-    <div className="card">
-      <div className="card__progress">
+    <div className="card" data-testid="1">
+      <div className="card__progress" data-testid="2">
         <CircularProgressbar
           className="card__progress-bar"
           value={percentage}

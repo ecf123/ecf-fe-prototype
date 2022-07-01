@@ -1,4 +1,4 @@
-import {render} from "@testing-library/react";
+import {render, screen} from "@testing-library/react";
 import PathwaysCard from "./PathwaysCard";
 
 describe("basic tests for card component", () => {
@@ -6,5 +6,23 @@ describe("basic tests for card component", () => {
     const card = {header: "Financial Forest", topics: "Banking, Investments"};
 
     render(<PathwaysCard card={card} />);
+    const div = screen.getByTestId("1");
+    expect(div).toBeInTheDocument();
+  });
+
+  it("should render the progress bar", () => {
+    const card = {header: "Financial Forest", topics: "Banking, Investments"};
+
+    render(<PathwaysCard card={card} />);
+    const div = screen.getByTestId("2");
+    expect(div).toBeInTheDocument();
+  });
+
+  it("should render the image", () => {
+    const card = {header: "Financial Forest", topics: "Banking, Investments"};
+
+    render(<PathwaysCard card={card} />);
+    const img = screen.getByRole("img");
+    expect(img).toBeInTheDocument();
   });
 });
