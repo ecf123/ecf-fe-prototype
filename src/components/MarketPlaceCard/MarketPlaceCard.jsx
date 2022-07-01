@@ -1,13 +1,27 @@
 import React from 'react'
 import trophy from "./../../assets/images/trophy-icon.svg"
 import xp from "./../../assets/images/xp-icon.svg"
+import lock from "./../../assets/images/lock.svg"
 import "./MarketplaceCard.scss"
 
 const MarketplaceCard = (props) => {
-  const {img,title,trophies, score, imgTitle}=props;
+
+  const {img, title, trophies, score, imgTitle, isLocked} = props;
+
   return (
     <div className='marketplace-card'>
-      <img className='marketplace-card__img' src={img} alt={imgTitle}/>
+
+      <div className='marketplace-card__img-container'>
+        {isLocked 
+          ? <div className='marketplace-card__img-container__overlay--locked'>
+              <img src={lock} alt="lock" className='marketplace-card__img-container__overlay--locked__lock' />
+            </div> 
+          : <div className='marketplace-card__img-container__overlay'></div>}
+
+        <div className='marketplace-card__img-container__overlay'></div>
+        <img className='marketplace-card__img-container__img' src={img} alt={imgTitle}/>
+      </div>
+      
       <h1 className='marketplace-card__title'>{title}</h1>
       <div className='marketplace-card__requirements'>
         <div className='marketplace-card__requirements__requirement'>
