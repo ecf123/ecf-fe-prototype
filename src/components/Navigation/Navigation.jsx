@@ -12,7 +12,6 @@ const Navigation = () => {
   return (
     <>
     <section>
-    <p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p><p>testing</p>
     </section>
     <div className='nav-bar' data-testid="navigation">
         <NavLink to="/" className={({isActive})=> (isActive ? "nav-bar__link-active" : "nav-bar__link")}><img src={home} alt="Home icon"/></NavLink>

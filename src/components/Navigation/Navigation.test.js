@@ -1,8 +1,9 @@
-import { render, screen } from "@testing-library/react";
-import { BrowserRouter as Router } from 'react-router-dom';
+import { render, screen, wrapper } from "@testing-library/react";
+import { BrowserRouter as Router, MemoryRouter } from 'react-router-dom';
 import { customRender } from "../../test-utilities/test-utilities.test";
 import userEvent from "@testing-library/user-event";
 import Navigation from "./Navigation";
+
 
 
 
@@ -11,7 +12,7 @@ import Navigation from "./Navigation";
     // ARRANGE - get everything we need to organize in order to be able to test
     // ACT - the process of getting all the elements/user events processed
     // ASSERT - this is where we make our expectations
-
+    import {createMemoryHistory} from 'history';
 describe("initial render test", () => {
       
     it("should render the navigation on the page", () => {
@@ -27,7 +28,28 @@ describe("initial render test", () => {
             expect(icon).toBeInTheDocument();
         })
     })
+    // it("should go to the correct page when clicked", () => {
+    //     customRender(<Navigation/>, {wrapper: MemoryRouter})
+    //         const libraryIcon = screen.getByTestId('library-icon')
+    //      userEvent.click(libraryIcon)
+    //     expect(screen.getByText(/Library/i)).toBeInTheDocument()
+    // })
+
+
     it("should go to the correct page when clicked", () => {
-        customRender(<Navigation/>)
+            let history = createMemoryHistory();
+            customRender(<Navigation/> ,history={history})
+            userEvent.click(screen.getByText(/Pathway/));
+            expect(history.location.pathname).toEqual('/Branches')
+        
     })
+
+    // test('NavLinks paths 1', () => {
+    //     nav = wrapper.find('nav');
+    //     NavLink = wrapper.find('NavLink')
+    //     expect(wrapper.find('NavLink')).toHaveLength(4)
+    //     const firstNavLink = wrapper.find('NavLink').first();
+    //     expect(firstNavLink.prop('to')).toEqual('/calories');
+    // })
+    
 })
