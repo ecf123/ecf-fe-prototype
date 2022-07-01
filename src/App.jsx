@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 import SignIn from "./containers/SignIn/SignIn";
+=======
+import Home from "./containers/Home/Home";
+import userProfile from "./assets/data/dummyUserData"
+import "./App.scss";
+import SearchContainer from "./containers/SearchContainer/SearchContainer";
+import Button from "./components/Button/Button";
+>>>>>>> 06b8739ccdf3dbbbfd9dd4f60da1da7a46bd413e
 
 const App = () => {
 
@@ -30,6 +38,7 @@ const App = () => {
 // }
 
 
+<<<<<<< HEAD
   return (
     <div className="App">
       <SignIn welcomeMessage="Welcome Back" />
@@ -37,4 +46,6 @@ const App = () => {
   );
 };
 
+=======
+>>>>>>> 06b8739ccdf3dbbbfd9dd4f60da1da7a46bd413e
 export default App;
