@@ -12,30 +12,22 @@ import Navigation from "./Navigation";
     // ACT - the process of getting all the elements/user events processed
     // ASSERT - this is where we make our expectations
 
-
 describe("initial render test", () => {
       
     it("should render the navigation on the page", () => {
-
         customRender(<Navigation/>)
-            const navigation = screen.getByTestId("navigation");
-
-        // render(<Router><Navigation/></Router>);
-        // const navigation = screen.getByTestId("navigation")
+         const navigation = screen.getByTestId("navigation");
         expect(navigation).toBeInTheDocument()
       }) 
     
-    // it("should render the icons in the navigation", () => {
-    //     render(<Router><Navigation/></Router>);
-    //     // const navigationImg = screen.getByRole("img")
-    //     const icons = screen.getAllByRole("img");
-        
-    //     icons.forEach(icon => {
-    //         expect(icon).toBeInTheDocument();
-    //     })
-    // })
-    // it("should go to the correct page when clicked", () => {
-    //     render(<Router><Navigation/></Router>);
-
-    // })
+    it("should render the icons in the navigation", () => {
+        customRender(<Navigation/>)
+        const icons = screen.getAllByRole("img");
+        icons.forEach(icon => {
+            expect(icon).toBeInTheDocument();
+        })
+    })
+    it("should go to the correct page when clicked", () => {
+        customRender(<Navigation/>)
+    })
 })

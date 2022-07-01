@@ -1,6 +1,8 @@
 import { render } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
 
+// Ui = component to be tested
+// 
 export const customRender = (ui, useRouting = true) => {
   // wrap components in routing if requested
   const uiResult = useRouting && wrapWithRouting(ui);
