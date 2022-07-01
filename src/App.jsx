@@ -1,4 +1,4 @@
-import LoginPage from "./components/LoginPage/LoginPage";
+import SignIn from "./containers/SignIn/SignIn";
 
 const App = () => {
 
@@ -32,7 +32,7 @@ const App = () => {
 
   return (
     <div className="App">
-      <LoginPage welcomeMessage="Welcome Back" />
+      <SignIn welcomeMessage="Welcome Back" />
     </div>
   );
 };
