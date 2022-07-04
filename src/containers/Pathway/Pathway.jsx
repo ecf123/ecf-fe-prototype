@@ -3,7 +3,7 @@ import "./Pathway.scss";
 
 const Pathway = () => {
   return (
-    <div><h1>Pathways</h1></div>
+<h1>Pathways</h1>
   )
 }
 
