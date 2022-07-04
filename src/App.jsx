@@ -9,7 +9,7 @@ import Button from "./components/Button/Button";
 import Pathway from "./containers/Pathway/Pathway";
 import Article from "./containers/Article/Article";
 import Marketplace from "./containers/Marketplace/Marketplace";
-
+import Splash from "./containers/Splash/Splash";
 
 const App = () => {
   const handleOnClick = () => {
@@ -34,6 +34,7 @@ const App = () => {
       />
         <Routes>
           <Route exact path="/" element={<Home userProfile={userProfile} />}/>
+          <Route path="/splash" element={<Splash/>} /> 
           <Route  path="/library" element="" />
           <Route  path="/pathway" element={<Pathway userProfile={userProfile}/>} />
           <Route  path="/profile" element={<Profile/>} />
