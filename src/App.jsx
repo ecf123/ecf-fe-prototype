@@ -13,7 +13,7 @@ import Marketplace from "./containers/Marketplace/Marketplace";
 
 const App = () => {
   const handleOnClick = () => {
-    console.log();
+    console.log("Clicked");
   }
 
   return (
