@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import MarketplaceCard from "./MarketPlaceCard";
+import MarketplaceCard from "./MarketplaceCard";
 import marketplaceImage from "../../assets/images/adidas-gift-voucher.svg";
 
 describe("basic tests for card component", () => {
