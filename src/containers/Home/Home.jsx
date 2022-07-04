@@ -6,7 +6,7 @@ const Home = ({ userProfile }) => {
   
     return (
         <div className='home-container'>
-            {/* <WelcomeHeader userProfile = {userProfile} /> */}
+            <WelcomeHeader userProfile = {userProfile} />
         </div>
     )
 }
