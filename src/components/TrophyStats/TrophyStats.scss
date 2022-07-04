@@ -12,7 +12,7 @@
   padding: 10px;
   margin: 30px;
   &__paragraph {
-    @include paragraghSmall();
+    @include paragraph();
     font-weight: $font-weight-bold;
   }
 }
