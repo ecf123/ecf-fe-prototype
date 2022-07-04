@@ -6,8 +6,6 @@ import PathwaysCard from "./components/PathwaysCard/PathwaysCard";
 
 import card from "./assets/data/dummyPathwayData";
 
-
-
 const App = () => {
   // useState is to be used in later development
   // const [percentage, setPercentage] = useState(80);
