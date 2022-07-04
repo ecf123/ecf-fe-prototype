@@ -4,7 +4,8 @@ import { customRender } from "../../test-utilities/test-utilities";
 import userEvent from "@testing-library/user-event";
 import SearchContainer from "../../containers/SearchContainer/SearchContainer";
 import { Route, Routes } from 'react-router-dom';
-import SignIn from "../../containers/SignIn/SignIn";
+import PathwaysCard from "../PathwaysCard/PathwaysCard";
+import dummyPathwayData from "../../assets/data/dummyPathwayData";
 
 describe("initial tests for content header", () => {
 
@@ -23,16 +24,16 @@ describe("initial tests for content header", () => {
     });
 
     it("should change the displayed page when 'View All' is clicked", () => {
-        //This test loads the SignIn container when the View All link is clicked because the component to display all results has not been completed, this can be updated once the component has been made.
+        //This test loads a single card when the View All link is clicked because the component to display all results has not been completed, this can be updated once the component has been made.
         const toRender = (<Routes>
         <Route path="/" element={<SearchContainer pathwaysLink="/test" />} />
-        <Route path="/test" element={<SignIn />} />
+        <Route path="/test" element={<PathwaysCard card={dummyPathwayData} />} />
         </Routes>);
 
         customRender(toRender);
         const viewAll = screen.getByText("View All");
         userEvent.click(viewAll);
-        const name = screen.getByRole("textbox");
-        expect(name).toBeInTheDocument();
+        const card = screen.getByTestId("pathwaycard");
+        expect(card).toBeInTheDocument();
     });
 });
