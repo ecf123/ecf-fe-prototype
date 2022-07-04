@@ -1,10 +1,15 @@
 import ContentHeader from "./ContentHeader";
 import { render, screen } from "@testing-library/react";
+import { customRender } from "../../test-utilities/test-utilities";
+import userEvent from "@testing-library/user-event";
+import SearchContainer from "../../containers/SearchContainer/SearchContainer";
+import { Route, Routes } from 'react-router-dom';
+import SignIn from "../../containers/SignIn/SignIn";
 
 describe("initial tests for content header", () => {
 
     it("should render a heading and a link on the page", () => {
-        render(<ContentHeader title="Test Title" />);
+        customRender(<ContentHeader title="Test Title" link="/" />);
         const title = screen.getByText("Test Title");
         const link = screen.getByText("View All");
         expect(title).toBeInTheDocument();
@@ -12,8 +17,22 @@ describe("initial tests for content header", () => {
     });
 
     it("should render a heading passed through the title prop", () => {
-        render(<ContentHeader title="Test Title" />);
+        customRender(<ContentHeader title="Test Title" link="/" />);
         const title = screen.getByText("Test Title");
         expect(title).toBeInTheDocument();
+    });
+
+    it("should change the displayed page when 'View All' is clicked", () => {
+        //This test loads the SignIn container when the View All link is clicked because the component to display all results has not been completed, this can be updated once the component has been made.
+        const toRender = (<Routes>
+        <Route path="/" element={<SearchContainer pathwaysLink="/test" />} />
+        <Route path="/test" element={<SignIn />} />
+        </Routes>);
+
+        customRender(toRender);
+        const viewAll = screen.getByText("View All");
+        userEvent.click(viewAll);
+        const name = screen.getByRole("textbox");
+        expect(name).toBeInTheDocument();
     });
 });
