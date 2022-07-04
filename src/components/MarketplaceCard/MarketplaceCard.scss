@@ -1,0 +1,86 @@
+@use "./../../assets/sass/variables" as *;
+@use "./../../assets/sass/mixins" as *;
+
+.marketplace-card{
+  width: 230px;
+
+  position: relative;
+
+  &__img-container {
+    width: 100%;
+    border-radius: 8px;
+    position: relative;
+    z-index: 0;
+
+    &__overlay {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, #fdfbfb00 0%, #83838349 100%);
+      border-radius: 8px;
+    }
+
+    &__overlay--locked {
+      position: absolute;
+      content: "";
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(212, 212, 212, 0.336);
+      border-radius: 8px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      &__lock {
+        height: 32px;
+      }
+    }
+
+    &__img {
+      width: 100%;
+    }
+  }
+
+  &__title{
+    @include heading6;
+    margin-top: 16px;
+    color: $secondary-color-dark-grey;
+    padding-left: 10px;
+
+  }
+
+  &__requirements{
+    display: flex;
+    width: 110px;
+    justify-content: space-between;
+    padding: 10px;
+  
+    &__requirement{
+      display: flex;
+      width: 40px;
+      justify-content: space-around;
+      align-content: flex-start;
+        
+    
+      &__img{
+        width: 10.5px;
+
+      }
+      &__number{
+        color:$secondary-color-grey;
+        @include paragraph;
+        padding-bottom: 3px;
+  
+      }
+    }
+  }
+}
