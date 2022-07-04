@@ -18,7 +18,7 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-      <SearchContainer title="Pathways" />
+      <SearchContainer title="Pathways" pathwaysLink="/library" />
       <Button
         buttonText="START PATHWAYS"
         buttonType="submit"
