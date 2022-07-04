@@ -2,13 +2,11 @@
 import "./App.scss";
 import Button from "./components/Button/Button";
 import SearchContainer from "./containers/SearchContainer/SearchContainer";
+import PathwaysCard from "./components/PathwaysCard/PathwaysCard";
 
 import card from "./assets/data/dummyPathwayData";
 
-// TEMPORARY //////////////////
-import PathwaysCard from "./components/PathwaysCard/PathwaysCard";
 
-//////////////////////////////
 
 const App = () => {
   // useState is to be used in later development
