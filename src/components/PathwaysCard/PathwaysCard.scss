@@ -1,0 +1,40 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+
+.card {
+  font-family: $primary-font-family;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 178px;
+  background-color: $secondary-color-light-green;
+  border-radius: 11px;
+
+  &__content {
+    &-header {
+      @include heading3Regular;
+      color: $primary-color-navy;
+      padding: 14px 0 0 20px;
+      margin: 0;
+    }
+
+    &-topics {
+      @include heading5;
+      color: $primary-color-blue-gray;
+      padding: 6px 0 25px 20px;
+      margin: 0;
+    }
+
+    &-image {
+      width: 91px;
+      padding: 34px 67px 0 21px;
+    }
+  }
+
+  &__progress {
+    position: absolute;
+    top: 12px;
+    right: 17px;
+    width: 39px;
+  }
+}
