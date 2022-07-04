@@ -3,10 +3,10 @@ import "./App.scss";
 import Button from "./components/Button/Button";
 import SearchContainer from "./containers/SearchContainer/SearchContainer";
 
+import card from "./assets/data/dummyPathwayData";
+
 // TEMPORARY //////////////////
 import PathwaysCard from "./components/PathwaysCard/PathwaysCard";
-
-const card = {header: "Financial Forest", topics: "Banking, Investments"};
 
 //////////////////////////////
 

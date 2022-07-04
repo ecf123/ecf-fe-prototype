@@ -7,7 +7,7 @@ describe("basic tests for card component", () => {
     const card = {header: "Financial Forest", topics: "Banking, Investments"};
 
     render(<PathwaysCard card={card} />);
-    const div = screen.getByTestId("1");
+    const div = screen.getByTestId("pathwaycard");
     expect(div).toBeInTheDocument();
   });
 
@@ -15,7 +15,7 @@ describe("basic tests for card component", () => {
     const card = {header: "Financial Forest", topics: "Banking, Investments"};
 
     render(<PathwaysCard card={card} />);
-    const div = screen.getByTestId("2");
+    const div = screen.getByTestId("circularprogressbar");
     expect(div).toBeInTheDocument();
   });
 
@@ -33,7 +33,7 @@ describe("Changing to overlay view", () => {
     const card = {header: "Financial Forest", topics: "Banking, Investments"};
 
     render(<PathwaysCard card={card} />);
-    const div = screen.getByTestId("1");
+    const div = screen.getByTestId("pathwaycard");
     userEvent.click(div);
     const overlay = screen.getByTestId("overlay");
     expect(overlay).toBeInTheDocument();
