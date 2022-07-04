@@ -15,8 +15,8 @@ const Navigation = () => {
     </section>
     <div className='nav-bar' data-testid="navigation">
         <NavLink to="/" data-testid="home-icon" className={({isActive})=> (isActive ? "nav-bar__link--active" : "nav-bar__link")}><img src={home} alt="Home icon"/></NavLink>
-        <NavLink to="/library" data-testid="resources-icon" className={({isActive})=> (isActive ? "nav-bar__link--active" : "nav-bar__link")}><img src={library} alt="Resources icon"/></NavLink>
-        <NavLink to="/pathway" data-testid="pathway-icon" className={({isActive})=> (isActive ? "nav-bar__link--active" : "nav-bar__link")}><img src={pathway} alt="Learning Branch icon" /></NavLink>
+        <NavLink to="/articles" data-testid="resources-icon" className={({isActive})=> (isActive ? "nav-bar__link--active" : "nav-bar__link")}><img src={library} alt="Resources icon"/></NavLink>
+        <NavLink to="/pathways" data-testid="pathway-icon" className={({isActive})=> (isActive ? "nav-bar__link--active" : "nav-bar__link")}><img src={pathway} alt="Learning Branch icon" /></NavLink>
         <NavLink to="/profile" data-testid="profile-icon" className={({isActive})=> (isActive ? "nav-bar__link--active" : "nav-bar__link")}><img src={profile} alt="User Profile icon"/></NavLink>
     </div>
     </>
