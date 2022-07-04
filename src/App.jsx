@@ -1,28 +1,38 @@
-// import {useState} from "react";
+import Home from "./containers/Home/Home";
+import userProfile from "./assets/data/dummyUserData";
 import "./App.scss";
 import Button from "./components/Button/Button";
-import SearchContainer from "./containers/SearchContainer/SearchContainer";
-import PathwaysCard from "./components/PathwaysCard/PathwaysCard";
-
-import card from "./assets/data/dummyPathwayData";
+import Pathway from "./containers/Pathway/Pathway";
+import Article from "./containers/Article/Article";
+import Marketplace from "./containers/Marketplace/Marketplace";
 
 const App = () => {
-  // useState is to be used in later development
-  // const [percentage, setPercentage] = useState(80);
-  const percentage = 80;
-
   const handleOnClick = () => {
     console.log(1);
   };
 
   return (
     <div className="App">
-      <SearchContainer title="Pathways" />
-      <Button buttonText="START PATHWAYS" buttonType="submit" isSecondary={false} onClickButton={handleOnClick} />
-      <Button buttonText="SIGN IN" buttonType="submit" isSecondary={true} onClickButton={handleOnClick} />
+      <Home userProfile={userProfile} />
+      <Pathway userProfile={userProfile} />
+      <Marketplace userProfile={userProfile} />
+      <Article userProfile={userProfile} />
 
-      <PathwaysCard card={card} percentage={percentage} />
+      <SearchContainer title="Pathways" />
+      <Button
+        buttonText="START PATHWAYS"
+        buttonType="submit"
+        isSecondary={false}
+        onClickButton={handleOnClick}
+      />
+      <Button
+        buttonText="SIGN IN"
+        buttonType="submit"
+        isSecondary={true}
+        onClickButton={handleOnClick}
+      />
     </div>
   );
 };
+
 export default App;
