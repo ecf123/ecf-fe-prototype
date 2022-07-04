@@ -9,7 +9,7 @@ const MarketplaceCard = (props) => {
   const {img, title, trophies, score, imgTitle, isLocked} = props;
 
   return (
-    <div 
+    <div
       className='marketplace-card'
       data-testid="marketplace-card"
     >
