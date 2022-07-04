@@ -9,16 +9,20 @@ const MarketplaceCard = (props) => {
   const {img, title, trophies, score, imgTitle, isLocked} = props;
 
   return (
-    <div className='marketplace-card'>
+    <div 
+      className='marketplace-card'
+      data-testid="marketplace-card"
+    >
 
-      <div className='marketplace-card__img-container'>
+      <div className='marketplace-card__img-container'
+        >
         {isLocked 
           ? <div className='marketplace-card__img-container__overlay--locked'>
-              <img src={lock} alt="lock" className='marketplace-card__img-container__overlay--locked__lock' />
+              <img data-testid="marketplace-card-lock" src={lock} alt="lock" className='marketplace-card__img-container__overlay--locked__lock' />
             </div> 
           : <div className='marketplace-card__img-container__overlay'></div>}
 
-        <img className='marketplace-card__img-container__img' src={img} alt={imgTitle}/>
+        <img data-testid="marketplace-card-img" className='marketplace-card__img-container__img' src={img} alt={imgTitle}/>
       </div>
       
       <h1 className='marketplace-card__title'>{title}</h1>
