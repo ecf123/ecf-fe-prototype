@@ -10,7 +10,6 @@ import Pathway from "./containers/Pathway/Pathway";
 import Article from "./containers/Article/Article";
 import Marketplace from "./containers/Marketplace/Marketplace";
 
-
 const App = () => {
   const handleOnClick = () => {
     console.log("Clicked");
