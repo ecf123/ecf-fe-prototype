@@ -1,0 +1,31 @@
+@use "../../assets/sass/variables" as *;
+
+@media only screen and (max-width: $max-mobile-view) {
+
+  .input {
+    width: 100%;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: $primary-font-family;
+    font-size: $font-size-small;
+
+
+    &__label {
+      display: flex;
+      justify-content: flex-start;
+      align-self: flex-start;
+    }
+
+    &__input {
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      font-family: $primary-font-family;
+      width: 100%;
+      background-color: $secondary-color-light-cream;
+    }
+  }
+}

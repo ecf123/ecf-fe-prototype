@@ -1,0 +1,14 @@
+@use "../../assets/sass/variables" as *;
+
+.social-login {
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px;
+    background-color: $secondary-color-light-cream;
+    border-radius: 15px;
+    border: 1px solid $secondary-color-lilac;
+  }
+} 
