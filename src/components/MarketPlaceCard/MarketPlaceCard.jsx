@@ -32,7 +32,6 @@ const MarketplaceCard = (props) => {
           <p className='marketplace-card__requirements__requirement__number'>{score}</p>
         </div>
       </div>
-
     </div>
   )
 }
