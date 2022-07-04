@@ -1,0 +1,9 @@
+@use "../../assets/sass/mixins" as *;
+@use "../../assets/sass/variables" as *;
+
+.trophy-header-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
