@@ -19,7 +19,7 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-      <SearchContainer title="Pathways" />
+      {/* <SearchContainer title="Pathways" />
       <Button
         buttonText="START PATHWAYS"
         buttonType="submit"
@@ -31,17 +31,18 @@ const App = () => {
         buttonType="submit"
         isSecondary={true}
         onClickButton={handleOnClick}
-      />
+      /> */}
+
         <Routes>
           <Route exact path="/" element={<Home userProfile={userProfile} />}/>
           <Route path="/splash" element={<Splash/>} /> 
-          <Route  path="/library" element="" />
-          <Route  path="/pathway" element={<Pathway userProfile={userProfile}/>} />
-          <Route  path="/profile" element={<Profile/>} />
+          <Route path="/library" element="" />
+          <Route path="/pathway" element={<Pathway userProfile={userProfile}/>} />
+          <Route path="/profile" element={<Profile/>} />
           <Route path="/market-place" element={<Marketplace userProfile={userProfile} />}/>
           <Route path="/article" element={<Article userProfile={userProfile} />}/>
         </Routes>
-        <Navigation/>
+        {/* <Navigation/> */}
       </div>
     </Router>
   );

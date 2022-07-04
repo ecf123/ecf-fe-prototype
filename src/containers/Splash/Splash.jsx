@@ -6,8 +6,8 @@ import Button from '../../components/Button/Button';
 const Splash = () => {
   return (
     <div className='splash-container'>
-        <img src={GraduationImage} alt="Graduation" />
-        <h1></h1>
+        <img classname='splash-container' src={GraduationImage} alt="Graduation" />
+        <h1 ></h1>
     </div>
   )
 }
