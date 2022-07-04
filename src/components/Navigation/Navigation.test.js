@@ -1,5 +1,5 @@
 import { screen } from "@testing-library/react";
-import { customRender } from "../../test-utilities/test-utilities.test";
+import { customRender } from "../../test-utilities/test-utilities";
 import userEvent from "@testing-library/user-event";
 import Navigation from "./Navigation";
 
