@@ -23,19 +23,19 @@ describe("initial render test", () => {
         customRender(<Navigation />)
         const home = screen.getByTestId("home-icon")
         const resources = screen.getByTestId("resources-icon")
-        const branches = screen.getByTestId("branches-icon")
+        const pathway = screen.getByTestId("pathway-icon")
         const profile = screen.getByTestId("profile-icon")
 
         userEvent.click(home)
-        expect(home).toHaveClass("nav-bar__link-active")
+        expect(home).toHaveClass("nav-bar__link--active")
 
         userEvent.click(resources)
-        expect(resources).toHaveClass("nav-bar__link-active")
+        expect(resources).toHaveClass("nav-bar__link--active")
 
-        userEvent.click(branches)
-        expect(branches).toHaveClass("nav-bar__link-active")
+        userEvent.click(pathway)
+        expect(pathway).toHaveClass("nav-bar__link--active")
 
         userEvent.click(profile)
-        expect(profile).toHaveClass("nav-bar__link-active")
+        expect(profile).toHaveClass("nav-bar__link--active")
     })
 })
