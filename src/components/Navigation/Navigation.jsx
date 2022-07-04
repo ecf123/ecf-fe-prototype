@@ -15,9 +15,9 @@ const Navigation = () => {
     </section>
     <div className='nav-bar' data-testid="navigation">
         <NavLink to="/" data-testid="home-icon" className={({isActive})=> (isActive ? "nav-bar__link-active" : "nav-bar__link")}><img src={home} alt="Home icon"/></NavLink>
-        <NavLink to="/Library" data-testid="resources-icon" className={({isActive})=> (isActive ? "nav-bar__link-active" : "nav-bar__link")}><img src={library} alt="Resources icon"/></NavLink>
-        <NavLink to="/Branches" data-testid="branches-icon" className={({isActive})=> (isActive ? "nav-bar__link-active" : "nav-bar__link")}><img src={branches} alt="Learning Branch icon" /></NavLink>
-        <NavLink to="/Profile" data-testid="profile-icon" className={({isActive})=> (isActive ? "nav-bar__link-active" : "nav-bar__link")}><img src={profile} alt="User Profile icon"/></NavLink>
+        <NavLink to="/library" data-testid="resources-icon" className={({isActive})=> (isActive ? "nav-bar__link-active" : "nav-bar__link")}><img src={library} alt="Resources icon"/></NavLink>
+        <NavLink to="/pathway" data-testid="branches-icon" className={({isActive})=> (isActive ? "nav-bar__link-active" : "nav-bar__link")}><img src={branches} alt="Learning Branch icon" /></NavLink>
+        <NavLink to="/profile" data-testid="profile-icon" className={({isActive})=> (isActive ? "nav-bar__link-active" : "nav-bar__link")}><img src={profile} alt="User Profile icon"/></NavLink>
     </div>
     </>
   )

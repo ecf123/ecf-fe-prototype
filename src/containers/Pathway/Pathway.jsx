@@ -1,9 +1,11 @@
 import React from 'react'
-import "./Pathway.scss";
+import TrophyHeader from '../../components/TrophyHeader/TrophyHeader'
 
-const Pathway = () => {
+const Pathway = ({ userProfile }) => {
   return (
-<h1>Pathways</h1>
+    <div>
+        <TrophyHeader userProfile = {userProfile}/>
+    </div>
   )
 }
 
