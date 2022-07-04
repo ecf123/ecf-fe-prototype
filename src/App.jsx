@@ -1,6 +1,3 @@
-import SignIn from "./containers/SignIn/SignIn";
-import Home from "./containers/Home/Home";
-import userProfile from "./assets/data/dummyUserData"
 import "./App.scss";
 import SearchContainer from "./containers/SearchContainer/SearchContainer";
 import Button from "./components/Button/Button";
