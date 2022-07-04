@@ -9,7 +9,7 @@ const CourseOverviewList = ({ title }) => {
       CourseOverviewList
       <h1>{title}</h1>
       <div>
-        <CourseOverviewListItem image={Redo} title="dummy text" duration="10" />
+        <CourseOverviewListItem image={Redo} title="The Role of Banking in The Financial System" duration="10" />
         <CourseOverviewListItem />
         <CourseOverviewListItem />
         <CourseOverviewListItem />

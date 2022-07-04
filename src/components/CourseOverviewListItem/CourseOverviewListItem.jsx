@@ -3,6 +3,7 @@ import ClockIcon from "../../assets/images/clock-icon.svg";
 import "./CourseOverviewListItem.scss";
 
 const CourseOverviewListItem = ({ image, title, duration }) => {
+  
   return (
     <div className="list-item">
       <div className="list-item__icon-container">
