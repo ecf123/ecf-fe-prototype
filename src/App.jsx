@@ -1,14 +1,15 @@
 import "./App.scss";
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Home from "./containers/Home/Home";
-import Navigation from './components/Navigation/Navigation';
-import Profile from "./containers/Profile/Profile";
-import userProfile from "./assets/data/dummyUserData";
-import SearchContainer from "./containers/SearchContainer/SearchContainer";
-import Button from "./components/Button/Button";
-import Pathway from "./containers/Pathway/Pathway";
-import Article from "./containers/Article/Article";
-import Marketplace from "./containers/Marketplace/Marketplace";
+// import Home from "./containers/Home/Home";
+// import Navigation from './components/Navigation/Navigation';
+// import Profile from "./containers/Profile/Profile";
+// import userProfile from "./assets/data/dummyUserData";
+// import SearchContainer from "./containers/SearchContainer/SearchContainer";
+// import Button from "./components/Button/Button";
+// import Pathway from "./containers/Pathway/Pathway";
+// import Article from "./containers/Article/Article";
+// import Marketplace from "./containers/Marketplace/Marketplace";
+import CourseOverview from "./containers/CourseOverview/CourseOverview";
 
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-      <SearchContainer title="Pathways" />
+      {/* <SearchContainer title="Pathways" />
       <Button
         buttonText="START PATHWAYS"
         buttonType="submit"
@@ -40,7 +41,9 @@ const App = () => {
           <Route path="/market-place" element={<Marketplace userProfile={userProfile} />}/>
           <Route path="/article" element={<Article userProfile={userProfile} />}/>
         </Routes>
-        <Navigation/>
+        <Navigation/> */}
+
+        <CourseOverview />
       </div>
     </Router>
   );
