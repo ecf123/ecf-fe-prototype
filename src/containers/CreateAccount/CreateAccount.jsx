@@ -1,5 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./CreateAccount.scss";
+import InputField from "../../components/InputField/InputField";
+import Button from "../../components/Button/Button";
+import BackButton from "../../components/BackButton/BackButton";
+import SocialLogin from "../../components/SocialLogin/SocialLogin";
+
 
 
 const CreateAccount = () => {
@@ -32,11 +37,11 @@ const CreateAccount = () => {
                 placeholder="Last Name"
               />
             </form>
-            <Button buttonText="NEXT" onclick={nextPage} />
+            <Button buttonText="NEXT" onClickButton={nextPage} />
         </>
         ) : (
         <>
-            <BackButton onclick={previousPage} />
+            <BackButton onClick={previousPage} />
             <h2 className="register-user__title">Create An Account</h2>
             <form className="register-user__inputs--pageTwo">
             <InputField
@@ -172,7 +177,7 @@ const CreateAccount = () => {
         </div>
       </div>
     );
-  };
-}
+};
+
 
 export default CreateAccount
