@@ -9,7 +9,6 @@ import Button from "./components/Button/Button";
 import Pathway from "./containers/Pathway/Pathway";
 import Article from "./containers/Article/Article";
 import Marketplace from "./containers/Marketplace/Marketplace";
-import ArticleCard from "./components/ArticleCard/ArticleCard";
 import articleInfo from "./assets/data/dummyArticleCardInformation";
 import ArticleCardList from "./containers/ArticleCardList/ArticleCardList";
 

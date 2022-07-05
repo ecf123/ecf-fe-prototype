@@ -3,29 +3,56 @@
 @use "../../assets/sass/mixins" as *;
 
 .article-card {
-    border-bottom: 2px solid black;
+    border-bottom: 1px solid black;
+    margin: 20px 29px 0px 29px;
     display: flex;
     justify-content: center;
-    padding: 15px 20px 20px 5px;
-    height: 75px;
+    padding: 0px 0px 20px 0px;
+    width: 363px;
+    height: 60px;
 
     &__image {
-        width: 75px;
-        height: 50px;
+        width: 53px;
+        height: 39px;
+        border: 2px solid;
     }
 
     &__text {
-        border: 2px solid red;
-        width: 75%;
-        margin-right: 10px;
-        margin-left: 10px;
+
+        width: 80%;
+        height: 100%;
+        margin-left: 15px;
 
         &--top {
-            @include heading2;
+            font-size: 10px;
+            padding-top: 2px;
+            font-family: $secondary-font-family;
+            font-weight: 500;
+            color: $secondary-color-grey;
         }
 
         &--bottom {
-            @include heading3;
+            // @include heading3;
+            font-family: $primary-font-family;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 120%;
         }
     }
+
+    &__button{
+        border: none;
+        background-color: transparent;
+        
+    &--bookmark {
+        width: 15.75px;
+        height: 22.5px;
+        margin-top: 13.75px;
+        position: relative;
+        right: -1px
+    }
+    &--active {
+        filter: invert(98%) sepia(53%) saturate(5201%) hue-rotate(321deg) brightness(115%) contrast(101%);    }
+
 }
