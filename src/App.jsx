@@ -18,9 +18,19 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-        <SearchContainer title="Pathways" pathwaysLink="/library" />
-        <Button buttonText="START PATHWAYS" buttonType="submit" isSecondary={false} onClickButton={handleOnClick} />
-        <Button buttonText="SIGN IN" buttonType="submit" isSecondary={true} onClickButton={handleOnClick} />
+      <SearchContainer title="Pathways" />
+      <Button
+        buttonText="START PATHWAYS"
+        buttonType="submit"
+        isSecondary={false}
+        onClickButton={handleOnClick}
+      />
+      <Button
+        buttonText="SIGN IN"
+        buttonType="submit"
+        isSecondary={true}
+        onClickButton={handleOnClick}
+      />
         <Routes>
           <Route exact path="/" element={<Home userProfile={userProfile} />} />
           <Route path="/library" element="" />
@@ -29,7 +39,7 @@ const App = () => {
           <Route path="/market-place" element={<Marketplace userProfile={userProfile} />} />
           <Route path="/article" element={<Article userProfile={userProfile} />} />
         </Routes>
-        <Navigation />
+        <Navigation/>
       </div>
     </Router>
   );
