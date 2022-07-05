@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import "./SearchContainer.scss";
+import ContentHeader from "../../components/ContentHeader/ContentHeader";
 
-const SearchContainer = ({ title }) => {
+const SearchContainer = ({ title, pathwaysLink }) => {
 
   // dummy array
   const dummyArray = [
@@ -47,8 +48,7 @@ const SearchContainer = ({ title }) => {
           </h1>
         ) : (
           <div className="search-container__titles">
-            <h1 className="search-container__heading">{title}</h1>
-            <h2 className="search-container__view-button">View All</h2>
+            <ContentHeader title={title} link={pathwaysLink}/>
           </div>
         )
       ) : (

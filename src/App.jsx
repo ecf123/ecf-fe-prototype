@@ -11,7 +11,6 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 // import Marketplace from "./containers/Marketplace/Marketplace";
 import CourseOverview from "./containers/CourseOverview/CourseOverview";
 
-
 const App = () => {
   const handleOnClick = () => {
     console.log("Clicked");
@@ -20,7 +19,7 @@ const App = () => {
   return (
     <Router>
       <div className="App">
-      {/* <SearchContainer title="Pathways" />
+      <SearchContainer title="Pathways" pathwaysLink="/library" />
       <Button
         buttonText="START PATHWAYS"
         buttonType="submit"
@@ -41,7 +40,7 @@ const App = () => {
           <Route path="/market-place" element={<Marketplace userProfile={userProfile} />}/>
           <Route path="/article" element={<Article userProfile={userProfile} />}/>
         </Routes>
-        <Navigation/> */}
+        <Navigation/>
 
         <CourseOverview />
       </div>
