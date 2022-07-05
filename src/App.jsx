@@ -9,10 +9,18 @@ import Button from "./components/Button/Button";
 import Pathway from "./containers/Pathway/Pathway";
 import Article from "./containers/Article/Article";
 import Marketplace from "./containers/Marketplace/Marketplace";
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 import CreateAccount from "./containers/CreateAccount/CreateAccount";
 
 const App = () => {
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+
+  // Initialize Firebase Authentication and get a reference to the service
+  const auth = getAuth(app);
+
   const handleOnClick = () => {
     console.log("Clicked");
   }
@@ -20,7 +28,7 @@ const App = () => {
   return (
     <Router>
 
-      <CreateAccount />
+      <CreateAccount auth={auth} />
 
       <div className="App">
       <SearchContainer title="Pathways" pathwaysLink="/library" />
