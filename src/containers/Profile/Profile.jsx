@@ -1,11 +1,10 @@
 import React from 'react'
 
+// path: /profile
 
 const Profile = () => {
   return (
-    <div>
-      
-    </div>
+    <div>Profile</div>
   )
 }
 
