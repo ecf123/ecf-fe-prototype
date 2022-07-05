@@ -57,11 +57,17 @@ const CreateAccount = () => {
                 inputType="text"
                 label="First Name"
                 placeholder="First Name"
+                onChange={handleInputChange}
+                inputName="firstName"
+                value={user.firstName}
               />
               <InputField
                 inputType="text"
                 label="Last Name"
                 placeholder="Last Name"
+                onChange={handleInputChange}
+                inputName="lastName"
+                value={user.lastName}
               />
             </form>
             <Button buttonText="NEXT" buttonType={"submit"} onClickButton={() => {saveName(); nextPage()}} />
@@ -75,15 +81,24 @@ const CreateAccount = () => {
                 inputType="email"
                 label="Email Address"
                 placeholder="you@example.com"
+                onChange={handleInputChange}
+                inputName="email"
+                value={user.email}
             />
             <InputField
                 inputType="password"
                 label="Password"
                 placeholder="Your password"
+                onChange={handleInputChange}
+                inputName="password"
+                value={user.password}
             />
             <InputField
                 inputType="password"
                 label="Confirm Password"
+                onChange={handlePasswordConfirmChange}
+                inputName="passwordConfirm"
+                value={passwordConfirm}
             />
             </form>
             <Button buttonText="CREATE ACCOUNT" />
