@@ -4,6 +4,8 @@ import InputField from "../../components/InputField/InputField";
 import Button from "../../components/Button/Button";
 import BackButton from "../../components/BackButton/BackButton";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
 
 const CreateAccount = ({auth}) => {
     const [page, setPage] = useState(1);
@@ -25,7 +27,7 @@ const CreateAccount = ({auth}) => {
           console.log('Success')
           const user = userCredential.user;
           // ...
-          setUserEmail(user.email)
+          setUser(previousState => ({...previousState, email: user.email}));
         })
         .catch((error) => {
           const errorCode = error.code;
