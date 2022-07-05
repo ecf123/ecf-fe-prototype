@@ -10,7 +10,7 @@ const Carousel = props => {
     const [currentIndex, setCurrentIndex] = useState(0)
     const [length, setLength] = useState(children.length)
 
-    // Set the length to match current children from props
+    //Set the length to match current children from props
     useEffect(() => {
         setLength(children.length)
     }, [children])
@@ -30,6 +30,18 @@ const Carousel = props => {
             return
         }
     
+        const next = () => {
+            if (currentIndex < (length - 1)) {
+                setCurrentIndex(prevState => prevState + 1)
+            }
+        }
+        
+        const prev = () => {
+            if (currentIndex > 0) {
+                setCurrentIndex(prevState => prevState - 1)
+            }
+        }
+
         const currentTouch = e.touches[0].clientX
         const diff = touchDown - currentTouch
     
@@ -44,21 +56,23 @@ const Carousel = props => {
         setTouchPosition(null)
     }
 
+    
 
 
     return (
         <div className="carousel-container">
             <div className="carousel-wrapper" >
-            <button className="left-arrow">&lt;</button>
+            <button  onClick={prev} className="left-arrow">&lt;</button>
                 <div className="carousel-content-wrapper" 
                 onTouchStart={handleTouchStart} 
                 onTouchMove={handleTouchMove}>
                      
-                    <div className="carousel-content">
+                    <div className="carousel-content"
+                    style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
                         {children}
                     </div>
                 </div>
-                <button className="right-arrow">&gt;</button>
+                <button onClick={next} className="right-arrow">&gt;</button>
             </div>
         </div>
     )
