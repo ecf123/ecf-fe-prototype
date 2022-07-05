@@ -11,10 +11,46 @@ import Article from "./containers/Article/Article";
 import Marketplace from "./containers/Marketplace/Marketplace";
 
 const App = () => {
+  const handleOnClick = () => {
+    console.log("Clicked");
+  };
+
   return (
-    <div className="App">
-      <div></div>
-    </div>
+    <Router>
+      <div className="App">
+        <SearchContainer title="Pathways" pathwaysLink="/library" />
+        <Button
+          buttonText="START PATHWAYS"
+          buttonType="submit"
+          isSecondary={false}
+          onClickButton={handleOnClick}
+        />
+        <Button
+          buttonText="SIGN IN"
+          buttonType="submit"
+          isSecondary={true}
+          onClickButton={handleOnClick}
+        />
+        <Routes>
+          <Route exact path="/" element={<Home userProfile={userProfile} />} />
+          <Route path="/library" element="" />
+          <Route
+            path="/pathway"
+            element={<Pathway userProfile={userProfile} />}
+          />
+          <Route path="/profile" element={<Profile />} />
+          <Route
+            path="/market-place"
+            element={<Marketplace userProfile={userProfile} />}
+          />
+          <Route
+            path="/article"
+            element={<Article userProfile={userProfile} />}
+          />
+        </Routes>
+        <Navigation />
+      </div>
+    </Router>
   );
 };
 
