@@ -28,22 +28,9 @@ const CreateAccount = () => {
         console.log(event);
     }
 
-    // const handleSubmit = (event) => {
-    //     event.preventDefault();
-    //     createUserWithEmailAndPassword(auth, email, password)
-    //     .then((userCredential) => {
-    //       console.log('Success')
-    //       const user = userCredential.user;
-    //       // ...
-    //       setUserEmail(user.email)
-    //     })
-    //     .catch((error) => {
-    //       const errorCode = error.code;
-    //       const errorMessage = error.message;
-    //       // ..
-    //       console.log(errorMessage);
-    //     });
-    //   }
+    const handlePasswordConfirmChange = (event) => {
+      setPasswordConfirm(event.target.value);
+    }
 
 
     return (
@@ -70,7 +57,7 @@ const CreateAccount = () => {
                 value={user.lastName}
               />
             </form>
-            <Button buttonText="NEXT" buttonType={"submit"} onClickButton={() => {saveName(); nextPage()}} />
+            <Button buttonText="NEXT" buttonType={"submit"} onClickButton={() => {nextPage()}} />
         </>
         ) : (
         <>
