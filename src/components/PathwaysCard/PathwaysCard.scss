@@ -12,7 +12,7 @@
 
   &__content {
     &-header {
-      @include heading3Regular;
+      @include heading3;
       color: $primary-color-navy;
       padding: 14px 0 0 20px;
       margin: 0;

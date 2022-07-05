@@ -9,6 +9,7 @@ import Button from "./components/Button/Button";
 import Pathway from "./containers/Pathway/Pathway";
 import Article from "./containers/Article/Article";
 import Marketplace from "./containers/Marketplace/Marketplace";
+import Carousel from "./components/Carousel/Carousel";
 
 const App = () => {
   const handleOnClick = () => {
@@ -31,6 +32,11 @@ const App = () => {
         isSecondary={true}
         onClickButton={handleOnClick}
       />
+      <Carousel>
+    <img src="https://placekitten.com/100/100" alt="placeholder" />
+    <img src="https://placekitten.com/100/100" alt="placeholder" />
+    <img src="https://placekitten.com/100/100" alt="placeholder" />
+      </Carousel>
         <Routes>
           <Route exact path="/" element={<Home userProfile={userProfile} />}/>
           <Route  path="/library" element="" />

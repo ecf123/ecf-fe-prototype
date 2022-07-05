@@ -4,42 +4,64 @@ import PathwaysCard from "../PathwaysCard/PathwaysCard";
 
 
 const Carousel = props => {
-    const { imagesArr } = props;
-    const [counter, setCounter] = useState(0);
-  
-    const handleIncrement = () => {
-      if (counter === imagesArr.length - 1) {
-        setCounter(0);
-      } else {
-        setCounter(counter + 1);
-      }
-    };
-  
-    const handleDecrement = () => {
-      if (counter === 0) {
-        setCounter(imagesArr.length - 1);
-      } else {
-        setCounter(counter - 1);
-      }
-    };
-  
+    const {children} = props
+    const [touchPosition, setTouchPosition] = useState(null)
+    
+    const [currentIndex, setCurrentIndex] = useState(0)
+    const [length, setLength] = useState(children.length)
+
+    // Set the length to match current children from props
+    useEffect(() => {
+        setLength(children.length)
+    }, [children])
+
+
+
+
+    const handleTouchStart = (e) => {
+        const touchDown = e.touches[0].clientX
+        setTouchPosition(touchDown)
+    }
+
+    const handleTouchMove = (e) => {
+        const touchDown = touchPosition
+    
+        if(touchDown === null) {
+            return
+        }
+    
+        const currentTouch = e.touches[0].clientX
+        const diff = touchDown - currentTouch
+    
+        if (diff > 5) {
+            next()
+        }
+    
+        if (diff < -5) {
+            prev()
+        }
+    
+        setTouchPosition(null)
+    }
+
+
+
     return (
-      <div className="carousel">
-        <img
-          src={leftArrow}
-          alt="left arrow"
-          onClick={handleDecrement}
-          className="carousel__arrow carousel__arrow--left"
-        />
-        <img src={PathwaysCard[counter]} alt="" className="carousel__image" />
-        <img
-          src={rightArrow}
-          alt="right arrow"
-          onClick={handleIncrement}
-          className="carousel__arrow carousel__arrow--right"
-        />
-      </div>
-    );
-  };
+        <div className="carousel-container">
+            <div className="carousel-wrapper" >
+            <button className="left-arrow">&lt;</button>
+                <div className="carousel-content-wrapper" 
+                onTouchStart={handleTouchStart} 
+                onTouchMove={handleTouchMove}>
+                     
+                    <div className="carousel-content">
+                        {children}
+                    </div>
+                </div>
+                <button className="right-arrow">&gt;</button>
+            </div>
+        </div>
+    )
+}
 
 export default Carousel
