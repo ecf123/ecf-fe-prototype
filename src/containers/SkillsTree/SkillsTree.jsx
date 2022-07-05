@@ -1,4 +1,5 @@
 import React from "react";
+import "./../../assets/data/dummySkillsMap";
 import {
   SkillTreeGroup,
   SkillTree,
@@ -9,10 +10,10 @@ import {
 
 // /pathways/:pathwayId/skills-tree
 
-const SkillsTree = () => {
+const SkillsTree = (props) => {
+  const data = [];
   return (
     <div>
-      <p>Hello</p>
       <SkillProvider>
         <SkillTreeGroup>
           {({ skillCount }) => (
