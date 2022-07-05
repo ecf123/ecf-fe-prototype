@@ -4,12 +4,14 @@ import InputField from "../../components/InputField/InputField";
 import Button from "../../components/Button/Button";
 import BackButton from "../../components/BackButton/BackButton";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
-
-
+import { initializeApp } from "firebase/app";
+import { getAuth } from "firebase/auth";
 
 const CreateAccount = () => {
-    // const { accountMessage } = props;
     const [page, setPage] = useState(1);
+    const [userEmail, setUserEmail] = useState(null);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
     const [user, setUser] = useState({firstName:"", lastName:"", email:"", password:""});
     const [passwordConfirm, setPasswordConfirm] = useState("");
 
