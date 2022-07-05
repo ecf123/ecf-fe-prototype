@@ -1,0 +1,31 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/reset" as *;
+@use "../../assets/sass/mixins" as *;
+
+.article-card {
+    border-bottom: 2px solid black;
+    display: flex;
+    justify-content: center;
+    padding: 15px 20px 20px 5px;
+    height: 75px;
+
+    &__image {
+        width: 75px;
+        height: 50px;
+    }
+
+    &__text {
+        border: 2px solid red;
+        width: 75%;
+        margin-right: 10px;
+        margin-left: 10px;
+
+        &--top {
+            @include heading2;
+        }
+
+        &--bottom {
+            @include heading3;
+        }
+    }
+}
