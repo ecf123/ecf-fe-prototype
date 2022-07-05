@@ -10,6 +10,7 @@ import Pathway from "./containers/Pathway/Pathway";
 import Article from "./containers/Article/Article";
 import Marketplace from "./containers/Marketplace/Marketplace";
 import Splash from "./containers/Splash/Splash";
+import SignIn from "./containers/SignIn/SignIn.jsx"
 
 const App = () => {
   const handleOnClick = () => {
@@ -42,6 +43,7 @@ const App = () => {
           <Route path="/profile" element={<Profile/>} />
           <Route path="/market-place" element={<Marketplace userProfile={userProfile} />}/>
           <Route path="/article" element={<Article userProfile={userProfile} />}/>
+          <Route path="/sign-in" element={<SignIn welcomeMessage = "Welcome"/>} /> 
         </Routes>
         {/* <Navigation/> */}
       </div>
