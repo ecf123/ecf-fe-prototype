@@ -4,7 +4,6 @@ import lessonData from "../../assets/data/dummyLessonData";
 import challengeData from "../../assets/data/dummyChallengeData";
 import PlayIcon from "../../assets/images/play-icon.svg";
 import Assignment from "../../assets/images/library-icon.svg";
-import Redo from "../../assets/images/redo.svg";
 import "./CourseOverviewList.scss";
 
 const CourseOverviewList = ({ title, category }) => {
@@ -18,9 +17,11 @@ const CourseOverviewList = ({ title, category }) => {
     return (
       <CourseOverviewListItem
         image={imageSrc}
+        id={index}
         key={index}
         title={item.title}
         duration={item.duration}
+        category={category}
       />
     );
   });
@@ -35,9 +36,11 @@ const CourseOverviewList = ({ title, category }) => {
     return (
       <CourseOverviewListItem
         image={imageSrc}
+        id={index}
         key={index}
         title={item.title}
         duration={item.duration}
+        category={category}
       />
     );
   });
@@ -56,7 +59,7 @@ const CourseOverviewList = ({ title, category }) => {
   return (
     <div>
       <h1 className="list-container__title">{title}</h1>
-      <div>{lessonJSX}</div>
+      <div>{displayJSX()}</div>
     </div>
   );
 };
