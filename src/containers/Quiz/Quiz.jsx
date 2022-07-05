@@ -1,6 +1,6 @@
 import React from 'react'
 
-// path: /courses/:courseId/:lessonId/quiz
+// path: /quiz/:quizId
 
 const Quiz = () => {
   return (

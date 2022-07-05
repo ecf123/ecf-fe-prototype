@@ -1,6 +1,6 @@
 import React from 'react'
 
-// path: /courses/:courseId/:lessonId
+// path: /lesson/:lessonId
 
 const LessonOverview = () => {
   return (

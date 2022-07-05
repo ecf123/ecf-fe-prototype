@@ -5,7 +5,7 @@ import Button from "../../components/Button/Button";
 import BackButton from "../../components/BackButton/BackButton";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
 
-// path: sign-in/
+// path: /sign-in
 
 const SignIn = (props) => {
   const { welcomeMessage } = props;
