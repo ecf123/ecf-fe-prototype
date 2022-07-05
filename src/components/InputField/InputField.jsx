@@ -2,7 +2,7 @@ import React from "react";
 import "./InputField.scss";
 
 const InputField = (props) => {
-  const { inputName, inputType, placeholder, label, onChange } = props;
+  const { inputName, inputType, placeholder, label, onChange, value } = props;
   return (
     <div className="input">
       <label className="input__label" htmlFor={inputName}>
@@ -14,6 +14,7 @@ const InputField = (props) => {
         name={inputName}
         placeholder={placeholder}
         onChange={onChange}
+        value={value}
       />
     </div>
   );
