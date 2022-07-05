@@ -22,7 +22,7 @@ const CourseOverview = () => {
       <div className="course-overview__filters" onClick={handleCategoryChange}>
         Dummy filter section. Click here to switch to challenges.
       </div>
-      <div className="course-overview__list">
+      <div data-testid="course-overview-list" className="course-overview__list">
         <CourseOverviewList
           title={capitalisedNames(category)}
           category={category}
