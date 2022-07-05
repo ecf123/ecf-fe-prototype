@@ -1,7 +1,7 @@
 import "./App.scss";
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "./containers/Home/Home";
-import Navigation from './components/Navigation/Navigation';
+import Navigation from "./components/Navigation/Navigation";
 import Profile from "./containers/Profile/Profile";
 import userProfile from "./assets/data/dummyUserData";
 import SearchContainer from "./containers/SearchContainer/SearchContainer";
@@ -14,12 +14,12 @@ import Carousel from "./components/Carousel/Carousel";
 const App = () => {
   const handleOnClick = () => {
     console.log("Clicked");
-  }
+  };
 
   return (
     <Router>
       <div className="App">
-      <SearchContainer title="Pathways" pathwaysLink="/library" />
+      <SearchContainer title="Pathways" />
       <Button
         buttonText="START PATHWAYS"
         buttonType="submit"
@@ -38,12 +38,12 @@ const App = () => {
     <img src="https://placekitten.com/100/100" alt="placeholder" />
       </Carousel>
         <Routes>
-          <Route exact path="/" element={<Home userProfile={userProfile} />}/>
-          <Route  path="/library" element="" />
-          <Route  path="/pathway" element={<Pathway userProfile={userProfile}/>} />
-          <Route  path="/profile" element={<Profile/>} />
-          <Route path="/market-place" element={<Marketplace userProfile={userProfile} />}/>
-          <Route path="/article" element={<Article userProfile={userProfile} />}/>
+          <Route exact path="/" element={<Home userProfile={userProfile} />} />
+          <Route path="/library" element="" />
+          <Route path="/pathway" element={<Pathway userProfile={userProfile} />} />
+          <Route path="/profile" element={<Profile />} />
+          <Route path="/market-place" element={<Marketplace userProfile={userProfile} />} />
+          <Route path="/article" element={<Article userProfile={userProfile} />} />
         </Routes>
         <Navigation/>
       </div>
