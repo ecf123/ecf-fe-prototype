@@ -2,7 +2,8 @@ import React from "react";
 import CourseOverviewListItem from "../../components/CourseOverviewListItem/CourseOverviewListItem";
 import lessonData from "../../assets/data/dummyLessonData";
 import challengeData from "../../assets/data/dummyChallengeData";
-//import PlayIcon from "../"
+import PlayIcon from "../../assets/images/business-icon.svg";
+import Assignment from "../../assets/images/library-icon.svg";
 import Redo from "../../assets/images/redo.svg";
 import "./CourseOverviewList.scss";
 
@@ -34,6 +35,8 @@ const CourseOverviewList = ({ title, category }) => {
       CourseOverviewList
       <h1 className="list-container__title">{title}</h1>
       <div>{lessonJSX}</div>
+      <img src={PlayIcon} alt="" />
+      <img src={Assignment} alt="" />
     </div>
   );
 };
