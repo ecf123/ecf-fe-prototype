@@ -1,9 +1,10 @@
-import SkillsTree from "./containers/SkillsTree/SkillsTree";
+import "./App.scss";
+import Routing from "./containers/Routing/Routing";
 
 const App = () => {
   return (
     <div className="App">
-      <SkillsTree/>
+      <Routing />
     </div>
   );
 };
