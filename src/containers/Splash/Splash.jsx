@@ -12,16 +12,20 @@ const Splash = () => {
   return (
     <div className='splash-container'>
         <img className='splash-container__img' src={GraduationImage} alt="Graduation" />
-        <h1 className='splash-container__title'>Welcome to the Future Hub</h1>
-        <p className='splash-container__sub-title'>Lorem, ipsum dolor sit amet consec</p>
-        <Button buttonText="CREATE AN ACCOUNT"
-        buttonType="submit"
-        isSecondary={false}/>
-        <Link to="/sign-in">
-        <Button buttonText="SIGN IN"
-        buttonType="submit"
-        isSecondary={true}/>
-        </Link>
+        <div className='splash-container__'>
+          <h1 className='splash-container__title'>Welcome to the Future Hub</h1>
+          <p className='splash-container__sub-title'>Lorem, ipsum dolor sit amet consec</p>
+        </div>
+        <div className='splash-container__buttons'>
+          <Button buttonText="CREATE AN ACCOUNT"
+          buttonType="submit"
+          isSecondary={false}/>
+          <Link to="/sign-in">
+            <Button buttonText="SIGN IN"
+            buttonType="submit"
+            isSecondary={true}/>
+          </Link>
+        </div>
     </div>
   )
 }
