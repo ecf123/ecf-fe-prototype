@@ -12,7 +12,13 @@ const SkillsTree = () => {
   return (
     <SkillProvider>
       <SkillTreeGroup>
-        
+      <SkillTree
+        treeId="first-tree"
+        title="Skill Tree"
+        data={data}
+        collapsible
+        description="My first skill tree"
+      />
       </SkillTreeGroup>
     </SkillProvider>
   )
