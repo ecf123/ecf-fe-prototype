@@ -1,12 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import Splash from "../../containers/Splash/Splash";
-import { customRender } from "../../testing-utility/Testing-utility";
+import { customRender } from "../../test-utilities/test-utilities";
 import BackButton from "./BackButton";
 
 describe("initial test for back button", () => {
     it("should render button", () => {
-        render(<BackButton />);
+        customRender(<BackButton linkTo="/"/>);
         const button = screen.getByRole("button");
         expect(button).toBeInTheDocument()
         expect(button).not.toBeNull()
