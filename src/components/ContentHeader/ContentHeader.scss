@@ -1,0 +1,37 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+
+.content-header {
+
+    display: flex;
+        justify-content: space-between;
+        align-content: center;
+        width: 90vw;
+
+    &__heading {
+        font-size: $font-size-medium;
+        color: $primary-color-navy;
+        font-family: $primary-font-family;
+        text-align: left;
+        width: 90vw;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+    }
+
+    &__anchor {
+        font-size: $font-size-small;
+        color: $primary-color-lilac;
+        text-decoration: underline;
+        text-underline-offset: 5px;
+        $font-family: $primary-font-family;
+        width: 100px;
+        margin-top: 7px;
+        margin-bottom: 0px;
+        padding-bottom: 0px;
+
+        &:hover {
+            color: $primary-color-navy;
+        }
+    }
+}
