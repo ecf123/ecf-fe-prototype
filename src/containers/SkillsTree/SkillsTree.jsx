@@ -1,26 +1,11 @@
 import React from 'react'
-import {
-  SkillTreeGroup,
-  SkillTree,
-  SkillProvider,
-  SkillType,
-  SkillGroupDataType,
-} from 'beautiful-skill-tree';
+
+// /pathways/:pathwayId/skills-tree
 
 const SkillsTree = () => {
-  const data = [];
+  
   return (
-    <SkillProvider>
-      <SkillTreeGroup>
-      <SkillTree
-        treeId="first-tree"
-        title="Skill Tree"
-        data={data}
-        collapsible
-        description="My first skill tree"
-      />
-      </SkillTreeGroup>
-    </SkillProvider>
+    <div>SkillsTree</div>
   )
 }
 
