@@ -2,6 +2,8 @@ import React from 'react'
 import "./Home.scss"
 import WelcomeHeader from '../../components/WelcomeHeader/WelcomeHeader'
 
+// path: /
+
 const Home = ({ userProfile }) => {
   
     return (
