@@ -10,10 +10,8 @@ import SocialLogin from "../../components/SocialLogin/SocialLogin";
 const CreateAccount = () => {
     // const { accountMessage } = props;
     const [page, setPage] = useState(1);
-    const [userEmail, setUserEmail] = useState(null);
-    const [email, setEmail] = useState('');
-    const [password, setPassword] = useState('');
-    const [user, setUser] = useState({name:"", email:"", password:""})
+    const [user, setUser] = useState({firstName:"", lastName:"", email:"", password:""});
+    const [passwordConfirm, setPasswordConfirm] = useState("");
 
     const previousPage = () => {
         setPage(1);
@@ -23,9 +21,25 @@ const CreateAccount = () => {
         setPage(2);
     }
 
-    const saveName = (event) => {
-        // event.preventDefault();
-        console.log(event);
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        createUserWithEmailAndPassword(auth, user.email, user.password)
+        .then((userCredential) => {
+          console.log('Success')
+          const user = userCredential.user;
+          // ...
+          setUserEmail(user.email)
+        })
+        .catch((error) => {
+          const errorCode = error.code;
+          const errorMessage = error.message;
+          // ..
+          console.log(errorMessage);
+        });
+      }
+
+    const handleInputChange = (event) => {
+      setUser(previousState => ({...previousState, [event.target.name]: event.target.value}));
     }
 
     const handlePasswordConfirmChange = (event) => {
