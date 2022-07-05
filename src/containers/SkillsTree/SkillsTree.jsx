@@ -8,10 +8,13 @@ import {
   SkillGroupDataType,
 } from "beautiful-skill-tree";
 
+const dummySkills = dummySkillsMap.js;
+
 // /pathways/:pathwayId/skills-tree
 
 const SkillsTree = (props) => {
   const data = [];
+  console.log(data);
   return (
     <div>
       <SkillProvider>
