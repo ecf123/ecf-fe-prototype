@@ -10,6 +10,10 @@ import SocialLogin from "../../components/SocialLogin/SocialLogin";
 const CreateAccount = () => {
     // const { accountMessage } = props;
     const [page, setPage] = useState(1);
+    const [userEmail, setUserEmail] = useState(null);
+    const [email, setEmail] = useState('');
+    const [password, setPassword] = useState('');
+    const [user, setUser] = useState({name:"", email:"", password:""})
 
     const previousPage = () => {
         setPage(1);
@@ -18,6 +22,29 @@ const CreateAccount = () => {
     const nextPage = () => {
         setPage(2);
     }
+
+    const saveName = (event) => {
+        // event.preventDefault();
+        console.log(event);
+    }
+
+    // const handleSubmit = (event) => {
+    //     event.preventDefault();
+    //     createUserWithEmailAndPassword(auth, email, password)
+    //     .then((userCredential) => {
+    //       console.log('Success')
+    //       const user = userCredential.user;
+    //       // ...
+    //       setUserEmail(user.email)
+    //     })
+    //     .catch((error) => {
+    //       const errorCode = error.code;
+    //       const errorMessage = error.message;
+    //       // ..
+    //       console.log(errorMessage);
+    //     });
+    //   }
+
 
     return (
       <div className="register-user">
@@ -37,7 +64,7 @@ const CreateAccount = () => {
                 placeholder="Last Name"
               />
             </form>
-            <Button buttonText="NEXT" onClickButton={nextPage} />
+            <Button buttonText="NEXT" buttonType={"submit"} onClickButton={() => {saveName(); nextPage()}} />
         </>
         ) : (
         <>
