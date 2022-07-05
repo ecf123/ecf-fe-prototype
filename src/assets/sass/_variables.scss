@@ -9,8 +9,11 @@ $primary-color-navy:#3B5165;
 $secondary-color-light-green: #EFFEFB;
 $secondary-color-light-cream: #FBFBFB;
 $secondary-color-lilac: #BCC6CC;
+$secondary-color-dark-grey: #3E464C;
+$secondary-color-grey:#7A7A7A;
 $white-color: white;
 $black-color: black;
+
 
 // FONTS
 
@@ -19,15 +22,16 @@ $secondary-font-family: 'Inter', sans-serif;
 
 // Font sizes
 
-$font-size-extra-large: 2rem;
-$font-size-large: 1.125rem;
-$font-size-medium: 1rem;
-$font-size-small: 0.8rem;
+$font-size-extra-extra-large: 40px; // 2.5 rem
+$font-size-extra-large: 32px; // 2 rem
+$font-size-large: 28px; // 1.75rem
+$font-size-medium: 24px; // 1.5rem
+$font-size-small: 16px; // 1rem
+$font-size-extra-small: 12.8px; // 0.8 rem
 
 // Font weight
 
 $font-weight-regular: 400;
-$font-weight-medium: 500;
 $font-weight-bold:700;
 
 //Letter-spacing
