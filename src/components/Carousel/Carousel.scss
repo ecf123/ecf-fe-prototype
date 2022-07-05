@@ -1,6 +1,7 @@
 .carousel {
   display: flex;
   overflow-x: auto;
+  padding-left: 30px;
 
   &::-webkit-scrollbar {
     width: 0;
