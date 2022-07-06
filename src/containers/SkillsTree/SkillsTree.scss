@@ -1,0 +1,12 @@
+.skills-tree {
+    display: flex;
+    flex-direction: column;
+
+    &__level {
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        justify-content: center;
+    }
+}

@@ -1,0 +1,21 @@
+@use "../../assets/sass/mixins" as *;
+@use "../../assets/sass/variables" as *;
+
+
+.node {
+    background-color: white;
+    border-radius: 40px;
+    width: 76px;
+    height: 76px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__image {
+        width: 50%
+    }
+
+    &--locked {
+        
+    }
+}

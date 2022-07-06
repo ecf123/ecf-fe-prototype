@@ -1,17 +1,27 @@
 import React from "react";
 import { useState } from "react";
+import "./SkillsTreeNode.scss";
+
 
 const SkillsTreeNode = (props) => {
-  const { image, title, description, link } = props;
+  const { image, title, description, link, locked, id} = props;
   const [displayPopUp, setDisplayPopUp] = useState(false);
 
   const toggleDisplayPopUp = () => {
     setDisplayPopUp(!displayPopUp);
   };
+
   return (
     <div>
-      Lots of really important text
-      <img src={image} alt={title} />
+      
+        {locked 
+          ? <div className="node node--locked">
+              <img  className="node__image" src={image} alt={title} />
+            </div>
+          : <div className="node">
+              <img  className="node__image" src={image} alt={title} />
+            </div>}
+      
       {displayPopUp && <div>Interesting text</div>}
     </div>
   );
