@@ -30,7 +30,7 @@ const CreateAccount = ({ auth }) => {
         console.log('Success')
         const user = userCredential.user;
         setUser(previousState => ({ ...previousState, email: user.email }));
-        navigate("/");
+        navigate("/home");
       })
       .catch((error) => {
         const errorCode = error.code;
@@ -99,6 +99,7 @@ const CreateAccount = ({ auth }) => {
             <InputField
               inputType="password"
               label="Confirm Password"
+              placeholder="Confirm Password"
               onChange={handlePasswordConfirmChange}
               inputName="passwordConfirm"
               value={passwordConfirm}
