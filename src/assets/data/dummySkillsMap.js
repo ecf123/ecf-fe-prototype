@@ -1,4 +1,3 @@
-import { SkillType } from "beautiful-skill-tree";
 import barclays from "../images/barclays.svg";
 import hsbc from "../images/hsbc.svg";
 import goldmanSachs from "../images/goldman-sachs.svg";
@@ -6,53 +5,39 @@ import halifax from "../images/halifax.svg";
 import santander from "../images/santander.svg";
 import play from "../images/play.svg";
 
-export const data: SkillType = [
+export const data = [
   {
     id: "play",
     title: "play",
     icon: play,
-    tooltip: {
-      content:
-        "Lorem ipsum dolor sit amet. Ut quia recusandae et ipsam sint ea dolores facilis sit nihil quia.",
-    },
+
     children: [
       {
         id: "barclays",
         title: "Barclays",
         icon: barclays,
         nodeState: "unlocked",
-        tooltip: {
-          content:
-            "Lorem ipsum dolor sit amet. Ut quia recusandae et ipsam sint ea dolores facilis sit nihil quia.",
-        },
+
         children: [
           {
             id: "goldman sachs",
             icon: goldmanSachs,
             title: "Goldman Sachs",
-            tooltip: {
-              content:
-                "Lorem ipsum dolor sit amet. Ut quia recusandae et ipsam sint ea dolores facilis sit nihil quia.",
-            },
+
             children: [],
           },
           {
             id: "hsbc",
             icon: hsbc,
             title: "HSBC",
-            tooltip: {
-              content:
-                "Lorem ipsum dolor sit amet. Ut quia recusandae et ipsam sint ea dolores facilis sit nihil quia.",
-            },
+
             children: [
               {
                 id: "santander",
                 icon: santander,
+                nodeState: "unlocked",
                 title: "Santander",
-                tooltip: {
-                  content:
-                    "Lorem ipsum dolor sit amet. Ut quia recusandae et ipsam sint ea dolores facilis sit nihil quia.",
-                },
+
                 children: [],
               },
             ],
@@ -60,11 +45,9 @@ export const data: SkillType = [
           {
             id: "halifax",
             icon: halifax,
+            nodeState: "unlocked",
             title: "Halifax",
-            tooltip: {
-              content:
-                "Lorem ipsum dolor sit amet. Ut quia recusandae et ipsam sint ea dolores facilis sit nihil quia.",
-            },
+
             children: [],
           },
         ],
