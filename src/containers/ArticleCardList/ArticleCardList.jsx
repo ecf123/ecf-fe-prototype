@@ -1,24 +1,30 @@
-import React from 'react';
-import ArticleCard from '../../components/ArticleCard/ArticleCard';
+import React from "react";
+import { useState } from "react";
+import ArticleCard from "../../components/ArticleCard/ArticleCard";
 
-const ArticleCardList = ({articleInfo}) => {
+const ArticleCardList = ({ articleInfo }) => {
+  const [isActive, setIsActive] = useState(false);
 
-
-  const buttonPressed = (event) => {
-    console.log(event.target.className);
-    event.target.className += " article-card__button--active"
-  }
-
+  const onSaveButtonPress = (event) => {
+    setIsActive(!isActive);
+    isActive
+      ? (event.target.className += " save-button--active")
+      : (event.target.className = "save-button--save");
+  };
 
   const articleCardJSX = articleInfo.map((article, index) => {
-    return <ArticleCard handleBookmarkPress={buttonPressed} key={index} thumbnail={article.thumbnail} category={article.category} title={article.title}/> 
-  })
+    return (
+      <ArticleCard
+        handleSaveButtonPress={onSaveButtonPress}
+        key={index}
+        thumbnail={article.thumbnail}
+        category={article.category}
+        title={article.title}
+      />
+    );
+  });
 
-  return (
-    <>
-    {articleCardJSX}
-    </>
-  )
-}
+  return <div data-testid = "article-card-component">{articleCardJSX}</div>;
+};
 
-export default ArticleCardList
+export default ArticleCardList;
