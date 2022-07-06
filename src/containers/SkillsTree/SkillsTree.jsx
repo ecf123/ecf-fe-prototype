@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import Xarrow from "react-xarrows";
 import SkillsTreeNode from "../../components/SkillsTreeNode/SkillsTreeNode";
 import { data } from "./../../assets/data/dummySkillsMap";
 import "./SkillsTree.scss"
@@ -18,14 +18,22 @@ const SkillsTree = (props) => {
   getNodes(data[0], 0)
 
   const getNodeJsx = (node) => {
-    const {icon, title, locked, description, link, id} = node;
-    return <SkillsTreeNode key={id} image={icon} title={title} link={link} locked={locked} description={description}/>
+    const {icon, title, locked, description, link, id, parentId} = node;
+    console.log(title + " " + parentId);
+    return <div>
+        <SkillsTreeNode id={id} key={id} image={icon} title={title} link={link} locked={locked} description={description}/>
+        {parentId && <Xarrow start={id} end={parentId} />}
+        
+      </div>
+    
   }
 
   const getLevelJsx = (level) => {
     let levelJsx = <div className="skills-tree__level">
       {level.map((node) => {
-        return <div className="skills-tree__level">{getNodeJsx(node)}</div>})}
+        return getNodeJsx(node)
+        })
+      }
     </div>
     return levelJsx
   }

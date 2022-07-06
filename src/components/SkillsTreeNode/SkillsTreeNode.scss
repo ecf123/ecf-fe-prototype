@@ -10,12 +10,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 0 10px white;
 
     &__image {
         width: 50%
     }
 
     &--locked {
-        
+        box-shadow:none;
+        border: white 3px solid;
+        background-color: transparent;
+
     }
 }

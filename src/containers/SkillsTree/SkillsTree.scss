@@ -3,10 +3,10 @@
     flex-direction: column;
 
     &__level {
-        margin: 10px;
+        margin-top: 80px;
         display: flex;
         flex-direction: row;
         width: 100%;
-        justify-content: center;
+        justify-content: space-around;
     }
 }
