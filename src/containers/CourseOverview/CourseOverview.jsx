@@ -4,18 +4,14 @@ import "./CourseOverview.scss";
 import MenuBar from "../../components/MenuBar/MenuBar";
 
 const CourseOverview = () => {
-  const [category, setCategory] = useState("lesson");
+  const [category, setCategory] = useState("lessons");
 
   const capitalisedNames = (name) => {
     return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
   };
 
-  const handleCategoryChange = () => {
-    if (category === "lesson") {
-      setCategory("challenge");
-    } else {
-      setCategory("lesson");
-    }
+  const handleCategoryChange = (event) => {
+    setCategory(event.target.innerText.toLowerCase());
   };
 
   return (
@@ -23,10 +19,9 @@ const CourseOverview = () => {
       <div className="course-overview__content">
         <div
           className="course-overview__filters"
-          onClick={handleCategoryChange}
         >
           <MenuBar
-            link1="Lesson"
+            link1="Lessons"
             link2="Challenges"
             link3="Additional Info"
             onClickLink={handleCategoryChange}

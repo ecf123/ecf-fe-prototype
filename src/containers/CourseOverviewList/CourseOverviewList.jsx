@@ -47,11 +47,11 @@ const CourseOverviewList = ({ title, category }) => {
   });
 
   const displayJSX = () => {
-    if (category === "lesson") {
+    if (category === "lessons") {
       return lessonJSX;
-    } else if (category === "challenge") {
+    } else if (category === "challenges") {
       return challengeJSX;
-    } else if (category === "additional") {
+    } else if (category === "additional info") {
       // This is to be replaced once the format for additional information is know.
       return null;
     }

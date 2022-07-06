@@ -20,11 +20,11 @@ const CourseOverviewListItem = ({ image, title, duration, id, category }) => {
   };
 
   const setPath = () => {
-    if (category === "lesson") {
+    if (category === "lessons") {
       return "/lesson/:lessonId";
-    } else if (category === "challenge") {
+    } else if (category === "challenges") {
       return "/challenge/:challengeId";
-    } else if (category === "additional") {
+    } else if (category === "additional info") {
       return "/";
     }
   };
