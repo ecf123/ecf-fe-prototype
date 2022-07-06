@@ -11,6 +11,7 @@ import card from "../../assets/data/dummyPathwayData";
 const PathwaysCard = () => {
   const {header, topics, image} = card;
 
+  // percentage is a prop of circular progress bar
   const percentage = 80;
 
   return (
