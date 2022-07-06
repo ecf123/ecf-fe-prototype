@@ -1,0 +1,46 @@
+@use "../../assets/sass/mixins.scss" as *;
+@use "../../assets/sass/variables" as *;
+
+.splash-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+
+  &__img{
+    width: 75%;
+
+  }
+
+  &__buttons{
+    width: 75%;
+    height: 17%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__titles{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 20%;
+    max-height: 150px;
+
+    &__main-title{
+      @include heading1;
+      font-size: 45px;
+      width: 85%;
+      
+    }
+
+    &__sub-title{
+      color: $secondary-color-lilac;
+    }
+
+  }
+
+}
