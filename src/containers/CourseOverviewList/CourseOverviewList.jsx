@@ -35,6 +35,7 @@ const CourseOverviewList = ({ title, category }) => {
     }
     return (
       <CourseOverviewListItem
+        data-testid="course-list-items"
         image={imageSrc}
         id={index}
         key={index}
@@ -58,8 +59,8 @@ const CourseOverviewList = ({ title, category }) => {
 
   return (
     <div>
-      <h1 className="list-container__title">{title}</h1>
-      <div>{displayJSX()}</div>
+      <h1 data-testid="course-list-heading" className="list-container__title">{title}</h1>
+      <div data-testid="course-list-items">{displayJSX()}</div>
     </div>
   );
 };

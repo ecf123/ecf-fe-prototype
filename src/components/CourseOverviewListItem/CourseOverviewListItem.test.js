@@ -48,4 +48,21 @@ describe("initial tests for course overview list item", () => {
       expect(img).not.toBeNull();
     });
   });
+
+  it("all list item description renders on the page", () => {
+    customRender(
+      <CourseOverviewListItem
+        image={Redo}
+        title="Currency Risk Management"
+        duration="10 minutes"
+        id={1}
+        category="lesson"
+      />
+    );
+    const duration = screen.getByTestId("course-list-duration");
+
+      expect(duration).toBeInTheDocument();
+      expect(duration).not.toBeNull();
+      expect(duration).toHaveTextContent("10 minutes");
+  });
 });

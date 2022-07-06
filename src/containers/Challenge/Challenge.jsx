@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
+import "./Challenge.scss";
 
-// path: /quiz/:quizId
+// path: /challenge/:challengeId
 
-const Quiz = () => {
-  return (
-    <div>Quiz</div>
-  )
-}
+const Challenge = () => {
+    return <div>Challenge</div>;
+};
 
-export default Quiz
+export default Challenge;
