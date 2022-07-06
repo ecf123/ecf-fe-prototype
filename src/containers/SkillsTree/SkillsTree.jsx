@@ -1,5 +1,5 @@
 import React from "react";
-import "./../../assets/data/dummySkillsMap";
+import {data} from "./../../assets/data/dummySkillsMap";
 import {
   SkillTreeGroup,
   SkillTree,
@@ -8,14 +8,20 @@ import {
   SkillGroupDataType,
 } from "beautiful-skill-tree";
 
-// /pathways/:pathwayId/skills-tree
+
 
 const SkillsTree = (props) => {
-  const data = [];
+  const theme = {
+    borderRadius: "50px",
+    border: "none",
+    treeBackgroundColor: "none",
+    nodeBackgroundColor: "white",
+    nodeActiveBackgroundColor: "white"
+  };
   return (
     <div>
       <SkillProvider>
-        <SkillTreeGroup>
+        <SkillTreeGroup theme={theme}>
           {({ skillCount }) => (
             <SkillTree
               treeId="first-tree"

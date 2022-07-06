@@ -14,7 +14,7 @@ import SignIn from "../SignIn/SignIn";
 import Splash from "../Splash/Splash";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
-import SkillsTree from "../SkillsTree/SkillsTree";
+import SkillsTreePage from "../SkillsTreePage/SkillsTreePage";
 import Quiz from "../Quiz/Quiz";
 
 const Routing = () => {
@@ -37,7 +37,7 @@ const Routing = () => {
         />
         <Route
           path="/pathways/:pathwayId/skills-tree"
-          element={<SkillsTree />}
+          element={<SkillsTreePage />}
         />
 
         <Route path="/splash" element={<Splash />} />
