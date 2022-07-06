@@ -1,4 +1,4 @@
-import { screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import { customRender } from "../../test-utilities/test-utilities";
 import userEvent from "@testing-library/user-event";
 import Navigation from "./Navigation";
@@ -13,6 +13,7 @@ describe("initial render test", () => {
 
     it("should render the icons in the navigation", () => {
         customRender(<Navigation />)
+        
         const icons = screen.getAllByRole("img");
         icons.forEach(icon => {
             expect(icon).toBeInTheDocument();

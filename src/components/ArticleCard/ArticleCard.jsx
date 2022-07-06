@@ -11,7 +11,7 @@ const ArticleCard = ({
 }) => {
   return (
     <div key={index} className="article-card">
-      <img className="article-card__image" src={thumbnail} alt={category} />
+      <img data-testid="thumbnail" className="article-card__image" src={thumbnail} alt={category} />
       <div className="article-card__text">
         <h3 className="article-card__text--top">{category}</h3>
         <h2 className="article-card__text--bottom">{title}</h2>
