@@ -1,11 +1,9 @@
 import React from 'react';
 import ArticleCardList from '../ArticleCardList/ArticleCardList';
-import articleInfo from '../../assets/data/dummyArticleCardInformation';
-
 
 // path: /articles
 
-const Articles = () => {
+const Articles = ({articleInfo}) => {
   return (
     <div><ArticleCardList articleInfo={articleInfo}/></div>
   )

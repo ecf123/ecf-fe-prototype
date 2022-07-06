@@ -16,6 +16,7 @@ import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTree from "../SkillsTree/SkillsTree";
 import Quiz from "../Quiz/Quiz";
+import articleInfo from "../../assets/data/dummyArticleCardInformation";
 
 const Routing = () => {
   return (
@@ -48,7 +49,7 @@ const Routing = () => {
 
         <Route
           path="/articles"
-          element={<Articles userProfile={userProfile} />}
+          element={<Articles userProfile={userProfile} articleInfo={articleInfo}/>}
         />
         <Route path="/articles/:articleId" element={<ArticleIndex />} />
 

@@ -1,30 +1,24 @@
 import React from "react";
-import { useState } from "react";
 import ArticleCard from "../../components/ArticleCard/ArticleCard";
+import { Link } from "react-router-dom";
 
 const ArticleCardList = ({ articleInfo }) => {
-  const [isActive, setIsActive] = useState(false);
-
-  const onSaveButtonPress = (event) => {
-    setIsActive(!isActive);
-    isActive
-      ? (event.target.className += " save-button--active")
-      : (event.target.className = "save-button--save");
-  };
-
   const articleCardJSX = articleInfo.map((article, index) => {
     return (
+      // <Link to={"/articles/" + article.id}>
       <ArticleCard
-        handleSaveButtonPress={onSaveButtonPress}
         key={index}
         thumbnail={article.thumbnail}
         category={article.category}
         title={article.title}
+        isActive={article.isActive}
+        id={article.id}
       />
+      // </Link>
     );
   });
 
-  return <div data-testid = "article-card-component">{articleCardJSX}</div>;
+  return <div data-testid="article-card-component">{articleCardJSX}</div>;
 };
 
 export default ArticleCardList;
