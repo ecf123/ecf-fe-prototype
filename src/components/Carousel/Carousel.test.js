@@ -8,4 +8,10 @@ describe("testing functionality of carousel", () => {
     const carousel = screen.getByTestId("carousel");
     expect(carousel).toBeInTheDocument();
   });
+
+  it("should render the carousel item on the page", () => {
+    customRender(<Carousel />);
+    const carouselItem = screen.getByTestId("carousel__item");
+    expect(carouselItem).toBeInTheDocument();
+  });
 });
