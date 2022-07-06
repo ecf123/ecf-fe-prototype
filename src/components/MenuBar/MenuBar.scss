@@ -16,5 +16,9 @@
 }
 
 .active {
-  text-decoration: underline;
+  //   text-decoration: underline;
+  //   text-decoration-color: $primary-color-green;
+  //   text-decoration-line: underline;
+  border-bottom: 3px $primary-color-green solid;
+  padding-bottom: 18px;
 }
