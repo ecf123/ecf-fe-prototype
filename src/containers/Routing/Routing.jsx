@@ -16,6 +16,7 @@ import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTree from "../SkillsTree/SkillsTree";
 import Quiz from "../Quiz/Quiz";
+import { auth } from "../../firebase";
 
 const Routing = () => {
   return (
@@ -42,7 +43,7 @@ const Routing = () => {
 
         <Route path="/splash" element={<Splash />} />
         <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/create-account" element={<CreateAccount />} />
+        <Route path="/create-account" element={<CreateAccount auth={auth} />} />
 
         <Route path="/" element={<Home userProfile={userProfile} />} />
 
