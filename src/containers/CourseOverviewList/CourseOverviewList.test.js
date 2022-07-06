@@ -1,10 +1,12 @@
-import {render, screen} from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import CourseOverviewList from "./CourseOverviewList";
+import { customRender } from "../../test-utilities/test-utilities";
 
-
-it('renders on the page', () => {
-    render(<CourseOverviewList />)
-    const list = screen.getByTestId("course-overview-list");
-    expect(list).toBeInTheDocument();
-})
+describe("initial tests for course overview list container", () => {
+  it("title renders on the page", () => {
+    customRender(<CourseOverviewList />);
+    const title = screen.getByRole("heading");
+    expect(title).toBeInTheDocument();
+  });
+});

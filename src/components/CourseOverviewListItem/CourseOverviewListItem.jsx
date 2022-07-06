@@ -23,25 +23,26 @@ const CourseOverviewListItem = ({ image, title, duration, id, category }) => {
     if (category === "lesson") {
       return "/lesson/:lessonId";
     } else if (category === "challenge") {
-      return "/quiz/:quizId";
+      return "/challenge/:challengeId";
     } else if (category === "additional") {
       return "/";
     }
   };
 
   return (
-    <Link to={setPath()} style={{ textDecoration: "none" }}>
-      <div
-        data-testid="course-list-item"
-        id={id}
-        className="list-item"
-        onClick={handleClick}
-      >
+    <Link
+      data-testid="course-list-item"
+      to={setPath()}
+      style={{ textDecoration: "none" }}
+    >
+      <div id={id} className="list-item" onClick={handleClick}>
         <div className="list-item__icon-container">
           <img className="list-item__icon" src={setImage()} alt="" />
         </div>
         <div className="list-item__content">
-          <h1 className="list-item__title">{title}</h1>
+          <h1 data-testid="course-list-title" className="list-item__title">
+            {title}
+          </h1>
           <div className="list-item__duration">
             <img className="list-item__duration--icon" src={ClockIcon} alt="" />
             <h2 className="list-item__duration--heading">{duration}</h2>
