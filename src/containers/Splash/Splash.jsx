@@ -2,14 +2,11 @@ import React from 'react'
 import "./Splash.scss"
 import GraduationImage from "../../assets/images/graduation.png"
 import Button from '../../components/Button/Button';
-
-
 import {Link} from 'react-router-dom';
 
 // path: /splash
 
 const Splash = () => {
-
   return (
     <div className='splash-container'>
         <img className='splash-container__img' src={GraduationImage} alt="Graduation" />
