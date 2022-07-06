@@ -4,7 +4,7 @@ import SaveButton from '../SaveButton/SaveButton';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const ArticleCard = ({ thumbnail, category, title, index, isActive, id }) => {
+const ArticleCard = ({ thumbnail, category, title, key, isActive, id }) => {
   const [isPressed, setIsPressed] = useState(isActive);
 
   const onSaveButtonPress = () => {
@@ -18,7 +18,7 @@ const ArticleCard = ({ thumbnail, category, title, index, isActive, id }) => {
   };
 
   return (
-    <div className="article-card">
+    <div className="article-card" key={key}>
       <div className="article-card__content" onClick={navigateToArticle}>
         <img
           data-testid="thumbnail"
