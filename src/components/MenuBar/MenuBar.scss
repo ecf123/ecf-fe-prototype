@@ -1,0 +1,16 @@
+@use "../../assets/sass/variables" as *;
+.menu-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid #f3f3f3;
+  border-radius: 23px;
+  height: 63px;
+  &__link {
+    font-size: $font-size-extra-small;
+    font-weight: $font-weight-bold;
+    font-family: $secondary-font-family;
+    color: #44435e;
+    margin: 0.5em;
+  }
+}
