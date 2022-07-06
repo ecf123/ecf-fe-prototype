@@ -2,4 +2,10 @@
 
 .skills-tree-page {
     background-color: $primary-color-green;
+    
+    &__heading {
+        text-align: center;
+        color: $white-color;
+    }
+
 }

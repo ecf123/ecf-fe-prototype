@@ -1,6 +1,7 @@
 import Xarrow from "react-xarrows";
 import SkillsTreeNode from "../../components/SkillsTreeNode/SkillsTreeNode";
 import { data } from "./../../assets/data/dummySkillsMap";
+import React, {useRef} from "react";
 import "./SkillsTree.scss"
 
 const SkillsTree = (props) => {

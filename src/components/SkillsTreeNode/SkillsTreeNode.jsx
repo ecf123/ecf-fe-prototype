@@ -14,7 +14,6 @@ const SkillsTreeNode = (props) => {
 
   return (
     <div>
-      
         {locked 
           ? <div className="node node--locked">
             <img  className="node__image" src={lock} alt="locked" />
@@ -22,8 +21,8 @@ const SkillsTreeNode = (props) => {
             </div>
           : <div className="node">
               <img  className="node__image" src={image} alt={title} />
-            </div>}
-      
+            </div>
+        }
       {displayPopUp && <div>Interesting text</div>}
     </div>
   );

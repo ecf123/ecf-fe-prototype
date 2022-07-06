@@ -7,7 +7,7 @@ import "./SkillsTreePage.scss";
 const SkillsTreePage = () => {
   return (
     <div className="skills-tree-page">
-        <h1>Financial Forest</h1>
+        <h1 className="skills-tree-page__heading">Financial Forest</h1>
         <SkillsTree/>
     </div>
   )
