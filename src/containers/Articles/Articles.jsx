@@ -3,10 +3,12 @@ import ArticleCardList from '../ArticleCardList/ArticleCardList';
 
 // path: /articles
 
-const Articles = ({articleInfo}) => {
+const Articles = ({ articleInfo }) => {
   return (
-    <div><ArticleCardList articleInfo={articleInfo}/></div>
-  )
-}
+    <div>
+      <ArticleCardList articleInfo={articleInfo} />
+    </div>
+  );
+};
 
-export default Articles
+export default Articles;

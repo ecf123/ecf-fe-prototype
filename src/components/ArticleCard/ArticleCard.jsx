@@ -1,8 +1,8 @@
-import React from "react";
-import "./ArticleCard.scss";
-import SaveButton from "../SaveButton/SaveButton";
-import { useState } from "react";
-import { Link } from "react-router-dom";
+import React from 'react';
+import './ArticleCard.scss';
+import SaveButton from '../SaveButton/SaveButton';
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const ArticleCard = ({ thumbnail, category, title, index, isActive, id }) => {
   const [isPressed, setIsPressed] = useState(isActive);
@@ -11,9 +11,15 @@ const ArticleCard = ({ thumbnail, category, title, index, isActive, id }) => {
     setIsPressed(!isPressed);
   };
 
+  const navigate = useNavigate();
+
+  const navigateToArticle = () => {
+    navigate('/articles/' + id);
+  };
+
   return (
-    // <Link href={"/articles/" + id} key={index}>
-      <div className="article-card">
+    <div className="article-card">
+      <div className="article-card__content" onClick={navigateToArticle}>
         <img
           data-testid="thumbnail"
           className="article-card__image"
@@ -24,12 +30,12 @@ const ArticleCard = ({ thumbnail, category, title, index, isActive, id }) => {
           <h3 className="article-card__text--top">{category}</h3>
           <h2 className="article-card__text--bottom">{title}</h2>
         </div>
-        <SaveButton
-          handleSaveButtonPress={onSaveButtonPress}
-          isPressed={isPressed}
-        />
       </div>
-    // </Link>
+      <SaveButton
+        handleSaveButtonPress={onSaveButtonPress}
+        isPressed={isPressed}
+      />
+    </div>
   );
 };
 
