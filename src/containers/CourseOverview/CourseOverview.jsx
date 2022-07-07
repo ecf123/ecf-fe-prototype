@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import CourseOverviewList from "../CourseOverviewList/CourseOverviewList";
 import "./CourseOverview.scss";
 
+// path: /courses/:courseId
+
 const CourseOverview = () => {
   const [category, setCategory] = useState("lesson");
 
