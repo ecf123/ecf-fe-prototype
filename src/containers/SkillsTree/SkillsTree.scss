@@ -1,10 +1,13 @@
+@use "../../assets/sass/variables" as *;
+
 .skills-tree {
     display: flex;
     flex-direction: column;
     position: relative;
 
     &__level {
-        margin-top: 117px;
+        margin-top: 58px;
+        margin-bottom: 58px;
         display: flex;
         flex-direction: row;
         width: 100%;

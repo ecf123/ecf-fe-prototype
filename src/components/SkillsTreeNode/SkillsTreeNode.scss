@@ -10,21 +10,20 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 30px $white-color;
+    box-shadow: 0 0 20px 5px $white-color;
     position: relative;
     margin: 0px;
+    z-index: 1;
 
-    svg {
-        box-shadow: 0 0 30px $white-color;
-    }
+    
 
     &__image {
-        width: 40%
+        width: 45%
     }
 
     &--locked {
         box-shadow: none;
         border: rgba($color: $white-color, $alpha: 0.5) 3px solid;
-        background-color: transparent;
+        background-color: $primary-color-green;
     }
 }
