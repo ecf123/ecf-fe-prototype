@@ -1,6 +1,7 @@
 import React from 'react';
 import ArticleCardList from '../ArticleCardList/ArticleCardList';
 
+
 // path: /articles
 
 const Articles = ({ articleInfo }) => {
