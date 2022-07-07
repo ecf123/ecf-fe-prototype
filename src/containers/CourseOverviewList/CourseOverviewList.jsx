@@ -2,46 +2,34 @@ import React from "react";
 import CourseOverviewListItem from "../../components/CourseOverviewListItem/CourseOverviewListItem";
 import lessonData from "../../assets/data/dummyLessonData";
 import challengeData from "../../assets/data/dummyChallengeData";
-import PlayIcon from "../../assets/images/play-icon.svg";
-import Assignment from "../../assets/images/library-icon.svg";
+
 import "./CourseOverviewList.scss";
 
 const CourseOverviewList = ({ title, category }) => {
   const challengeJSX = challengeData.map((item, index) => {
-    let imageSrc = "";
-    if (item.type === "video") {
-      imageSrc = PlayIcon;
-    } else {
-      imageSrc = Assignment;
-    }
+
     return (
       <CourseOverviewListItem
-        image={imageSrc}
         id={index}
         key={index}
         title={item.title}
         duration={item.duration}
         category={category}
+        type={item.type}
       />
     );
   });
 
   const lessonJSX = lessonData.map((item, index) => {
-    let imageSrc = "";
-    if (item.type === "video") {
-      imageSrc = PlayIcon;
-    } else {
-      imageSrc = Assignment;
-    }
     return (
       <CourseOverviewListItem
         data-testid="course-list-items"
-        image={imageSrc}
         id={index}
         key={index}
         title={item.title}
         duration={item.duration}
         category={category}
+        type={item.type}
       />
     );
   });

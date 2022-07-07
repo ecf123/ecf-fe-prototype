@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import ClockIcon from "../../assets/images/clock-icon.svg";
 import "./CourseOverviewListItem.scss";
 import Redo from "../../assets/images/redo.svg";
+import PlayIcon from "../../assets/images/play-icon.svg";
+import Assignment from "../../assets/images/library-icon.svg";
 import { Link } from "react-router-dom";
 
-const CourseOverviewListItem = ({ image, title, duration, id, category }) => {
+const CourseOverviewListItem = ({ title, duration, id, category, type }) => {
   const [completed, setCompleted] = useState(false);
 
   const handleClick = () => {
@@ -14,8 +16,10 @@ const CourseOverviewListItem = ({ image, title, duration, id, category }) => {
   const setImage = () => {
     if (completed === true) {
       return Redo;
+    } else if (type === "video") {
+      return PlayIcon;
     } else {
-      return image;
+      return Assignment;
     }
   };
 
