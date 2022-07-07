@@ -1,0 +1,7 @@
+@use "../../assets/sass/variables" as *;
+
+.course-overview {
+    &__list {
+        margin: 1em 3em;
+    }
+}
