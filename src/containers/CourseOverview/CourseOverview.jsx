@@ -3,6 +3,8 @@ import CourseOverviewList from "../CourseOverviewList/CourseOverviewList";
 import "./CourseOverview.scss";
 import MenuBar from "../../components/MenuBar/MenuBar";
 
+// path: /courses/:courseId
+
 const CourseOverview = () => {
   const [category, setCategory] = useState("lessons");
 
