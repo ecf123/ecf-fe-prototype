@@ -16,6 +16,7 @@ import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTree from "../SkillsTree/SkillsTree";
 import Challenge from "../Challenge/Challenge";
+import articleData from '../../assets/data/dummyArticles'
 
 const Routing = () => {
   return (
@@ -47,7 +48,7 @@ const Routing = () => {
           path="/articles"
           element={<Articles userProfile={userProfile} />}
         />
-        <Route path="/articles/:articleId" element={<ArticleIndex />} />
+        <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleData} />} />
 
         <Route path="/courses/:courseId" element={<CourseOverview />} />
         <Route path="/lesson/:lessonId" element={<LessonOverview />} />

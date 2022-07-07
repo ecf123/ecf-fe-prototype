@@ -5,16 +5,19 @@ import "./ArticleIndexHeading.scss";
 
 const ArticleIndexHeading = ({ articleArray }) => {
   const { articleId } = useParams();
+  console.log(articleId)
 
-  const pickedArticle = articleArray.filter((article) => {
-    if (articleId === article.id) {
+  const pickedArticle = articleArray.filter(article => {
+    console.log(article.id);
+    if (articleId == article.id) {
+      console.log(article)
       return article;
     }
   });
 
   return (
     <article className="article-index-card">
-      <h1 className="article-index-card__title">{pickedArticle.title}</h1>
+      <h1 className="article-index-card__title">{pickedArticle[0].title}</h1>
       <div className="article-index-card__info">
         <p>
           <img
@@ -22,9 +25,9 @@ const ArticleIndexHeading = ({ articleArray }) => {
             src={bookIcon}
             alt="book icon"
           />
-          {pickedArticle.readTime}
+          {pickedArticle[0].readTime}
         </p>
-        <p className="article-index-card__info__date">{pickedArticle.date}</p>
+        <p className="article-index-card__info__date">{pickedArticle[0].date}</p>
       </div>
     </article>
   );
