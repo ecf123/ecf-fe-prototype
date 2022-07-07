@@ -24,11 +24,13 @@ const CourseOverviewListItem = ({ title, duration, id, category, type }) => {
   };
 
   const setPath = () => {
-    if (category === "lesson") {
-      return "/lesson/" + id;
-    } else if (category === "challenge") {
-      return "/challenge/" + id;
+    if (category === "lessons") {
+      return `/lesson/${id}`;
+    } else if (category === "challenges") {
+      return `/challenge/${id}`;
     } else if (category === "additional") {
+      return "/";
+    } else {
       return "/";
     }
   };

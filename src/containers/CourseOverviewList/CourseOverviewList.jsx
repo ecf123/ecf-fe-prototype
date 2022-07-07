@@ -7,7 +7,6 @@ import "./CourseOverviewList.scss";
 
 const CourseOverviewList = ({ title, category }) => {
   const challengeJSX = challengeData.map((item, index) => {
-
     return (
       <CourseOverviewListItem
         id={index}
@@ -47,7 +46,9 @@ const CourseOverviewList = ({ title, category }) => {
 
   return (
     <div>
-      <h1 data-testid="course-list-heading" className="list-container__title">{title}</h1>
+      <h1 data-testid="course-list-heading" className="list-container__title">
+        {title}
+      </h1>
       <div data-testid="course-list-items">{displayJSX()}</div>
     </div>
   );
