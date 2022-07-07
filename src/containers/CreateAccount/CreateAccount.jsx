@@ -80,7 +80,7 @@ const CreateAccount = ({ auth }) => {
         </>
       ) : (
         <>
-          <BackButton onClick={previousPage} />
+          <BackButton onClick={previousPage} linkTo="" />
           <h2 className="register-user__title">Create An Account</h2>
           <form className="register-user__inputs--pageTwo" onSubmit={handleSubmit}>
             <InputField
