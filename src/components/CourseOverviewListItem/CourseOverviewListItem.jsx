@@ -21,9 +21,9 @@ const CourseOverviewListItem = ({ image, title, duration, id, category }) => {
 
   const setPath = () => {
     if (category === "lesson") {
-      return "/lesson/:lessonId";
+      return "/lesson/"+id;
     } else if (category === "challenge") {
-      return "/challenge/:challengeId";
+      return "/challenge/"+id;
     } else if (category === "additional") {
       return "/";
     }
