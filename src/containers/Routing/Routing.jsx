@@ -15,7 +15,7 @@ import Splash from "../Splash/Splash";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTree from "../SkillsTree/SkillsTree";
-import Quiz from "../Quiz/Quiz";
+// import Quiz from "../Quiz/Quiz";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
 import Challenge from "../Challenge/Challenge";
 
