@@ -33,7 +33,7 @@ const CourseOverviewListItem = ({ image, title, duration, id, category }) => {
     <Link
       data-testid="course-list-item"
       to={setPath()}
-      style={{ textDecoration: "none" }}
+      className="list-item__link"
     >
       <div id={id} className="list-item" onClick={handleClick}>
         <div className="list-item__icon-container">
