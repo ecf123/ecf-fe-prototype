@@ -9,6 +9,7 @@ describe("testing functionality of carousel", () => {
     expect(carousel).toBeInTheDocument();
   });
 
+  // testing the item appears
   it("should render the carousel item on the page", () => {
     customRender(<Carousel />);
     const carouselItem = screen.getByTestId("carousel__item");
