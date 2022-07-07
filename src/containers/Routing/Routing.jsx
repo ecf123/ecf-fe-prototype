@@ -17,6 +17,7 @@ import Articles from "../Articles/Articles";
 import SkillsTree from "../SkillsTree/SkillsTree";
 import Quiz from "../Quiz/Quiz";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
+import Challenge from "../Challenge/Challenge";
 
 const Routing = () => {
   return (
@@ -32,10 +33,7 @@ const Routing = () => {
         />
 
         <Route path="/pathways" element={<PathwaysMenu />} />
-        <Route
-          path="/pathways/:pathwayId"
-          element={<PathwayOverview />}
-        />
+        <Route path="/pathways/:pathwayId" element={<PathwayOverview />} />
         <Route
           path="/pathways/:pathwayId/skills-tree"
           element={<SkillsTree />}
@@ -55,7 +53,7 @@ const Routing = () => {
 
         <Route path="/courses/:courseId" element={<CourseOverview />} />
         <Route path="/lesson/:lessonId" element={<LessonOverview />} />
-        <Route path="/quiz/:quizId" element={<Quiz />} />
+        <Route path="/challenge/:challengeId" element={<Challenge />} />
 
         <Route path="/profile" element={<Profile />} />
       </Routes>
