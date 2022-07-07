@@ -8,7 +8,7 @@ const Carousel = () => {
       <div className="carousel__item">
         <PathwaysCard />
       </div>
-      <div className="carousel__item">
+      <div className="carousel__item" data-testid="carousel__item">
         <PathwaysCard />
       </div>
       <div className="carousel__item">
