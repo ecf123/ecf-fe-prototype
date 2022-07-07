@@ -20,17 +20,21 @@ const SkillsTree = (props) => {
 
   const getNodeJsx = (node) => {
     const {icon, title, locked, description, link, id, parentId} = node;
-    console.log(title + " " + parentId);
-    return <div>
-        <SkillsTreeNode id={id} key={id} image={icon} title={title} link={link} locked={locked} description={description}/>
-        {parentId && <Xarrow start={id} end={parentId} />}
-        
+    console.log(id + " " + parentId);
+    return <div key={id}>
+        <SkillsTreeNode id={id} image={icon} title={title} link={link} locked={locked} description={description}/>
+        {parentId &&
+          (locked
+            ? <Xarrow start={id} end={parentId} startAnchor="top" color="white" strokeWidth={3} showHead={false} path="grid" animateDrawing={false}/>
+            : <Xarrow start={id} end={parentId} startAnchor="top" color="white" strokeWidth={6} showHead={false} path="grid" animateDrawing={false}/>
+          )
+        }
       </div>
     
   }
 
-  const getLevelJsx = (level) => {
-    let levelJsx = <div className="skills-tree__level">
+  const getLevelJsx = (level, index) => {
+    let levelJsx = <div className="skills-tree__level" key={"level-" + index}>
       {level.map((node) => {
         return getNodeJsx(node)
         })
@@ -39,13 +43,17 @@ const SkillsTree = (props) => {
     return levelJsx
   }
 
-  const levelsJsx = levels.map((level) => {
-    return getLevelJsx(level);
+  const levelsJsx = levels.map((level, index) => {
+    return getLevelJsx(level, index);
   })
 
   return (
     <div className="skills-tree">
       {levelsJsx}
+      <div id="start">Start Box</div>
+      <p>hi</p>
+      <p>hi</p>
+      <div id="end">End Box</div>
     </div>
   );
 };

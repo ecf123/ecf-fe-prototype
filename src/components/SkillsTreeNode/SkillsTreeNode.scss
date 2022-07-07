@@ -10,11 +10,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 0 20px $white-color;
+    box-shadow: 0 0 30px $white-color;
     position: relative;
+    margin: 0px;
+
+    svg {
+        box-shadow: 0 0 30px $white-color;
+    }
 
     &__image {
-        width: 45%
+        width: 40%
     }
 
     &--locked {
