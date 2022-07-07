@@ -1,0 +1,50 @@
+@use "../../assets/sass/variables" as *;
+
+.list-item {
+  height: 80px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+
+  margin: 1.5em 0;
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__icon {
+    margin: 1em;
+  }
+  &__content {
+    margin: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &__title {
+    font-size: $font-size-extra-small;
+    font-family: $secondary-font-family;
+    font-weight: $font-weight-bold;
+    color: $primary-color-navy;
+    margin-bottom: 0.25em;
+  }
+  &__duration {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  &__duration--icon {
+    margin-right: 0.4em;
+  }
+  &__duration--heading {
+    font-size: $font-size-extra-small;
+    font-family: $secondary-font-family;
+    font-weight: $font-weight-regular;
+    color: $primary-color-blue-gray;
+  }
+}
