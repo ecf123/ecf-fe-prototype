@@ -1,0 +1,9 @@
+@use "../../assets/sass/variables" as *;
+.list-container {
+  &__title {
+    font-size: $font-size-small;
+    font-family: $secondary-font-family;
+    font-weight: $font-weight-bold;
+    color: $primary-color-navy;
+  }
+}
