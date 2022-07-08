@@ -6,7 +6,7 @@ import PathwaysMenu from "../PathwaysMenu/PathwaysMenu";
 import Marketplace from "../Marketplace/Marketplace";
 import CourseOverview from "../CourseOverview/CourseOverview";
 import ArticleIndex from "../ArticleIndex/ArticleIndex";
-import React from "react";
+import React, {useState} from "react";
 import LessonOverview from "../LessonOverview/LessonOverview";
 import MarketplaceIndex from "../MarketplaceIndex/MarketplaceIndex";
 import PathwayOverview from "../PathwayOverview/PathwayOverview";
@@ -19,6 +19,13 @@ import { auth } from "../../firebase";
 import Challenge from "../Challenge/Challenge";
 
 const Routing = () => {
+
+  const [user, setUser] = useState({ firstName: "", lastName: "", email: "", password: "" });
+  
+  const handleInputChange = (event) => {
+    setUser(previousState => ({ ...previousState, [event.target.name]: event.target.value }));
+  }
+
   return (
     <Router>
       <Routes>
@@ -40,7 +47,7 @@ const Routing = () => {
 
         <Route path="/splash" element={<Splash />} />
         <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/create-account" element={<CreateAccount auth={auth} />} />
+        <Route path="/create-account" element={<CreateAccount auth={auth} user={user} handleInputChange={handleInputChange} setUser={setUser} />} />
 
         <Route path="/" element={<Home userProfile={userProfile} />} />
 
