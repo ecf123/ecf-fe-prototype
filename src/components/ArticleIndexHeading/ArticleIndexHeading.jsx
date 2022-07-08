@@ -17,16 +17,10 @@ const ArticleIndexHeading = ({ articleArray }) => {
 
   return (
     <article className="article-index-card">
-      <h1 className="article-index-card__title">{pickedArticle[0].title}</h1>
+      <h1 data-testid="article-heading" className="article-index-card__title">{pickedArticle[0].title}</h1>
       <div className="article-index-card__info">
-        <p>
-          <img
-            className="article-index-card__info__time"
-            src={bookIcon}
-            alt="book icon"
-          />
-          {pickedArticle[0].readTime}
-        </p>
+        <img className="article-index-card__info__img" src={bookIcon} alt="book icon"/>
+        <p className="article-index-card__info__time">{pickedArticle[0].readTime}</p>
         <p className="article-index-card__info__date">{pickedArticle[0].date}</p>
       </div>
     </article>
