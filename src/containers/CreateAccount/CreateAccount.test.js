@@ -3,7 +3,7 @@ import CreateAccount from "./CreateAccount";
 import { waitFor, screen, render } from '@testing-library/react';
 import { customRender } from "../../test-utilities/test-utilities";
 import Splash from "../../containers/Splash/Splash";
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, MemoryRouter, BrowserRouter } from "react-router-dom";
 
 describe("should sign up a new user", () => {
 
@@ -59,28 +59,58 @@ describe("should sign up a new user", () => {
     //     });
     // });
 
-    it("should add a new user", () => {
-        customRender(
-              <Routes>
-                <Route path="/" element={<CreateAccount />} />
-                <Route path="/home" element={<Splash />} />
-              </Routes>
-          );
-
-          userEvent.click(screen.getByText("CREATE AN ACCOUNT"))
+    it("should add a new user", async () => {
+        render(
+          <MemoryRouter initialEntries={["/create-account"]}>
+            <Routes>
+              <Route path="/create-account" element={<CreateAccount />} />
+              <Route path="/" element={<Splash />} />
+            </Routes>
+          </MemoryRouter>
+        )
 
         // first screen
-        userEvent.type(screen.getByPlaceholderText("First Name"), "Test");
-        userEvent.type(screen.getByPlaceholderText("Last Name"), "McTest");
-        userEvent.click(screen.getByText("NEXT"));
+        const firstNameInput = screen.getByPlaceholderText("First Name");
+        const lastNameInput = screen.getByPlaceholderText("Last Name");
+
+        userEvent.type(firstNameInput, "Test");
+        userEvent.type(lastNameInput, "McTest");
+        userEvent.click(screen.getAllByRole("button")[1]);
 
         // second screen
-        userEvent.type(screen.getByPlaceholderText("you@example.com"), "test@gmail.com");
-        userEvent.type(screen.getByPlaceholderText("Your password"), "password");
-        userEvent.type(screen.getByPlaceholderText("Confirm Password"), "password");
+        const emailInput = screen.getByPlaceholderText("you@example.com");
+        const passwordInput = screen.getByPlaceholderText("Your password");
+        const confirmPasswordInput = screen.getByPlaceholderText("Confirm Password");
 
-        userEvent.click(screen.getByText("CREATE ACCOUNT"));
+        userEvent.type(emailInput, "test@gmail.com");
+        userEvent.type(passwordInput, "password");
+        userEvent.type(confirmPasswordInput, "password");
 
-        expect(screen.getByText("Ellie Laken")).toBeInTheDocument(); 
-    })
-})
+        userEvent.click(screen.getAllByRole("button")[1]);
+
+        await waitFor(() => {
+          const splashTitle = screen.getByText("Welcome to the Future Hub");
+          expect(splashTitle).toBeInTheDocument();
+        });
+
+        //Cleaning up by deleting test user for future tests
+
+        // await waitFor(() => {
+        //   let headersList = {
+        //     "Accept": "*/*",
+        //     "Content-Type": "application/json"
+        //   };
+              
+        //   let bodyContent = JSON.stringify({
+        //     "idToken": response.idToken
+        //   });
+          
+        //   return fetch("https://identitytoolkit.googleapis.com/v1/accounts:delete?key=AIzaSyDqFVYVthpIozXOTZXcLrt-nSzxJPfaZWY", { 
+        //     method: "POST",
+        //     body: bodyContent,
+        //     headers: headersList
+        //   });
+        // });
+    });
+
+});
