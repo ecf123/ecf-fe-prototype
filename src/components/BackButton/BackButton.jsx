@@ -10,7 +10,7 @@ const BackButton = (props) => {
     return (
         <div className='back'>
             <Link to={linkTo}>
-                <button className='back__button'>
+                <button className='back__button' onClick={onClick}>
                     <img src={BackButtonArrow} alt="back arrow" />
                 </button>
             </Link>
