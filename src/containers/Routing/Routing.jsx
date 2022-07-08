@@ -15,12 +15,8 @@ import Splash from "../Splash/Splash";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTree from "../SkillsTree/SkillsTree";
-<<<<<<< HEAD
-import Quiz from "../Quiz/Quiz";
 import { auth } from "../../firebase";
-=======
 import Challenge from "../Challenge/Challenge";
->>>>>>> abefd194c344bc586d8bf0f9055539940947e5f5
 
 const Routing = () => {
   return (
