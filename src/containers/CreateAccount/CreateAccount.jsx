@@ -30,21 +30,21 @@ const CreateAccount = ({ auth }) => {
   }
 
   const handleSubmit = (event) => {
-    console.log("fire")
     event.preventDefault();
+    console.log("fire")
+    console.log(`Email: ${user.email}. Password: ${user.password}`);
     createUserWithEmailAndPassword(auth, user.email, user.password)
       .then((userCredential) => {
         console.log('Success')
         const user = userCredential.user;
         setUser(previousState => ({ ...previousState, email: user.email }));
-        navigate("/home");
+        navigate("/");
       })
       .catch((error) => {
         const errorCode = error.code;
         const errorMessage = error.message;
-        console.log(errorMessage);
+        console.log(errorCode + ' ' + errorMessage);
       });
-
   }
 
   const handleInputChange = (event) => {
