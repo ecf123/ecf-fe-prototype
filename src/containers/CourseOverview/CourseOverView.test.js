@@ -1,22 +1,26 @@
-import { screen, fireEvent } from "@testing-library/react";
+import { screen, fireEvent, renderHook } from "@testing-library/react";
 import { customRender } from "../../test-utilities/test-utilities";
 import userEvent from "@testing-library/user-event";
-import CourseOverview from "./CourseOverview"
+import CourseOverview from "./CourseOverview";
+import CourseOverviewList from "../CourseOverviewList/CourseOverviewList";
+import MenuBar from "../../components/MenuBar/MenuBar";
+import handleCategoryChange from "./CourseOverview";
+import React from "react";
 
-describe("test for the filter functionality", () => {
-    it("Should change heading after uses click on a different category", () => {
-        customRender(<CourseOverview />);
 
-        const links = screen.getAllByTestId("menu-bar-onClinkLink");
-        
-        // userEvent.click(links[1]);
-        userEvent.click(links[1]);
-        
-
-        const listHeading = screen.getByTestId("course-list-heading");
-
-        expect(listHeading).toHaveTextContent("Lessons")
-
+describe("initial tests for course overview list container", () => {
+    it("Should render correct links", () => {
+        customRender(<CourseOverview >
+            <CourseOverviewList>
+                <MenuBar
+            link1="Lessons"
+            link2="Challenges"
+            link3="Additional Info"
+            onClickLink={handleCategoryChange}
+        />
+        </CourseOverviewList>
+        </CourseOverview>);
+        const links = screen.getAllByTestId("menu-bar-onClinkLink"); 
         expect(links.length).toBe(3);
         expect(links[0]).toHaveTextContent("Lessons")
         expect(links[1]).toHaveTextContent("Challenges")
