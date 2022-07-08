@@ -17,9 +17,13 @@ const CreateAccount = ({ auth }) => {
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const navigate = useNavigate();
 
-  const previousPage = () => {
+  const switchPage = () => {
+    if (page === 1) {
+      setPage(2)
+    } else {
     setPage(1);
   }
+  };
 
   const nextPage = () => {
     setPage(2);
