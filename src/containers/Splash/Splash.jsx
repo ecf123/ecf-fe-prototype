@@ -15,17 +15,10 @@ const Splash = () => {
           <p className='splash-container__titles__sub-title'>Lorem, ipsum dolor sit amet consec</p>
         </div>
         <div className='splash-container__buttons'>
-<<<<<<< HEAD
-          <Link to="/create-account">
-            <Button buttonText="CREATE AN ACCOUNT"
-            buttonType="submit"
-            isSecondary={false}/>
-=======
         <Link to="/create-account">
           <Button buttonText="CREATE AN ACCOUNT"
           buttonType="submit"
           isSecondary={false}/>
->>>>>>> abefd194c344bc586d8bf0f9055539940947e5f5
           </Link>
           <Link to="/sign-in">
             <Button buttonText="SIGN IN"
