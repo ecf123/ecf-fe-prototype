@@ -1,11 +1,16 @@
 @use "../../assets/sass/variables" as *;
 
 .skills-tree-page {
-    background-color: $primary-color-green;
-    
-    &__heading {
-        text-align: center;
-        color: $white-color;
-    }
+  background-color: $primary-color-green;
 
+  &__heading {
+    text-align: center;
+    color: $white-color;
+    margin-top: 15px;
+  }
+
+  &__back-button {
+    padding-left: 20px;
+    padding-top: 20px;
+  }
 }

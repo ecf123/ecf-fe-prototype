@@ -41,21 +41,21 @@ const SkillsTree = () => {
               path="grid"
               gridBreak="100%"
               animateDrawing={false}
-              SVGcanvasProps={{ strokeOpacity: "50%", }}
+              SVGcanvasProps={{ strokeOpacity: "50%" }}
             />
           ) : (
-              <Xarrow
-                start={id}
-                end={parentId}
-                startAnchor="top"
-                endAnchor="middle"
-                color="white"
-                strokeWidth={6}
-                showHead={false}
-                path="grid"
-                gridBreak="100%"
-                animateDrawing={false}
-              />
+            <Xarrow
+              start={id}
+              end={parentId}
+              startAnchor="top"
+              endAnchor="middle"
+              color="white"
+              strokeWidth={6}
+              showHead={false}
+              path="grid"
+              gridBreak="100%"
+              animateDrawing={false}
+            />
           ))}
       </div>
     );
@@ -76,11 +76,7 @@ const SkillsTree = () => {
     return getLevelJsx(level, index);
   });
 
-  return (
-    <div className="skills-tree">
-      {levelsJsx}
-    </div>
-  );
+  return <div className="skills-tree">{levelsJsx}</div>;
 };
 
 export default SkillsTree;
