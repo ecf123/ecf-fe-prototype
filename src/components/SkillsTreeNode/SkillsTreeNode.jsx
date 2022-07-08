@@ -5,7 +5,7 @@ import lock from "./../../assets/images/lock.svg"
 
 
 const SkillsTreeNode = (props) => {
-  const { image, title, description, link, locked, id, parentId} = props;
+  const { image, title, description, link, locked, id, parentId, handleNodeClick} = props;
   const [displayPopUp, setDisplayPopUp] = useState(false);
 
   const toggleDisplayPopUp = () => {
@@ -13,7 +13,7 @@ const SkillsTreeNode = (props) => {
   };
 
   return (
-    <div id={id}>
+    <div id={id} onClick={handleNodeClick}>
         {locked 
           ? <div className="node node--locked">
             <img  className="node__image" src={lock} alt="locked" />

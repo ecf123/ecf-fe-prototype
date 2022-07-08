@@ -2,6 +2,8 @@
 
 .skills-tree-page {
     background-color: $primary-color-green;
+    display: flex;
+    flex-direction: column;
     
     &__heading {
         text-align: center;

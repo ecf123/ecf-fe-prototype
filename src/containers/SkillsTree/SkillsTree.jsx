@@ -1,11 +1,13 @@
 import Xarrow from "react-xarrows";
 import SkillsTreeNode from "../../components/SkillsTreeNode/SkillsTreeNode";
 import { data } from "./../../assets/data/dummySkillsMap";
-import React, { useRef } from "react";
+import React from "react";
 import "./SkillsTree.scss";
 
-const SkillsTree = () => {
+
+const SkillsTree = (props) => {
   let levels = [];
+  const {handleNodeClick} = props;
   const getNodes = (node, level) => {
     if (!levels[level]) {
       levels[level] = [];
@@ -27,6 +29,7 @@ const SkillsTree = () => {
           link={link}
           locked={locked}
           description={description}
+          handleNodeClick={handleNodeClick}
         />
         {parentId &&
           (locked ? (
@@ -79,6 +82,7 @@ const SkillsTree = () => {
   return (
     <div className="skills-tree">
       {levelsJsx}
+      
     </div>
   );
 };
