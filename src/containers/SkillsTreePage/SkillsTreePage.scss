@@ -10,4 +10,14 @@
         color: $white-color;
     }
 
+  &__heading {
+    text-align: center;
+    color: $white-color;
+    margin-top: 15px;
+  }
+
+  &__back-button {
+    padding-left: 20px;
+    padding-top: 20px;
+  }
 }

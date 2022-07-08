@@ -3,11 +3,15 @@ import SkillsTree from '../SkillsTree/SkillsTree'
 import "./SkillsTreePage.scss";
 import PopUp from "../../components/PopUp/PopUp";
 import { data } from "./../../assets/data/dummySkillsMap";
+import BackButton from "../../components/BackButton/BackButton";
+import { useParams } from "react-router-dom";
 
 // /pathways/:pathwayId/skills-tree
 
 
 const SkillsTreePage = () => {
+
+  const { pathwayId } = useParams();
   const [displayPopUp, setDisplayPopUp] = useState(false);
   const [node, setNode] = useState(undefined);
 
@@ -45,12 +49,14 @@ const SkillsTreePage = () => {
 
   return (
     <div className="skills-tree-page">
+        <div className="skills-tree-page__back-button">
+          <BackButton linkTo={"/pathways/" + pathwayId} isSecondary={true} />
+        </div>
         <h1 className="skills-tree-page__heading">Financial Forest</h1>
         <SkillsTree handleNodeClick={handleNodeClick}/>
         {displayPopUp && <PopUp link="/pathways" description={node.description} title={node.title} onOverlayClick={handleOverlayClick}/>}
-        
     </div>
-  )
-}
+  );
+};
 
-export default SkillsTreePage
+export default SkillsTreePage;

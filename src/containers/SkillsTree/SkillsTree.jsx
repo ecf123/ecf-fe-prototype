@@ -44,21 +44,21 @@ const SkillsTree = (props) => {
               path="grid"
               gridBreak="100%"
               animateDrawing={false}
-              SVGcanvasProps={{ strokeOpacity: "50%", }}
+              SVGcanvasProps={{ strokeOpacity: "50%" }}
             />
           ) : (
-              <Xarrow
-                start={id}
-                end={parentId}
-                startAnchor="top"
-                endAnchor="middle"
-                color="white"
-                strokeWidth={6}
-                showHead={false}
-                path="grid"
-                gridBreak="100%"
-                animateDrawing={false}
-              />
+            <Xarrow
+              start={id}
+              end={parentId}
+              startAnchor="top"
+              endAnchor="middle"
+              color="white"
+              strokeWidth={6}
+              showHead={false}
+              path="grid"
+              gridBreak="100%"
+              animateDrawing={false}
+            />
           ))}
       </div>
     );
