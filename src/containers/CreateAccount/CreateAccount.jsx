@@ -5,34 +5,35 @@ import Button from "../../components/Button/Button";
 import BackButton from "../../components/BackButton/BackButton";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useNavigate, Link, Route } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import facebookIcon from "../../assets/images/facebook-logo.svg";
 import googleIcon from "../../assets/images/google-logo.svg";
 import appleIcon from "../../assets/images/apple-logo.svg";
 
 
-const CreateAccount = ({ auth }) => {
+const CreateAccount = ({auth, user, handleInputChange, setUser}) => {
   const [page, setPage] = useState(1);
-  const [user, setUser] = useState({ firstName: "", lastName: "", email: "", password: "" });
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const navigate = useNavigate();
 
   const switchPage = () => {
+    if (user.firstName === "" || user.lastName === "") {
+      return
+    }
+  
     if (page === 1) {
-      setPage(2)
+      setPage(2);
     } else {
-    setPage(1);
-  }
+      setPage(1);
+    }
   };
 
-  const nextPage = () => {
-    setPage(2);
+  const handlePasswordConfirmChange = (event) => {
+    setPasswordConfirm(event.target.value);
   }
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    console.log("fire")
-    console.log(`Email: ${user.email}. Password: ${user.password}`);
     createUserWithEmailAndPassword(auth, user.email, user.password)
       .then((userCredential) => {
         console.log('Success')
@@ -46,15 +47,6 @@ const CreateAccount = ({ auth }) => {
         console.log(errorCode + ' ' + errorMessage);
       });
   }
-
-  const handleInputChange = (event) => {
-    setUser(previousState => ({ ...previousState, [event.target.name]: event.target.value }));
-  }
-
-  const handlePasswordConfirmChange = (event) => {
-    setPasswordConfirm(event.target.value);
-  }
-
 
   return (
     <div className="register-user">
