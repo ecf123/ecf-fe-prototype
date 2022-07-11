@@ -54,7 +54,7 @@ const SkillsTreePage = () => {
         </div>
         <h1 className="skills-tree-page__heading">Financial Forest</h1>
         <SkillsTree handleNodeClick={handleNodeClick}/>
-        {displayPopUp && <PopUp link="/pathways" description={node.description} title={node.title} onOverlayClick={handleOverlayClick}/>}
+        {displayPopUp && <PopUp description={node.description} title={node.title} link={node.link} onOverlayClick={handleOverlayClick}/>}
     </div>
   );
 };

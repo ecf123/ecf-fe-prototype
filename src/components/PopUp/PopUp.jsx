@@ -11,9 +11,9 @@ const PopUp = (props) => {
         <h1 className='pop-up__heading'>{title}</h1>
         <p className='pop-up__text'>{description}</p>
         <div className='pop-up__button-container'>
-        <Link to={link}>
-            <Button buttonText="Start Course" buttonType="submit" />
-        </Link>
+            <Link to={link} >
+                <Button buttonText="Start Course" buttonType="submit" />
+            </Link>
         </div>
         
     </div>
