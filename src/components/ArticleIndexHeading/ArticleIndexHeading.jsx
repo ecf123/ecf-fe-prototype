@@ -5,12 +5,9 @@ import "./ArticleIndexHeading.scss";
 
 const ArticleIndexHeading = ({ articleArray }) => {
   const { articleId } = useParams();
-  console.log(articleId)
 
   const pickedArticle = articleArray.filter(article => {
-    console.log(article.id);
-    if (articleId == article.id) {
-      console.log(article)
+    if (articleId === article.id) {
       return article;
     }
   });
