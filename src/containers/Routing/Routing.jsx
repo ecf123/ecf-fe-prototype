@@ -35,7 +35,7 @@ const Routing = () => {
         setUser({ firstName: "", lastName: "", email: "", password: "" });
       }
     });
-  }, [auth]);
+  }, []);
 
   return (
     <Router>
