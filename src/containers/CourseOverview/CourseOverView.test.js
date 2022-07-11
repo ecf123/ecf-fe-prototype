@@ -21,13 +21,17 @@ describe("initial tests for course overview list container", () => {
         </CourseOverviewList>
         </CourseOverview>);
         const links = screen.getAllByTestId("menu-bar-onClinkLink"); 
-        expect(links.length).toBe(3);
-        expect(links[0]).toHaveTextContent("Lessons")
-        expect(links[1]).toHaveTextContent("Challenges")
-        expect(links[2]).toHaveTextContent("Additional Info")
-        expect(links).not.toBeNull();
-        links.forEach(link => {
-            expect(link).not.toBeNull();
-        })
+        userEvent.click(links[1]);
+        const heading = screen.getAllByTestId("course-list-heading");
+        expect(heading).toHaveTextContent("Challenges")
+        expect(heading).not.toHaveTextContent("Lessons")
+        // expect(links.length).toBe(3);
+        // expect(links[0]).toHaveTextContent("Lessons")
+        // expect(links[1]).toHaveTextContent("Challenges")
+        // expect(links[2]).toHaveTextContent("Additional Info")
+        // expect(links).not.toBeNull();
+        // links.forEach(link => {
+        //     expect(link).not.toBeNull();
+        // })
     });
 });
