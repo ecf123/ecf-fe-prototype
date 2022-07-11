@@ -1,4 +1,7 @@
+@use "../../assets/sass/variables" as *;
+
 .pathway-overview {
+    
 
     display: flex;
     flex-direction: column;
@@ -29,7 +32,7 @@
      }
     
 }
-@use "../../assets/sass/variables" as *;
+
 
 .pathway-overview {
   overflow: clip;
