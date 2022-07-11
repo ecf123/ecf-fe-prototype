@@ -1,0 +1,10 @@
+@use "../../assets/sass/variables" as *;
+
+.pathway-overview {
+  overflow: clip;
+  &__filters {
+    position: sticky;
+    top: 0;
+    background-color: $white-color;
+  }
+}
