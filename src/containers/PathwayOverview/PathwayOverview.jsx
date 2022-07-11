@@ -7,7 +7,7 @@ import PathwayCardList from "../PathwayCardList/PathwayCardList";
 const PathwayOverview = () => {
   return (
     <div>
-      <PathwayCardList />
+      <h1>Pathway Overview</h1>
     </div>
   );
 };

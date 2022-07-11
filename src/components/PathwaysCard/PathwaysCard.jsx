@@ -1,10 +1,10 @@
-import { React } from "react";
+import {React} from "react";
 
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
+import {CircularProgressbar, buildStyles} from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./PathwaysCard.scss";
 
-const PathwaysCard = ({ header, topics, image, percentage }) => {
+const PathwaysCard = ({header, topics, image, percentage}) => {
   //const { header, topics, image } = card;
 
   return (
@@ -25,7 +25,10 @@ const PathwaysCard = ({ header, topics, image, percentage }) => {
           />
         </div>
         <div className="card__content">
-          <img className="card__content-image" src={image} alt={header} />
+          <div className="card__content-img-div">
+            <img className="card__content-image" src={image} alt={header} />
+          </div>
+
           <h1 className="card__content-header">{header}</h1>
           <h2 className="card__content-topics">{topics}</h2>
         </div>
