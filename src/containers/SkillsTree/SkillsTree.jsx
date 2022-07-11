@@ -83,7 +83,7 @@ const SkillsTree = (props) => {
   return (
     <div className="skills-tree">
       {levelsJsx}
-      <FinishTreeNode parentId="santander" title={title} finished={true}/>
+      <FinishTreeNode parentId="santander" title={title} finished={false}/>
       
     </div>
   );
