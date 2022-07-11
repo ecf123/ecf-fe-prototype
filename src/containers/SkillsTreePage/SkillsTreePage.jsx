@@ -15,6 +15,8 @@ const SkillsTreePage = () => {
   const [displayPopUp, setDisplayPopUp] = useState(false);
   const [node, setNode] = useState(undefined);
 
+  const title = "Financial Forest"
+
   const handleOverlayClick = () => {
     setDisplayPopUp(false);
   }
@@ -46,14 +48,13 @@ const SkillsTreePage = () => {
     }
     console.log("here")
   }
-
   return (
     <div className="skills-tree-page">
         <div className="skills-tree-page__back-button">
           <BackButton linkTo={"/pathways/" + pathwayId} isSecondary={true} />
         </div>
-        <h1 className="skills-tree-page__heading">Financial Forest</h1>
-        <SkillsTree handleNodeClick={handleNodeClick}/>
+        <h1 className="skills-tree-page__heading">{title}</h1>
+        <SkillsTree handleNodeClick={handleNodeClick} title={title}/>
         {displayPopUp && <PopUp description={node.description} title={node.title} link={node.link} onOverlayClick={handleOverlayClick}/>}
     </div>
   );

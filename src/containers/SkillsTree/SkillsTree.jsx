@@ -3,11 +3,12 @@ import SkillsTreeNode from "../../components/SkillsTreeNode/SkillsTreeNode";
 import { data } from "./../../assets/data/dummySkillsMap";
 import React from "react";
 import "./SkillsTree.scss";
+import FinishTreeNode from "../../components/FinishTreeNode/FinishTreeNode";
 
 
 const SkillsTree = (props) => {
   let levels = [];
-  const {handleNodeClick} = props;
+  const {handleNodeClick, title} = props;
   const getNodes = (node, level) => {
     if (!levels[level]) {
       levels[level] = [];
@@ -82,6 +83,7 @@ const SkillsTree = (props) => {
   return (
     <div className="skills-tree">
       {levelsJsx}
+      <FinishTreeNode parentId="santander" title={title} finished={true}/>
       
     </div>
   );

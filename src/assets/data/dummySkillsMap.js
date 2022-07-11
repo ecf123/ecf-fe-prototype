@@ -50,17 +50,7 @@ export const data = [
                 description: "Lorem ipsum dolor sit amet. Ea nisi accusamus 33 Quis quidem ut quia obcaecati ex modi dolore 33 suscipit labore. Ut aliquid molestias aut voluptate incidunt nam assumenda quis et iste vero sit dolor dicta At iusto sunt suscipit nulla.",
                 title: "Santander",
                 parentId: "hsbc",
-                children: [
-                  {
-                    id: "finish",
-                    icon: podium,
-                    locked: true,
-                    description: "Lorem ipsum dolor sit amet. Ea nisi accusamus 33 Quis quidem ut quia obcaecati ex modi dolore 33 suscipit labore. Ut aliquid molestias aut voluptate incidunt nam assumenda quis et iste vero sit dolor dicta At iusto sunt suscipit nulla.",
-                    title: "Santander",
-                    parentId: "santander",
-                    children: []
-                  }
-                ],
+                children: [],
               },
             ],
           },
