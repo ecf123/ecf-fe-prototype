@@ -1,13 +1,25 @@
 import React from "react";
-import PathwaysCard from "../../components/PathwaysCard/PathwaysCard";
-import PathwayCardList from "../PathwayCardList/PathwayCardList";
+import "./PathwayOverview.scss";
+
+import MenuBar from "../../components/MenuBar/MenuBar";
 
 // path: /pathways/:pathwayId
 
 const PathwayOverview = () => {
+  // Category state to be used later to deremine which content is displayed based on the users selection
+  // const [category, setCategory] = useState("overview");
+
+  const handleCategoryChange = (event) => {
+    // setCategory(event.target.innerText.toLowerCase());
+    console.log(event.target.innerText.toLowerCase());
+  };
+
   return (
     <div>
-      <h1>Pathway Overview</h1>
+      PathwayOverview
+      <div className="pathway-overview__filters">
+        <MenuBar link1="Overview" link2="Structure" link3="Careers" onClickLink={handleCategoryChange} />
+      </div>
     </div>
   );
 };
