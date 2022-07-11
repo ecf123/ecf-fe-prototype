@@ -21,18 +21,14 @@ import Challenge from "../Challenge/Challenge";
 
 const Routing = () => {
 
-  const [user, setUser] = useState({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
-  
-  const handleInputChange = (event) => {
-    setUser(previousState => ({ ...previousState, [event.target.name]: event.target.value }));
-  }
+  const [userToken, setUserToken] = useState(null);
 
   useEffect(() => {
     onAuthStateChanged(auth, (authenticatedUser) => {
       if (authenticatedUser) {
-        setUser(authenticatedUser);
+        setUserToken(authenticatedUser);
       } else {
-        setUser({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
+        setUserToken(null);
       }
     });
   }, []);
@@ -58,7 +54,7 @@ const Routing = () => {
 
         <Route path="/splash" element={<Splash />} />
         <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/create-account" element={<CreateAccount user={user} handleInputChange={handleInputChange} setUser={setUser} />} />
+        <Route path="/create-account" element={<CreateAccount />} />
 
         <Route path="/" element={<Home userProfile={userProfile} />} />
 

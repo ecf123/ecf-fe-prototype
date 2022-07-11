@@ -12,9 +12,14 @@ import appleIcon from "../../assets/images/apple-logo.svg";
 import { auth } from "../../firebase";
 import { updateProfile } from "firebase/auth";
 
-const CreateAccount = ({user, handleInputChange, setUser}) => {
+const CreateAccount = () => {
   const [page, setPage] = useState(1);
   const navigate = useNavigate();
+  const [user, setUser] = useState({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
+  
+  const handleInputChange = (event) => {
+    setUser(previousState => ({ ...previousState, [event.target.name]: event.target.value }));
+  }
 
   const switchPage = () => {
     if (user.firstName === "" || user.lastName === "") {
