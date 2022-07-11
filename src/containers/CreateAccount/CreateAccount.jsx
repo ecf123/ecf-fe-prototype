@@ -9,7 +9,8 @@ import { useNavigate } from 'react-router-dom';
 import facebookIcon from "../../assets/images/facebook-logo.svg";
 import googleIcon from "../../assets/images/google-logo.svg";
 import appleIcon from "../../assets/images/apple-logo.svg";
-
+import { auth } from "../../firebase";
+import { updateProfile } from "firebase/auth";
 
 const CreateAccount = ({auth, user, handleInputChange, setUser}) => {
   const [page, setPage] = useState(1);
@@ -32,12 +33,18 @@ const CreateAccount = ({auth, user, handleInputChange, setUser}) => {
     setPasswordConfirm(event.target.value);
   }
 
-  const handleSubmit = (event) => {
+  const handleSubmit = async (event) => {
     event.preventDefault();
-    createUserWithEmailAndPassword(auth, user.email, user.password)
+    await createUserWithEmailAndPassword(auth, user.email, user.password)
       .then((userCredential) => {
         console.log('Success')
         const user = userCredential.user;
+
+        updateProfile(auth.currentUser, {
+          firstName: user.firstName ,
+          lastName : user.lastName,
+        });
+        
         setUser(previousState => ({ ...previousState, email: user.email }));
         navigate("/");
       })

@@ -15,7 +15,7 @@ import Splash from "../Splash/Splash";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTree from "../SkillsTree/SkillsTree";
-import { auth } from "../../firebase";
+import { auth, onAuthStateChanged } from "../../firebase";
 import Challenge from "../Challenge/Challenge";
 
 const Routing = () => {
@@ -25,6 +25,16 @@ const Routing = () => {
   const handleInputChange = (event) => {
     setUser(previousState => ({ ...previousState, [event.target.name]: event.target.value }));
   }
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (authenticatedUser) => {
+      if (authenticatedUser) {
+        setUser(authenticatedUser);
+      } else {
+        setUser(null);
+      }
+    });
+  }, []);
 
   return (
     <Router>
@@ -47,7 +57,7 @@ const Routing = () => {
 
         <Route path="/splash" element={<Splash />} />
         <Route path="/sign-in" element={<SignIn />} />
-        <Route path="/create-account" element={<CreateAccount auth={auth} user={user} handleInputChange={handleInputChange} setUser={setUser} />} />
+        <Route path="/create-account" element={<CreateAccount user={user} handleInputChange={handleInputChange} setUser={setUser} />} />
 
         <Route path="/" element={<Home userProfile={userProfile} />} />
 
