@@ -5,7 +5,7 @@ import challengeData from "../../assets/data/dummyChallengeData";
 
 import "./CourseOverviewList.scss";
 
-const CourseOverviewList = ({ title, category }) => {
+const CourseOverviewList = ({ category }) => {
   const challengeJSX = challengeData.map((item, index) => {
     return (
       <CourseOverviewListItem
@@ -34,12 +34,12 @@ const CourseOverviewList = ({ title, category }) => {
   });
 
   const displayJSX = () => {
-    if (category === "lessons") {
+    if (category === "Lessons") {
       return lessonJSX;
-    } else if (category === "challenges") {
+    } else if (category === "Challenges") {
       return challengeJSX;
-    } else if (category === "additional info") {
-      // This is to be replaced once the format for additional information is know.
+    } else if (category === "Additional Info") {
+      // This is to be replaced once the format for additional information is known.
       return null;
     }
   };
@@ -47,7 +47,7 @@ const CourseOverviewList = ({ title, category }) => {
   return (
     <div>
       <h1 data-testid="course-list-heading" className="list-container__title">
-        {title}
+        {category}
       </h1>
       <div data-testid="course-list-items">{displayJSX()}</div>
     </div>

@@ -17,7 +17,7 @@ const MenuBar = ({ link1, link2, link3, onClickLink }) => {
 
     return (
         <div data-testid="menu-bar" className="menu-bar">
-            <span data-testid="menu-bar-onClinkLink" onClick={onClickLink}>
+            <span data-testid="menu-bar-onClickLink" onClick={onClickLink}>
                 <span
                     data-testid="menu-bar-link"
                     id={0}
@@ -31,7 +31,7 @@ const MenuBar = ({ link1, link2, link3, onClickLink }) => {
                     {link1}
                 </span>
             </span>
-            <span data-testid="menu-bar-onClinkLink" onClick={onClickLink}>
+            <span data-testid="menu-bar-onClickLink" onClick={onClickLink}>
                 <span
                     data-testid="menu-bar-link"
                     id={1}
@@ -45,7 +45,7 @@ const MenuBar = ({ link1, link2, link3, onClickLink }) => {
                     {link2}
                 </span>
             </span>
-            <span data-testid="menu-bar-onClinkLink" onClick={onClickLink}>
+            <span data-testid="menu-bar-onClickLink" onClick={onClickLink}>
                 <span
                     data-testid="menu-bar-link"
                     id={2}

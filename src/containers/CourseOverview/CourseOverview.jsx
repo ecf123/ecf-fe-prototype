@@ -6,14 +6,14 @@ import MenuBar from "../../components/MenuBar/MenuBar";
 // path: /courses/:courseId
 
 const CourseOverview = () => {
-    const [category, setCategory] = useState("lessons");
+    const [category, setCategory] = useState("Lessons");
 
     const capitalisedNames = (name) => {
         return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
     };
 
     const handleCategoryChange = (event) => {
-        setCategory(event.target.innerText.toLowerCase());
+        setCategory(event.target.innerText);
     };
 
     return (
@@ -33,10 +33,7 @@ const CourseOverview = () => {
                     data-testid="course-overview-list"
                     className="course-overview__list"
                 >
-                    <CourseOverviewList
-                        title={capitalisedNames(category)}
-                        category={category}
-                    />
+                    <CourseOverviewList title={category} category={category} />
                 </div>
             </div>
         </div>
