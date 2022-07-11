@@ -22,6 +22,8 @@ import Challenge from "../Challenge/Challenge";
 const Routing = () => {
 
   const [userToken, setUserToken] = useState(null);
+  //Console.log only used to use the token to pass tests, this will be unnecessary when the data is used
+  console.log(userToken)
 
   useEffect(() => {
     onAuthStateChanged(auth, (authenticatedUser) => {
