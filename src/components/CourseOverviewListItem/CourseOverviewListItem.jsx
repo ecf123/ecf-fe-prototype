@@ -24,11 +24,13 @@ const CourseOverviewListItem = ({ title, duration, id, category, type }) => {
   };
 
   const setPath = () => {
-    if (category === "lesson") {
-      return "/lesson/"+id;
-    } else if (category === "challenge") {
-      return "/challenge/"+id;
+    if (category === "lessons") {
+      return `/lesson/${id}`;
+    } else if (category === "challenges") {
+      return `/challenge/${id}`;
     } else if (category === "additional") {
+      return "/";
+    } else {
       return "/";
     }
   };
@@ -47,7 +49,10 @@ const CourseOverviewListItem = ({ title, duration, id, category, type }) => {
           <h1 data-testid="course-list-title" className="list-item__title">
             {title}
           </h1>
-          <div data-testid="course-list-duration" className="list-item__duration">
+          <div
+            data-testid="course-list-duration"
+            className="list-item__duration"
+          >
             <img className="list-item__duration--icon" src={ClockIcon} alt="" />
             <h2 className="list-item__duration--heading">{duration}</h2>
           </div>

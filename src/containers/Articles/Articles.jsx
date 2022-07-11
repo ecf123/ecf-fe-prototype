@@ -1,12 +1,15 @@
 import React from 'react';
+import ArticleCardList from '../ArticleCardList/ArticleCardList';
 
 
 // path: /articles
 
-const Articles = () => {
+const Articles = ({ articleInfo }) => {
   return (
-    <div>Articles</div>
-  )
-}
+    <div>
+      <ArticleCardList articleInfo={articleInfo} />
+    </div>
+  );
+};
 
-export default Articles
+export default Articles;

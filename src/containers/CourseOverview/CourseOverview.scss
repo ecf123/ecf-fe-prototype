@@ -1,7 +1,13 @@
 @use "../../assets/sass/variables" as *;
 
 .course-overview {
-    &__list {
-        margin: 1em 3em;
-    }
+  overflow: clip;
+  &__filters {
+    position: sticky;
+    top: 0;
+    background-color: $white-color;
+  }
+  &__content {
+    margin: 1em 3em;
+  }
 }

@@ -18,6 +18,7 @@ import SkillsTree from "../SkillsTree/SkillsTree";
 import { auth } from "../../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
+import articleInfo from "../../assets/data/dummyArticleCardInformation";
 
 const Routing = () => {
 
@@ -62,7 +63,7 @@ const Routing = () => {
 
         <Route
           path="/articles"
-          element={<Articles userProfile={userProfile} />}
+          element={<Articles articleInfo={articleInfo}  />}
         />
         <Route path="/articles/:articleId" element={<ArticleIndex />} />
 
