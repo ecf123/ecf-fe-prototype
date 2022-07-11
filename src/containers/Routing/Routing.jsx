@@ -6,7 +6,7 @@ import PathwaysMenu from "../PathwaysMenu/PathwaysMenu";
 import Marketplace from "../Marketplace/Marketplace";
 import CourseOverview from "../CourseOverview/CourseOverview";
 import ArticleIndex from "../ArticleIndex/ArticleIndex";
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import LessonOverview from "../LessonOverview/LessonOverview";
 import MarketplaceIndex from "../MarketplaceIndex/MarketplaceIndex";
 import PathwayOverview from "../PathwayOverview/PathwayOverview";
@@ -15,7 +15,8 @@ import Splash from "../Splash/Splash";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTree from "../SkillsTree/SkillsTree";
-import { auth, onAuthStateChanged } from "../../firebase";
+import { auth } from "../../firebase";
+import { onAuthStateChanged } from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
 
 const Routing = () => {
@@ -31,10 +32,10 @@ const Routing = () => {
       if (authenticatedUser) {
         setUser(authenticatedUser);
       } else {
-        setUser(null);
+        setUser({ firstName: "", lastName: "", email: "", password: "" });
       }
     });
-  }, []);
+  }, [auth]);
 
   return (
     <Router>

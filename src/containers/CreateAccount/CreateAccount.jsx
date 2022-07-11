@@ -12,7 +12,7 @@ import appleIcon from "../../assets/images/apple-logo.svg";
 import { auth } from "../../firebase";
 import { updateProfile } from "firebase/auth";
 
-const CreateAccount = ({auth, user, handleInputChange, setUser}) => {
+const CreateAccount = ({user, handleInputChange, setUser}) => {
   const [page, setPage] = useState(1);
   const [passwordConfirm, setPasswordConfirm] = useState("");
   const navigate = useNavigate();
@@ -44,7 +44,7 @@ const CreateAccount = ({auth, user, handleInputChange, setUser}) => {
           firstName: user.firstName ,
           lastName : user.lastName,
         });
-        
+
         setUser(previousState => ({ ...previousState, email: user.email }));
         navigate("/");
       })
