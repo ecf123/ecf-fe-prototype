@@ -1,0 +1,31 @@
+.pathway-overview {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+&__header{
+    border: solid black 2px;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+&__button{
+    position: fixed;
+    bottom: 0px;
+    width: 90%;
+    margin: 34px auto;
+
+}
+
+}
+.card-conatiner{
+    border: solid black 2px;
+    
+     align-items: center;
+
+     &__image{
+        width: 204px;
+        border: solid black 2px;
+     }
+    
+}

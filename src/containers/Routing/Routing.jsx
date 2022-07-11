@@ -16,6 +16,7 @@ import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTree from "../SkillsTree/SkillsTree";
 import Challenge from "../Challenge/Challenge";
+import card from "../../assets/data/dummyPathwayData";
 
 const Routing = () => {
   return (
@@ -31,7 +32,7 @@ const Routing = () => {
         />
 
         <Route path="/pathways" element={<PathwaysMenu />} />
-        <Route path="/pathways/:pathwayId" element={<PathwayOverview />} />
+        <Route path="/pathways/:pathwayId" element={<PathwayOverview card={card} userProfile={userProfile} />}  />
         <Route
           path="/pathways/:pathwayId/skills-tree"
           element={<SkillsTree />}
