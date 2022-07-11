@@ -5,7 +5,7 @@ const ArticleCardList = ({ articleInfo }) => {
   const articleCardJSX = articleInfo.map((article, index) => {
     return (
       <ArticleCard
-        key={index}
+        index={index}
         thumbnail={article.thumbnail}
         category={article.category}
         title={article.title}
