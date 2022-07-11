@@ -17,6 +17,7 @@ import Articles from "../Articles/Articles";
 import SkillsTree from "../SkillsTree/SkillsTree";
 import Challenge from "../Challenge/Challenge";
 import card from "../../assets/data/dummyPathwayData";
+import articleInfo from "../../assets/data/dummyArticleCardInformation";
 
 const Routing = () => {
   return (
@@ -46,7 +47,7 @@ const Routing = () => {
 
         <Route
           path="/articles"
-          element={<Articles userProfile={userProfile} />}
+          element={<Articles articleInfo={articleInfo}  />}
         />
         <Route path="/articles/:articleId" element={<ArticleIndex />} />
 
