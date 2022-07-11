@@ -32,7 +32,10 @@ const Routing = () => {
         />
 
         <Route path="/pathways" element={<PathwaysMenu />} />
-        <Route path="/pathways/:pathwayId" element={<PathwayOverview />} />
+        <Route
+          path="/pathways/:pathwayId"
+          element={<PathwayOverview />}
+        />
         <Route
           path="/pathways/:pathwayId/skills-tree"
           element={<SkillsTree />}
@@ -52,7 +55,7 @@ const Routing = () => {
 
         <Route path="/courses/:courseId" element={<CourseOverview />} />
         <Route path="/lesson/:lessonId" element={<LessonOverview />} />
-        <Route path="/challenge/:challengeId" element={<Challenge />} />
+        <Route path="/quiz/:quizId" element={<Quiz />} />
 
         <Route path="/profile" element={<Profile />} />
       </Routes>
