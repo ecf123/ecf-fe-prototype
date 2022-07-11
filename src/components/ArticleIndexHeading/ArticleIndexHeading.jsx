@@ -20,8 +20,8 @@ const ArticleIndexHeading = ({ articleArray }) => {
       <h1 data-testid="article-heading" className="article-index-card__title">{pickedArticle[0].title}</h1>
       <div className="article-index-card__info">
         <img className="article-index-card__info__img" src={bookIcon} alt="book icon"/>
-        <p className="article-index-card__info__time">{pickedArticle[0].readTime}</p>
-        <p className="article-index-card__info__date">{pickedArticle[0].date}</p>
+        <p data-testid="article-time" className="article-index-card__info__time">{pickedArticle[0].readTime}</p>
+        <p data-testid="article-date" className="article-index-card__info__date">{pickedArticle[0].date}</p>
       </div>
     </article>
   );
