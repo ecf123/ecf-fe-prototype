@@ -1,12 +1,21 @@
 @use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
 
 .skills-tree-page {
-  background-color: $primary-color-green;
+    background-color: $primary-color-green;
+    display: flex;
+    flex-direction: column;
+    
+    &__heading {
+        text-align: center;
+        color: $white-color;
+        @include heading3;
+    }
 
   &__heading {
     text-align: center;
     color: $white-color;
-    margin-top: 15px;
+    margin-top: 10px;
   }
 
   &__back-button {
