@@ -7,9 +7,11 @@ const ArticleIndexHeading = ({ articleArray }) => {
   const { articleId } = useParams();
 
   const pickedArticle = articleArray.filter(article => {
+    const selectedArticle = {}
     if (articleId === article.id) {
-      return article;
+      selectedArticle = article;
     }
+    return selectedArticle;
   });
 
   return (
