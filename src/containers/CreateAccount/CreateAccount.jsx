@@ -117,7 +117,7 @@ const CreateAccount = ({user, handleInputChange, setUser}) => {
               value={user.confirmPassword}
             />
           </form>
-          <Button onClickButton={handleSubmit} buttonText="CREATE ACCOUNT" buttonType={"submit"} />
+          <Button linkTo="" onClickButton={handleSubmit} buttonText="CREATE ACCOUNT" buttonType={"submit"} />
         </>
       )}
           <p className="register-user__divider">

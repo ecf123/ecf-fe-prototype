@@ -32,7 +32,7 @@ const Routing = () => {
       if (authenticatedUser) {
         setUser(authenticatedUser);
       } else {
-        setUser({ firstName: "", lastName: "", email: "", password: "" });
+        setUser({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
       }
     });
   }, []);
