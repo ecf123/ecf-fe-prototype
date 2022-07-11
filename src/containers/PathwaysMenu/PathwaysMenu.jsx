@@ -1,10 +1,14 @@
 import React from 'react'
+import FilterTag from '../../components/FilterTag/FilterTag.jsx';
 
 // path: /pathways
 
 const PathwaysMenu = () => {
   return (
-    <div>PathwaysMenu</div>
+    <div>PathwaysMenu
+      <FilterTag />
+    </div>
+    
   )
 }
 
