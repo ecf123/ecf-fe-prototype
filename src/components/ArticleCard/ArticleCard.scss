@@ -1,0 +1,48 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/reset" as *;
+@use "../../assets/sass/mixins" as *;
+
+.article-card {
+  border-bottom: 1px solid black;
+  margin: 20px 29px 0px 29px;
+  display: flex;
+  justify-content: center;
+  padding: 0px 0px 20px 0px;
+  width: 363px;
+  height: 60px;
+
+  &__content {
+    display: flex;
+    justify-content: flex-start;
+    width: 363px;
+  }
+
+  &__image {
+    width: 53px;
+    height: 39px;
+    border: 2px solid;
+  }
+
+  &__text {
+    width: 80%;
+    height: 100%;
+    margin-left: 15px;
+
+    &--top {
+      font-size: 10px;
+      padding-top: 2px;
+      font-family: $secondary-font-family;
+      font-weight: 500;
+      color: $secondary-color-grey;
+    }
+
+    &--bottom {
+      // @include heading3;
+      font-family: $primary-font-family;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 120%;
+    }
+  }
+}
