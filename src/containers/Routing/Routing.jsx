@@ -15,7 +15,6 @@ import Splash from "../Splash/Splash";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTree from "../SkillsTree/SkillsTree";
-import articleInfo from "../../assets/data/dummyArticleCardInformation";
 import Challenge from "../Challenge/Challenge";
 
 const Routing = () => {
@@ -32,10 +31,7 @@ const Routing = () => {
         />
 
         <Route path="/pathways" element={<PathwaysMenu />} />
-        <Route
-          path="/pathways/:pathwayId"
-          element={<PathwayOverview />}
-        />
+        <Route path="/pathways/:pathwayId" element={<PathwayOverview />} />
         <Route
           path="/pathways/:pathwayId/skills-tree"
           element={<SkillsTree />}
@@ -49,13 +45,13 @@ const Routing = () => {
 
         <Route
           path="/articles"
-          element={<Articles userProfile={userProfile} articleInfo={articleInfo}/>}
+          element={<Articles userProfile={userProfile} />}
         />
         <Route path="/articles/:articleId" element={<ArticleIndex />} />
 
         <Route path="/courses/:courseId" element={<CourseOverview />} />
         <Route path="/lesson/:lessonId" element={<LessonOverview />} />
-        <Route path="/quiz/:quizId" element={<Quiz />} />
+        <Route path="/challenge/:challengeId" element={<Challenge />} />
 
         <Route path="/profile" element={<Profile />} />
       </Routes>
