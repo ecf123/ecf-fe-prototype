@@ -49,13 +49,14 @@ const CreateAccount = () => {
     await createUserWithEmailAndPassword(auth, user.email, user.password)
       .then((userCredential) => {
         console.log('Success')
-        const user = userCredential.user;
+        //const userToken = userCredential.user;
 
+        //Sets displayName to the given first and last name
         updateProfile(auth.currentUser, {
-          firstName: user.firstName ,
-          lastName : user.lastName,
+          displayName: `${user.firstName} ${user.lastName}`
         });
 
+        //Reset user state to blank - user info is stored in the firebase auth token
         setUser({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
         navigate("/");
       })
