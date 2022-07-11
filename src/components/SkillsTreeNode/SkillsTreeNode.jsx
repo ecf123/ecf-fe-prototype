@@ -3,14 +3,14 @@ import { useState } from "react";
 import "./SkillsTreeNode.scss";
 import lock from "./../../assets/images/lock.svg"
 
-
+// must be passed in as props : parentId , description , link
 const SkillsTreeNode = (props) => {
-  const { image, title, description, link, locked, id, parentId, handleNodeClick} = props;
+  const { image, title,locked, id,handleNodeClick} = props;
   const [displayPopUp, setDisplayPopUp] = useState(false);
 
-  const toggleDisplayPopUp = () => {
-    setDisplayPopUp(!displayPopUp);
-  };
+  // const toggleDisplayPopUp = () => {
+  //   setDisplayPopUp(!displayPopUp);
+  // };
 
   return (
     <div id={id} onClick={handleNodeClick}>
