@@ -7,7 +7,7 @@ import phoneWrite from "../../assets/images/phone-write-icon.svg";
 import carActions from "../../assets/images/car-actions-icon.svg";
 import fileCode from "../../assets/images/file-code-icon.svg";
 
-const FilterTag = () => {
+const FilterTag = (filterArray) => {
     const [activeArray, setActiveArray] = useState([
         true,
         false,
@@ -121,7 +121,10 @@ const FilterTag = () => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={handleSelected}
+                onClick={()=>{
+                  handleSelected()
+                  filterArray();
+                }}
             >
                 {"    "}
                 All{"   "}
@@ -133,7 +136,10 @@ const FilterTag = () => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={handleSelected}
+                onClick={()=>{
+                  handleSelected()
+                  filterArray();
+                }}
             >
                 <img src={performanceMoney} alt="" /> Finance
             </span>
@@ -144,8 +150,10 @@ const FilterTag = () => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={handleSelected}
-            >
+                onClick={()=>{
+                  handleSelected()
+                  filterArray();
+                }}>
                 <img src={handshake} alt="" /> Business
             </span>
             <span
@@ -155,7 +163,10 @@ const FilterTag = () => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={handleSelected}
+                onClick={()=>{
+                  handleSelected()
+                  filterArray();
+                }}
             >
                 <img src={paintingPalette} alt="" /> Design
             </span>
@@ -166,7 +177,10 @@ const FilterTag = () => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={handleSelected}
+                onClick={()=>{
+                  handleSelected()
+                  filterArray();
+                }}
             >
                 <img src={phoneWrite} alt="" /> Digital Marketing
             </span>
@@ -177,7 +191,10 @@ const FilterTag = () => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={handleSelected}
+                onClick={()=>{
+                  handleSelected()
+                  filterArray();
+                }}
             >
                 <img src={carActions} alt="" /> Engineering
             </span>
@@ -188,7 +205,10 @@ const FilterTag = () => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={handleSelected}
+                onClick={()=>{
+                  handleSelected()
+                  filterArray();
+                }}
             >
                 <img src={fileCode} alt="" /> Programming
             </span>

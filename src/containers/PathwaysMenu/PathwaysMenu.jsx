@@ -4,9 +4,14 @@ import FilterTag from '../../components/FilterTag/FilterTag.jsx';
 // path: /pathways
 
 const PathwaysMenu = () => {
+
+  const filterArray = (event) =>{
+    console.log(event.target.id);
+  }
+
   return (
     <div>PathwaysMenu
-      <FilterTag />
+      <FilterTag filterArray = {filterArray}/>
     </div>
     
   )
