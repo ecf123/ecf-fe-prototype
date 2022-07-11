@@ -21,7 +21,7 @@ import Challenge from "../Challenge/Challenge";
 
 const Routing = () => {
 
-  const [user, setUser] = useState({ firstName: "", lastName: "", email: "", password: "" });
+  const [user, setUser] = useState({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
   
   const handleInputChange = (event) => {
     setUser(previousState => ({ ...previousState, [event.target.name]: event.target.value }));

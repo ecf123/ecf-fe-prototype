@@ -14,7 +14,6 @@ import { updateProfile } from "firebase/auth";
 
 const CreateAccount = ({user, handleInputChange, setUser}) => {
   const [page, setPage] = useState(1);
-  const [passwordConfirm, setPasswordConfirm] = useState("");
   const navigate = useNavigate();
 
   const switchPage = () => {
@@ -29,12 +28,19 @@ const CreateAccount = ({user, handleInputChange, setUser}) => {
     }
   };
 
-  const handlePasswordConfirmChange = (event) => {
-    setPasswordConfirm(event.target.value);
-  }
-
   const handleSubmit = async (event) => {
     event.preventDefault();
+
+    //Make sure all fields have content - error notification may be useful
+    if (!Object.values(user).every(item => item.length > 0)) {
+      return;
+    }
+
+    // Check passwords match - error notification may be useful
+    if (user.password !== user.confirmPassword) {
+      return;
+    }
+
     await createUserWithEmailAndPassword(auth, user.email, user.password)
       .then((userCredential) => {
         console.log('Success')
@@ -45,7 +51,7 @@ const CreateAccount = ({user, handleInputChange, setUser}) => {
           lastName : user.lastName,
         });
 
-        setUser(previousState => ({ ...previousState, email: user.email }));
+        setUser({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
         navigate("/");
       })
       .catch((error) => {
@@ -106,9 +112,9 @@ const CreateAccount = ({user, handleInputChange, setUser}) => {
               inputType="password"
               label="Confirm Password"
               placeholder="Confirm Password"
-              onChange={handlePasswordConfirmChange}
-              inputName="passwordConfirm"
-              value={passwordConfirm}
+              onChange={handleInputChange}
+              inputName="confirmPassword"
+              value={user.confirmPassword}
             />
           </form>
           <Button onClickButton={handleSubmit} buttonText="CREATE ACCOUNT" buttonType={"submit"} />
