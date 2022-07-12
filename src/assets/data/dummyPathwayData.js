@@ -5,7 +5,7 @@ import magicMarketing from "../images/margin-marketing.svg";
 import codingCamp from "../images/coding-camp.svg";
 import epicEngineering from "../images/epic-engineering.svg";
 
-
+//Percentage data will eventually have to be stored in userData as users progression will vary -- see dummy user data for example
 const cardData = [{header: "Financial Forest", topics: "Banking, Investments", image: financialForest, percentage: 90},
 {header: "Business Bonanza", topics: "Business, Strategy", image: businessBonanza, percentage: 35},
 {header: "Divine Design", topics: "UI/UX, Motion, Graphic Design", image: divineDesign, percentage: 1},
