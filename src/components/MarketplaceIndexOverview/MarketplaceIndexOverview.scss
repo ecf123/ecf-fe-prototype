@@ -1,12 +1,18 @@
-.marketplace-overview-container {
-  padding: 20px;
+@use "../../assets//sass/mixins" as *;
+@use "../../assets//sass/variables" as *;
+
+.marketplace-overview {
+  padding: 30px;
+  font-family: $primary-font-family;
+
   &__title {
-    margin-left: 20px;
+    margin-bottom: 20px;
+    @include heading4;
+    color: $secondary-color-dark-grey;
   }
 
   &__info {
-    padding-top: 20px;
-    margin-left: 20px;
-    margin-right: 20px;
+    @include paragraph;
+    color: $primary-color-lilac;
   }
 }
