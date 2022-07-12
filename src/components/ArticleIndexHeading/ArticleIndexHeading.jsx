@@ -6,7 +6,7 @@ import "./ArticleIndexHeading.scss";
 const ArticleIndexHeading = ({ articleArray }) => {
   const { articleId } = useParams();
 
-  const pickedArticle = articleArray.find( ({ id }) => id === articleId)
+  const pickedArticle = articleArray.find( ({ id }) => id == articleId)
 
   return (
     <article className="article-index-card">
