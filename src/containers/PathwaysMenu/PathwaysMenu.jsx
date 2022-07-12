@@ -1,20 +1,24 @@
-import React from 'react'
-import FilterTag from '../../components/FilterTag/FilterTag.jsx';
+import React from "react";
+import FilterTag from "../../components/FilterTag/FilterTag.jsx";
+import PathwayCardList from "../PathwayCardList/PathwayCardList";
 
 // path: /pathways
 
 const PathwaysMenu = () => {
+    const filterArray = (event) => {
+        console.log(event.target.id);
+    };
 
-  const filterArray = (event) =>{
-    console.log(event.target.id);
-  }
+    return (
+        <div>
+            PathwaysMenu
+            <div>PathwaysMenu</div>
+            <div>
+                <FilterTag filterArray={filterArray} />
+                <PathwayCardList />
+            </div>
+        </div>
+    );
+};
 
-  return (
-    <div>PathwaysMenu
-      <FilterTag filterArray = {filterArray}/>
-    </div>
-    
-  )
-}
-
-export default PathwaysMenu
+export default PathwaysMenu;
