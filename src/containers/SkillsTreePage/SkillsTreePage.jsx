@@ -22,31 +22,21 @@ const SkillsTreePage = () => {
   }
 
   const handleNodeClick = (event) => {
-    //event.currentTarget.value
-    console.log(event.currentTarget.id)
     const id = event.currentTarget.id
-    //console.log()
-    setNode(findNodeInArray(data, id))//findNodeInArray(data, id)
-    //console.log(node.description)
+    setNode(findNodeInArray(data, id))
     setDisplayPopUp(true);
   }
 
   const findNodeInArray = (arr, id) => {
-    console.log(arr.length)
     for (let i = 0; i < arr.length; i++)  {
-      
-      console.log(arr[i].children)
       if (arr[i].id === id) {
-        console.log(arr[i].id)
         return arr[i];
       } else {
-        
         if (findNodeInArray(arr[i].children, id)) {
           return findNodeInArray(arr[i].children, id);
         }
       }
     }
-    console.log("here")
   }
   return (
     <div className="skills-tree-page">

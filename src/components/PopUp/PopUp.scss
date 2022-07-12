@@ -10,7 +10,7 @@
     align-items: center;
     padding: 15px;
     position: sticky;
-    z-index: 2;
+    z-index: 5;
     bottom: 30px;
     border-radius: 20px;
     align-self: center;
@@ -54,6 +54,6 @@
         height: 100%;
         background: rgba(0, 0, 0, 0.377);
         border-radius: 8px;
-        z-index: 1;
+        z-index: 4;
     }
 }

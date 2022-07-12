@@ -8,50 +8,57 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  margin-top: 58px;
 
   &__container {
+    
     display: flex;
-  }
-
-  &__circle {
-    width: 199px;
-    z-index: 1;
+    align-items: center;
+    flex-direction: column;
     position: relative;
-    right: -100px;
-  }
+    padding: 0px;
 
-  &__img {
-    width: 200px;
-    height: 200px;
-    z-index: 2;
-    position: relative;
-    right: 100px;
-    top: 21px;
+    &__circle {
+      width: 199px;
+      z-index: 1;
+      top:0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+  
+    &__img {
+      width: 200px;
+      height: 200px;
+      z-index: 2;
+      position: absolute;
+      top: 21px;
+      left: 0;
+      right: 0;
+      bottom: 0;
+    }
+
+    &__lock {
+      position: absolute;
+      z-index: 4;
+      top:61px;
+      width: 53px;
+    }
   }
 
   &__line {
+    margin: 20px;
     width: 168px;
-    position: relative;
-    top: 21px;
   }
 
   &__heading {
-    position: relative;
     top: 19px;
     color: $white-color;
     text-align: center;
     margin: 36px;
+    margin-top: 32px;;
     font-size: 18px;
     font-weight: 500;
-  }
-
-  &__lock {
-    position: absolute;
-    right: 183px;
-    top: 60px;
-    opacity: 100%;
-    z-index: 7;
-    width: 53px;
   }
 
   &__overlay {
