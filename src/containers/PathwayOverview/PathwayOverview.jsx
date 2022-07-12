@@ -18,12 +18,7 @@ const PathwayOverview = () => {
     <div>
       PathwayOverview
       <div className="pathway-overview__filters">
-        <MenuBar
-          link1="Overview"
-          link2="Structure"
-          link3="Careers"
-          onClickLink={handleCategoryChange}
-        />
+        <MenuBar link1="Overview" link2="Structure" link3="Careers" onClickLink={handleCategoryChange} />
       </div>
     </div>
   );
