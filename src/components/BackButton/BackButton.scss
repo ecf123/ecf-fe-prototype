@@ -1,9 +1,7 @@
 @use "../../assets/sass/variables" as *;
 
 .back {
-
     align-self: flex-start;
-
     &__button {
         border-radius: 25px;
         border: 1px solid $primary-color-blue-gray;
@@ -13,5 +11,6 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: transparent;
     }
 }

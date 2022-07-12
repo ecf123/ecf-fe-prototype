@@ -1,44 +1,77 @@
 @use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
 
 .pathway-overview {
-    
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: clip;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-&__header{
-    border: solid black 2px;
+  &__header {
     display: flex;
     width: 100%;
+    height: 80px;
+    align-items: center;
     justify-content: space-between;
-}
-&__button{
+    margin-bottom: 69px;
+    background-color: $secondary-color-light-green;
+
+  }
+  &__backButton{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 3.5px;
+    bottom: -39px;
+    left: 30px;
+    width: 47px;
+    height: 47px;
+    background-color: $white-color;
+    border-radius: 25px;
+  }
+  &__trophy{
+    position: relative;
+    bottom: -39px;
+  }
+
+  &__button {
     position: fixed;
     bottom: 0px;
     width: 90%;
     margin: 34px auto;
 
-}
+  }
 
-}
-.card-conatiner{
-    border: solid black 2px;
-    
-     align-items: center;
-
-     &__image{
-        width: 204px;
-        border: solid black 2px;
-     }
-    
-}
-
-
-.pathway-overview {
-  overflow: clip;
   &__filters {
+    width: 90%;
     position: sticky;
     top: 0;
     background-color: $white-color;
+  }
+
+  &__content {
+    width: 90%;
+  }
+}
+
+.card-container {
+  border: solid black 2px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  &__header {
+    width: 220px;
+    text-align: center;
+    @include heading3();
+    color: #3b5165;
+    font-family: $primary-font-family;
+    
+  }
+
+  &__image {
+    width: 204px;
+    height: 204px;
+    border: solid black 2px;
   }
 }

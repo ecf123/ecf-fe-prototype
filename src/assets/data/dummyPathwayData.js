@@ -1,7 +1,12 @@
 import image from "../images/financial-forest.svg"
 
-const card = {header: "Financial Forest",
- topics: "Banking, Investments",
-  image: image};
+const card = {
+  header: "Financial Forest",
+  topics: "Banking, Investments",
+  image: image,
+  overview:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",
+  structure: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",
+  careers: "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi"
+};
 
 export default card;
