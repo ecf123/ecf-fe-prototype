@@ -4,16 +4,8 @@ import {CircularProgressbar, buildStyles} from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./PathwaysCard.scss";
 
-import card from "../../assets/data/dummyPathwayData";
-
-// {card, percentage} replace in ()
-
-const PathwaysCard = () => {
+const PathwaysCard = ({card, percentage}) => {
   const {header, topics, image} = card;
-
-  // percentage is a prop of circular progress bar
-  const percentage = 80;
-
   return (
     <>
       <div className="card" data-testid="pathwaycard">
@@ -21,7 +13,7 @@ const PathwaysCard = () => {
           <CircularProgressbar
             className="card__progress-bar"
             value={percentage}
-            text={percentage}
+            text={`${percentage}%`}
             strokeWidth={10}
             styles={buildStyles({
               textColor: "#3b5165",
