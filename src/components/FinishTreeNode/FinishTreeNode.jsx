@@ -44,14 +44,24 @@ const FinishTreeNode = (props) => {
         </div>
       ) : (
         <div className="finish-tree-node finish-tree-node--locked" id="finish">
-            <div className="finish-tree-node__container">
-          <img className="finish-tree-node__circle" src={circle} alt="Circle" />
+          <div className="finish-tree-node__overlay"></div>
           <img
-            className="finish-tree-node__img finish-tree-node--locked"
-            src={podium}
-            alt="People celebrating"
+            src={lock}
+            alt="lock"
+            className="finish-tree-node__lock"
+            data-testid="lock"
           />
-          <img src={lock} alt="lock" className="finish-tree-node__lock" />
+          <div className="finish-tree-node__container">
+            <img
+              className="finish-tree-node__circle"
+              src={circle}
+              alt="Circle"
+            />
+            <img
+              className="finish-tree-node__img finish-tree-node--locked"
+              src={podium}
+              alt="People celebrating"
+            />
           </div>
           <img className="finish-tree-node__line" src={line} alt="Underline" />
           <h1 className="finish-tree-node__heading finish-tree-node--locked">
@@ -68,7 +78,7 @@ const FinishTreeNode = (props) => {
             path="grid"
             gridBreak="100%"
             animateDrawing={false}
-            // SVGcanvasProps={{ strokeOpacity: "50%" }}
+            SVGcanvasProps={{ strokeOpacity: "50%" }}
           />
         </div>
       )}
