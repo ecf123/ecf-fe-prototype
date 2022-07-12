@@ -1,5 +1,4 @@
 import React from "react";
-import PathwayOverview from "../PathwayOverview/PathwayOverview";
 import PathwayCardList from "../PathwayCardList/PathwayCardList";
 
 // path: /pathways
