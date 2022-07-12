@@ -122,8 +122,26 @@ const FilterTag = () => {
         }
     };
 
+    const filterTagJsx = filtersArray.map((filter, index)=>{
+    return ( <span
+      id={filter.id}
+      data-testid="filtertag-item"
+      className={
+          activeArray[index+1]
+              ? "filter-tag__item filter-tag__active"
+              : "filter-tag__item"
+      }
+      onClick={(event)=>{
+        handleSelected(event)
+      }}
+  >
+      <img src={filter.img} alt="" /> {filter.name}
+  </span>)
+  })
+
+
     return (
-        <div className="filter-tag">
+       <div className="filter-tag">
             <span
                 id="all"
                 data-testid="filtertag-item"
@@ -140,95 +158,7 @@ const FilterTag = () => {
                 {"    "}
                 All{"   "}
             </span>
-            <span
-                id="finance"
-                data-testid="filtertag-item"
-                className={
-                    activeArray[1]
-                        ? "filter-tag__item filter-tag__active"
-                        : "filter-tag__item"
-                }
-                onClick={(event)=>{
-                  handleSelected(event)
-                 
-                }}
-            >
-                <img src={performanceMoney} alt="" /> Finance
-            </span>
-            <span
-                id="business"
-                data-testid="filtertag-item"
-                className={
-                    activeArray[2]
-                        ? "filter-tag__item filter-tag__active"
-                        : "filter-tag__item"
-                }
-                onClick={(event)=>{
-                  handleSelected(event)
-                 
-                }}>
-                <img src={handshake} alt="" /> Business
-            </span>
-            <span
-                id="design"
-                data-testid="filtertag-item"
-                className={
-                    activeArray[3]
-                        ? "filter-tag__item filter-tag__active"
-                        : "filter-tag__item"
-                }
-                onClick={(event)=>{
-                  handleSelected(event)
-                  
-                }}
-            >
-                <img src={paintingPalette} alt="" /> Design
-            </span>
-            <span
-                id="digital-marketing"
-                data-testid="filtertag-item"
-                className={
-                    activeArray[4]
-                        ? "filter-tag__item filter-tag__active"
-                        : "filter-tag__item"
-                }
-                onClick={(event)=>{
-                  handleSelected(event)
-                  
-                }}
-            >
-                <img src={phoneWrite} alt="" /> Digital Marketing
-            </span>
-            <span
-                id="engineering"
-                data-testid="filtertag-item"
-                className={
-                    activeArray[5]
-                        ? "filter-tag__item filter-tag__active"
-                        : "filter-tag__item"
-                }
-                onClick={(event)=>{
-                  handleSelected(event)
-                  
-                }}
-            >
-                <img src={carActions} alt="" /> Engineering
-            </span>
-            <span
-                id="programming"
-                data-testid="filtertag-item"
-                className={
-                    activeArray[6]
-                        ? "filter-tag__item filter-tag__active"
-                        : "filter-tag__item"
-                }
-                onClick={(event)=>{
-                  handleSelected(event)
-                  
-                }}
-            >
-                <img src={fileCode} alt="" /> Programming
-            </span>
+          {filterTagJsx}
         </div>
     );
 };
