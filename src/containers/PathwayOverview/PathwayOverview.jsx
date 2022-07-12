@@ -1,6 +1,6 @@
 import React from "react";
 import "./PathwayOverview.scss";
-import card from "../../assets/data/dummyPathwayData"
+// import card from "../../assets/data/dummyPathwayData"
 
 import MenuBar from "../../components/MenuBar/MenuBar";
 

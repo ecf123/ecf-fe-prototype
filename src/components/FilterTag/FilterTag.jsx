@@ -7,7 +7,7 @@ import phoneWrite from "../../assets/images/phone-write-icon.svg";
 import carActions from "../../assets/images/car-actions-icon.svg";
 import fileCode from "../../assets/images/file-code-icon.svg";
 
-const FilterTag = (filterArray) => {
+const FilterTag = () => {
     const [activeArray, setActiveArray] = useState([
         true,
         false,
@@ -24,8 +24,8 @@ const FilterTag = (filterArray) => {
         switch (event.target.id) {
             case "all":
                 setActiveArray([
-                    false,
                     true,
+                    false,
                     false,
                     false,
                     false,
@@ -33,7 +33,7 @@ const FilterTag = (filterArray) => {
                     false,
                 ]);
                 break;
-            case "1":
+            case "finance":
                 setActiveArray([
                     false,
                     true,
@@ -44,7 +44,7 @@ const FilterTag = (filterArray) => {
                     false,
                 ]);
                 break;
-            case "2":
+            case "business":
                 setActiveArray([
                     false,
                     false,
@@ -55,7 +55,7 @@ const FilterTag = (filterArray) => {
                     false,
                 ]);
                 break;
-            case "3":
+            case "design":
                 setActiveArray([
                     false,
                     false,
@@ -66,7 +66,7 @@ const FilterTag = (filterArray) => {
                     false,
                 ]);
                 break;
-            case "4":
+            case "digital-marketing":
                 setActiveArray([
                     false,
                     false,
@@ -77,7 +77,7 @@ const FilterTag = (filterArray) => {
                     false,
                 ]);
                 break;
-            case "5":
+            case "engineering":
                 setActiveArray([
                     false,
                     false,
@@ -88,7 +88,7 @@ const FilterTag = (filterArray) => {
                     false,
                 ]);
                 break;
-            case "6":
+            case "programming":
                 setActiveArray([
                     false,
                     false,
@@ -117,6 +117,7 @@ const FilterTag = (filterArray) => {
         <div className="filter-tag">
             <span
                 id="all"
+                data-testid="filtertag-item"
                 className={
                     activeArray[0]
                         ? "filter-tag__item filter-tag__active"
@@ -131,7 +132,8 @@ const FilterTag = (filterArray) => {
                 All{"   "}
             </span>
             <span
-                id="1"
+                id="finance"
+                data-testid="filtertag-item"
                 className={
                     activeArray[1]
                         ? "filter-tag__item filter-tag__active"
@@ -145,7 +147,8 @@ const FilterTag = (filterArray) => {
                 <img src={performanceMoney} alt="" /> Finance
             </span>
             <span
-                id="2"
+                id="business"
+                data-testid="filtertag-item"
                 className={
                     activeArray[2]
                         ? "filter-tag__item filter-tag__active"
@@ -158,7 +161,8 @@ const FilterTag = (filterArray) => {
                 <img src={handshake} alt="" /> Business
             </span>
             <span
-                id="3"
+                id="design"
+                data-testid="filtertag-item"
                 className={
                     activeArray[3]
                         ? "filter-tag__item filter-tag__active"
@@ -172,7 +176,8 @@ const FilterTag = (filterArray) => {
                 <img src={paintingPalette} alt="" /> Design
             </span>
             <span
-                id="4"
+                id="digital-marketing"
+                data-testid="filtertag-item"
                 className={
                     activeArray[4]
                         ? "filter-tag__item filter-tag__active"
@@ -186,7 +191,8 @@ const FilterTag = (filterArray) => {
                 <img src={phoneWrite} alt="" /> Digital Marketing
             </span>
             <span
-                id="5"
+                id="engineering"
+                data-testid="filtertag-item"
                 className={
                     activeArray[5]
                         ? "filter-tag__item filter-tag__active"
@@ -200,7 +206,8 @@ const FilterTag = (filterArray) => {
                 <img src={carActions} alt="" /> Engineering
             </span>
             <span
-                id="6"
+                id="programming"
+                data-testid="filtertag-item"
                 className={
                     activeArray[6]
                         ? "filter-tag__item filter-tag__active"

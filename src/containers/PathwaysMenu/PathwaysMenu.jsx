@@ -11,8 +11,6 @@ const PathwaysMenu = () => {
 
     return (
         <div>
-            PathwaysMenu
-            <div>PathwaysMenu</div>
             <div>
                 <FilterTag filterArray={filterArray} />
                 <PathwayCardList />
