@@ -1,9 +1,7 @@
 import { React } from "react";
-
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./PathwaysCard.scss";
-
 
 const PathwaysCard = ({ card, percentage }) => {
     const { header, topics, image } = card;
