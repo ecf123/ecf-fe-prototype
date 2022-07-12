@@ -19,6 +19,7 @@ const FilterTag = (filterArray) => {
     ]);
 
     const handleSelected = (event) => {
+      console.log(event);
         setActiveArray([false, false, false, false, false, false, false]);
         switch (event.target.id) {
             case "all":
@@ -121,9 +122,9 @@ const FilterTag = (filterArray) => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={()=>{
-                  handleSelected()
-                  filterArray();
+                onClick={(event)=>{
+                  handleSelected(event)
+                  
                 }}
             >
                 {"    "}
@@ -136,9 +137,9 @@ const FilterTag = (filterArray) => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={()=>{
-                  handleSelected()
-                  filterArray();
+                onClick={(event)=>{
+                  handleSelected(event)
+                 
                 }}
             >
                 <img src={performanceMoney} alt="" /> Finance
@@ -150,9 +151,9 @@ const FilterTag = (filterArray) => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={()=>{
-                  handleSelected()
-                  filterArray();
+                onClick={(event)=>{
+                  handleSelected(event)
+                 
                 }}>
                 <img src={handshake} alt="" /> Business
             </span>
@@ -163,9 +164,9 @@ const FilterTag = (filterArray) => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={()=>{
-                  handleSelected()
-                  filterArray();
+                onClick={(event)=>{
+                  handleSelected(event)
+                  
                 }}
             >
                 <img src={paintingPalette} alt="" /> Design
@@ -177,9 +178,9 @@ const FilterTag = (filterArray) => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={()=>{
-                  handleSelected()
-                  filterArray();
+                onClick={(event)=>{
+                  handleSelected(event)
+                  
                 }}
             >
                 <img src={phoneWrite} alt="" /> Digital Marketing
@@ -191,9 +192,9 @@ const FilterTag = (filterArray) => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={()=>{
-                  handleSelected()
-                  filterArray();
+                onClick={(event)=>{
+                  handleSelected(event)
+                  
                 }}
             >
                 <img src={carActions} alt="" /> Engineering
@@ -205,9 +206,9 @@ const FilterTag = (filterArray) => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={()=>{
-                  handleSelected()
-                  filterArray();
+                onClick={(event)=>{
+                  handleSelected(event)
+                  
                 }}
             >
                 <img src={fileCode} alt="" /> Programming
