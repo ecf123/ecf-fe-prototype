@@ -5,10 +5,10 @@ import PathwaysCard from "../PathwaysCard/PathwaysCard";
 const Carousel = ({cardData}) => {
   return (
     <div className="carousel" data-testid="carousel">
-        {cardData.map((item, index) => {
+        {cardData.map(item => {
           return (
-            <div key={index} className="carousel__item" data-testid="carousel__item">
-              <PathwaysCard card={item} />
+            <div key={item.id} className="carousel__item" data-testid="carousel__item">
+              <PathwaysCard header={item.header} topics={item.topics} image={item.image} percentage={item.percentage} />
             </div>
           );
         })}
