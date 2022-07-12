@@ -1,11 +1,17 @@
-import React from 'react'
+import React from "react";
+import PathwayCardList from "../PathwayCardList/PathwayCardList";
 
 // path: /pathways
 
 const PathwaysMenu = () => {
   return (
-    <div>PathwaysMenu</div>
-  )
-}
+    <>
+      <div>PathwaysMenu</div>
+      <div>
+        <PathwayCardList />
+      </div>
+    </>
+  );
+};
 
-export default PathwaysMenu
+export default PathwaysMenu;

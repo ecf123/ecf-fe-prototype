@@ -1,10 +1,14 @@
 import React from 'react'
+import ArticleIndexHeading from '../../components/ArticleIndexHeading/ArticleIndexHeading'
+
 
 // path: /articles/:articleId
 
-const ArticleIndex = () => {
+const ArticleIndex = ({articleArray}) => {
   return (
-    <div>ArticleIndex</div>
+    <div>
+      <ArticleIndexHeading articleArray={articleArray}/>
+    </div>
   )
 }
 
