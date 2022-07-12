@@ -1,0 +1,14 @@
+.video-card {
+  position: relative;
+  margin-bottom: 100px;
+
+  & img {
+    position: absolute;
+    bottom: -45px;
+    left: 45px;
+    background: white;
+    padding: 25px;
+    border-radius: 50%;
+    width: 90px;
+  }
+}

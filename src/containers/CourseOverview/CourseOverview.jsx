@@ -19,6 +19,7 @@ const CourseOverview = () => {
 
   return (
     <div data-testid="course-overview" className="course-overview">
+      <VideoCardList />
       <div className="course-overview__content">
         <div className="course-overview__filters">
           <MenuBar data-testid="course-overview" link1="Lessons" link2="Challenges" link3="Additional Info" onClickLink={handleCategoryChange} />

@@ -5,10 +5,12 @@ import barclays from "../../assets/images/barclays.svg";
 
 const VideoCardList = () => {
   return (
-    <div>
-      <VideoCard />
-      <img src={barclays} alt={"barclays icon"} />
-    </div>
+    <>
+      <div className="video-card">
+        <VideoCard />
+        <img className="video-card__icon" src={barclays} alt={"barclays icon"} />
+      </div>
+    </>
   );
 };
 
