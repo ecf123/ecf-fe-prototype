@@ -12,21 +12,22 @@
 
   &__content {
     &-header {
-      @include heading3Regular;
+      @include heading5;
       color: $primary-color-navy;
       padding: 14px 0 0 20px;
       margin: 0;
     }
 
     &-topics {
-      @include heading5;
+      @include heading7;
       color: $primary-color-blue-gray;
       padding: 6px 0 25px 20px;
       margin: 0;
     }
 
     &-image {
-      width: 91px;
+      height: 125px;
+      width: 100%;
       padding: 34px 67px 0 21px;
     }
   }
