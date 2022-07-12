@@ -5,10 +5,8 @@ import "./ArticleIndexHeading.scss";
 
 const ArticleIndexHeading = ({ articleArray }) => {
   const { articleId } = useParams();
-  console.log(articleId);
 
   const pickedArticle = articleArray.find( ({ id }) => id === parseInt(articleId))
-  console.log(pickedArticle);
 
   return (
     <article className="article-index-card">
