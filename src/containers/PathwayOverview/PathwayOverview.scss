@@ -51,12 +51,18 @@
   }
 
   &__content {
-    width: 90%;
+    width: 80%;
+    height: 295px;
+    overflow: auto;
+    color:#78878F;
+    mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
+    height:  290px; 
+ 
   }
 }
 
 .card-container {
-  border: solid black 2px;
+  // border: solid black 2px;
   align-items: center;
   display: flex;
   flex-direction: column;
@@ -72,6 +78,6 @@
   &__image {
     width: 204px;
     height: 204px;
-    border: solid black 2px;
+    // border: solid black 2px;
   }
 }
