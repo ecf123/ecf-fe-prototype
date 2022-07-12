@@ -7,7 +7,7 @@ const VideoCardList = () => {
   return (
     <div>
       <VideoCard />
-      <img src={barclays} />
+      <img src={barclays} alt={"barclays icon"} />
     </div>
   );
 };
