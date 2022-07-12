@@ -2,15 +2,15 @@ import React from "react";
 import "./VideoCardList.scss";
 import VideoCard from "../../components/VideoCard/VideoCard";
 
-const VideoCardList = (dummyVideo) => {
-  const {url, icon} = dummyVideo;
-
+const VideoCardList = ({dummyVideoData}) => {
   return (
     <>
-      <div className="video-card">
-        <VideoCard url={url} />
-        <img className="video-card__icon" src={icon} alt={"barclays icon"} />
-      </div>
+      {dummyVideoData.map(({url, icon, name}, index) => (
+        <div className="video-card-list" key={index}>
+          <VideoCard url={url} />
+          <img className="video-card-list__icon" src={icon} alt={`Icon for ${name}`} />
+        </div>
+      ))}
     </>
   );
 };
