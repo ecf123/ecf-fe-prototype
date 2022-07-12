@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import CourseOverviewList from "../CourseOverviewList/CourseOverviewList";
+import VideoCardList from "../VideoCardList/VideoCardList";
 import "./CourseOverview.scss";
 
 // path: /courses/:courseId
@@ -21,6 +22,7 @@ const CourseOverview = () => {
 
   return (
     <div className="course-overview">
+      <VideoCardList />
       <div className="course-overview__filters" onClick={handleCategoryChange}>
         Dummy filter section. Click here to switch to challenges.
       </div>
