@@ -5,7 +5,7 @@ import ReactPlayer from "react-player";
 const VideoCard = ({url}) => {
   return (
     <div className="video-card">
-      <ReactPlayer url={url} width="100%" />
+      <ReactPlayer url={url} width="100%" height="242px" />
     </div>
   );
 };
