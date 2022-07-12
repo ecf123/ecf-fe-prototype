@@ -126,6 +126,7 @@ const FilterTag = () => {
     return ( <span
       id={filter.id}
       data-testid="filtertag-item"
+      key= {index+1}
       className={
           activeArray[index+1]
               ? "filter-tag__item filter-tag__active"
