@@ -3,6 +3,10 @@ import "./Home.scss"
 import WelcomeHeader from '../../components/WelcomeHeader/WelcomeHeader'
 import SearchContainer from '../../containers/SearchContainer/SearchContainer'
 import Navigation from '../../components/Navigation/Navigation'
+import Carousel from '../../components/Carousel/Carousel'
+import image from "../../assets/images/financial-forest.svg"
+import cardData from "../../assets/data/dummyPathwayData"
+
 
 
 // path: /
@@ -14,6 +18,7 @@ const Home = ({ userProfile }) => {
             <WelcomeHeader userProfile = {userProfile} />
             <SearchContainer title="Pathways"  pathwaysLink="/"  />
             <Navigation/>
+            <Carousel cardData={cardData} />
         </div>
     )
 }
