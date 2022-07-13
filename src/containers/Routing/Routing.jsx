@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "../Home/Home";
 import Profile from "../Profile/Profile";
 import userProfile from "../../assets/data/dummyUserData";
@@ -15,14 +15,13 @@ import Splash from "../Splash/Splash";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTreePage from "../SkillsTreePage/SkillsTreePage";
-import { auth } from "../../firebase";
-import { onAuthStateChanged } from "firebase/auth";
+import {auth} from "../../firebase";
+import {onAuthStateChanged} from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
-import articleData from '../../assets/data/dummyArticles'
+import articleData from "../../assets/data/dummyArticles";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
 
 const Routing = () => {
-
   // eslint-disable-next-line no-unused-vars
   const [userToken, setUserToken] = useState(null);
 
@@ -39,21 +38,12 @@ const Routing = () => {
   return (
     <Router>
       <Routes>
-        <Route
-          path="/marketplace"
-          element={<Marketplace userProfile={userProfile} />}
-        />
-        <Route
-          path="/marketplace/:marketplaceId"
-          element={<MarketplaceIndex />}
-        />
+        <Route path="/marketplace" element={<Marketplace userProfile={userProfile} />} />
+        <Route path="/marketplace/:marketplaceId" element={<MarketplaceIndex />} />
 
         <Route path="/pathways" element={<PathwaysMenu />} />
         <Route path="/pathways/:pathwayId" element={<PathwayOverview />} />
-        <Route
-          path="/pathways/:pathwayId/skills-tree"
-          element={<SkillsTreePage />}
-        />
+        <Route path="/pathways/:pathwayId/skills-tree" element={<SkillsTreePage />} />
 
         <Route path="/splash" element={<Splash />} />
         <Route path="/sign-in" element={<SignIn />} />
@@ -61,10 +51,7 @@ const Routing = () => {
 
         <Route path="/" element={<Home userProfile={userProfile} />} />
 
-        <Route
-          path="/articles"
-          element={<Articles articleInfo={articleInfo}  />}
-        />
+        <Route path="/articles" element={<Articles articleInfo={articleInfo} />} />
         <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleData} />} />
 
         <Route path="/courses/:courseId" element={<CourseOverview />} />
