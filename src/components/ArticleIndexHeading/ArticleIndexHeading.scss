@@ -2,8 +2,25 @@
 @use "./../../assets/sass/mixins" as *;
 
 .article-index-card{
-display: flex;
-justify-content: space-evenly;
-flex-direction: column;
-align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    height: 100px;
+    margin: 15px;
+
+    &__info {
+        display: flex;
+        flex-direction: row;
+        margin: 15px 0;
+        color: $primary-color-lilac;
+        
+        &__img {
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        &__time {
+            margin-right: 40px;
+        }
+    }
 }

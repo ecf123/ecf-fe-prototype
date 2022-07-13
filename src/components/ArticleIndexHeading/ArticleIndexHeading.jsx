@@ -6,23 +6,15 @@ import "./ArticleIndexHeading.scss";
 const ArticleIndexHeading = ({ articleArray }) => {
   const { articleId } = useParams();
 
-  const pickedArticle = articleArray.filter((article) => {
-    return articleId === article.id;
-  });
+  const pickedArticle = articleArray.find( ({ id }) => id === parseInt(articleId))
 
   return (
     <article className="article-index-card">
-      <h1 className="article-index-card__title">{pickedArticle.title}</h1>
+      <h1 data-testid="heading" className="article-index-card__title">{pickedArticle.title}</h1>
       <div className="article-index-card__info">
-        <p>
-          <img
-            className="article-index-card__info__time"
-            src={bookIcon}
-            alt="book icon"
-          />
-          {pickedArticle.readTime}
-        </p>
-        <p className="article-index-card__info__date">{pickedArticle.date}</p>
+        <img className="article-index-card__info__img" src={bookIcon} alt="book icon"/>
+        <p data-testid="time" className="article-index-card__info__time">{pickedArticle.readTime}</p>
+        <p data-testid="date" className="article-index-card__info__date">{pickedArticle.date}</p>
       </div>
     </article>
   );
