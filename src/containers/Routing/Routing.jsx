@@ -22,9 +22,8 @@ import articleInfo from "../../assets/data/dummyArticleCardInformation";
 
 const Routing = () => {
 
+  // eslint-disable-next-line no-unused-vars
   const [userToken, setUserToken] = useState(null);
-  //Console.log only used to use the token to pass tests, this will be unnecessary when the data is used
-  console.log(userToken)
 
   useEffect(() => {
     onAuthStateChanged(auth, (authenticatedUser) => {

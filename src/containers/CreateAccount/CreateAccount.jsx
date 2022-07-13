@@ -70,7 +70,7 @@ const CreateAccount = () => {
         <>
           <BackButton linkTo="/splash" />
           <h2 className="register-user__title">Create An Account</h2>
-          <form className="register-user__inputs--pageOne">
+          <form className="register-user__inputs--page-one">
             <InputField
               inputType="text"
               label="First Name"
