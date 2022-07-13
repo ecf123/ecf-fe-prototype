@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 import CourseOverviewList from "../CourseOverviewList/CourseOverviewList";
 import "./CourseOverview.scss";
 import MenuBar from "../../components/MenuBar/MenuBar";
-
+import BackButton from "../../components/BackButton/BackButton";
 // path: /courses/:courseId
 
 const CourseOverview = () => {
@@ -20,23 +20,11 @@ const CourseOverview = () => {
     <div data-testid="course-overview" className="course-overview">
       <div className="course-overview__content">
         <div className="course-overview__filters">
-          <MenuBar
-            data-testid="course-overview"
-            link1="Lessons"
-            link2="Challenges"
-            link3="Additional Info"
-            onClickLink={handleCategoryChange}
-          />
+          <MenuBar data-testid="course-overview" link1="Lessons" link2="Challenges" link3="Additional Info" onClickLink={handleCategoryChange} />
         </div>
 
-        <div
-          data-testid="course-overview-list"
-          className="course-overview__list"
-        >
-          <CourseOverviewList
-            title={capitalisedNames(category)}
-            category={category}
-          />
+        <div data-testid="course-overview-list" className="course-overview__list">
+          <CourseOverviewList title={capitalisedNames(category)} category={category} />
         </div>
       </div>
     </div>
