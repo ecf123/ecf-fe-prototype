@@ -2,21 +2,11 @@ import { React } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import "./PathwaysCard.scss";
-import { useNavigate } from 'react-router-dom';
 
-const PathwaysCard = ({ header, topics, image, percentage, id, cardUrl }) => {
-  const navigate = useNavigate();
-
-  // const redirect = (url) => {
-  //   console.log("attempt");
-  //   console.log(url);
-
-    // navigate(url, true);
-  // }
-
+const PathwaysCard = ({ header, topics, image, percentage, id }) => {
   return (
     <>
-      <div id={id} className="card" data-testid="pathwaycard" onClick={()=>navigate(cardUrl)}>
+      <div id={id} className="card" data-testid="pathwaycard">
         <div className="card__progress" data-testid="circularprogressbar">
           <CircularProgressbar
             className="card__progress-bar"
