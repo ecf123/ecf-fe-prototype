@@ -8,12 +8,12 @@ import carActions from "../../assets/images/car-actions-icon.svg";
 import fileCode from "../../assets/images/file-code-icon.svg";
 
 const filtersArray = [
-  { id: "finance", name: "Finance", img: performanceMoney },
-  { id: "business", name: "Business", img: handshake },
-  { id: "design", name: "Design", img: paintingPalette },
-  { id: "digital-marketing", name: "Digital-marketing", img: phoneWrite },
-  { id: "engineering", name: "Engineering", img: carActions },
-  { id: "programming", name: "Programming", img: fileCode },
+    { id: "finance", name: "Finance", img: performanceMoney },
+    { id: "business", name: "Business", img: handshake },
+    { id: "design", name: "Design", img: paintingPalette },
+    { id: "digital-marketing", name: "Digital-marketing", img: phoneWrite },
+    { id: "engineering", name: "Engineering", img: carActions },
+    { id: "programming", name: "Programming", img: fileCode },
 ];
 
 const FilterTag = () => {
@@ -28,7 +28,7 @@ const FilterTag = () => {
     ]);
 
     const handleSelected = (event) => {
-      console.log(event);
+        console.log(event);
         setActiveArray([false, false, false, false, false, false, false]);
         switch (event.target.id) {
             case "all":
@@ -122,27 +122,28 @@ const FilterTag = () => {
         }
     };
 
-    const filterTagJsx = filtersArray.map((filter, index)=>{
-    return ( <span
-      id={filter.id}
-      data-testid="filtertag-item"
-      key= {index+1}
-      className={
-          activeArray[index+1]
-              ? "filter-tag__item filter-tag__active"
-              : "filter-tag__item"
-      }
-      onClick={(event)=>{
-        handleSelected(event)
-      }}
-  >
-      <img src={filter.img} alt="" /> {filter.name}
-  </span>)
-  })
-
+    const filterTagJsx = filtersArray.map((filter, index) => {
+        return (
+            <span
+                id={filter.id}
+                data-testid="filtertag-item"
+                key={index + 1}
+                className={
+                    activeArray[index + 1]
+                        ? "filter-tag__item filter-tag__active"
+                        : "filter-tag__item"
+                }
+                onClick={(event) => {
+                    handleSelected(event);
+                }}
+            >
+                <img src={filter.img} alt="" /> {filter.name}
+            </span>
+        );
+    });
 
     return (
-       <div className="filter-tag">
+        <div className="filter-tag">
             <span
                 id="all"
                 data-testid="filtertag-item"
@@ -151,15 +152,14 @@ const FilterTag = () => {
                         ? "filter-tag__item filter-tag__active"
                         : "filter-tag__item"
                 }
-                onClick={(event)=>{
-                  handleSelected(event)
-                  
+                onClick={(event) => {
+                    handleSelected(event);
                 }}
             >
                 {"    "}
                 All{"   "}
             </span>
-          {filterTagJsx}
+            {filterTagJsx}
         </div>
     );
 };
