@@ -9,9 +9,9 @@ const MarketplaceIndexOverview = ({ marketData }) => {
   );
 
   return (
-    <div className="marketplace-overview-container">
-      <h1 className="marketplace-overview-container__title">Overview</h1>
-      <p className="marketplace-overview-container__info">
+    <div className="marketplace-overview">
+      <h1 className="marketplace-overview__title">Overview</h1>
+      <p className="marketplace-overview__info">
         {pickedMarketCard.overview}
       </p>
     </div>
