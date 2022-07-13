@@ -7,7 +7,7 @@ import ArticleIndexHeading from '../../components/ArticleIndexHeading/ArticleInd
 const ArticleIndex = ({articleArray}) => {
   return (
     <div>
-      <ArticleIndexHeading articleArray={articleArray}/>
+      <ArticleIndexHeading articleArray={articleArray}/> 
     </div>
   )
 }
