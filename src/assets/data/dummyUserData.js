@@ -5,7 +5,10 @@ const userProfile = {
     lastName: "laken",
     userIcon: userIcon,
     trophies: 5,
-    skillPoints: 300
+    skillPoints: 300,
+    pathwayProgression: {
+      financialForest: 80
+    }
   }
 
 export default userProfile;
