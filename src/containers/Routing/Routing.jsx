@@ -16,7 +16,6 @@ import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTree from "../SkillsTree/SkillsTree";
 import Challenge from "../Challenge/Challenge";
-import articleData from '../../assets/data/dummyArticles'
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
 
 const Routing = () => {
@@ -49,7 +48,7 @@ const Routing = () => {
           path="/articles"
           element={<Articles articleInfo={articleInfo}  />}
         />
-        <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleData} />} />
+        <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
 
         <Route path="/courses/:courseId" element={<CourseOverview />} />
         <Route path="/lesson/:lessonId" element={<LessonOverview />} />

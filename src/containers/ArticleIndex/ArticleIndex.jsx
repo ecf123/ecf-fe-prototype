@@ -1,8 +1,9 @@
-import React from 'react'
+import {React, useState} from 'react'
 import ArticleIndexHeading from '../../components/ArticleIndexHeading/ArticleIndexHeading';
 import Navigation from '../../components/Navigation/Navigation';
 import { useParams } from 'react-router-dom';
-
+import BackButton from '../../components/BackButton/BackButton';
+import SaveButton from '../../components/SaveButton/SaveButton';
 // path: /articles/:articleId
 
 
@@ -13,8 +14,15 @@ const ArticleIndex = ({articleArray}) => {
 
 
 
+  const [isPressed, setIsPressed] = useState(pickedArticle.isActive);
+
+  const onSaveButtonPress = () => {
+    setIsPressed(!isPressed);
+  };
+
   return (
     <div className='articleIndex'>
+      <div className='articleIndex__header' ><BackButton linkTo="/articles"/><SaveButton handleSaveButtonPress={onSaveButtonPress} isPressed={isPressed}/> </div>
       <ArticleIndexHeading articleArray={articleArray}/>
       <div className='articleIndex__container'>
       {pickedArticle.articleContent.map((item,index) => {
