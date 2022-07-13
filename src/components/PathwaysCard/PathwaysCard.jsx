@@ -11,7 +11,7 @@ const PathwaysCard = ({ header, topics, image, percentage, id }) => {
           <CircularProgressbar
             className="card__progress-bar"
             value={percentage}
-            text={percentage === 0 ? "0" : `${percentage}`}
+            text={percentage === 0 ? "0" : `${percentage}%`}
             strokeWidth={10}
             styles={buildStyles({
               textColor: "#3b5165",
