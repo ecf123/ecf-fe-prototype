@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import CourseOverviewList from "../CourseOverviewList/CourseOverviewList";
 import VideoCardList from "../VideoCardList/VideoCardList";
 import "./CourseOverview.scss";
@@ -20,14 +20,26 @@ const CourseOverview = () => {
 
   return (
     <div data-testid="course-overview" className="course-overview">
-      <VideoCardList dummyVideoData={dummyVideoData} />
+      <VideoCardList dummyVideoData={dummyVideoData} id={1} />
       <div className="course-overview__content">
         <div className="course-overview__filters">
-          <MenuBar data-testid="course-overview" link1="Lessons" link2="Challenges" link3="Additional Info" onClickLink={handleCategoryChange} />
+          <MenuBar
+            data-testid="course-overview"
+            link1="Lessons"
+            link2="Challenges"
+            link3="Additional Info"
+            onClickLink={handleCategoryChange}
+          />
         </div>
 
-        <div data-testid="course-overview-list" className="course-overview__list">
-          <CourseOverviewList title={capitalisedNames(category)} category={category} />
+        <div
+          data-testid="course-overview-list"
+          className="course-overview__list"
+        >
+          <CourseOverviewList
+            title={capitalisedNames(category)}
+            category={category}
+          />
         </div>
       </div>
     </div>
