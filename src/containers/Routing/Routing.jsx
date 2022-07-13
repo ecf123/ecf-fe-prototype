@@ -14,7 +14,7 @@ import SignIn from "../SignIn/SignIn";
 import Splash from "../Splash/Splash";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
-import SkillsTree from "../SkillsTree/SkillsTree";
+import SkillsTreePage from "../SkillsTreePage/SkillsTreePage";
 import { auth } from "../../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
@@ -52,7 +52,7 @@ const Routing = () => {
         <Route path="/pathways/:pathwayId" element={<PathwayOverview />} />
         <Route
           path="/pathways/:pathwayId/skills-tree"
-          element={<SkillsTree />}
+          element={<SkillsTreePage />}
         />
 
         <Route path="/splash" element={<Splash />} />

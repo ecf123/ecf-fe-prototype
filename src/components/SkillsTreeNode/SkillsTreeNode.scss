@@ -1,0 +1,26 @@
+@use "../../assets/sass/mixins" as *;
+@use "./../../assets/sass/variables" as *;
+
+.node {
+  background-color: $white-color;
+  border-radius: 40px;
+  width: 76px;
+  height: 76px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 20px 5px $white-color;
+  position: relative;
+  margin: 0px;
+  z-index: 1;
+
+  &__image {
+    width: 45%;
+  }
+
+  &--locked {
+    box-shadow: none;
+    border: rgba($color: $white-color, $alpha: 0.5) 3px solid;
+    background-color: $primary-color-green;
+  }
+}
