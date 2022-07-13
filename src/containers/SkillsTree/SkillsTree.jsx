@@ -5,10 +5,9 @@ import React from "react";
 import "./SkillsTree.scss";
 import FinishTreeNode from "../../components/FinishTreeNode/FinishTreeNode";
 
-
 const SkillsTree = (props) => {
   let levels = [];
-  const {handleNodeClick, title} = props;
+  const { handleNodeClick, title } = props;
   const getNodes = (node, level) => {
     if (!levels[level]) {
       levels[level] = [];
@@ -33,36 +32,36 @@ const SkillsTree = (props) => {
           handleNodeClick={handleNodeClick}
         />
         {parentId &&
-          (locked ? (
-            process.env.NODE_ENV !== 'test' && 
-            <Xarrow
-              start={id}
-              end={parentId}
-              startAnchor="top"
-              endAnchor="middle"
-              color="white"
-              strokeWidth={5}
-              showHead={false}
-              path="grid"
-              gridBreak="100%"
-              animateDrawing={false}
-              SVGcanvasProps={{ strokeOpacity: "50%" }}
-            />
-          ) : (
-            process.env.NODE_ENV !== 'test' && 
-            <Xarrow
-              start={id}
-              end={parentId}
-              startAnchor="top"
-              endAnchor="middle"
-              color="white"
-              strokeWidth={6}
-              showHead={false}
-              path="grid"
-              gridBreak="100%"
-              animateDrawing={false}
-            /> 
-          ))}
+          (locked
+            ? process.env.NODE_ENV !== "test" && (
+                <Xarrow
+                  start={id}
+                  end={parentId}
+                  startAnchor="top"
+                  endAnchor="middle"
+                  color="white"
+                  strokeWidth={5}
+                  showHead={false}
+                  path="grid"
+                  gridBreak="100%"
+                  animateDrawing={false}
+                  SVGcanvasProps={{ strokeOpacity: "50%" }}
+                />
+              )
+            : process.env.NODE_ENV !== "test" && (
+                <Xarrow
+                  start={id}
+                  end={parentId}
+                  startAnchor="top"
+                  endAnchor="middle"
+                  color="white"
+                  strokeWidth={6}
+                  showHead={false}
+                  path="grid"
+                  gridBreak="100%"
+                  animateDrawing={false}
+                />
+              ))}
       </div>
     );
   };
@@ -83,10 +82,9 @@ const SkillsTree = (props) => {
   });
 
   return (
-    <div className="skills-tree"  data-testid="skills-tree">
+    <div className="skills-tree" data-testid="skills-tree">
       {levelsJsx}
-      <FinishTreeNode parentId="santander" title={title} finished={true}/>
-      
+      <FinishTreeNode parentId="santander" title={title} finished={true} />
     </div>
   );
 };

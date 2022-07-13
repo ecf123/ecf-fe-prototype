@@ -41,8 +41,10 @@ const SkillsTreePage = () => {
       <div className="skills-tree-page__back-button">
         <BackButton linkTo={"/pathways/" + pathwayId} isSecondary={true} />
       </div>
-      <h1 className="skills-tree-page__heading" data-testid="popup-title">{title}</h1>
-      <SkillsTree handleNodeClick={handleNodeClick} title={title}/>
+      <h1 className="skills-tree-page__heading" data-testid="popup-title">
+        {title}
+      </h1>
+      <SkillsTree handleNodeClick={handleNodeClick} title={title} />
       {displayPopUp && (
         <PopUp
           description={node.description}
