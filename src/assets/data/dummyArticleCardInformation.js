@@ -1,5 +1,16 @@
 import image from "../images/amazon-logo.png";
 
+const articleContent = [
+	{
+	heading: "Heading 1",
+	paragraph: "Lorem ipsum..."
+	},
+	{
+	heading: "Heading 2",
+	paragraph: "Lorem ipsum..."
+	}
+]
+
 const articleInfo = [
     {
         title: "Want a winning CV? Follow these 5 tips",
@@ -9,6 +20,7 @@ const articleInfo = [
         isActive: false,
         readTime: "5 mins",
         date: "23 May 2022",
+        articleContent: articleContent
     },
     {
         category: "test 2 category",
@@ -18,6 +30,7 @@ const articleInfo = [
         title: "Want a winning CV? Folow these 7 tips",
         readTime: "5 mins",
         date: "23 May 2022",
+        articleContent: articleContent
     },
     {
         category: "test 3 category",
@@ -26,7 +39,8 @@ const articleInfo = [
         isActive: false,
         title: "Want a winning CV? Folow these 8 tips",
         readTime: "5 mins",
-        date: "23 May 2022"
+        date: "23 May 2022",
+        articleContent: articleContent
     }
 ]
 
