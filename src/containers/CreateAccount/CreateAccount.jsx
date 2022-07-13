@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import "./CreateAccount.scss";
 import InputField from "../../components/InputField/InputField";
 import Button from "../../components/Button/Button";
 import BackButton from "../../components/BackButton/BackButton";
 import SocialLogin from "../../components/SocialLogin/SocialLogin";
 import { createUserWithEmailAndPassword } from "firebase/auth";
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from "react-router-dom";
 import facebookIcon from "../../assets/images/facebook-logo.svg";
 import googleIcon from "../../assets/images/google-logo.svg";
 import appleIcon from "../../assets/images/apple-logo.svg";
@@ -16,16 +16,16 @@ const CreateAccount = () => {
   const [page, setPage] = useState(1);
   const navigate = useNavigate();
   const [user, setUser] = useState({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
-  
-  const handleInputChange = (event) => {
+
+  const handleInputChange = event => {
     setUser(previousState => ({ ...previousState, [event.target.name]: event.target.value }));
-  }
+  };
 
   const switchPage = () => {
     if (user.firstName === "" || user.lastName === "") {
-      return
+      return;
     }
-  
+
     if (page === 1) {
       setPage(2);
     } else {
@@ -33,7 +33,7 @@ const CreateAccount = () => {
     }
   };
 
-  const handleSubmit = async (event) => {
+  const handleSubmit = async event => {
     event.preventDefault();
 
     //Make sure all fields have content - error notification may be useful
@@ -46,26 +46,23 @@ const CreateAccount = () => {
       return;
     }
 
-    await createUserWithEmailAndPassword(auth, user.email, user.password)
-      .then((userCredential) => {
-        console.log('Success')
-        //const userToken = userCredential.user;
+    try {
+      const userCredential = await createUserWithEmailAndPassword(auth, user.email, user.password);
 
-        //Sets displayName to the given first and last name
+      if (userCredential) {
         updateProfile(auth.currentUser, {
-          displayName: `${user.firstName} ${user.lastName}`
+          displayName: `${user.firstName} ${user.lastName}`,
         });
-
-        //Reset user state to blank - user info is stored in the firebase auth token
         setUser({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
         navigate("/");
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        console.log(errorCode + ' ' + errorMessage);
-    });
-  }
+      }
+      
+    } catch (error) {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode + " " + errorMessage);
+    }
+  };
 
   return (
     <div className="register-user">
@@ -91,7 +88,7 @@ const CreateAccount = () => {
               value={user.lastName}
             />
           </form>
-            <Button buttonText="NEXT" onClickButton={switchPage} />
+          <Button buttonText="NEXT" onClickButton={switchPage} />
         </>
       ) : (
         <>
@@ -126,23 +123,16 @@ const CreateAccount = () => {
           <Button linkTo="" onClickButton={handleSubmit} buttonText="CREATE ACCOUNT" buttonType={"submit"} />
         </>
       )}
-          <p className="register-user__divider">
-            <span className="register-user__divider--text">Sign in with</span>
-          </p>
-          <div className="register-user__login-buttons">
-            <SocialLogin
-              icon={facebookIcon}
-            />
-            <SocialLogin
-              icon={googleIcon}
-            />
-            <SocialLogin
-              icon={appleIcon}
-            />
-          </div>
-        </div>
-      );
+      <p className="register-user__divider">
+        <span className="register-user__divider--text">Sign in with</span>
+      </p>
+      <div className="register-user__login-buttons">
+        <SocialLogin icon={facebookIcon} />
+        <SocialLogin icon={googleIcon} />
+        <SocialLogin icon={appleIcon} />
+      </div>
+    </div>
+  );
 };
 
-
-      export default CreateAccount
+export default CreateAccount;
