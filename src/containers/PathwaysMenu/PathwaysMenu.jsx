@@ -3,6 +3,7 @@ import TrophyHeader from "../../components/TrophyHeader/TrophyHeader.jsx";
 import FilterTag from "../../components/FilterTag/FilterTag.jsx";
 import PathwayCardList from "../PathwayCardList/PathwayCardList";
 import Navigation from "../../components/Navigation/Navigation.jsx";
+import "./PathwaysMenu.scss"
 
 // Link to dummy data
 import userProfile from "../../assets/data/dummyUserData.js";
@@ -17,7 +18,7 @@ const PathwaysMenu = () => {
     return (
         <div className="pathways-menu">
             <div className="pathways-menu__header">
-                <TrophyHeader userProfile={userProfile} />
+            <TrophyHeader userProfile={userProfile} />  
             </div>
             <h1 className="pathways-menu__heading">Pathways</h1>
             <div className="pathways-menu__filters">
