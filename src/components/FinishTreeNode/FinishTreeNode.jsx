@@ -3,7 +3,7 @@ import "./FinishTreeNode.scss";
 import podium from "../../assets/images/podium.svg";
 import lock from "../../assets/images/lock.svg";
 import Xarrow from "react-xarrows";
-import line from "../../assets/images/Vector.svg";
+import line from "../../assets/images/line.svg";
 import circle from "../../assets/images/Ellipse 92.svg";
 
 const FinishTreeNode = (props) => {
@@ -39,7 +39,7 @@ const FinishTreeNode = (props) => {
         </div>
         <img className="finish-tree-node__line" data-testid="line" src={line} alt="Underline" />
         <h1 className="finish-tree-node__heading" data-testid="heading">
-          CONGRATULATIONS!! YOU'VE COMPLETED THE {title} PATHWAY
+          CONGRATULATIONS!! YOU'VE COMPLETED THE {title.toUpperCase()} PATHWAY
         </h1>
         {process.env.NODE_ENV !== 'test' && 
           <Xarrow

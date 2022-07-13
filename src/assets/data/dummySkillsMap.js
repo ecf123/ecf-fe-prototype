@@ -4,7 +4,6 @@ import goldmanSachs from "../images/goldman-sachs.svg";
 import halifax from "../images/halifax.svg";
 import santander from "../images/santander.svg";
 import play from "../images/play.svg";
-import podium from "../images/podium.svg";
 
 export const data = [
   {

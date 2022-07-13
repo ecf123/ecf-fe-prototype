@@ -1,5 +1,4 @@
 import React from "react";
-import { useState } from "react";
 import "./SkillsTreeNode.scss";
 import lock from "./../../assets/images/lock.svg";
 
