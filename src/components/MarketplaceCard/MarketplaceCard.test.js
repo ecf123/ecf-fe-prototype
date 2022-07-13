@@ -33,7 +33,7 @@ describe("basic tests for card component", () => {
     expect(img).toBeInTheDocument();
   });
 
-  it("should render lock when isLocked]", () => {
+  it("should render lock when isLocked", () => {
     render(
       <MarketplaceCard
         img={marketplaceImage}
