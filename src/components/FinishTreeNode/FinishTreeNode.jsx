@@ -21,11 +21,13 @@ const FinishTreeNode = (props) => {
             className="finish-tree-node__container__circle"
             src={circle}
             alt="Circle"
+            data-testid="circle"
           />
           <img
             className="finish-tree-node__container__img"
             src={podium}
             alt="People celebrating"
+            data-testid="podium"
           />
           {!finished &&
             <img
@@ -35,26 +37,28 @@ const FinishTreeNode = (props) => {
             data-testid="lock"
           />}
         </div>
-        <img className="finish-tree-node__line" src={line} alt="Underline" />
-        <h1 className="finish-tree-node__heading">
+        <img className="finish-tree-node__line" data-testid="line" src={line} alt="Underline" />
+        <h1 className="finish-tree-node__heading" data-testid="heading">
           CONGRATULATIONS!! YOU'VE COMPLETED THE {title} PATHWAY
         </h1>
-        <Xarrow
-          start="finish"
-          end={parentId}
-          startAnchor="top"
-          endAnchor="middle"
-          color="white"
-          strokeWidth={5}
-          showHead={false}
-          path="grid"
-          gridBreak="100%"
-          animateDrawing={false}
-          SVGcanvasProps={{ strokeOpacity: strokeOpacity}}
-        />
+        {process.env.NODE_ENV !== 'test' && 
+          <Xarrow
+            start="finish"
+            end={parentId}
+            startAnchor="top"
+            endAnchor="middle"
+            color="white"
+            strokeWidth={5}
+            showHead={false}
+            path="grid"
+            gridBreak="100%"
+            animateDrawing={false}
+            SVGcanvasProps={{ strokeOpacity: strokeOpacity}}
+          />
+        }
 
         {!finished && 
-        <div className="finish-tree-node__overlay"></div>}
+        <div className="finish-tree-node__overlay" data-testid="overlay"></div>}
       </div>
   );
 };
