@@ -1,13 +1,13 @@
 import React from "react";
 import MarketplaceIndexOverview from "../../components/MarketplaceIndexOverview/MarketplaceIndexOverview";
-import TrophyStats from "../../components/TrophyStats/TrophyStats"
+import MarketplaceIndexRequirements from "../../components/MarketplaceIndexRequirements/MarketplaceIndexRequirements";
 
 // path: /marketplace/:marketplaceId
 
 const MarketplaceIndex = ({ marketData }) => {
   return (
     <div>
-      <TrophyStats />
+      <MarketplaceIndexRequirements marketData={marketData} />
       <MarketplaceIndexOverview marketData={marketData} />
     </div>
   );
