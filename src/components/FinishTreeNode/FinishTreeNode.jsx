@@ -37,7 +37,7 @@ const FinishTreeNode = (props) => {
         </div>
         <img className="finish-tree-node__line" src={line} alt="Underline" />
         <h1 className="finish-tree-node__heading">
-          CONGRATULATIONS!! YOU'VE COMPLETED THE {title.toUpperCase()} PATHWAY
+          CONGRATULATIONS!! YOU'VE COMPLETED THE {title} PATHWAY
         </h1>
         <Xarrow
           start="finish"

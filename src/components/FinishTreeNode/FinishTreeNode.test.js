@@ -7,7 +7,7 @@ describe("Tests to check finishTreeNode", () => {
   it("should be locked if not finished", () => {
     render(<>
         <div id="parent"></div>
-        <FinishTreeNode parentId="parent" finished={false}/>
+        <FinishTreeNode parentId="parent" finished={false} title="hi"/>
         </>
     );
     const lock = screen.getByTestId("lock");
