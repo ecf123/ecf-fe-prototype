@@ -1,17 +1,22 @@
 import React from "react";
+import FilterTag from "../../components/FilterTag/FilterTag.jsx";
 import PathwayCardList from "../PathwayCardList/PathwayCardList";
 
 // path: /pathways
 
 const PathwaysMenu = () => {
-  return (
-    <>
-      <div>PathwaysMenu</div>
-      <div>
-        <PathwayCardList />
-      </div>
-    </>
-  );
+    const filterArray = (event) => {
+        console.log(event.target.id);
+    };
+
+    return (
+        <div>
+            <div>
+                <FilterTag filterArray={filterArray} />
+                <PathwayCardList />
+            </div>
+        </div>
+    );
 };
 
 export default PathwaysMenu;

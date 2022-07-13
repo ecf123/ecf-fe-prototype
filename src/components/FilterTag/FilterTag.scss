@@ -1,0 +1,25 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+
+.filter-tag {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+
+    font-family: $primary-font-family;
+    font-size: $font-size-extra-small;
+    color: $primary-color-navy;
+    
+    &__item {
+        margin: 0.5em;
+        background-color: $secondary-color-light-green;
+        border-radius: 26.4px;
+        padding: 0.5em 1.5em;
+    }
+}
+
+.filter-tag__active {
+    background-color: $primary-color-green;
+    
+}

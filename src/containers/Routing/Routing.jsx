@@ -6,7 +6,7 @@ import PathwaysMenu from "../PathwaysMenu/PathwaysMenu";
 import Marketplace from "../Marketplace/Marketplace";
 import CourseOverview from "../CourseOverview/CourseOverview";
 import ArticleIndex from "../ArticleIndex/ArticleIndex";
-import React from "react";
+import React, {useState, useEffect} from "react";
 import LessonOverview from "../LessonOverview/LessonOverview";
 import MarketplaceIndex from "../MarketplaceIndex/MarketplaceIndex";
 import PathwayOverview from "../PathwayOverview/PathwayOverview";
@@ -15,11 +15,27 @@ import Splash from "../Splash/Splash";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTreePage from "../SkillsTreePage/SkillsTreePage";
+import { auth } from "../../firebase";
+import { onAuthStateChanged } from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
 import articleData from '../../assets/data/dummyArticles'
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
 
 const Routing = () => {
+
+  // eslint-disable-next-line no-unused-vars
+  const [userToken, setUserToken] = useState(null);
+
+  useEffect(() => {
+    onAuthStateChanged(auth, (authenticatedUser) => {
+      if (authenticatedUser) {
+        setUserToken(authenticatedUser);
+      } else {
+        setUserToken(null);
+      }
+    });
+  }, []);
+
   return (
     <Router>
       <Routes>
