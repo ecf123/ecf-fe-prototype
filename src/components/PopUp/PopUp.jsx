@@ -7,7 +7,7 @@ const PopUp = (props) => {
     const {title, description, link, onOverlayClick} = props;
   return (
     <>
-    <div className='pop-up'>
+    <div className='pop-up' data-testid="popup">
         <h1 className='pop-up__heading'>{title}</h1>
         <p className='pop-up__text'>{description}</p>
         <div className='pop-up__button-container'>
@@ -17,7 +17,7 @@ const PopUp = (props) => {
         </div>
         
     </div>
-    <div onClick={onOverlayClick} className='pop-up__overlay'></div>
+    <div onClick={onOverlayClick} className='pop-up__overlay' data-testid="popup-overlay"></div>
     </>
   )
 }

@@ -34,6 +34,7 @@ const SkillsTree = (props) => {
         />
         {parentId &&
           (locked ? (
+            process.env.NODE_ENV !== 'test' && 
             <Xarrow
               start={id}
               end={parentId}
@@ -48,6 +49,7 @@ const SkillsTree = (props) => {
               SVGcanvasProps={{ strokeOpacity: "50%" }}
             />
           ) : (
+            process.env.NODE_ENV !== 'test' && 
             <Xarrow
               start={id}
               end={parentId}
@@ -59,7 +61,7 @@ const SkillsTree = (props) => {
               path="grid"
               gridBreak="100%"
               animateDrawing={false}
-            />
+            /> 
           ))}
       </div>
     );
@@ -81,7 +83,7 @@ const SkillsTree = (props) => {
   });
 
   return (
-    <div className="skills-tree">
+    <div className="skills-tree"  data-testid="skills-tree">
       {levelsJsx}
       <FinishTreeNode parentId="santander" title={title} finished={true}/>
       
