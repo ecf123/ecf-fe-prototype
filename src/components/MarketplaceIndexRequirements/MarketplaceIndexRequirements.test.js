@@ -5,7 +5,7 @@ import marketData from "../../assets/data/dummyMarketData";
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
-  useParams: () => ({ marketData: 1 }),
+  useParams: () => ({ marketplaceId: 1 }),
 }));
 
 describe("initial test to get determine skill points and trophies required to gain rewards ", () => {
@@ -13,5 +13,10 @@ describe("initial test to get determine skill points and trophies required to ga
     customRender(<MarketplaceIndexRequirements marketData={marketData} />);
     const points = screen.getByTestId("skillPoints");
     expect(points).toBeInTheDocument();
+  });
+  it("should display amount of trophies required", () => {
+    customRender(<MarketplaceIndexRequirements marketData={marketData} />);
+    const trophies = screen.getByTestId("trophies");
+    expect(trophies).toBeInTheDocument();
   });
 });

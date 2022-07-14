@@ -32,7 +32,12 @@ const MarketplaceIndexRequirements = ({ marketData }) => {
           src={TrophyIcon}
           alt="trophies"
         />
-        <p className="marketplace-requirements__info-points">{trophies}</p>
+        <p
+          data-testid="trophies"
+          className="marketplace-requirements__info-points"
+        >
+          {trophies}
+        </p>
       </div>
     </div>
   );
