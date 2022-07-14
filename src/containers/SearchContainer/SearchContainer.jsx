@@ -2,36 +2,19 @@ import React, { useState } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import "./SearchContainer.scss";
 import ContentHeader from "../../components/ContentHeader/ContentHeader";
+import Carousel from '../../components/Carousel/Carousel'
+import cardData from "../../assets/data/dummyPathwayData"
 
 const SearchContainer = ({ title, pathwaysLink }) => {
 
-  // dummy array
-  const dummyArray = [
-    "apple",
-    "orange",
-    "banana",
-    "pear",
-    "jackfruit",
-    "passionfruit",
-    "melon",
-    "lemon",
-    "lime",
-    "watermelon",
-    "mango",
-  ];
-
   const [searchTerm, setSearchTerm] = useState("");
-  const [arr, setArr] = useState(dummyArray);
-
-  const arrayJsx = arr.map((element, index) => {
-    return <p key={index}>{element}</p>;
-  });
+  const [arr, setArr] = useState(cardData);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.search.value);
     event.preventDefault();
-    const filterArray = dummyArray.filter((element) => {
-      return element
+    const filterArray = cardData.filter((element) => {
+      return element.header
         .toLowerCase()
         .includes(event.target.search.value.toLowerCase());
     });
@@ -56,7 +39,9 @@ const SearchContainer = ({ title, pathwaysLink }) => {
           Nothing matched your search.
         </h1>
       )}
-      <div className="search-container__list">{arrayJsx}</div>
+      <div className="search-container__carousel">
+        <Carousel cardData={arr} />
+      </div>
     </div>
   );
 };

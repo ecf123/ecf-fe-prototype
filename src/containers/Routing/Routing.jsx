@@ -51,7 +51,10 @@ const Routing = () => {
         <Route path="/pathways" element={<PathwaysMenu />} />
         <Route path="/pathways/:pathwayId" element={<PathwayOverview />} />
         <Route
-          path="/pathways/:pathwayId/skills-tree"
+          // TEMPORARY PATH FOR DEMO -v
+          path="/pathways/skills-tree"
+          // THIS IS THE ACTUAL PATH -v
+          // path="/pathways/:pathwayId/skills-tree"
           element={<SkillsTreePage />}
         />
 
