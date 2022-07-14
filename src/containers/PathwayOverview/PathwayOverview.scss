@@ -14,9 +14,9 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 69px;
-
   }
-  &__backButton{
+
+  &__backButton {
     position: relative;
     display: flex;
     justify-content: center;
@@ -28,7 +28,8 @@
     background-color: $white-color;
     border-radius: 25px;
   }
-  &__trophy{
+
+  &__trophy {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +49,6 @@
     height: 100px;
     background-color: $white-color;
     margin: 0px auto;
-
   }
 
   &__filters {
@@ -63,18 +63,17 @@
     width: 80%;
     height: 295px;
     overflow: auto;
-    color:#78878F;
+    color: #78878F;
     mask-image: linear-gradient(to bottom, black 50%, transparent 100%);
-    height:  290px; 
- 
+    height: 290px;
   }
 }
 
 .card-container {
-  // border: solid black 2px;
   align-items: center;
   display: flex;
   flex-direction: column;
+
   &__header {
     width: 220px;
     text-align: center;
@@ -82,13 +81,11 @@
     color: #3b5165;
     font-family: $primary-font-family;
     margin-bottom: 25px;
-    
   }
 
   &__image {
     width: 204px;
     height: 204px;
     margin-bottom: 19px;
-    // border: solid black 2px;
   }
 }
