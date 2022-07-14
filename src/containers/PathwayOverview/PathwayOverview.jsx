@@ -13,22 +13,20 @@ const PathwayOverview = ({ userProfile, card }) => {
   // PROPS TO USE WHEN PATHWAY CARD LIST IS LINKED AND CAN GIVE AN ID
   // const { header, topics, image, id, overview, structure, careers } = card;
 
-  
   const cardOne = card[0];
-  
+
   // --------------- (id.overview)
   const overviewJSX = cardOne.overview.split('.').map((sentence, index) => {
-      return <p key={index}>{sentence}</p>;
-    });
+    return <p key={index}>{sentence}</p>;
+  });
 
   const structureJSX = cardOne.structure.split('.').map((sentence, index) => {
-      return <p key={index}>{sentence}</p>;
-    });
+    return <p key={index}>{sentence}</p>;
+  });
 
   const careersJSX = cardOne.careers.split('.').map((sentence, index) => {
-      return <p key={index}>{sentence}</p>;
-    });
-
+    return <p key={index}>{sentence}</p>;
+  });
 
   const handleCategoryChange = (event) => {
     setCategory(event.target.innerText.toLowerCase());
@@ -38,16 +36,15 @@ const PathwayOverview = ({ userProfile, card }) => {
     switch (category) {
       case 'overview':
         return overviewJSX;
-        case 'structure':
-          return structureJSX;
-        case 'careers':
-          return careersJSX;
+      case 'structure':
+        return structureJSX;
+      case 'careers':
+        return careersJSX;
       default:
-        console.log('not working');
         return;
     }
   };
-
+  
   return (
     <div className="pathway-overview">
       <header className="pathway-overview__header">
@@ -60,7 +57,12 @@ const PathwayOverview = ({ userProfile, card }) => {
       </header>
       <div className="card-container">
         <h1 className="card-container__header">{cardOne.header}</h1>
-        <img className="card-container__image" data-testid="main-image" src={cardOne.image} alt={cardOne.topics} />
+        <img
+          className="card-container__image"
+          data-testid="main-image"
+          src={cardOne.image}
+          alt={cardOne.topics}
+        />
       </div>
       <div className="pathway-overview__filters">
         <MenuBar
@@ -70,8 +72,9 @@ const PathwayOverview = ({ userProfile, card }) => {
           onClickLink={handleCategoryChange}
         />
       </div>
-      <div className="pathway-overview__content" data-testid="main-content">{changeCategory()}</div>
-
+      <div className="pathway-overview__content" data-testid="main-content">
+        {changeCategory()}
+      </div>
       <div className="pathway-overview__button">
         <Button buttonText={'START PATHWAYS'} />
       </div>
