@@ -7,6 +7,22 @@
     top: 0;
     background-color: $white-color;
   }
+
+  &__headerSection {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    // border: 1px solid red;
+    margin: 0 1.875rem;
+  }
+
+  &__heading {
+    font-size: 20px;
+    // text-align: center;
+    // flex-grow: 1;
+  }
+
   &__content {
     margin: 1em 3em;
   }

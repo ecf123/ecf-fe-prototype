@@ -5,7 +5,7 @@ import MenuBar from "../../components/MenuBar/MenuBar";
 import BackButton from "../../components/BackButton/BackButton";
 // path: /courses/:courseId
 
-const CourseOverview = () => {
+const CourseOverview = ({dummyPathwayData}) => {
   const [category, setCategory] = useState("lessons");
 
   const capitalisedNames = (name) => {
@@ -18,6 +18,11 @@ const CourseOverview = () => {
 
   return (
     <div data-testid="course-overview" className="course-overview">
+      <div className="course-overview__headerSection">
+        <BackButton linkTo="/pathways/1/skills-tree" />
+        <h1 className="course-overview__heading">{dummyPathwayData[0].header}</h1>
+      </div>
+
       <div className="course-overview__content">
         <div className="course-overview__filters">
           <MenuBar data-testid="course-overview" link1="Lessons" link2="Challenges" link3="Additional Info" onClickLink={handleCategoryChange} />

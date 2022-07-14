@@ -20,6 +20,7 @@ import {onAuthStateChanged} from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
 import articleData from "../../assets/data/dummyArticles";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
+import dummyPathwayData from "../../assets/data/dummyPathwayData";
 
 const Routing = () => {
   // eslint-disable-next-line no-unused-vars
@@ -54,7 +55,7 @@ const Routing = () => {
         <Route path="/articles" element={<Articles articleInfo={articleInfo} />} />
         <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleData} />} />
 
-        <Route path="/courses/:courseId" element={<CourseOverview />} />
+        <Route path="/courses/:courseId" element={<CourseOverview dummyPathwayData={dummyPathwayData} />} />
         <Route path="/lesson/:lessonId" element={<LessonOverview />} />
         <Route path="/challenge/:challengeId" element={<Challenge />} />
 
