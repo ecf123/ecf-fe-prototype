@@ -2,7 +2,6 @@ import { render, screen } from "@testing-library/react";
 import { customRender } from "../../test-utilities/test-utilities";
 import PathwaysMenu from "./PathwaysMenu"
 
-
 describe("initial tests for pathways menu container", () => {
     it("Should render correct components", () => {
         customRender(<PathwaysMenu />);
