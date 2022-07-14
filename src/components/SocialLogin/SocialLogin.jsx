@@ -7,7 +7,7 @@ const SocialLogin = (props) => {
   return (
     <div className="social-login">
       <button className="social-login__button" onClick={onClick}>
-        {icon}
+        <img src={icon} alt="social login" />
       </button>
     </div>
   );

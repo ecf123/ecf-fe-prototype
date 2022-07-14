@@ -1,0 +1,17 @@
+@use "../../assets/sass/variables" as *;
+
+.skills-tree {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+
+  &__level {
+    margin-top: 58px;
+    margin-bottom: 58px;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-around;
+  }
+}

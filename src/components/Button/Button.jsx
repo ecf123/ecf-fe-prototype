@@ -8,7 +8,7 @@ const Button = ({ buttonText, isSecondary, onClickButton, buttonType }) => {
     buttonStyle += " button--secondary";
   }
   return (
-    <button className={buttonStyle} type={buttonType} onClick={onClickButton}>
+    <button className={buttonStyle} type={buttonType} onClick={onClickButton} data-testid="button">
       {buttonText}
     </button>
   );
