@@ -1,0 +1,12 @@
+.carousel {
+  display: flex;
+  overflow-x: scroll;
+
+  &::-webkit-scrollbar {
+    width: 0;
+  }
+
+  &__item {
+    margin-right: 12px;
+  }
+}
