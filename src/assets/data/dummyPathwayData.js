@@ -5,7 +5,7 @@ import magicMarketing from "../images/margin-marketing.svg";
 import codingCamp from "../images/coding-camp.svg";
 import epicEngineering from "../images/epic-engineering.svg";
 
-const card = [
+const cardData = [
   {
     id: "card1",
     header: "Financial Forest",
@@ -86,4 +86,4 @@ const card = [
   },
 ];
 
-export default card;
+export default cardData;
