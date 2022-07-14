@@ -1,0 +1,44 @@
+@use "../../assets//sass/variables" as *;
+
+.articleIndex {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 108px;
+    font-family: $primary-font-family;
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__heading {
+        font-size: $font-size-medium;
+        margin: 20px 0px 10px 0px;
+    }
+
+    &__paragraph {
+        font-size: $font-size-small;
+        color: $primary-color-blue-gray;
+    }
+}
+
+.save-button {
+    margin: 0;
+}
