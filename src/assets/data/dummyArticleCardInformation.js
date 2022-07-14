@@ -1,4 +1,4 @@
-import image from "../images/amazon-logo.png";
+import image from "../images/cv-pic.jpg";
 
 const articleContent = [
 	{

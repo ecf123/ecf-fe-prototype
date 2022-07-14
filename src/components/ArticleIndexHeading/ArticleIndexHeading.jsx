@@ -10,6 +10,7 @@ const ArticleIndexHeading = ({ articleArray }) => {
 
   return (
     <article className="article-index-card">
+      <img className="article-index-card__heading-img" src={pickedArticle.thumbnail} alt={pickedArticle.title}></img>
       <h1 data-testid="heading" className="article-index-card__title">{pickedArticle.title}</h1>
       <div className="article-index-card__info">
         <img className="article-index-card__info__img" src={bookIcon} alt="book icon"/>
