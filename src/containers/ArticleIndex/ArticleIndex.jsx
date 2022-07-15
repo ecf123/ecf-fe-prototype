@@ -23,10 +23,14 @@ const ArticleIndex = ({ articleArray }) => {
 
   return (
     <div className='articleIndex'>
-      <div className='articleIndex__header' >
-        <BackButton linkTo="/articles" />
+      <header className="articleIndex__header">
+        <div className="articleIndex__backButton">
+          <BackButton linkTo="linkTo" />
+        </div>
+        <div className="articleIndex__saveButton">
         <SaveButton handleSaveButtonPress={onSaveButtonPress} isPressed={isPressed} />
-      </div>
+        </div>
+      </header>
       <ArticleIndexHeading articleArray={articleArray} />
       <div className='articleIndex__container'>
         {pickedArticle.articleContent.map((item, index) => {

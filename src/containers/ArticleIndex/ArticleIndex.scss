@@ -1,11 +1,11 @@
 @use "../../assets//sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
 
 .articleIndex {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 20px;
     margin-bottom: 108px;
     font-family: $primary-font-family;
 
@@ -15,7 +15,35 @@
         align-items: center;
         width: 100%;
         margin-bottom: 20px;
+        @include light-green-background();
+        padding: 20px;
     }
+
+    &__backButton {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        padding-top: 3.5px;
+        bottom: -39px;
+        left: 20px;
+        width: 47px;
+        height: 47px;
+        background-color: $white-color;
+        border-radius: 25px;
+      }
+    
+      &__saveButton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        bottom: -39px;
+        background-color: white;
+        width: 40px;
+        height: 39px;
+        border-radius: 22px;
+        margin-right: 30px;
+      }
 
     &__container {
         display: flex;
@@ -31,14 +59,18 @@
     &__heading {
         font-size: $font-size-medium;
         margin: 20px 0px 10px 0px;
+        padding: 10px 10px 5px 10px;
+        font-weight: $font-weight-regular;
     }
 
     &__paragraph {
         font-size: $font-size-small;
         color: $primary-color-blue-gray;
+        padding: 5px 10px 10px 10px;
+        line-height: 150%;
     }
 }
 
 .save-button {
-    margin: 0;
+    margin: 0 1px 0 0;
 }
