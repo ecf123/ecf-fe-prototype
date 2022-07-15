@@ -11,11 +11,13 @@
   }
 
   &__headerSection {
+    margin: 1rem 1.875rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    width: 60%;
-    margin: 1rem 1.875rem;
+  }
+
+  button {
+    display: inline-block;
   }
 
   &__heading {
@@ -23,7 +25,14 @@
     font-weight: $font-weight-regular;
     color: $primary-color-navy;
     font-family: $secondary-font-family;
+    display: inline-flex;
+    margin-left: 20%;
   }
+
+  &__content {
+    margin: 4.375rem 2.5rem 0;
+  }
+
   &__sub-heading {
     @include heading3;
     color: $primary-color-navy;
@@ -36,9 +45,5 @@
     font-family: $secondary-font-family;
     font-weight: $font-weight-regular;
     margin: 1.25rem 0 2rem;
-  }
-
-  &__content {
-    margin: 4.375rem 3em 0;
   }
 }
