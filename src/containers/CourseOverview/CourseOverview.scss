@@ -15,7 +15,6 @@
     align-items: center;
     justify-content: space-between;
     width: 60%;
-    // border: 1px solid red;
     margin: 1rem 1.875rem;
   }
 
@@ -24,22 +23,20 @@
     font-weight: $font-weight-regular;
     color: $primary-color-navy;
     font-family: $secondary-font-family;
-    // text-align: center;
-    // flex-grow: 1;
   }
   &__sub-heading {
-    @include heading3();
+    @include heading3;
     color: $primary-color-navy;
     font-family: $secondary-font-family;
     margin: 1em 0;
   }
 
   &__paragraph {
+    @include paragraph;
     color: $primary-color-blue-gray;
     font-family: $secondary-font-family;
-    font-size: 14px;
     font-weight: $font-weight-regular;
-    margin: 1em 0;
+    margin: 2rem 0;
   }
 
   &__content {
