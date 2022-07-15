@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import CourseOverviewList from "../CourseOverviewList/CourseOverviewList";
+import VideoCardList from "../VideoCardList/VideoCardList";
 import "./CourseOverview.scss";
 import MenuBar from "../../components/MenuBar/MenuBar";
+import dummyVideoData from "../../assets/data/dummyVideoCardData";
 
 // path: /courses/:courseId
 
@@ -18,6 +20,7 @@ const CourseOverview = () => {
 
   return (
     <div data-testid="course-overview" className="course-overview">
+      <VideoCardList dummyVideoData={dummyVideoData} id={1} />
       <div className="course-overview__content">
         <div className="course-overview__filters">
           <MenuBar
