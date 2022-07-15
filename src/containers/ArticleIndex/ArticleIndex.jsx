@@ -11,9 +11,7 @@ import "./ArticleIndex.scss";
 const ArticleIndex = ({ articleArray }) => {
   const { articleId } = useParams();
 
-  const pickedArticle = articleArray.find(({ id }) => id === parseInt(articleId))
-
-
+  const pickedArticle = articleArray.find(({ id }) => id === parseInt(articleId));
 
   const [isPressed, setIsPressed] = useState(pickedArticle.isActive);
 
@@ -35,7 +33,7 @@ const ArticleIndex = ({ articleArray }) => {
       <div className='articleIndex__container'>
         {pickedArticle.articleContent.map((item, index) => {
           return (
-            <div className='articleIndex__content' key={index}>
+            <div className='articleIndex__content' data-testid="articleContent" key={index}>
               <h2 className='articleIndex__heading'>{item.heading}</h2>
               <p className='articleIndex__paragraph'>{item.paragraph}</p>
             </div>)
