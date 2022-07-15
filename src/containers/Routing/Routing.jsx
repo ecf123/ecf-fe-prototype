@@ -18,6 +18,7 @@ import SkillsTreePage from "../SkillsTreePage/SkillsTreePage";
 import {auth} from "../../firebase";
 import {onAuthStateChanged} from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
+import card from "../../assets/data/dummyPathwayData";
 import articleData from "../../assets/data/dummyArticles";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
 import dummyPathwayData from "../../assets/data/dummyPathwayData";

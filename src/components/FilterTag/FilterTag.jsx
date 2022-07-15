@@ -28,7 +28,6 @@ const FilterTag = () => {
     ]);
 
     const handleSelected = (event) => {
-        console.log(event);
         setActiveArray([false, false, false, false, false, false, false]);
         switch (event.target.id) {
             case "all":
