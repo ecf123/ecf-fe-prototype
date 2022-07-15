@@ -10,6 +10,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
   &--secondary {
     background-color: $primary-color-green;
     border: 1px solid $white-color;

@@ -18,6 +18,7 @@ import SkillsTreePage from "../SkillsTreePage/SkillsTreePage";
 import { auth } from "../../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
+import card from "../../assets/data/dummyPathwayData";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
 
 const Routing = () => {
@@ -48,9 +49,12 @@ const Routing = () => {
         />
 
         <Route path="/pathways" element={<PathwaysMenu />} />
-        <Route path="/pathways/:pathwayId" element={<PathwayOverview />} />
+        <Route path="/pathways/:pathwayId" element={<PathwayOverview card={card} userProfile={userProfile} />}  />
         <Route
-          path="/pathways/:pathwayId/skills-tree"
+          // TEMPORARY PATH FOR DEMO -v
+          path="/pathways/skills-tree"
+          // THIS IS THE ACTUAL PATH -v
+          // path="/pathways/:pathwayId/skills-tree"
           element={<SkillsTreePage />}
         />
 
