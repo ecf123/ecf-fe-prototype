@@ -25,7 +25,7 @@
         justify-content: center;
         padding-top: 3.5px;
         bottom: -39px;
-        left: 20px;
+        left: 10px;
         width: 47px;
         height: 47px;
         background-color: $white-color;
@@ -38,6 +38,7 @@
         align-items: center;
         position: relative;
         bottom: -39px;
+        left: 10px;
         background-color: white;
         width: 40px;
         height: 39px;
@@ -49,6 +50,11 @@
         display: flex;
         flex-direction: column;
         width: 100%;
+        padding: 0px 10px;
+
+        & :first-child :first-child {
+            margin: 0%;
+        }
     }
 
     &__content {
@@ -66,8 +72,9 @@
     &__paragraph {
         font-size: $font-size-small;
         color: $primary-color-blue-gray;
-        padding: 5px 10px 10px 10px;
+        padding: 5px 20px 20px 10px;
         line-height: 150%;
+
     }
 }
 
