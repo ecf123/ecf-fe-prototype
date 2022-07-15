@@ -28,7 +28,6 @@
     @include heading3;
     color: $primary-color-navy;
     font-family: $secondary-font-family;
-    margin: 1em 0;
   }
 
   &__paragraph {
@@ -36,10 +35,10 @@
     color: $primary-color-blue-gray;
     font-family: $secondary-font-family;
     font-weight: $font-weight-regular;
-    margin: 2rem 0;
+    margin: 1.25rem 0 2rem;
   }
 
   &__content {
-    margin: 1em 3em;
+    margin: 4.375rem 3em 0;
   }
 }

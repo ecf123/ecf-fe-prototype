@@ -32,7 +32,7 @@ const CourseOverview = ({dummyPathwayData}) => {
       <VideoCardList dummyVideoData={dummyVideoData} id={1} />
       <div className="course-overview__content">
         <h2 className="course-overview__sub-heading">{dummyPathwayData[0].subHeading}</h2>
-        <p className="course-overview__paragraph">{dummyPathwayData[0].content}</p>
+        <p className="course-overview__paragraph">{dummyPathwayData[0].courseIntroContent}</p>
         <div className="course-overview__filters">
           <MenuBar data-testid="course-overview" link1="Lessons" link2="Challenges" link3="Additional Info" onClickLink={handleCategoryChange} />
         </div>
