@@ -1,7 +1,7 @@
 import { customRender } from "../../test-utilities/test-utilities";
 import { screen } from "@testing-library/react";
 import ArticleHeaderIndex from "./ArticleIndexHeading";
-import articleInfo from "../../assets/data/dummyArticles";
+import articleInfo from "../../assets/data/dummyArticleCardInformation";
 
 jest.mock("react-router-dom", () => ({
     ...jest.requireActual("react-router-dom"),
