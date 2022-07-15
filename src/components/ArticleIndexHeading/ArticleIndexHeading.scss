@@ -7,12 +7,13 @@
     justify-content: space-evenly;
     align-items: center;
     width: 100%;
+    padding: 5px 20px;
 
     &__heading-img {
         max-width: 350px;
-        max-height: 200px;
-        border-radius: 20px;
-        padding: 10px;
+        max-height: 300px;
+        border-radius: 15px;
+        margin: 10px 0px;
     }
 
     &__title {
