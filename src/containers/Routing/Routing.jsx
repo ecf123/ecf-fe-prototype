@@ -67,7 +67,7 @@ const Routing = () => {
 
         <Route
           path="/articles"
-          element={<Articles articleInfo={articleInfo}  />}
+          element={<Articles userProfile={userProfile} articleInfo={articleInfo}  />}
         />
         <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
 
