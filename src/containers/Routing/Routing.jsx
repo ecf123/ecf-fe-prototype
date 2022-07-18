@@ -21,6 +21,7 @@ import Challenge from "../Challenge/Challenge";
 import card from "../../assets/data/dummyPathwayData";
 import articleData from '../../assets/data/dummyArticles'
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
+import marketData from "../../assets/data/dummyMarketData.js";
 
 const Routing = () => {
 
@@ -46,7 +47,7 @@ const Routing = () => {
         />
         <Route
           path="/marketplace/:marketplaceId"
-          element={<MarketplaceIndex userProfile={userProfile} />}
+          element={<MarketplaceIndex userProfile={userProfile} marketData={marketData} />}
         />
 
         <Route path="/pathways" element={<PathwaysMenu />} />

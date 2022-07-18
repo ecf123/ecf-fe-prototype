@@ -3,13 +3,13 @@ import BackButton from '../../components/BackButton/BackButton';
 import TrophyStats from '../../components/TrophyStats/TrophyStats';
 import Button from '../../components/Button/Button';
 import './MarketplaceIndex.scss';
+import MarketplaceIndexOverview from "../../components/MarketplaceIndexOverview/MarketplaceIndexOverview";
+import MarketplaceIndexRequirements from "../../components/MarketplaceIndexRequirements/MarketplaceIndexRequirements";
 
 // path: /marketplace/:marketplaceId
 
 const MarketplaceIndex = (props) => {
   const {userProfile} = props;
-  //const index = useParams()
-
   return (
     <div className='marketplace-index'>
       <header className='marketplace-index__header'>
@@ -20,6 +20,8 @@ const MarketplaceIndex = (props) => {
           <TrophyStats userProfile={userProfile} />
         </div>
       </header>
+      <MarketplaceIndexRequirements marketData={marketData} />
+      <MarketplaceIndexOverview marketData={marketData} />
       <div className='marketplace-index__button-container'>
         <Button buttonText="Purchase"  />
       </div>
@@ -28,4 +30,4 @@ const MarketplaceIndex = (props) => {
   )
 }
 
-export default MarketplaceIndex
+export default MarketplaceIndex;
