@@ -23,7 +23,7 @@ const ArticleIndex = ({ articleArray }) => {
     <div className='articleIndex'>
       <header className="articleIndex__header">
         <div className="articleIndex__backButton">
-          <BackButton linkTo="linkTo" />
+          <BackButton linkTo="/articles" />
         </div>
         <div className="articleIndex__saveButton">
         <SaveButton handleSaveButtonPress={onSaveButtonPress} isPressed={isPressed} />
