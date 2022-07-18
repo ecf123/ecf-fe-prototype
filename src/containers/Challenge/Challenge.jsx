@@ -22,15 +22,19 @@ const Challenge = () => {
           <TrophyStats userProfile={userProfile} />
         </div>
       </header>
-      <h1>Q1/15</h1>
-      <h2>{quiz[0].question}</h2>
-      <QuizAnswerCardList quizData={quiz} />
-      <button>
-        <img src={backArrow} alt="" />
-      </button>
-      <button>
-        <img src={forwardArrow} alt="" />
-      </button>
+      <div className="challenge__question-container">
+        <h1 className="challenge__question-number">Q1/15</h1>
+        <h2 className="challenge__question-text">{quiz[0].question}</h2>
+        <QuizAnswerCardList quizData={quiz} />
+      </div>
+      <div className="challenge__button-container">
+        <button className="challenge__back-button">
+          <img src={backArrow} alt="" />
+        </button>
+        <button className="challenge__forward-button">
+          <img src={forwardArrow} alt="" />
+        </button>
+      </div>
       <Navigation />
     </div>
   );
