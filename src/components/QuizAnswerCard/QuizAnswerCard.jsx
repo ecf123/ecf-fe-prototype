@@ -1,11 +1,11 @@
 import React from "react";
 import "./QuizAnswerCard.scss";
 
-const QuizAnswerCard = ({ quizData }) => {
+const QuizAnswerCard = ({ answer, choice }) => {
   return (
     <div className="quiz">
-      <h1 className="quiz__question">{quizData[0].A.choice}</h1>
-      <p className="quiz__answer">{quizData[0].A.answer}</p>
+      <h1 className="quiz__question">{choice}</h1>
+      <p className="quiz__answer">{answer}</p>
     </div>
   );
 };
