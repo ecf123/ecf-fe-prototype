@@ -21,6 +21,7 @@ import Challenge from "../Challenge/Challenge";
 import card from "../../assets/data/dummyPathwayData";
 import articleData from '../../assets/data/dummyArticles'
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
+import MultipleChoiceEndScreen from "../MultiplChoiceEndScreen/MultipleChoiceEndScreen";
 
 const Routing = () => {
 
@@ -74,6 +75,7 @@ const Routing = () => {
         <Route path="/courses/:courseId" element={<CourseOverview />} />
         <Route path="/lesson/:lessonId" element={<LessonOverview />} />
         <Route path="/challenge/:challengeId" element={<Challenge />} />
+        <Route path="/challenge/multiple-choice-end-screen" element={<MultipleChoiceEndScreen/>} />
 
         <Route path="/profile" element={<Profile />} />
       </Routes>
