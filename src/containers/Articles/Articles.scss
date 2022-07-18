@@ -1,0 +1,52 @@
+@use "../../assets/sass/mixins" as *;
+@use "../../assets//sass/variables" as *;
+
+.articles {
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        margin-bottom: 20px;
+        @include light-green-background();
+        padding: 20px;
+    }
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0px 20px;
+    }
+
+    &__title {
+        font-size: $font-size-extra-large;
+        font-weight: $font-weight-regular;
+        align-self: flex-start;
+        margin: 20px 0px;
+    }
+}
+
+.user-icon {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 3.5px;
+    bottom: -39px;
+    left: -20px;
+    width: auto;
+    border-radius: 25px;
+  }
+
+.trophy-stats-container {
+    position: relative;
+    bottom: -39px;
+    left: 170px;
+    background-color: white;
+    width: 100px;
+    height: auto;
+    border-radius: 22px;
+    margin-right: 30px;
+  }
