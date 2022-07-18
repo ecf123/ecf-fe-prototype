@@ -37,13 +37,10 @@ const ArticleIndex = ({ articleArray }) => {
               <h2 className='articleIndex__heading'>{item.heading}</h2>
               <p className='articleIndex__paragraph'>{item.paragraph}</p>
             </div>)
-
         })}
-
       </div>
       <Navigation />
     </div>
-
   )
 }
 
