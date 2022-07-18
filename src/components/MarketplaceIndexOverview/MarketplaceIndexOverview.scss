@@ -2,12 +2,14 @@
 @use "../../assets//sass/variables" as *;
 
 .marketplace-overview {
-  padding: 30px;
   font-family: $primary-font-family;
+  width: 90%;
+  margin-top: 30px;
 
   &__title {
     margin-bottom: 20px;
-    @include heading4;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-small;
     color: $secondary-color-dark-grey;
   }
 

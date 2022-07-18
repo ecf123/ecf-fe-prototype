@@ -1,4 +1,5 @@
-import React, {useParams} from 'react';
+import React from 'react';
+import { useParams } from "react-router-dom";
 import BackButton from '../../components/BackButton/BackButton';
 import TrophyStats from '../../components/TrophyStats/TrophyStats';
 import Button from '../../components/Button/Button';
@@ -9,7 +10,11 @@ import MarketplaceIndexRequirements from "../../components/MarketplaceIndexRequi
 // path: /marketplace/:marketplaceId
 
 const MarketplaceIndex = (props) => {
-  const {userProfile} = props;
+  const {marketData, userProfile} = props;
+  const { marketplaceId } = useParams();
+  const pickedMarketCard = marketData.find(
+    ({ id }) => id === parseInt(marketplaceId)
+  );
   return (
     <div className='marketplace-index'>
       <header className='marketplace-index__header'>
@@ -20,6 +25,8 @@ const MarketplaceIndex = (props) => {
           <TrophyStats userProfile={userProfile} />
         </div>
       </header>
+      <img src={pickedMarketCard.image}  alt=""/>
+      <h1 className='marketplace-index__heading'>{pickedMarketCard.heading}</h1>
       <MarketplaceIndexRequirements marketData={marketData} />
       <MarketplaceIndexOverview marketData={marketData} />
       <div className='marketplace-index__button-container'>

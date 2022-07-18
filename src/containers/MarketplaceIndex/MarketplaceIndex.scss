@@ -8,6 +8,17 @@
   justify-content: center;
   overflow: clip;
 
+  &__image {
+    width: 350px;
+  }
+
+  &__heading {
+    color: $secondary-color-dark-grey;
+    @include heading4();
+    margin-top: 30px;
+    width: 90%;
+  }
+
   &__header {
     display: flex;
     @include light-green-background();
@@ -43,11 +54,11 @@
   }
 
   &__button-container {
-    position: absolute;
+    position: sticky;
     bottom: 0px;
     width: 90%;
-    height: 100px;
+    height: 120px;
+    padding: 20px;
     background-color: $white-color;
-    margin: 0px auto;
   }
 }

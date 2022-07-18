@@ -2,14 +2,16 @@
 @use "../../assets//sass/variables" as *;
 
 .marketplace-requirements {
-    padding: 30px;
     padding-bottom: 0px;
     font-family: $primary-font-family;
+    width: 90%;
 
     &__title {
         margin-bottom: 20px;
-        @include heading4;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-small;
         color: $secondary-color-dark-grey;
+        margin-top: 35px;
     }
 
     &__info {
