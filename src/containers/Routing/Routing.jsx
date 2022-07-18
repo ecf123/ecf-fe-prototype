@@ -21,6 +21,7 @@ import Challenge from "../Challenge/Challenge";
 import articleData from "../../assets/data/dummyArticles";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
 import dummyPathwayData from "../../assets/data/dummyPathwayData";
+import marketData from "../../assets/data/dummyMarketData.js";
 
 const Routing = () => {
   // eslint-disable-next-line no-unused-vars
@@ -40,7 +41,7 @@ const Routing = () => {
     <Router>
       <Routes>
         <Route path="/marketplace" element={<Marketplace userProfile={userProfile} />} />
-        <Route path="/marketplace/:marketplaceId" element={<MarketplaceIndex />} />
+        <Route path="/marketplace/:marketplaceId" element={<MarketplaceIndex marketData={marketData} />} />
 
         <Route path="/pathways" element={<PathwaysMenu />} />
         <Route path="/pathways/:pathwayId" element={<PathwayOverview />} />
