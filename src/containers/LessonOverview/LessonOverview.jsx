@@ -3,6 +3,7 @@ import VideoCard from '../../components/VideoCard/VideoCard';
 import BackButton from '../../components/BackButton/BackButton';
 import TrophyStats from '../../components/TrophyStats/TrophyStats';
 import data from "../../assets/data/dummyLessonOverview.js"
+import Navigation from "../../components/Navigation/Navigation";
 
 import "./LessonOverview.scss";
 
@@ -30,13 +31,15 @@ const LessonOverview = ({userProfile}) => {
         <h1 className="contents__title">{lessonData.title}</h1>
         <h2 className="contents__header">Overview</h2>
         <p className="contents__paragraph">
-          {bulletPoints}
+          <ul>{bulletPoints}</ul>
         </p>
         <h2 className="contents__header">{lessonData.headingOne}</h2>
         <p className="contents__paragraph">{lessonData.paragraphOne}</p>
         <h2 className="contents__header">{lessonData.headingTwo}</h2>
         <p className="contents__paragraph">{lessonData.paragraphTwo}</p>
       </div>
+      <Navigation />
+      
     </div>
   )
 }

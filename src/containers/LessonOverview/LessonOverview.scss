@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     overflow: clip;
+    position: relative;
 
     &__header {
         display: flex;
@@ -45,10 +46,12 @@
 
 .contents {
     font-family: $primary-font-family;
-
     display: flex;
     flex-direction: column;
     gap: 30px;
+    margin-left:33px;
+    margin-bottom: 200px;
+    width:360px;
 
     &__video {
         width: 360px;
@@ -72,4 +75,8 @@
         color: #B1B8CF;
 
     }
+}
+
+li{
+    margin-left:10px;
 }
