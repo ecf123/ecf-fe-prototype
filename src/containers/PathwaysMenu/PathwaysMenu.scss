@@ -1,0 +1,27 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+
+.pathways-menu{
+  @include light-green-background ();
+
+  &__heading{
+    margin: 1em;
+    font-family:$primary-font-family;
+    color: $primary-color-navy;
+    font-size:$font-size-extra-large;
+    font-weight: $font-weight-regular;
+  }
+
+  &__filters{
+    margin: 1em;
+  }
+
+  &__list{
+    margin: 1em;
+    margin-bottom: 108px;
+  }
+
+  &__navbar{
+    padding-top: 1em;
+  }
+}
