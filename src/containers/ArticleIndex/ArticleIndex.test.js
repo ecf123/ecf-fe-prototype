@@ -39,5 +39,4 @@ describe("initial render tests", () => {
         const backButton = screen.getByTestId("backButton");
         expect(backButton).toBeInTheDocument();
     });
-
 })
