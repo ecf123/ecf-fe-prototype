@@ -26,10 +26,11 @@ import marketData from "../../assets/data/dummyMarketData.js";
 const Routing = () => {
 
   // eslint-disable-next-line no-unused-vars
-  const [userToken, setUserToken] = useState(null);
+  const [userToken, setUserToken] = useState();
 
   useEffect(() => {
     onAuthStateChanged(auth, (authenticatedUser) => {
+      console.log(authenticatedUser);
       if (authenticatedUser) {
         setUserToken(authenticatedUser);
       } else {
@@ -37,7 +38,7 @@ const Routing = () => {
       }
     });
   }, []);
-
+  
   return (
     <Router>
       <Routes>
@@ -64,7 +65,7 @@ const Routing = () => {
         <Route path="/sign-in" element={<SignIn />} />
         <Route path="/create-account" element={<CreateAccount />} />
 
-        <Route path="/" element={<Home userProfile={userProfile} />} />
+        { userToken && <Route path="/" element={<Home displayName={userToken.displayName} userProfile={userProfile} />} /> }
 
         <Route
           path="/articles"
