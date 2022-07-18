@@ -2,7 +2,9 @@
 @use "../../assets/sass/mixins" as *;
 
 .course-overview {
+  position: relative;
   overflow: clip;
+
   &__filters {
     position: sticky;
     top: 0;
@@ -11,7 +13,7 @@
   }
 
   &__headerSection {
-    margin: 1rem 1.875rem;
+    margin: 1rem 1.875rem 1rem;
     display: flex;
     align-items: center;
   }
