@@ -46,7 +46,7 @@ const Routing = () => {
         />
         <Route
           path="/marketplace/:marketplaceId"
-          element={<MarketplaceIndex />}
+          element={<MarketplaceIndex userProfile={userProfile} />}
         />
 
         <Route path="/pathways" element={<PathwaysMenu />} />
