@@ -15,24 +15,25 @@
      @include heading4;
      color: $white-color;
     }
+    
     &__podium{
         height: 271px;
         width: 271px;
     }
+
     &__underline{
         width: 242px;
         height: 17px;
     }
+
     &__message{
         color: $white-color;
        font-size: 20px;
     }
-    &__re-take-button{
-        width: 90%;
-        height: 100px;
-    }
-    &__continue-button{
-        width: 200px;
-        height: 100px;
+
+    &__button{
+        width: 303px;
+        height: 65px;
+        // border: 2px solid red;
     }
 }
