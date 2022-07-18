@@ -19,7 +19,6 @@ import { auth } from "../../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
 import card from "../../assets/data/dummyPathwayData";
-import articleData from '../../assets/data/dummyArticles'
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
 import marketData from "../../assets/data/dummyMarketData.js";
 
@@ -71,7 +70,7 @@ const Routing = () => {
           path="/articles"
           element={<Articles articleInfo={articleInfo}  />}
         />
-        <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleData} />} />
+        <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
 
         <Route path="/courses/:courseId" element={<CourseOverview />} />
         <Route path="/lesson/:lessonId" element={<LessonOverview />} />

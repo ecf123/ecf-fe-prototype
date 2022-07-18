@@ -3,16 +3,30 @@
 
 .article-index-card{
     display: flex;
-    justify-content: space-evenly;
     flex-direction: column;
-    height: 100px;
-    margin: 15px;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    padding: 5px 20px;
+
+    &__heading-img {
+        max-width: 350px;
+        max-height: 300px;
+        border-radius: 15px;
+        margin: 10px 0px;
+    }
+
+    &__title {
+        font-family: $primary-font-family;
+    }
 
     &__info {
         display: flex;
         flex-direction: row;
         margin: 15px 0;
         color: $primary-color-lilac;
+        justify-content: flex-start;
+        width: 100%;
         
         &__img {
             width: 20px;
@@ -23,4 +37,5 @@
             margin-right: 40px;
         }
     }
+
 }
