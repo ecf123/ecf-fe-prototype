@@ -1,0 +1,18 @@
+@use "../../assets//sass/mixins" as *;
+@use "../../assets//sass/variables" as *;
+
+.marketplace-overview {
+  padding: 30px;
+  font-family: $primary-font-family;
+
+  &__title {
+    margin-bottom: 20px;
+    @include heading4;
+    color: $secondary-color-dark-grey;
+  }
+
+  &__info {
+    @include paragraph;
+    color: $primary-color-lilac;
+  }
+}

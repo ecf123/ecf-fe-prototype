@@ -14,7 +14,7 @@ const BackButton = (props) => {
   }
   return (
     <Link to={linkTo}>
-      <button className={buttonStyle}>
+      <button data-testid="backButton" className={buttonStyle}>
         {isSecondary ? (
           <img src={whiteArrow} alt="back arrow" />
         ) : (

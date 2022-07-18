@@ -1,11 +1,16 @@
-import React from 'react'
+import React from "react";
+import MarketplaceIndexOverview from "../../components/MarketplaceIndexOverview/MarketplaceIndexOverview";
+import MarketplaceIndexRequirements from "../../components/MarketplaceIndexRequirements/MarketplaceIndexRequirements";
 
 // path: /marketplace/:marketplaceId
 
-const MarketplaceIndex = () => {
+const MarketplaceIndex = ({ marketData }) => {
   return (
-    <div>MarketplaceIndex</div>
-  )
-}
+    <div>
+      <MarketplaceIndexRequirements marketData={marketData} />
+      <MarketplaceIndexOverview marketData={marketData} />
+    </div>
+  );
+};
 
-export default MarketplaceIndex
+export default MarketplaceIndex;
