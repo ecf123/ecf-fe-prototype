@@ -10,6 +10,7 @@
     justify-content: space-evenly;
     height: 100vh;
     padding: 67px;
+    font-family: $primary-font-family;
     
     &__title{
      @include heading4;
@@ -35,5 +36,6 @@
         width: 303px;
         height: 65px;
         // border: 2px solid red;
+        background-color: #A6D0B2;
     }
 }
