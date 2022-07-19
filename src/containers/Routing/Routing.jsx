@@ -22,21 +22,10 @@ import card from "../../assets/data/dummyPathwayData";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
 import marketData from "../../assets/data/dummyMarketData.js";
 
-const Routing = () => {
+const Routing = ({userToken}) => {
 
   // eslint-disable-next-line no-unused-vars
-  const [userToken, setUserToken] = useState();
 
-  useEffect(() => {
-    onAuthStateChanged(auth, (authenticatedUser) => {
-      console.log(authenticatedUser);
-      if (authenticatedUser) {
-        setUserToken(authenticatedUser);
-      } else {
-        setUserToken(null);
-      }
-    });
-  }, []);
   
   return (
     <Router>
@@ -65,6 +54,7 @@ const Routing = () => {
         <Route path="/create-account" element={<CreateAccount />} />
 
         { userToken && <Route path="/" element={<Home displayName={userToken.displayName} userProfile={userProfile} />} /> }
+        { !userToken &&  <Route path="/" element={<Splash />} /> }
 
         <Route
           path="/articles"
