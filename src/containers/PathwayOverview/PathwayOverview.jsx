@@ -49,7 +49,7 @@ const PathwayOverview = ({ userProfile, card }) => {
     <div className="pathway-overview">
       <header className="pathway-overview__header">
         <div className="pathway-overview__backButton">
-          <BackButton linkTo="linkTo" />
+          <BackButton linkTo="/pathways" />
         </div>
         <div className="pathway-overview__trophy">
           <TrophyStats userProfile={userProfile} />
