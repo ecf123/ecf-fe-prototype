@@ -17,6 +17,10 @@ const PathwaysMenu = () => {
         setFilter(event.target.id);
     };
 
+    // const getId = (event) => {
+    //     console.log(event);
+    // }
+
     return (
         <div className="pathways-menu">
             <div data-testid="pathways-menu-header" className="pathways-menu__header">

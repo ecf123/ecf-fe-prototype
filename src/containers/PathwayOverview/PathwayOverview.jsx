@@ -4,27 +4,34 @@ import TrophyStats from '../../components/TrophyStats/TrophyStats';
 import Button from '../../components/Button/Button';
 import './PathwayOverview.scss';
 import MenuBar from '../../components/MenuBar/MenuBar';
+import { useLocation } from 'react-router-dom';
 
 // path: /pathways/:pathwayId
 
-const PathwayOverview = ({ userProfile, card }) => {
+const PathwayOverview = ({ userProfile, cardData }) => {
   const [category, setCategory] = useState('overview');
 
   // PROPS TO USE WHEN PATHWAY CARD LIST IS LINKED AND CAN GIVE AN ID
   // const { header, topics, image, id, overview, structure, careers } = card;
 
-  const cardOne = card[0];
+  const location = useLocation();
+  // console.log(location.pathname);
+  const splitPathname = location.pathname.split("/");
+  const index = splitPathname[2];
+  // console.log(index);
+
+  const card = cardData[index];
 
   // --------------- (id.overview)
-  const overviewJSX = cardOne.overview.split('.').map((sentence, index) => {
+  const overviewJSX = card.overview.split('.').map((sentence, index) => {
     return <p key={index}>{sentence}</p>;
   });
 
-  const structureJSX = cardOne.structure.split('.').map((sentence, index) => {
+  const structureJSX = card.structure.split('.').map((sentence, index) => {
     return <p key={index}>{sentence}</p>;
   });
 
-  const careersJSX = cardOne.careers.split('.').map((sentence, index) => {
+  const careersJSX = card.careers.split('.').map((sentence, index) => {
     return <p key={index}>{sentence}</p>;
   });
 
@@ -56,12 +63,12 @@ const PathwayOverview = ({ userProfile, card }) => {
         </div>
       </header>
       <div className="card-container">
-        <h1 className="card-container__header">{cardOne.header}</h1>
+        <h1 className="card-container__header">{card.header}</h1>
         <img
           className="card-container__image"
           data-testid="main-image"
-          src={cardOne.image}
-          alt={cardOne.topics}
+          src={card.image}
+          alt={card.topics}
         />
       </div>
       <div className="pathway-overview__filters">

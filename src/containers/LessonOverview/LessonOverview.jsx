@@ -30,7 +30,7 @@ const LessonOverview = ({userProfile}) => {
         <h1 className="contents__title">{lessonData.title}</h1>
         <h2 className="contents__header">Overview</h2>
         <p className="contents__paragraph">
-          {bulletPoints}
+          <ul>{bulletPoints}</ul>
         </p>
         <h2 className="contents__header">{lessonData.headingOne}</h2>
         <p className="contents__paragraph">{lessonData.paragraphOne}</p>

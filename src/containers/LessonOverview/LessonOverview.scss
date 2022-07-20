@@ -7,6 +7,7 @@
     align-items: center;
     justify-content: center;
     overflow: clip;
+    width: 360px;
 
     &__header {
         display: flex;
@@ -72,4 +73,9 @@
         color: #B1B8CF;
 
     }
+}
+
+li {
+    list-style-position: inside;
+    text-indent: -1em;
 }
