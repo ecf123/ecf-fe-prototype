@@ -9,7 +9,8 @@ import "./Articles.scss";
 // path: /articles
 
 const Articles = ({ articleInfo, userProfile }) => {
-
+  
+  // eslint-disable-next-line no-unused-vars
   const [searchCriteria, setSearchCriteria] = useState("");
 
   return (
