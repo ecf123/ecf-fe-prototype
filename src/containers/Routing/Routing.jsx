@@ -18,7 +18,6 @@ import SkillsTreePage from "../SkillsTreePage/SkillsTreePage";
 import {auth} from "../../firebase";
 import {onAuthStateChanged} from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
-import articleData from "../../assets/data/dummyArticles";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
 import dummyPathwayData from "../../assets/data/dummyPathwayData";
 import marketData from "../../assets/data/dummyMarketData.js";
@@ -40,8 +39,14 @@ const Routing = () => {
   return (
     <Router>
       <Routes>
-        <Route path="/marketplace" element={<Marketplace userProfile={userProfile} />} />
-        <Route path="/marketplace/:marketplaceId" element={<MarketplaceIndex marketData={marketData} />} />
+        <Route
+          path="/marketplace"
+          element={<Marketplace userProfile={userProfile} />}
+        />
+        <Route
+          path="/marketplace/:marketplaceId"
+          element={<MarketplaceIndex userProfile={userProfile} marketData={marketData} />}
+        />
 
         <Route path="/pathways" element={<PathwaysMenu />} />
         <Route path="/pathways/:pathwayId" element={<PathwayOverview />} />
@@ -53,8 +58,11 @@ const Routing = () => {
 
         <Route path="/" element={<Home userProfile={userProfile} />} />
 
-        <Route path="/articles" element={<Articles articleInfo={articleInfo} />} />
-        <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleData} />} />
+        <Route
+          path="/articles"
+          element={<Articles articleInfo={articleInfo}  />}
+        />
+        <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
 
         <Route path="/courses/:courseId" element={<CourseOverview dummyPathwayData={dummyPathwayData} />} />
         <Route path="/lesson/:lessonId" element={<LessonOverview />} />
