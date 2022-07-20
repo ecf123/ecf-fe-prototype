@@ -8,6 +8,7 @@ import { signOut } from "firebase/auth";
 
 const App = () => {
   const [userToken, setUserToken] = useState();
+  signOut(auth)
   useEffect(() => {
     onAuthStateChanged(auth, authenticatedUser => {
       console.log(authenticatedUser);

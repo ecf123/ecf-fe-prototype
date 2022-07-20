@@ -95,7 +95,9 @@ const Routing = ({ userToken }) => {
 
   return (
     <Router>
-      <Routes>{userToken ? AuthPages : preAuthPages}</Routes>
+      <Routes>
+        {userToken ? AuthPages : preAuthPages}
+        </Routes>
     </Router>
   );
 };
