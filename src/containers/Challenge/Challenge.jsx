@@ -14,6 +14,7 @@ import forwardArrow from "../../assets/images/forward-arrow.svg";
 const Challenge = () => {
   const [index, setIndex] = useState(0);
   const [isDisabled, setDisabled] = useState(false);
+  const [userScore, setUserScore] = useState(0);
 
   const onClickIncrease = () => {
     if (index === quiz.length) {
@@ -30,7 +31,7 @@ const Challenge = () => {
       setIndex(index - 1);
     }
   };
-
+  console.log(userScore);
   return (
     <div>
       <header className="challenge__header">
