@@ -4,7 +4,7 @@ import podium from "../../assets/images/podium.svg";
 import line from "../../assets/images/line.svg";
 import Button from "../../components/Button/Button";
 import retakeIcon from "../../assets/images/retake.svg";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 //challenge/multiple-choice-end-screen
 
