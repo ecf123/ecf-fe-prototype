@@ -8,7 +8,7 @@ import PathwaysCard from "../PathwaysCard/PathwaysCard";
 import dummyPathwayData from "../../assets/data/dummyPathwayData";
 
 describe("initial tests for content header", () => {
-
+    
     it("should render a heading and a link on the page", () => {
         customRender(<ContentHeader title="Test Title" link="/" />);
         const title = screen.getByText("Test Title");
