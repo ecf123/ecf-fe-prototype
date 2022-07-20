@@ -4,11 +4,8 @@ import QuizAnswerCard from "../../components/QuizAnswerCard/QuizAnswerCard";
 import "./QuizAnswerCardList.scss";
 
 const QuizAnswerCardList = ({ quizData, index }) => {
-  const onClickCheckAnswer = (event) => {
-    console.log(event.target.id);
-    console.log(quiz[index].correctAnswer);
-
-    if (event.target.id.toString() === quiz[index].correctAnswer.toString()) {
+  const onClickCheckAnswer = (quizId, e) => {
+    if (quizId.toString() === quiz[index].correctAnswer.toString()) {
       console.log(true);
     } else {
       console.log(false);
@@ -19,7 +16,7 @@ const QuizAnswerCardList = ({ quizData, index }) => {
     return (
       <QuizAnswerCard
         key={i}
-        id={i + 1}
+        quizId={i + 1}
         choice={item.choice}
         answer={item.answer}
         onClickCheckAnswer={onClickCheckAnswer}
