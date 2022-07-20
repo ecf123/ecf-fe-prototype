@@ -20,6 +20,7 @@ import {onAuthStateChanged} from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
 import dummyPathwayData from "../../assets/data/dummyPathwayData";
+import MultipleChoiceEndScreen from "../MultipleChoiceEndScreen/MultipleChoiceEndScreen";
 import marketData from "../../assets/data/dummyMarketData.js";
 
 const Routing = () => {
@@ -67,6 +68,7 @@ const Routing = () => {
         <Route path="/courses/:courseId" element={<CourseOverview dummyPathwayData={dummyPathwayData} />} />
         <Route path="/lesson/:lessonId" element={<LessonOverview />} />
         <Route path="/challenge/:challengeId" element={<Challenge />} />
+        <Route path="/challenge/multiple-choice-end-screen" element={<MultipleChoiceEndScreen/>} />
 
         <Route path="/profile" element={<Profile />} />
       </Routes>
