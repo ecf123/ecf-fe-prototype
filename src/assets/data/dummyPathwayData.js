@@ -9,6 +9,9 @@ const cardData = [
   {
     id: "card1",
     header: "Financial Forest",
+    subHeading: "Commercial Banking with Barclays",
+    courseIntroContent:
+      "You will learn Ut morbi iaculis mauris vitae. Pellentesque aliquet neque ipsum pulvinar ut interdum. Turpis lobortis fames tellus vitae. Ipsum elit nibh dignissim quisque. Ut turpis nullam nisi, sodales vitae tellus arcu sagittis faucibus. Ut gravida vestibulum augue scelerisque tellus purus morbi duis diam. Nisl in non vitae senectus turpis enim.",
     topics: "Banking, Investments",
     image: financialForest,
     percentage: 90,
