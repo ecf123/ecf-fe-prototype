@@ -2,21 +2,19 @@ import React from 'react';
 import VideoCard from '../../components/VideoCard/VideoCard';
 import BackButton from '../../components/BackButton/BackButton';
 import TrophyStats from '../../components/TrophyStats/TrophyStats';
-import data from "../../assets/data/dummyLessonOverview.js"
 import Navigation from "../../components/Navigation/Navigation";
 
 import "./LessonOverview.scss";
 
 // path: /lesson/:lessonId
 
-const lessonData = data[0];
 
-const bulletPoints = lessonData.bullets.split("*").map(sentence => <li>{sentence}</li>);
 
-const LessonOverview = ({userProfile}) => {
+const LessonOverview = ({userProfile, lessonData}) => {
+  const bulletPoints = lessonData.bullets.split("*").map(sentence => <li>{sentence}</li>);
   return (
     <div className="lesson">
-      <header className="lesson__header">
+      <header className="lesson__header" data-testId = "topButtons">
         <div className="lesson__back-button" >
           <BackButton linkTo="/courses/0" isSecondary={false} />
         </div>
@@ -28,8 +26,8 @@ const LessonOverview = ({userProfile}) => {
         <div className="contents__video">
           <VideoCard className="contents__video--temp" videoData={lessonData.video} />
         </div>
-        <h1 className="contents__title">{lessonData.title}</h1>
-        <h2 className="contents__header">Overview</h2>
+        <h1 className="contents__title" data-testId = "title">{lessonData.title}</h1>
+        <h2 className="contents__header" >Overview</h2>
         <p className="contents__paragraph">
           <ul>{bulletPoints}</ul>
         </p>
@@ -38,7 +36,7 @@ const LessonOverview = ({userProfile}) => {
         <h2 className="contents__header">{lessonData.headingTwo}</h2>
         <p className="contents__paragraph">{lessonData.paragraphTwo}</p>
       </div>
-      <Navigation />
+      <Navigation/>
       
     </div>
   )

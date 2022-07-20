@@ -21,9 +21,10 @@ import Challenge from "../Challenge/Challenge";
 import card from "../../assets/data/dummyPathwayData";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
 import marketData from "../../assets/data/dummyMarketData.js";
+import lessonsData from "../../assets/data/dummyLessonOverview.js"
 
 const Routing = () => {
-
+  const lessonData =lessonsData[0];
   // eslint-disable-next-line no-unused-vars
   const [userToken, setUserToken] = useState(null);
 
@@ -72,7 +73,7 @@ const Routing = () => {
         <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
 
         <Route path="/courses/:courseId" element={<CourseOverview />} />
-        <Route path="/lesson/:lessonId" element={<LessonOverview userProfile={userProfile}/>} />
+        <Route path="/lesson/:lessonId" element={<LessonOverview userProfile={userProfile} lessonData ={lessonData} />} />
         <Route path="/challenge/:challengeId" element={<Challenge />} />
 
         <Route path="/profile" element={<Profile />} />
