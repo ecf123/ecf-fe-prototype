@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import "./App.scss";
 import Routing from "./containers/Routing/Routing";
 import { auth } from "./firebase";
-import { signOut } from "firebase/auth";
 
 
 const App = () => {
