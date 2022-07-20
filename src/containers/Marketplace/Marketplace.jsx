@@ -11,7 +11,7 @@ const Marketplace = ({ userProfile, marketData }) => {
   return (
     <div className="marketplace">
       <TrophyHeader userProfile={userProfile} />
-      <h1 className="marketplace__heading">Marketplace</h1>
+      <h1 data-testid="heading" className="marketplace__heading">Marketplace</h1>
       <p className="marketplace__text">Use the XP you’ve successfully earnt to unlock great prizes and opportunities</p>
       <MarketplaceCarousel 
         heading="Under 100XP" 

@@ -2,16 +2,24 @@ import React from 'react'
 import trophy from "./../../assets/images/trophy-icon.svg"
 import xp from "./../../assets/images/xp-icon.svg"
 import lock from "./../../assets/images/lock.svg"
+import { useNavigate } from 'react-router-dom';
 import "./MarketplaceCard.scss"
 
 const MarketplaceCard = ({ cardData }) => {
 
-  const {image, heading, trophies, skillPoints, isLocked} = cardData;
+  const {image, heading, trophies, skillPoints, isLocked, id} = cardData;
+
+  const navigate = useNavigate();
+
+  const navigateToMarketplace = () => {
+    navigate('/marketplace/' + id);
+  };
 
   return (
     <div
       className='marketplace-card'
       data-testid="marketplace-card"
+      onClick={navigateToMarketplace}
     >
 
       <div className='marketplace-card__img-container'
