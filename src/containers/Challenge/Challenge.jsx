@@ -1,4 +1,4 @@
-import React from "react";
+import { React, useState } from "react";
 import "./Challenge.scss";
 import quiz from "../../assets/data/dummyQuizData";
 import QuizAnswerCardList from "../QuizAnswerCardList/QuizAnswerCardList";
@@ -12,6 +12,24 @@ import forwardArrow from "../../assets/images/forward-arrow.svg";
 // path: /challenge/:challengeId
 
 const Challenge = () => {
+  const [index, setIndex] = useState(0);
+
+  const onClickIncrease = () => {
+    if (index === quiz.length) {
+      setIndex(quiz.length);
+    } else {
+      setIndex(index + 1);
+    }
+  };
+
+  const onClickDecrease = () => {
+    if (index === 0) {
+      setIndex(0);
+    } else {
+      setIndex(index - 1);
+    }
+  };
+
   return (
     <div>
       <header className="challenge__header">
@@ -23,15 +41,17 @@ const Challenge = () => {
         </div>
       </header>
       <div className="challenge__question-container">
-        <h1 className="challenge__question-number">Q1/15</h1>
-        <h2 className="challenge__question-text">{quiz[0].question}</h2>
-        <QuizAnswerCardList quizData={quiz} />
+        <h1 className="challenge__question-number">
+          Q{index + 1}/{quiz.length}
+        </h1>
+        <h2 className="challenge__question-text">{quiz[index].question}</h2>
+        <QuizAnswerCardList quizData={quiz} index={index} />
       </div>
       <div className="challenge__button-container">
-        <button className="challenge__back-button">
+        <button className="challenge__back-button" onClick={onClickDecrease}>
           <img src={backArrow} alt="" />
         </button>
-        <button className="challenge__forward-button">
+        <button className="challenge__forward-button" onClick={onClickIncrease}>
           <img src={forwardArrow} alt="" />
         </button>
       </div>
