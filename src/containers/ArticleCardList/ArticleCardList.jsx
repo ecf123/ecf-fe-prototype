@@ -1,5 +1,6 @@
 import React from 'react';
 import ArticleCard from '../../components/ArticleCard/ArticleCard';
+import "./ArticleCardList.scss"
 
 const ArticleCardList = ({ articleInfo }) => {
   const articleCardJSX = articleInfo.map((article, index) => {
@@ -15,7 +16,7 @@ const ArticleCardList = ({ articleInfo }) => {
     );
   });
 
-  return <div data-testid="article-card-component">{articleCardJSX}</div>;
+  return <div data-testid="article-card-component" className='article-card-list'>{articleCardJSX}</div>;
 };
 
 export default ArticleCardList;
