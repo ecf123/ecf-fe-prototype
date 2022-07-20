@@ -13,6 +13,7 @@ import forwardArrow from "../../assets/images/forward-arrow.svg";
 
 const Challenge = () => {
   const [index, setIndex] = useState(0);
+  const [isDisabled, setDisabled] = useState(false);
 
   const onClickIncrease = () => {
     if (index === quiz.length) {
@@ -48,7 +49,11 @@ const Challenge = () => {
         <QuizAnswerCardList quizData={quiz} index={index} />
       </div>
       <div className="challenge__button-container">
-        <button className="challenge__back-button" onClick={onClickDecrease}>
+        <button
+          className="challenge__back-button"
+          onClick={onClickDecrease}
+          disabled={isDisabled}
+        >
           <img src={backArrow} alt="" />
         </button>
         <button className="challenge__forward-button" onClick={onClickIncrease}>

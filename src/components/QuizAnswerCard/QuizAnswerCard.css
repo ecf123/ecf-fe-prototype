@@ -23,3 +23,11 @@
   font-size: 12.8px;
   color: #7d92a5;
 }
+
+.correct {
+  background-color: #b3dec0;
+}
+
+.incorrect {
+  background-color: #fe6e6e;
+}
