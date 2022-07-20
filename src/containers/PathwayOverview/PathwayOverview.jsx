@@ -14,13 +14,8 @@ const PathwayOverview = ({ userProfile, cardData }) => {
   // PROPS TO USE WHEN PATHWAY CARD LIST IS LINKED AND CAN GIVE AN ID
   // const { header, topics, image, id, overview, structure, careers } = card;
 
-  const location = useLocation();
-  // console.log(location.pathname);
-  const splitPathname = location.pathname.split("/");
-  const index = splitPathname[2];
-  // console.log(index);
-
-  const card = cardData[index];
+  const splitPathname = useLocation().pathname.split("/");
+  const card = cardData[splitPathname[2]];
 
   // --------------- (id.overview)
   const overviewJSX = card.overview.split('.').map((sentence, index) => {
