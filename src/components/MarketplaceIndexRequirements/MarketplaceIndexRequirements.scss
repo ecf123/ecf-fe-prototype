@@ -1,0 +1,30 @@
+@use "../../assets//sass/mixins" as *;
+@use "../../assets//sass/variables" as *;
+
+.marketplace-requirements {
+    padding-bottom: 0px;
+    font-family: $primary-font-family;
+    width: 90%;
+
+    &__title {
+        margin-bottom: 20px;
+        font-weight: $font-weight-bold;
+        font-size: $font-size-small;
+        color: $secondary-color-dark-grey;
+        margin-top: 35px;
+    }
+
+    &__info {
+        display: flex;
+        @include heading1;
+
+        &-points{
+            padding: 0 40px 0 15px;
+        }
+
+        &-img{
+            width: 20px
+        }
+
+      }
+}

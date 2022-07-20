@@ -1,0 +1,21 @@
+@use "../../assets//sass/mixins" as *;
+@use "../../assets//sass/variables" as *;
+
+.marketplace-overview {
+  font-family: $primary-font-family;
+  width: 90%;
+  margin-top: 30px;
+  margin-bottom: 150px;
+
+  &__title {
+    margin-bottom: 20px;
+    font-weight: $font-weight-bold;
+    font-size: $font-size-small;
+    color: $secondary-color-dark-grey;
+  }
+
+  &__info {
+    @include paragraph;
+    color: $primary-color-lilac;
+  }
+}

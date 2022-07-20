@@ -19,9 +19,9 @@ import { auth } from "../../firebase";
 import { onAuthStateChanged } from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
 import card from "../../assets/data/dummyPathwayData";
-import articleData from '../../assets/data/dummyArticles'
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
-import MultipleChoiceEndScreen from "../MultiplChoiceEndScreen/MultipleChoiceEndScreen";
+import MultipleChoiceEndScreen from "../MultipleChoiceEndScreen/MultipleChoiceEndScreen";
+import marketData from "../../assets/data/dummyMarketData.js";
 
 const Routing = () => {
 
@@ -47,7 +47,7 @@ const Routing = () => {
         />
         <Route
           path="/marketplace/:marketplaceId"
-          element={<MarketplaceIndex />}
+          element={<MarketplaceIndex userProfile={userProfile} marketData={marketData} />}
         />
 
         <Route path="/pathways" element={<PathwaysMenu />} />
@@ -70,7 +70,7 @@ const Routing = () => {
           path="/articles"
           element={<Articles articleInfo={articleInfo}  />}
         />
-        <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleData} />} />
+        <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
 
         <Route path="/courses/:courseId" element={<CourseOverview />} />
         <Route path="/lesson/:lessonId" element={<LessonOverview />} />
