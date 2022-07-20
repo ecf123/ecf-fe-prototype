@@ -3,7 +3,7 @@ import "./MultipleChoiceEndScreen.scss";
 import podium from "../../assets/images/podium.svg";
 import line from "../../assets/images/line.svg";
 import Button from "../../components/Button/Button";
-import retakeIcon from "../../assets/images/redo.svg";
+import retakeIcon from "../../assets/images/retake.svg";
 
 //challenge/multiple-choice-end-screen
 
@@ -23,11 +23,13 @@ const MultipleChoiceEndScreen = ({ score }) => {
         Congratulations!! You passed with a score of {score}{" "}
       </h2>
       <div className="end-screen__button">
-        <Button buttonText="RE-TAKE" />
-        <Button
-          isSecondary={true}
-          buttonText="CONTINUE"
-        />
+        <button
+          className="end-screen__button--retake"
+        >
+          <img src={retakeIcon}  alt="re-take" className="end-screen__retake-icon"/>
+          RE-TAKE
+        </button>
+        <Button isSecondary={true} buttonText="CONTINUE" />
       </div>
     </div>
   );
