@@ -6,10 +6,14 @@ import "./TrophyHeader.scss";
 const TrophyHeader = ({ userProfile }) => {
   const { userIcon } = userProfile;
   return (
-    <div className="trophy-header-container">
-      <UserIcon userIcon={userIcon} />
-      <TrophyStats userProfile={userProfile} />
-    </div>
+    <header className="trophy-header">
+      <div className="trophy-header__backButton">
+        <UserIcon userIcon={userIcon} />
+      </div>
+      <div className="trophy-header__trophy">
+        <TrophyStats userProfile={userProfile} />
+      </div>
+    </header>
   );
 };
 
