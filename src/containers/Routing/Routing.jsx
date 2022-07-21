@@ -43,7 +43,7 @@ const Routing = () => {
       <Routes>
         <Route
           path="/marketplace"
-          element={<Marketplace userProfile={userProfile} />}
+          element={<Marketplace userProfile={userProfile} marketData={marketData} />}
         />
         <Route
           path="/marketplace/:marketplaceId"
