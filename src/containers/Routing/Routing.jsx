@@ -25,10 +25,6 @@ import marketData from "../../assets/data/dummyMarketData.js";
 import lessonsData from "../../assets/data/dummyLessonOverview.js"
 
 const Routing = () => {
-<<<<<<< HEAD
-  const lessonData =lessonsData[0];
-=======
->>>>>>> eefe2a45121c942aff95eaefc8e047f63dce527d
   // eslint-disable-next-line no-unused-vars
   const [userToken, setUserToken] = useState(null);
 
