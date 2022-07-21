@@ -41,7 +41,7 @@ const quiz = [
 ]
   },{
     question: "Which of the following best defines the term equity?",
-    correctAnswer: "c", answers: [
+    correctAnswer: 2, answers: [
     {
       choice: "A",
       answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
@@ -61,7 +61,7 @@ const quiz = [
 ]
   },{
     question: "Which of the following best defines the term equity?",
-    correctAnswer: "c", answers: [
+    correctAnswer: 1, answers: [
     {
       choice: "A",
       answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
@@ -81,7 +81,7 @@ const quiz = [
 ]
   },{
     question: "Which of the following best defines the term equity?",
-    correctAnswer: "c", answers: [
+    correctAnswer: 4, answers: [
     {
       choice: "A",
       answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
@@ -101,7 +101,7 @@ const quiz = [
 ]
   },{
     question: "Which of the following best defines the term equity?",
-    correctAnswer: "c", answers: [
+    correctAnswer: 2, answers: [
     {
       choice: "A",
       answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
@@ -121,7 +121,7 @@ const quiz = [
 ]
   },{
     question: "Which of the following best defines the term equity?",
-    correctAnswer: "c", answers: [
+    correctAnswer: 3, answers: [
     {
       choice: "A",
       answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
@@ -141,7 +141,7 @@ const quiz = [
 ]
   },{
     question: "Which of the following best defines the term equity?",
-    correctAnswer: "c", answers: [
+    correctAnswer: 4, answers: [
     {
       choice: "A",
       answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
@@ -161,7 +161,7 @@ const quiz = [
 ]
   },{
     question: "Which of the following best defines the term equity?",
-    correctAnswer: "c", answers: [
+    correctAnswer: 3, answers: [
     {
       choice: "A",
       answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
@@ -181,7 +181,7 @@ const quiz = [
 ]
   },{
     question: "Which of the following best defines the term equity?",
-    correctAnswer: "c", answers: [
+    correctAnswer: 2, answers: [
     {
       choice: "A",
       answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
@@ -201,7 +201,7 @@ const quiz = [
 ]
   },{
     question: "Which of the following best defines the term equity?",
-    correctAnswer: "c", answers: [
+    correctAnswer: 4, answers: [
     {
       choice: "A",
       answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
@@ -221,7 +221,7 @@ const quiz = [
 ]
   },{
     question: "Which of the following best defines the term equity?",
-    correctAnswer: "c", answers: [
+    correctAnswer: 2, answers: [
     {
       choice: "A",
       answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
@@ -241,7 +241,7 @@ const quiz = [
 ]
   },{
     question: "Which of the following best defines the term equity?",
-    correctAnswer: "c", answers: [
+    correctAnswer: 1, answers: [
     {
       choice: "A",
       answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
@@ -261,7 +261,7 @@ const quiz = [
 ]
   },{
     question: "Which of the following best defines the term equity?",
-    correctAnswer: "c", answers: [
+    correctAnswer: 2, answers: [
     {
       choice: "A",
       answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
@@ -281,7 +281,7 @@ const quiz = [
 ]
   },{
     question: "Which of the following best defines the term equity?",
-    correctAnswer: "c", answers: [
+    correctAnswer: 1, answers: [
     {
       choice: "A",
       answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",

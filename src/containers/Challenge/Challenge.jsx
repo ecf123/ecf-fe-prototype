@@ -15,10 +15,20 @@ const Challenge = () => {
   const [index, setIndex] = useState(0);
   const [isDisabled, setDisabled] = useState(false);
   const [userScore, setUserScore] = useState(0);
+  const [toggleClear, setToggleClear] = useState(false);
+
+  const increaseScore = () => {
+    setUserScore(userScore + 1);
+  };
+
+  const onClickCheckAnswer = (event) => {
+    console.log(event);
+    //event.target.classList.remove("correct");
+  };
 
   const onClickIncrease = () => {
-    if (index === quiz.length) {
-      setIndex(quiz.length);
+    if (index === quiz.length - 1) {
+      setIndex(quiz.length - 1);
     } else {
       setIndex(index + 1);
     }
@@ -47,13 +57,20 @@ const Challenge = () => {
           Q{index + 1}/{quiz.length}
         </h1>
         <h2 className="challenge__question-text">{quiz[index].question}</h2>
-        <QuizAnswerCardList quizData={quiz} index={index} />
+        <QuizAnswerCardList
+          quizData={quiz}
+          index={index}
+          toggleClear={toggleClear}
+          increaseScore={increaseScore}
+          onClickCheckAnswer={onClickCheckAnswer}
+        />
       </div>
       <div className="challenge__button-container">
         <button
           className="challenge__back-button"
           onClick={onClickDecrease}
-          disabled={isDisabled}
+
+          //disabled={isDisabled}
         >
           <img src={backArrow} alt="" />
         </button>
