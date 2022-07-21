@@ -11,10 +11,10 @@ import "./LessonOverview.scss";
 const LessonOverview = ({ userProfile, lessonData }) => {
     const bulletPoints = lessonData.bullets
         .split("*")
-        .map((sentence) => <li>{sentence}</li>);
+        .map((sentence,index) => <li key={index} >{sentence}</li>);
     return (
         <div className="lesson">
-            <header className="lesson__header" data-testId="topButtons">
+            <header className="lesson__header" data-testid="topButtons">
                 <div className="lesson__back-button">
                     <BackButton linkTo="/courses/0" isSecondary={false} />
                 </div>
@@ -26,16 +26,17 @@ const LessonOverview = ({ userProfile, lessonData }) => {
                 <div className="contents__video">
                     <VideoCard
                         className="contents__video--temp"
-                        videoData={lessonData.video}
+                        dummyVideoData={lessonData.video}
+                        id={0}
                     />
                 </div>
-                <h1 className="contents__title" data-testId="title">
+                <h1 className="contents__title" data-testid="title">
                     {lessonData.title}
                 </h1>
                 <h2 className="contents__header">Overview</h2>
-                <p className="contents__paragraph">
+                <div className="contents__paragraph">
                     <ul>{bulletPoints}</ul>
-                </p>
+                </div>
                 <h2 className="contents__header">{lessonData.headingOne}</h2>
                 <p className="contents__paragraph">{lessonData.paragraphOne}</p>
                 <h2 className="contents__header">{lessonData.headingTwo}</h2>

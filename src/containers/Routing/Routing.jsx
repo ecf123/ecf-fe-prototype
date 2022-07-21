@@ -65,12 +65,10 @@ const Routing = () => {
           element={<Articles articleInfo={articleInfo}  />}
         />
         <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
-
         <Route path="/courses/:courseId" element={<CourseOverview dummyPathwayData={dummyPathwayData} />} />
-        <Route path="/lesson/:lessonId" element={<LessonOverview />} />
+        <Route path="/lesson/:lessonId" element={<LessonOverview userProfile={userProfile} lessonData={lessonsData[0]}/>} />
         <Route path="/challenge/:challengeId" element={<Challenge />} />
         <Route path="/challenge/multiple-choice-end-screen" element={<MultipleChoiceEndScreen/>} />
-
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
