@@ -49,7 +49,7 @@ const Routing = ({ userToken }) => {
         path="/marketplace/:marketplaceId"
         element={<MarketplaceIndex marketData={marketData} />}
       />
-
+      
       <Route path="/pathways" element={<PathwaysMenu />} />
       <Route
         path="/pathways/:pathwayId"
