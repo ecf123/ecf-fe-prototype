@@ -4,9 +4,7 @@ import UserIcon from '../UserIcon/UserIcon';
 
 const WelcomeHeader = ({ userProfile, displayName }) => {
   const { userIcon } = userProfile;
-  console.log(displayName);
   useEffect(() => {
-    console.log(displayName);
   }, [displayName]);
 
   return (

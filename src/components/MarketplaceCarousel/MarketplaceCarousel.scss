@@ -1,0 +1,28 @@
+@use "./../../assets/sass/variables" as *;
+@use "./../../assets/sass/mixins" as *;
+
+.marketplace-carousel {
+
+    margin: 30px;
+
+    &__carousel {
+        display: flex;
+    overflow-x: scroll;
+  
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  
+    &__item {
+      margin-right: 12px;
+    }
+    }
+    
+
+    &__heading {
+        @include heading5;
+        font-weight: $font-weight-bold;
+        margin-bottom: 20px;
+        color: $secondary-color-dark-grey;
+    }
+  }

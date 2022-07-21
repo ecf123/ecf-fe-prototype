@@ -3,13 +3,17 @@
 
 .marketplace-card{
   width: 230px;
-
+  margin-left: 10px;
+  margin-right: 10px;
   position: relative;
 
   &__img-container {
     width: 100%;
     border-radius: 8px;
     position: relative;
+    display: flex;
+    justify-content: center;
+    height: 154px;
     z-index: 0;
 
     &__overlay {
@@ -47,6 +51,7 @@
 
     &__img {
       width: 100%;
+      align-self: center;
     }
   }
 
