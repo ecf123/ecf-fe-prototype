@@ -9,10 +9,10 @@ import articleInfo from "../../assets/data/dummyArticleCardInformation";
 
 // path: /
 
-const Home = ({ userProfile }) => {  
+const Home = ({ userProfile, displayName }) => {  
     return (
         <div className='home-container'>
-            <WelcomeHeader userProfile={userProfile} />
+            <WelcomeHeader displayName={displayName} userProfile={userProfile} />
             <SearchContainer title="Pathways"  pathwaysLink="/pathways" />
             <div className='home-container__header'>
                 <ContentHeader title="Articles" link="/articles"/>
