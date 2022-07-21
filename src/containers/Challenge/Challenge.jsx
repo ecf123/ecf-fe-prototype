@@ -13,22 +13,34 @@ import forwardArrow from "../../assets/images/forward-arrow.svg";
 
 const Challenge = () => {
   const [index, setIndex] = useState(0);
-  const [isDisabled, setDisabled] = useState(false);
+  const [isDisabled, setDisabled] = useState(true);
   const [userScore, setUserScore] = useState(0);
-  const [toggleClear, setToggleClear] = useState(false);
+  const [userPercentage, setUserPercentage] = useState(0);
 
   const increaseScore = () => {
     setUserScore(userScore + 1);
   };
 
-  const onClickCheckAnswer = (event) => {
-    console.log(event);
-    //event.target.classList.remove("correct");
+  const calculatePercentage = () => {
+    const total = Math.floor((userScore / quiz.length) * 100);
+    setUserPercentage(total);
+    console.log(userScore + "userScore");
+    console.log(total + "total");
   };
 
+  // const onClickCheckAnswer = (event) => {
+  //   console.log(event);
+  //   //event.target.classList.remove("correct");
+  // };
+
   const onClickIncrease = () => {
+    if (index === 0) {
+      setDisabled(false);
+    }
+
     if (index === quiz.length - 1) {
       setIndex(quiz.length - 1);
+      calculatePercentage();
     } else {
       setIndex(index + 1);
     }
@@ -37,11 +49,15 @@ const Challenge = () => {
   const onClickDecrease = () => {
     if (index === 0) {
       setIndex(0);
+    } else if (index === 1) {
+      setDisabled(true);
+      setIndex(index - 1);
     } else {
       setIndex(index - 1);
     }
   };
   console.log(userScore);
+  console.log(userPercentage + "userpercent");
   return (
     <div>
       <header className="challenge__header">
@@ -60,17 +76,14 @@ const Challenge = () => {
         <QuizAnswerCardList
           quizData={quiz}
           index={index}
-          toggleClear={toggleClear}
           increaseScore={increaseScore}
-          onClickCheckAnswer={onClickCheckAnswer}
         />
       </div>
       <div className="challenge__button-container">
         <button
-          className="challenge__back-button"
+          className={"challenge__back-button" + (isDisabled ? " disabled" : "")}
           onClick={onClickDecrease}
-
-          //disabled={isDisabled}
+          disabled={isDisabled}
         >
           <img src={backArrow} alt="" />
         </button>
