@@ -81,32 +81,15 @@ const Routing = ({ userToken }) => {
       {!userToken && <Route path="/" element={<Splash />} />}
 
       <Route
-        path="/articles"
-        element={<Articles articleInfo={articleInfo} />}
-      />
-      <Route
-        path="/articles/:articleId"
-        element={<ArticleIndex articleArray={articleInfo} />}
-      />
-      <Route
-        path="/courses/:courseId"
-        element={<CourseOverview dummyPathwayData={dummyPathwayData} />}
-      />
-      <Route
-        path="/lesson/:lessonId"
-        element={
-          <LessonOverview
-            userProfile={userProfile}
-            lessonData={lessonsData[0]}
-          />
-        }
-      />
-      <Route path="/challenge/:challengeId" element={<Challenge />} />
-      <Route
-        path="/challenge/multiple-choice-end-screen"
-        element={<MultipleChoiceEndScreen />}
-      />
-      <Route path="/profile" element={<Profile />} />
+          path="/articles"
+          element={<Articles userProfile={userProfile} articleInfo={articleInfo}  />}
+        />
+        <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
+        <Route path="/courses/:courseId" element={<CourseOverview dummyPathwayData={dummyPathwayData} />} />
+        <Route path="/lesson/:lessonId" element={<LessonOverview userProfile={userProfile} lessonData={lessonsData[0]}/>} />
+        <Route path="/challenge/:challengeId" element={<Challenge />} />
+        <Route path="/challenge/multiple-choice-end-screen" element={<MultipleChoiceEndScreen/>} />
+        <Route path="/profile" element={<Profile />} />
     </>
   );
 
