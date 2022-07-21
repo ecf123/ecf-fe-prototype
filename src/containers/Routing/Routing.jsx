@@ -22,6 +22,7 @@ import articleInfo from "../../assets/data/dummyArticleCardInformation";
 import dummyPathwayData from "../../assets/data/dummyPathwayData";
 import MultipleChoiceEndScreen from "../MultipleChoiceEndScreen/MultipleChoiceEndScreen";
 import marketData from "../../assets/data/dummyMarketData.js";
+import lessonsData from "../../assets/data/dummyLessonOverview.js"
 
 const Routing = () => {
   // eslint-disable-next-line no-unused-vars
@@ -42,7 +43,7 @@ const Routing = () => {
       <Routes>
         <Route
           path="/marketplace"
-          element={<Marketplace userProfile={userProfile} />}
+          element={<Marketplace userProfile={userProfile} marketData={marketData} />}
         />
         <Route
           path="/marketplace/:marketplaceId"
@@ -64,12 +65,10 @@ const Routing = () => {
           element={<Articles userProfile={userProfile} articleInfo={articleInfo}  />}
         />
         <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
-
         <Route path="/courses/:courseId" element={<CourseOverview dummyPathwayData={dummyPathwayData} />} />
-        <Route path="/lesson/:lessonId" element={<LessonOverview />} />
+        <Route path="/lesson/:lessonId" element={<LessonOverview userProfile={userProfile} lessonData={lessonsData[0]}/>} />
         <Route path="/challenge/:challengeId" element={<Challenge />} />
         <Route path="/challenge/multiple-choice-end-screen" element={<MultipleChoiceEndScreen/>} />
-
         <Route path="/profile" element={<Profile />} />
       </Routes>
     </Router>
