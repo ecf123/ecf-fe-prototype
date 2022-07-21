@@ -1,0 +1,19 @@
+@use "./../../assets/sass/variables" as *;
+@use "./../../assets/sass/mixins" as *;
+
+
+.marketplace {
+    &__heading {
+        @include heading1;
+        color: $secondary-color-dark-grey;
+        margin: 30px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    &__text {
+        margin: 30px;
+        margin-top: 16px;
+        color: $secondary-color-lilac;
+    }
+}
