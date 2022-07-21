@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "../Home/Home";
 import Profile from "../Profile/Profile";
 import userProfile from "../../assets/data/dummyUserData";
@@ -15,16 +15,20 @@ import Splash from "../Splash/Splash";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTreePage from "../SkillsTreePage/SkillsTreePage";
-import { auth } from "../../firebase";
-import { onAuthStateChanged } from "firebase/auth";
+import {auth} from "../../firebase";
+import {onAuthStateChanged} from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
-import card from "../../assets/data/dummyPathwayData";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
+import dummyPathwayData from "../../assets/data/dummyPathwayData";
+import MultipleChoiceEndScreen from "../MultipleChoiceEndScreen/MultipleChoiceEndScreen";
 import marketData from "../../assets/data/dummyMarketData.js";
 import lessonsData from "../../assets/data/dummyLessonOverview.js"
 
 const Routing = () => {
+<<<<<<< HEAD
   const lessonData =lessonsData[0];
+=======
+>>>>>>> eefe2a45121c942aff95eaefc8e047f63dce527d
   // eslint-disable-next-line no-unused-vars
   const [userToken, setUserToken] = useState(null);
 
@@ -51,14 +55,8 @@ const Routing = () => {
         />
 
         <Route path="/pathways" element={<PathwaysMenu />} />
-        <Route path="/pathways/:pathwayId" element={<PathwayOverview card={card} userProfile={userProfile} />}  />
-        <Route
-          // TEMPORARY PATH FOR DEMO -v
-          path="/pathways/skills-tree"
-          // THIS IS THE ACTUAL PATH -v
-          // path="/pathways/:pathwayId/skills-tree"
-          element={<SkillsTreePage />}
-        />
+        <Route path="/pathways/:pathwayId" element={<PathwayOverview />} />
+        <Route path="/pathways/:pathwayId/skills-tree" element={<SkillsTreePage />} />
 
         <Route path="/splash" element={<Splash />} />
         <Route path="/sign-in" element={<SignIn />} />
@@ -72,9 +70,10 @@ const Routing = () => {
         />
         <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
 
-        <Route path="/courses/:courseId" element={<CourseOverview />} />
-        <Route path="/lesson/:lessonId" element={<LessonOverview userProfile={userProfile} lessonData ={lessonData} />} />
+        <Route path="/courses/:courseId" element={<CourseOverview dummyPathwayData={dummyPathwayData} />} />
+        <Route path="/lesson/:lessonId" element={<LessonOverview />} />
         <Route path="/challenge/:challengeId" element={<Challenge />} />
+        <Route path="/challenge/multiple-choice-end-screen" element={<MultipleChoiceEndScreen/>} />
 
         <Route path="/profile" element={<Profile />} />
       </Routes>
