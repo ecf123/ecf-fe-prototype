@@ -1,17 +1,26 @@
 import { render, screen } from "@testing-library/react";
+import { customRender } from "../../test-utilities/test-utilities";
 import MarketplaceCard from "./MarketplaceCard";
 import marketplaceImage from "../../assets/images/adidas-gift-voucher.svg";
+import marketData from "../../assets/data/dummyMarketData";
+import thorpeParkVoucher from "../../assets/images/thorpe-park.svg"
 
 describe("basic tests for card component", () => {
-  it("Should render the card", () => {
-    render(
+  const cardData ={
+    image: thorpeParkVoucher,
+    heading: "Get tickets to Thorpe Park for you and two others",
+    overview:
+      "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic placeat quis blanditiis. Debitis placeat sunt, sapiente, a iste repudiandae hic necessitatibus natus inventore maxime, perspiciatis sed distinctio praesentium blanditiis ipsa? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic placeat quis blanditiis. Debitis placeat sunt, sapiente, a iste repudiandae hic necessitatibus natus inventore maxime, perspiciatis sed distinctio praesentium blanditiis ipsa? Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic placeat quis blanditiis. Debitis placeat sunt, sapiente, a iste repudiandae hic necessitatibus natus inventore maxime, perspiciatis sed distinctio praesentium blanditiis ipsa?",
+    id: 3,
+    skillPoints: 300,
+    trophies: 2,
+    isLocked: true
+  }
+
+  it("Should render the card", () => {  
+    customRender(
       <MarketplaceCard
-        img={marketplaceImage}
-        title="gift voucher"
-        trophies={100}
-        score={100}
-        imgTitle="gift voucher"
-        isLocked={true}
+        cardData={cardData}
       />
     );
     const div = screen.getByTestId("marketplace-card");
@@ -19,14 +28,9 @@ describe("basic tests for card component", () => {
   });
 
   it("should render the image", () => {
-    render(
+    customRender(
       <MarketplaceCard
-        img={marketplaceImage}
-        title="gift voucher"
-        trophies={100}
-        score={100}
-        imgTitle="gift voucher"
-        isLocked={true}
+      cardData={cardData}
       />
     );
     const img = screen.getByTestId("marketplace-card-img");
@@ -34,14 +38,9 @@ describe("basic tests for card component", () => {
   });
 
   it("should render lock when isLocked", () => {
-    render(
+    customRender(
       <MarketplaceCard
-        img={marketplaceImage}
-        title="gift voucher"
-        trophies={100}
-        score={100}
-        imgTitle="gift voucher"
-        isLocked={true}
+      cardData={cardData}
       />
     );
     const lock = screen.getByTestId("marketplace-card-lock");

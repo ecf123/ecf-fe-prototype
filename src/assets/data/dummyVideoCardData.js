@@ -4,37 +4,37 @@ const dummyVideoData = [
   {
     id: 0,
     name: "Barclays",
-    url: "http://www.youtube.com/watch?v=ysz5S6PUM-U",
+    url: "https://vimeo.com/90283590",
     icon: barclaysIcon,
   },
   {
     id: 1,
     name: "Business Bonanza",
-    url: "https://www.youtube.com/watch?v=9xwazD5SyVg",
+    url: "https://vimeo.com/90283590",
     icon: barclaysIcon,
   },
   {
     id: 2,
     name: "Divine Design",
-    url: "http://www.youtube.com/watch?v=ysz5S6PUM-U",
+    url: "https://vimeo.com/90283590",
     icon: barclaysIcon,
   },
   {
     id: 3,
     name: "Magic Marketing",
-    url: "https://www.youtube.com/watch?v=9xwazD5SyVg",
+    url: "https://vimeo.com/90283590",
     icon: barclaysIcon,
   },
   {
     id: 4,
     name: "Coding Camp",
-    url: "https://www.youtube.com/watch?v=9xwazD5SyVg",
+    url: "https://vimeo.com/90283590",
     icon: barclaysIcon,
   },
   {
     id: 5,
     name: "Epic Engineering",
-    url: "https://www.youtube.com/watch?v=9xwazD5SyVg",
+    url: "https://vimeo.com/90283590",
     icon: barclaysIcon,
   },
 ];
