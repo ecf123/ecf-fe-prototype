@@ -2,11 +2,12 @@ import React, { useState } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import "./SearchContainer.scss";
 import ContentHeader from "../../components/ContentHeader/ContentHeader";
-import Carousel from '../../components/Carousel/Carousel'
-import cardData from "../../assets/data/dummyPathwayData"
+import Carousel from "../../components/Carousel/Carousel";
+import cardData from "../../assets/data/dummyPathwayData";
+import articleInfo from "../../assets/data/dummyArticleCardInformation";
+import ArticleCardList from "../ArticleCardList/ArticleCardList";
 
 const SearchContainer = ({ title, pathwaysLink }) => {
-
   const [searchTerm, setSearchTerm] = useState("");
   const [arr, setArr] = useState(cardData);
 
@@ -31,7 +32,7 @@ const SearchContainer = ({ title, pathwaysLink }) => {
           </h1>
         ) : (
           <div className="search-container__titles">
-            <ContentHeader title={title} link={pathwaysLink}/>
+            <ContentHeader title={title} link={pathwaysLink} />
           </div>
         )
       ) : (
@@ -42,6 +43,10 @@ const SearchContainer = ({ title, pathwaysLink }) => {
       <div className="search-container__carousel">
         <Carousel cardData={arr} />
       </div>
+      <div className="home-container__header">
+        <ContentHeader title="Articles" link="/articles" />
+      </div>
+      <ArticleCardList articleInfo={articleInfo} />
     </div>
   );
 };
