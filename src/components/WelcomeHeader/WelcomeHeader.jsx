@@ -3,15 +3,12 @@ import './WelcomeHeader.scss';
 import UserIcon from '../UserIcon/UserIcon';
 
 const WelcomeHeader = ({ userProfile, displayName }) => {
-  const { firstName, lastName, userIcon } = userProfile;
+  const { userIcon } = userProfile;
   console.log(displayName);
   useEffect(() => {
     console.log(displayName);
   }, [displayName]);
 
-  const capitalisedNames = (name) => {
-    return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-  };
   return (
     <div className="welcome-header">
       <div className="welcome-header__welcome-message">
