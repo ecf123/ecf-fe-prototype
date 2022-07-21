@@ -39,6 +39,7 @@ const Routing = ({ userToken }) => {
 
   const AuthPages = (
     <>
+    <Route path="*" element={<Navigate to="/" />} />
       <Route
         path="/marketplace"
         element={<Marketplace userProfile={userProfile} />}
