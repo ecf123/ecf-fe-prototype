@@ -3,10 +3,11 @@
 @use "../../assets/sass/mixins" as *;
 
 .article-card {
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid $secondary-color-lilac;
   margin: 20px 29px 0px 29px;
   display: flex;
   justify-content: center;
+  align-items: center;
   padding: 0px 0px 20px 0px;
   width: 363px;
   height: 60px;
@@ -20,7 +21,6 @@
   &__image {
     width: 53px;
     height: 39px;
-    border: 2px solid;
   }
 
   &__text {
