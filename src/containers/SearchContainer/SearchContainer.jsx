@@ -10,6 +10,7 @@ import ArticleCardList from "../ArticleCardList/ArticleCardList";
 const SearchContainer = ({ title, pathwaysLink }) => {
   const [searchTerm, setSearchTerm] = useState("");
   const [arr, setArr] = useState(cardData);
+  const [articleArray, setArticleArray] = useState(articleInfo);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.search.value);
@@ -20,6 +21,13 @@ const SearchContainer = ({ title, pathwaysLink }) => {
         .includes(event.target.search.value.toLowerCase());
     });
     setArr(filterArray);
+    
+    const articleFilterArray = articleInfo.filter((element) => {
+      return element.title
+        .toLowerCase()
+        .includes(event.target.search.value.toLowerCase());
+    });
+    setArticleArray(articleFilterArray)
   };
 
   return (
@@ -46,7 +54,7 @@ const SearchContainer = ({ title, pathwaysLink }) => {
       <div className="home-container__header">
         <ContentHeader title="Articles" link="/articles" />
       </div>
-      <ArticleCardList articleInfo={articleInfo} />
+      <ArticleCardList articleInfo={articleArray} />
     </div>
   );
 };
