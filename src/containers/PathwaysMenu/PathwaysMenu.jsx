@@ -19,9 +19,7 @@ const PathwaysMenu = () => {
 
     return (
         <div className="pathways-menu">
-            <div data-testid="pathways-menu-header" className="pathways-menu__header">
-            <TrophyHeader  userProfile={userProfile} />  
-            </div>
+            <TrophyHeader  userProfile={userProfile} />
             <h1 data-testid="pathways-menu-heading" className="pathways-menu__heading">Pathways</h1>
             <div data-testid="pathways-menu-filters" className="pathways-menu__filters">
                 <FilterTag filterArray={handleFilterChange} />
