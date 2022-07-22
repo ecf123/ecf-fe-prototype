@@ -2,20 +2,32 @@ import React, { useState } from "react";
 import "./QuizAnswerCard.scss";
 import quiz from "../../assets/data/dummyQuizData";
 
-const QuizAnswerCard = ({ answer, choice, quizId, index, increaseScore }) => {
+const QuizAnswerCard = ({
+  answer,
+  choice,
+  quizId,
+  index,
+  increaseScore,
+  toggleClear,
+  setToggleClear,
+}) => {
   const [cardClass, setCardClass] = useState("quiz");
 
   const onClickCheckAnswer = (quizId, e) => {
+    //setToggleClear(false);
     if (quizId.toString() === quiz[index].correctAnswer.toString()) {
-      setCardClass("quiz correct");
+      setCardClass("correct");
       increaseScore();
     } else {
-      setCardClass("quiz incorrect");
+      setCardClass("incorrect");
     }
   };
 
   return (
-    <div className={cardClass} onClick={(e) => onClickCheckAnswer(quizId, e)}>
+    <div
+      className={toggleClear ? "quiz" : "quiz " + { cardClass }}
+      onClick={(e) => onClickCheckAnswer(quizId, e)}
+    >
       <h1 className="quiz__question">{choice}</h1>
       <p className="quiz__answer">{answer}</p>
     </div>

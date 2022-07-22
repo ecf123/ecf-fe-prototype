@@ -16,6 +16,7 @@ const Challenge = () => {
   const [isDisabled, setDisabled] = useState(true);
   const [userScore, setUserScore] = useState(0);
   const [userPercentage, setUserPercentage] = useState(0);
+  const [toggleClear, setToggleClear] = useState(false);
 
   const increaseScore = () => {
     setUserScore(userScore + 1);
@@ -34,6 +35,7 @@ const Challenge = () => {
   // };
 
   const onClickIncrease = () => {
+    setToggleClear(true);
     if (index === 0) {
       setDisabled(false);
     }
@@ -77,6 +79,7 @@ const Challenge = () => {
           quizData={quiz}
           index={index}
           increaseScore={increaseScore}
+          toggleClear={toggleClear}
         />
       </div>
       <div className="challenge__button-container">
