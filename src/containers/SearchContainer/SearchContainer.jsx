@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import SearchBar from "../../components/SearchBar/SearchBar";
 import "./SearchContainer.scss";
 import ContentHeader from "../../components/ContentHeader/ContentHeader";
@@ -29,6 +29,9 @@ const SearchContainer = ({ title, pathwaysLink }) => {
     });
     setArticleArray(articleFilterArray);
   };
+
+  const articleFilterListClassName =
+    "search-container__articles-list" + (searchTerm ? "" : "--search");
 
   return (
     <div className="search-container">
@@ -64,7 +67,9 @@ const SearchContainer = ({ title, pathwaysLink }) => {
       ) : (
         <h1 className="search-container__heading">No Articles found</h1>
       )}
-      <ArticleCardList articleInfo={articleArray} />
+      <div className={articleFilterListClassName}>
+        <ArticleCardList articleInfo={articleArray} />
+      </div>
     </div>
   );
 };
