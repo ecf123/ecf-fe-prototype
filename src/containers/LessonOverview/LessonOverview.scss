@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: center;
     overflow: clip;
-    position: relative;
+    width: 360px;
 
     &__header {
         display: flex;
@@ -74,6 +74,7 @@
     }
 }
 
-li{
-    margin-left:15px;
+li {
+    list-style-position: inside;
+    text-indent: -1em;
 }
