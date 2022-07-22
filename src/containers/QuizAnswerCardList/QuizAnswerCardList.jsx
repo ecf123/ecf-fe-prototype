@@ -24,7 +24,11 @@ const QuizAnswerCardList = ({
     );
   });
 
-  return <div className="answer-list">{JSX}</div>;
+  return (
+    <div data-testid="answer-list" className="answer-list">
+      {JSX}
+    </div>
+  );
 };
 
 export default QuizAnswerCardList;
