@@ -21,22 +21,23 @@ const SearchContainer = ({ title, pathwaysLink }) => {
         .includes(event.target.search.value.toLowerCase());
     });
     setArr(filterArray);
-    
+
     const articleFilterArray = articleInfo.filter((element) => {
       return element.title
         .toLowerCase()
         .includes(event.target.search.value.toLowerCase());
     });
-    setArticleArray(articleFilterArray)
+    setArticleArray(articleFilterArray);
   };
 
   return (
     <div className="search-container">
       <SearchBar handleChange={handleSearchChange} />
+
       {arr.length ? (
         searchTerm ? (
           <h1 className="search-container__heading">
-            Search results for "{searchTerm}"
+            Pathway results for "{searchTerm}"
           </h1>
         ) : (
           <div className="search-container__titles">
@@ -44,16 +45,25 @@ const SearchContainer = ({ title, pathwaysLink }) => {
           </div>
         )
       ) : (
-        <h1 className="search-container__heading">
-          Nothing matched your search.
-        </h1>
+        <h1 className="search-container__heading">No Pathways found</h1>
       )}
       <div className="search-container__carousel">
         <Carousel cardData={arr} />
       </div>
-      <div className="home-container__header">
-        <ContentHeader title="Articles" link="/articles" />
-      </div>
+
+      {articleArray.length ? (
+        searchTerm ? (
+          <h1 className="search-container__heading">
+            Article results for "{searchTerm}"
+          </h1>
+        ) : (
+          <div className="search-container__titles">
+            <ContentHeader title="Articles" link="/articles" />
+          </div>
+        )
+      ) : (
+        <h1 className="search-container__heading">No Articles found</h1>
+      )}
       <ArticleCardList articleInfo={articleArray} />
     </div>
   );
