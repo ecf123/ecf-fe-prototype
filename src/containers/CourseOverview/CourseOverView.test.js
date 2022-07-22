@@ -28,7 +28,6 @@ describe("initial tests for course overview list container", () => {
   it("Should render correct title", () => {
     customRender(<CourseOverview dummyPathwayData={dummyPathwayData} />);
     const heading = screen.getByTestId("course-overview-heading");
-    console.log(heading);
     expect(heading).toBeInTheDocument();
     expect(heading).not.toBeNull();
   });
@@ -36,7 +35,6 @@ describe("initial tests for course overview list container", () => {
   it("Should render back button", () => {
     customRender(<CourseOverview dummyPathwayData={dummyPathwayData} />);
     const backBtn = screen.getByTestId("back-button");
-    console.log(backBtn);
     expect(backBtn).toBeInTheDocument();
     expect(backBtn).not.toBeNull();
   });
@@ -44,7 +42,6 @@ describe("initial tests for course overview list container", () => {
   it("Should render video card", () => {
     customRender(<CourseOverview dummyPathwayData={dummyPathwayData} />);
     const videoCard = screen.getByTestId("video-card");
-    console.log(videoCard);
     expect(videoCard).toBeInTheDocument();
     expect(videoCard).not.toBeNull();
   });
@@ -52,7 +49,6 @@ describe("initial tests for course overview list container", () => {
   it("Should render the sub-heading", () => {
     customRender(<CourseOverview dummyPathwayData={dummyPathwayData} />);
     const subHeading = screen.getByTestId("sub-heading");
-    console.log(subHeading);
     expect(subHeading).toBeInTheDocument();
     expect(subHeading).not.toBeNull();
   });
@@ -60,7 +56,6 @@ describe("initial tests for course overview list container", () => {
   it("Should render the paragraph text", () => {
     customRender(<CourseOverview dummyPathwayData={dummyPathwayData} />);
     const paragraph = screen.getByTestId("paragraph-text");
-    console.log(paragraph);
     expect(paragraph).toBeInTheDocument();
     expect(paragraph).not.toBeNull();
   });
