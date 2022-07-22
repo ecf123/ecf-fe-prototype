@@ -18,12 +18,12 @@ import SkillsTreePage from "../SkillsTreePage/SkillsTreePage";
 import {auth} from "../../firebase";
 import {onAuthStateChanged} from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
-import pathwayOverviewData from "../../assets/data/dummyPathwayData";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
+import MultipleChoiceEndScreen from "../MultipleChoiceEndScreen/MultipleChoiceEndScreen";
 import marketData from "../../assets/data/dummyMarketData.js";
-import card from '../../assets/data/dummyPathwayData';
-import MultipleChoiceEndScreen from '../MultipleChoiceEndScreen/MultipleChoiceEndScreen';
-import lessonsData from '../../assets/data/dummyLessonOverview.js';
+import lessonsData from "../../assets/data/dummyLessonOverview.js"
+import pathwayOverviewData from "../../assets/data/dummyPathwayData";
+
 
 const Routing = () => {
 
@@ -41,25 +41,22 @@ const Routing = ({ userToken }) => {
     });
   }, []);
 
+
   const AuthPages = (
     <>
       <Route path="*" element={<Navigate to="/" />} />
+      <Route path="/" element={<Home userProfile={userProfile} />} />
       <Route path="/marketplace" element={<Marketplace userProfile={userProfile} marketData={marketData} />} />
       <Route path="/marketplace/:marketplaceId" element={<MarketplaceIndex userProfile={userProfile} marketData={marketData} />} />
       <Route path="/pathways" element={<PathwaysMenu />} />
-      <Route path="/pathways/:pathwayId" element={<PathwayOverview card={card} userProfile={userProfile} />} />
-      <Route path="/pathways" element={<PathwaysMenu />} />
-      <Route path="/pathways/:pathwayId" element={<PathwayOverview cardData={pathwayOverviewData} userProfile={userProfile}/>} />
+      <Route path="/pathways/:pathwayId" element={<PathwayOverview card={pathwayOverviewData} userProfile={userProfile} />} />
       <Route path="/pathways/:pathwayId/skills-tree" element={<SkillsTreePage />} />
-
-      {userToken && (
-        <Route path="/" element={<Home displayName={userToken.displayName} userProfile={userProfile} />} />
-      )}
-      {!userToken && <Route path="/" element={<Splash />} />}
-
+      <Route path="/splash" element={<Splash />} />
+      <Route path="/sign-in" element={<SignIn />} />
+      <Route path="/create-account" element={<CreateAccount />} />
       <Route path="/articles" element={<Articles userProfile={userProfile} articleInfo={articleInfo} />} />
       <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
-      <Route path="/courses/:courseId" element={<CourseOverview dummyPathwayData={dummyPathwayData} />} />
+      <Route path="/courses/:courseId" element={<CourseOverview dummyPathwayData={pathwayOverviewData} />} />
       <Route path="/lesson/:lessonId" element={<LessonOverview userProfile={userProfile} lessonData={lessonsData[0]}/>} />
       <Route path="/challenge/:challengeId" element={<Challenge />} />
       <Route path="/challenge/multiple-choice-end-screen" element={<MultipleChoiceEndScreen/>} />
