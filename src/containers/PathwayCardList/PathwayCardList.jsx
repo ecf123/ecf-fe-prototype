@@ -4,10 +4,10 @@ import card from "../../assets/data/dummyPathwayData";
 import "./PathwayCardList.scss";
 
 const PathwayCardList = () => {
-  const JSX = card.map((card, index) => (
-    <PathwaysCard linkTo={"/pathways/" + index}
+  const JSX = card.map((card) => (
+    <PathwaysCard linkTo={"/pathways/" + card.id}
       key={index}
-      id={index}
+      id={card.id}
       header={card.header}
       image={card.image}
       topics={card.topics}

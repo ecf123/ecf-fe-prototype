@@ -27,7 +27,7 @@ import pathwayOverviewData from "../../assets/data/dummyPathwayData";
 
 const Routing = () => {
 
-const Routing = ({ userToken }) => {
+const Routing = () => {
   // eslint-disable-next-line no-unused-vars
   const [userToken, setUserToken] = useState(null);
 
@@ -41,32 +41,27 @@ const Routing = ({ userToken }) => {
     });
   }, []);
 
-
-  const AuthPages = (
-    <>
-      <Route path="*" element={<Navigate to="/" />} />
-      <Route path="/" element={<Home userProfile={userProfile} />} />
-      <Route path="/marketplace" element={<Marketplace userProfile={userProfile} marketData={marketData} />} />
-      <Route path="/marketplace/:marketplaceId" element={<MarketplaceIndex userProfile={userProfile} marketData={marketData} />} />
-      <Route path="/pathways" element={<PathwaysMenu />} />
-      <Route path="/pathways/:pathwayId" element={<PathwayOverview card={pathwayOverviewData} userProfile={userProfile} />} />
-      <Route path="/pathways/:pathwayId/skills-tree" element={<SkillsTreePage />} />
-      <Route path="/splash" element={<Splash />} />
-      <Route path="/sign-in" element={<SignIn />} />
-      <Route path="/create-account" element={<CreateAccount />} />
-      <Route path="/articles" element={<Articles userProfile={userProfile} articleInfo={articleInfo} />} />
-      <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
-      <Route path="/courses/:courseId" element={<CourseOverview dummyPathwayData={pathwayOverviewData} />} />
-      <Route path="/lesson/:lessonId" element={<LessonOverview userProfile={userProfile} lessonData={lessonsData[0]}/>} />
-      <Route path="/challenge/:challengeId" element={<Challenge />} />
-      <Route path="/challenge/multiple-choice-end-screen" element={<MultipleChoiceEndScreen/>} />
-      <Route path="/profile" element={<Profile />} />
-    </>
-  );
-
   return (
     <Router>
-      <Routes>{userToken ? AuthPages : preAuthPages}</Routes>
+      <Routes>
+        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="/" element={<Home userProfile={userProfile} />} />
+        <Route path="/marketplace" element={<Marketplace userProfile={userProfile} marketData={marketData} />} />
+        <Route path="/marketplace/:marketplaceId" element={<MarketplaceIndex userProfile={userProfile} marketData={marketData} />} />
+        <Route path="/pathways" element={<PathwaysMenu />} />
+        <Route path="/pathways/:pathwayId" element={<PathwayOverview card={pathwayOverviewData} userProfile={userProfile} />} />
+        <Route path="/pathways/:pathwayId/skills-tree" element={<SkillsTreePage />} />
+        <Route path="/splash" element={<Splash />} />
+        <Route path="/sign-in" element={<SignIn />} />
+        <Route path="/create-account" element={<CreateAccount />} />
+        <Route path="/articles" element={<Articles userProfile={userProfile} articleInfo={articleInfo} />} />
+        <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
+        <Route path="/courses/:courseId" element={<CourseOverview dummyPathwayData={pathwayOverviewData} />} />
+        <Route path="/lesson/:lessonId" element={<LessonOverview userProfile={userProfile} lessonData={lessonsData[0]}/>} />
+        <Route path="/challenge/:challengeId" element={<Challenge />} />
+        <Route path="/challenge/multiple-choice-end-screen" element={<MultipleChoiceEndScreen/>} />
+        <Route path="/profile" element={<Profile />} />
+      </Routes>
     </Router>
   );
 };

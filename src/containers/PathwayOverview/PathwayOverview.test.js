@@ -4,6 +4,11 @@ import { customRender } from "../../test-utilities/test-utilities";
 import card from "../../assets/data/dummyPathwayData";
 import userProfile from "../../assets/data/dummyUserData"
 
+jest.mock("react-router-dom", () => ({
+    ...jest.requireActual("react-router-dom"),
+    useParams: () => ({ pathwayId: 1 }),
+}));
+
 describe("initial rendering tests", () => {
     it("should render the title on the page", () => {
         customRender(<PathwayOverview userProfile={userProfile} card={card} />);
