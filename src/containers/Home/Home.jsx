@@ -6,10 +6,10 @@ import Navigation from '../../components/Navigation/Navigation'
 
 // path: /
 
-const Home = ({ userProfile, displayName }) => {  
+const Home = ({ userProfile }) => {  
     return (
         <div className='home-container'>
-            <WelcomeHeader displayName={displayName} userProfile={userProfile} />
+            <WelcomeHeader userProfile={userProfile} />
             <SearchContainer title="Pathways"  pathwaysLink="/pathways" />
             <Navigation/>
         </div>
