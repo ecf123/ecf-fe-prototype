@@ -22,9 +22,7 @@ const MarketplaceIndex = (props) => {
         <div className="marketplace-index__back-button">
           <BackButton linkTo="/marketplace" />
         </div>
-        <div className="marketplace-index__trophy">
-          <TrophyStats userProfile={userProfile} />
-        </div>
+        <TrophyStats userProfile={userProfile} />
       </header>
       <img
         data-testid="image"
