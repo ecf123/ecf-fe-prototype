@@ -25,12 +25,9 @@ const Challenge = () => {
   const calculatePercentage = () => {
     const total = Math.floor((userScore / quiz.length) * 100);
     setUserPercentage(total);
-    console.log(userScore + "userScore");
-    console.log(total + "total");
   };
 
   const onClickCard = () => {
-    console.log(15627829929);
     setToggleClear(false);
   };
 
@@ -58,19 +55,21 @@ const Challenge = () => {
       setIndex(index - 1);
     }
   };
-  console.log(userScore);
-  console.log(userPercentage + "userpercent");
+
   return (
-    <div>
+    <div data-testid="challenge">
       <header className="challenge__header">
         <div className="challenge__backButton">
           <BackButton linkTo="linkTo" />
         </div>
-        <div className="challenge__trophy">
+        <div data-testid="trophy" className="challenge__trophy">
           <TrophyStats userProfile={userProfile} />
         </div>
       </header>
-      <div className="challenge__question-container">
+      <div
+        data-testid="question-container"
+        className="challenge__question-container"
+      >
         <h1 className="challenge__question-number">
           Q{index + 1}/{quiz.length}
         </h1>
@@ -89,10 +88,10 @@ const Challenge = () => {
           onClick={onClickDecrease}
           disabled={isDisabled}
         >
-          <img src={backArrow} alt="" />
+          <img src={backArrow} alt="back arrow" />
         </button>
         <button className="challenge__forward-button" onClick={onClickIncrease}>
-          <img src={forwardArrow} alt="" />
+          <img src={forwardArrow} alt="forward-arrow" />
         </button>
       </div>
       <Navigation />
