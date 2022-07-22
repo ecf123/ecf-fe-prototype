@@ -4,10 +4,10 @@ import { Link } from "react-router-dom";
 import "react-circular-progressbar/dist/styles.css";
 import "./PathwaysCard.scss";
 
-const PathwaysCard = ({ header, topics, image, percentage, id, linkTo }) => {
+const PathwaysCard = ({ header, topics, image, percentage, id }) => {
   return (
     <>
-      <Link to={linkTo}>
+      <Link to={"/pathways/" + id}>
         <div id={id} className="card" data-testid="pathwaycard">
           <div className="card__progress" data-testid="circularprogressbar">
             <CircularProgressbar

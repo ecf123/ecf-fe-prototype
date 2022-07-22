@@ -5,7 +5,7 @@ import "./PathwayCardList.scss";
 
 const PathwayCardList = () => {
   const JSX = card.map((card, index) => (
-    <PathwaysCard linkTo={"/pathways/" + card.id}
+    <PathwaysCard
       key={index}
       id={card.id}
       header={card.header}

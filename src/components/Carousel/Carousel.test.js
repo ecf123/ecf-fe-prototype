@@ -1,17 +1,18 @@
 import {screen} from "@testing-library/react";
 import {customRender} from "../../test-utilities/test-utilities";
 import Carousel from "./Carousel";
+import cardData from "../../assets/data/dummyPathwayData";
 
 describe("testing functionality of carousel", () => {
   it("should render the carousel on the page", () => {
-    customRender(<Carousel cardData={[1,2,3]} />);
+    customRender(<Carousel cardData={cardData} />);
     const carousel = screen.getByTestId("carousel");
     expect(carousel).toBeInTheDocument();
   });
 
   it("should render the carousel item on the page", () => {
-    customRender(<Carousel cardData={[1]} />);
-    const carouselItem = screen.getByTestId("carousel__item");
+    customRender(<Carousel cardData={cardData} />);
+    const carouselItem = screen.getByTestId("carousel__item1");
     expect(carouselItem).toBeInTheDocument();
   });
 

@@ -11,22 +11,22 @@ jest.mock("react-router-dom", () => ({
 
 describe("initial rendering tests", () => {
     it("should render the title on the page", () => {
-        customRender(<PathwayOverview userProfile={userProfile} card={card} />);
+        customRender(<PathwayOverview userProfile={userProfile} pathwaysData={card} />);
         const header = screen.getByRole("heading")
         expect(header).toBeInTheDocument();
     })
     it("should render the image on the page", () => {
-        customRender(<PathwayOverview userProfile={userProfile} card={card} />);
+        customRender(<PathwayOverview userProfile={userProfile} pathwaysData={card} />);
         const image = screen.getByTestId("main-image")
         expect(image).toBeInTheDocument();
     })
     it("should render given text in the content div", () => {
-        customRender(<PathwayOverview userProfile={userProfile} card={card} />);
+        customRender(<PathwayOverview userProfile={userProfile} pathwaysData={card} />);
         const content = screen.getByTestId("main-content")
         expect(content).not.toBeNull();
     })
     it("should render the content div", () => {
-        customRender(<PathwayOverview userProfile={userProfile} card={card} />);
+        customRender(<PathwayOverview userProfile={userProfile} pathwaysData={card} />);
         const content = screen.getByTestId("main-content")
         expect(content).toBeInTheDocument();
     })
