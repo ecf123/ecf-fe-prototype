@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import {BrowserRouter as Router, Routes, Route} from "react-router-dom";
 import Home from "../Home/Home";
 import Profile from "../Profile/Profile";
 import userProfile from "../../assets/data/dummyUserData";
@@ -15,8 +15,8 @@ import Splash from "../Splash/Splash";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTreePage from "../SkillsTreePage/SkillsTreePage";
-import { auth } from "../../firebase";
-import { onAuthStateChanged } from "firebase/auth";
+import {auth} from "../../firebase";
+import {onAuthStateChanged} from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
 import pathwayOverviewData from "../../assets/data/dummyPathwayData";
 import articleInfo from "../../assets/data/dummyArticleCardInformation";
@@ -29,15 +29,17 @@ const Routing = () => {
 
 const Routing = ({ userToken }) => {
   // eslint-disable-next-line no-unused-vars
+  const [userToken, setUserToken] = useState(null);
 
-  const preAuthPages = (
-    <>
-      <Route path="/splash" element={<Splash />} />
-      <Route path="/sign-in" element={<SignIn />} />
-      <Route path="/create-account" element={<CreateAccount />} />
-      <Route path="*" element={<Navigate to="/splash" />} />
-    </>
-  );
+  useEffect(() => {
+    onAuthStateChanged(auth, (authenticatedUser) => {
+      if (authenticatedUser) {
+        setUserToken(authenticatedUser);
+      } else {
+        setUserToken(null);
+      }
+    });
+  }, []);
 
   const AuthPages = (
     <>
