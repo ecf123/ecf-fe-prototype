@@ -16,7 +16,7 @@ const Challenge = () => {
   const [isDisabled, setDisabled] = useState(true);
   const [userScore, setUserScore] = useState(0);
   const [userPercentage, setUserPercentage] = useState(0);
-  const [toggleClear, setToggleClear] = useState(false);
+  const [toggleClear, setToggleClear] = useState(true);
 
   const increaseScore = () => {
     setUserScore(userScore + 1);
@@ -29,10 +29,10 @@ const Challenge = () => {
     console.log(total + "total");
   };
 
-  // const onClickCheckAnswer = (event) => {
-  //   console.log(event);
-  //   //event.target.classList.remove("correct");
-  // };
+  const onClickCard = () => {
+    console.log(15627829929);
+    setToggleClear(false);
+  };
 
   const onClickIncrease = () => {
     setToggleClear(true);
@@ -80,6 +80,7 @@ const Challenge = () => {
           index={index}
           increaseScore={increaseScore}
           toggleClear={toggleClear}
+          onClickCard={onClickCard}
         />
       </div>
       <div className="challenge__button-container">

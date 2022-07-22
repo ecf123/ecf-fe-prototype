@@ -7,7 +7,7 @@ const QuizAnswerCardList = ({
   index,
   increaseScore,
   toggleClear,
-  setToggleClear,
+  onClickCard,
 }) => {
   const JSX = quizData[index].answers.map((item, i) => {
     return (
@@ -19,7 +19,7 @@ const QuizAnswerCardList = ({
         index={index}
         increaseScore={increaseScore}
         toggleClear={toggleClear}
-        setToggleClear={setToggleClear}
+        onClickCard={onClickCard}
       />
     );
   });

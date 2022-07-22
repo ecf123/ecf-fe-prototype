@@ -9,23 +9,23 @@ const QuizAnswerCard = ({
   index,
   increaseScore,
   toggleClear,
-  setToggleClear,
+  onClickCard,
 }) => {
-  const [cardClass, setCardClass] = useState("quiz");
+  const [cardClass, setCardClass] = useState("");
 
   const onClickCheckAnswer = (quizId, e) => {
-    //setToggleClear(false);
     if (quizId.toString() === quiz[index].correctAnswer.toString()) {
       setCardClass("correct");
       increaseScore();
     } else {
       setCardClass("incorrect");
     }
+    onClickCard();
   };
 
   return (
     <div
-      className={toggleClear ? "quiz" : "quiz " + { cardClass }}
+      className={toggleClear ? "quiz" : "quiz " + cardClass}
       onClick={(e) => onClickCheckAnswer(quizId, e)}
     >
       <h1 className="quiz__question">{choice}</h1>
