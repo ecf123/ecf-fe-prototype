@@ -4,29 +4,33 @@ import TrophyStats from '../../components/TrophyStats/TrophyStats';
 import Button from '../../components/Button/Button';
 import './PathwayOverview.scss';
 import MenuBar from '../../components/MenuBar/MenuBar';
-import { useLocation } from 'react-router-dom';
+import { useParams, Link } from "react-router-dom";
+
 
 // path: /pathways/:pathwayId
 
-const PathwayOverview = ({ userProfile, cardData }) => {
+const PathwayOverview = ({ userProfile, pathwaysData }) => {
   const [category, setCategory] = useState('overview');
 
   // PROPS TO USE WHEN PATHWAY CARD LIST IS LINKED AND CAN GIVE AN ID
   // const { header, topics, image, id, overview, structure, careers } = card;
 
-  const splitPathname = useLocation().pathname.split("/");
-  const card = cardData[splitPathname[2]];
+  const { pathwayId } = useParams();
+  const pickedPathway = pathwaysData.find(
+    ({ id }) => id === parseInt(pathwayId)
+  );
+
 
   // --------------- (id.overview)
-  const overviewJSX = card.overview.split('.').map((sentence, index) => {
+  const overviewJSX = pickedPathway.overview.split('.').map((sentence, index) => {
     return <p key={index}>{sentence}</p>;
   });
 
-  const structureJSX = card.structure.split('.').map((sentence, index) => {
+  const structureJSX = pickedPathway.structure.split('.').map((sentence, index) => {
     return <p key={index}>{sentence}</p>;
   });
 
-  const careersJSX = card.careers.split('.').map((sentence, index) => {
+  const careersJSX = pickedPathway.careers.split('.').map((sentence, index) => {
     return <p key={index}>{sentence}</p>;
   });
 
@@ -58,12 +62,12 @@ const PathwayOverview = ({ userProfile, cardData }) => {
         </div>
       </header>
       <div className="card-container">
-        <h1 className="card-container__header">{card.header}</h1>
+        <h1 className="card-container__header">{pickedPathway.header}</h1>
         <img
           className="card-container__image"
           data-testid="main-image"
-          src={card.image}
-          alt={card.topics}
+          src={pickedPathway.image}
+          alt={pickedPathway.topics}
         />
       </div>
       <div className="pathway-overview__filters">
@@ -77,9 +81,9 @@ const PathwayOverview = ({ userProfile, cardData }) => {
       <div className="pathway-overview__content" data-testid="main-content">
         {changeCategory()}
       </div>
-      <div className="pathway-overview__button">
+      <Link to={"/pathways/" + pathwayId + "/skills-tree"} className="pathway-overview__button">
         <Button buttonText={'START PATHWAYS'} />
-      </div>
+      </Link>
     </div>
   );
 };

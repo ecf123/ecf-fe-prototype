@@ -2,6 +2,7 @@ import React from 'react';
 import VideoCard from '../../components/VideoCard/VideoCard';
 import BackButton from '../../components/BackButton/BackButton';
 import TrophyStats from '../../components/TrophyStats/TrophyStats';
+import Navigation from '../../components/Navigation/Navigation';
 import data from "../../assets/data/dummyLessonOverview.js"
 import "./LessonOverview.scss";
 

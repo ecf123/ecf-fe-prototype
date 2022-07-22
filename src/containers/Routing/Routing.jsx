@@ -24,9 +24,6 @@ import marketData from "../../assets/data/dummyMarketData.js";
 import lessonsData from "../../assets/data/dummyLessonOverview.js"
 import pathwayOverviewData from "../../assets/data/dummyPathwayData";
 
-
-const Routing = () => {
-
 const Routing = () => {
   // eslint-disable-next-line no-unused-vars
   const [userToken, setUserToken] = useState(null);
@@ -44,12 +41,11 @@ const Routing = () => {
   return (
     <Router>
       <Routes>
-        <Route path="*" element={<Navigate to="/" />} />
         <Route path="/" element={<Home userProfile={userProfile} />} />
         <Route path="/marketplace" element={<Marketplace userProfile={userProfile} marketData={marketData} />} />
         <Route path="/marketplace/:marketplaceId" element={<MarketplaceIndex userProfile={userProfile} marketData={marketData} />} />
         <Route path="/pathways" element={<PathwaysMenu />} />
-        <Route path="/pathways/:pathwayId" element={<PathwayOverview card={pathwayOverviewData} userProfile={userProfile} />} />
+        <Route path="/pathways/:pathwayId" element={<PathwayOverview pathwaysData={pathwayOverviewData} userProfile={userProfile} />} />
         <Route path="/pathways/:pathwayId/skills-tree" element={<SkillsTreePage />} />
         <Route path="/splash" element={<Splash />} />
         <Route path="/sign-in" element={<SignIn />} />
