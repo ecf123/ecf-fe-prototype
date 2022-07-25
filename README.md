@@ -6,7 +6,7 @@
 
 - [Live Site](https://ecf-future-hub.web.app/)
 - [Trello Board](https://trello.com/b/vXkrNAAj/ecf)
-- [Wireframes](https://trello.com/b/vXkrNAAj/ecf)
+- [Wireframes](https://www.figma.com/file/ImHUEmoFd2UP7xDi1WKHCe/ECF---Future-Hub?node-id=376%3A644)
 - [Component Tree](https://app.mural.co/invitation/mural/niueclientproject8578/1656342195507?sender=u0be897b7931cfb00fb096975&key=3719cda3-f1d6-40b9-9d69-4a52d3cc588d)
 
 # Installation
