@@ -98,7 +98,7 @@ const CreateAccount = () => {
             <BackButton onClick={switchPage} linkTo="" />
           </div>
           <h2 className="register-user__title">Create An Account</h2>
-          <form className="register-user__inputs register-user__inputs--pageTwo" onSubmit={handleSubmit}>
+          <form className="register-user__inputs register-user__inputs--page-two" onSubmit={handleSubmit}>
             <InputField
               inputType="email"
               label="Email Address"
