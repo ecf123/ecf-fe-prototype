@@ -11,7 +11,7 @@ const filtersArray = [
   { id: "finance", name: "Finance", img: performanceMoney },
   { id: "business", name: "Business", img: handshake },
   { id: "design", name: "Design", img: paintingPalette },
-  { id: "digital-marketing", name: "Digital-marketing", img: phoneWrite },
+  { id: "digital marketing", name: "Digital Marketing", img: phoneWrite },
   { id: "engineering", name: "Engineering", img: carActions },
   { id: "programming", name: "Programming", img: fileCode },
 ];
@@ -42,7 +42,7 @@ const FilterTag = ({ filterArray }) => {
       case "design":
         setActiveArray([false, false, false, true, false, false, false]);
         break;
-      case "digital-marketing":
+      case "digital marketing":
         setActiveArray([false, false, false, false, true, false, false]);
         break;
       case "engineering":
@@ -92,8 +92,7 @@ const FilterTag = ({ filterArray }) => {
           handleSelected(event);
         }}
       >
-        {"    "}
-        All{"   "}
+        All
       </span>
       {filterTagJsx}
     </div>

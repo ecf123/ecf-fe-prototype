@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import PathwaysCard from "../../components/PathwaysCard/PathwaysCard";
-import card from "../../assets/data/dummyPathwayData";
 import "./PathwayCardList.scss";
 
-const PathwayCardList = ({ filter }) => {
-  const initialJSXArray = card.map((card, index) => (
+const PathwayCardList = ({ cards }) => {
+  const JSX = cards.map((card, index) => (
     <PathwaysCard
       key={index}
       id={card.id}
@@ -15,12 +14,6 @@ const PathwayCardList = ({ filter }) => {
       category={card.category}
     />
   ));
-
-  const [JSX, setJSX] = useState(initialJSXArray);
-
-  if (filter != "all") {
-    setJSX(initialJSXArray.filter((element) => (element.category == filter)));
-  }
 
   return <div className="pathway-card-list-content">{JSX}</div>;
 };
