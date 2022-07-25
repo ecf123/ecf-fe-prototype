@@ -11,6 +11,10 @@
   border-radius: 11px;
   margin: 3px;
 
+  &__link {
+    text-decoration: none;
+  }
+
   &__content {
     &-header {
       @include heading5;
