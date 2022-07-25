@@ -7,7 +7,7 @@ const PathwayCardList = () => {
   const JSX = card.map((card, index) => (
     <PathwaysCard
       key={index}
-      id={index}
+      id={card.id}
       header={card.header}
       image={card.image}
       topics={card.topics}

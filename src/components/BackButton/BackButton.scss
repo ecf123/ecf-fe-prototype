@@ -3,6 +3,7 @@
 .back-button {
   align-self: flex-start;
   border-radius: 25px;
+  background-color: transparent;
   border: 1px solid $primary-color-blue-gray;
   color: $primary-color-green;
   width: 40px;
@@ -10,6 +11,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: transparent;
   &--secondary {
     background-color: $primary-color-green;
     border: 1px solid $white-color;

@@ -3,13 +3,16 @@ import UserIcon from "../UserIcon/UserIcon";
 import TrophyStats from "../TrophyStats/TrophyStats";
 import "./TrophyHeader.scss";
 
-const TrophyHeader = ({ userProfile }) => {
+const TrophyHeader = ({ userProfile}) => {
   const { userIcon } = userProfile;
   return (
-    <div className="trophy-header-container">
-      <UserIcon userIcon={userIcon} />
+    <header className="trophy-header">
+      <div className="trophy-header__user-profile">
+        <UserIcon userIcon={userIcon} />
+      </div>
       <TrophyStats userProfile={userProfile} />
-    </div>
+      
+    </header>
   );
 };
 

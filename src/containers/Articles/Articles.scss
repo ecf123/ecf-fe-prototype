@@ -1,0 +1,30 @@
+@use "../../assets/sass/mixins" as *;
+@use "../../assets//sass/variables" as *;
+
+.articles {
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px 20px;
+  }
+
+  &__title {
+    @include heading1;
+    color: $secondary-color-dark-grey;
+    margin: 30px;
+    margin-top: 51px;
+    margin-bottom: 34px;
+  }
+}
+
+.trophy-stats-container {
+  position: absolute;
+  right: 20px;
+  bottom: -18px;
+  background-color: white;
+  width: 100px;
+  height: auto;
+  border-radius: 22px;
+}
