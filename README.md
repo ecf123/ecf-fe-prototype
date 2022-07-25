@@ -8,6 +8,20 @@
 
 # Contributors
 
+- [Awo Ali](https://github.com/awo-ali)
+- [Fernanda Suarez](https://github.com/Fercita06)
+- [Sam Pridmore](https://github.com/sPridmore96)
+- [Aiman Wahizam](https://github.com/aimanwahizam)
+- [Younus Khan](https://github.com/younusk-hub)
+- [Hassan Seedat](https://github.com/HassanS85)
+- [Rachel Bester](https://github.com/rachel2bester)
+- [Mark Lawson](https://github.com/walkonmars36)
+- [Wesley Forrest](https://github.com/wesleyforrest)
+- [Will Smith](https://github.com/CarapaceonBear)
+- [Hugo Reed](https://github.com/HPTR)
+- [Gavin Stirling](https://github.com/GavinStirling)
+- [Isobelle Joyce](https://github.com/isobelleanna)
+
 # Additional Resources
 
 - View an md file of the component tree in Notes folder
