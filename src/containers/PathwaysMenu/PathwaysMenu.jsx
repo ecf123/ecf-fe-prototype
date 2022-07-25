@@ -18,9 +18,9 @@ const PathwaysMenu = () => {
 
   const getFilteredCards = (newFilter) => {
     console.log(newFilter);
-    if (newFilter != "all") {
+    if (newFilter !== "all") {
       setFilteredCardData(
-        cardData.filter((card) => card.category.toLowerCase() == newFilter)
+        cardData.filter((card) => card.category.toLowerCase() === newFilter)
       );
     } else {
       setFilteredCardData(cardData);

@@ -19,7 +19,7 @@ const Articles = ({ articleInfo, userProfile }) => {
       <h1 className='articles__title'>Articles</h1>
       <div className="articles__content">
         <SearchBar handleChange={setSearchCriteria} />
-        <FilterTag />
+        {/* <FilterTag filterArray={}/> */}
         <ArticleCardList articleInfo={articleInfo} />
         <Navigation />
       </div>

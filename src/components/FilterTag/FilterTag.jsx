@@ -17,44 +17,16 @@ const filtersArray = [
 ];
 
 const FilterTag = ({ filterArray }) => {
-  const [activeArray, setActiveArray] = useState([
-    true,
-    false,
-    false,
-    false,
-    false,
-    false,
-    false,
-  ]);
+
+  const [selected, setSelected] = useState("all");
 
   const handleSelected = (event) => {
-    setActiveArray([false, false, false, false, false, false, false]);
-    switch (event.target.id) {
-      case "all":
-        setActiveArray([true, false, false, false, false, false, false]);
-        break;
-      case "finance":
-        setActiveArray([false, true, false, false, false, false, false]);
-        break;
-      case "business":
-        setActiveArray([false, false, true, false, false, false, false]);
-        break;
-      case "design":
-        setActiveArray([false, false, false, true, false, false, false]);
-        break;
-      case "digital marketing":
-        setActiveArray([false, false, false, false, true, false, false]);
-        break;
-      case "engineering":
-        setActiveArray([false, false, false, false, false, true, false]);
-        break;
-      case "programming":
-        setActiveArray([false, false, false, false, false, false, true]);
-        break;
-      default:
-        setActiveArray([true, false, false, false, false, false, false]);
-        break;
-    }
+    if (event.target.id === "all") {
+      setSelected("all")
+    } else {
+      setSelected(
+        filtersArray.find((pathway) => pathway.id === event.target.id).id)
+      };
   };
 
   const filterTagJsx = filtersArray.map((filter, index) => {
@@ -64,7 +36,7 @@ const FilterTag = ({ filterArray }) => {
         data-testid="filtertag-item"
         key={index + 1}
         className={
-          activeArray[index + 1]
+          (selected == filter.id)
             ? "filter-tag__item filter-tag__active"
             : "filter-tag__item"
         }
@@ -84,12 +56,13 @@ const FilterTag = ({ filterArray }) => {
         id="all"
         data-testid="filtertag-item"
         className={
-          activeArray[0]
+          (selected == "all")
             ? "filter-tag__item filter-tag__active"
             : "filter-tag__item"
         }
         onClick={(event) => {
           handleSelected(event);
+          filterArray(event);
         }}
       >
         All
