@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import CourseOverviewList from '../CourseOverviewList/CourseOverviewList';
-import VideoCardList from '../VideoCardList/VideoCardList';
 import './CourseOverview.scss';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import BackButton from '../../components/BackButton/BackButton';
 import Navigation from '../../components/Navigation/Navigation';
-import dummyVideoData from '../../assets/data/dummyVideoCardData';
 
 // path: /courses/:courseId
 
@@ -37,7 +35,7 @@ const CourseOverview = ({ dummyPathwayData }) => {
 
       <div className="course-overview__content">
         <img
-        data-testid="overview-image"
+          data-testid="overview-image"
           className="course-overview__image"
           src={dummyPathwayData[0].image}
           alt=""
