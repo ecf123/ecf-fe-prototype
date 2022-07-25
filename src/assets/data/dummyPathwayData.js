@@ -13,6 +13,7 @@ const cardData = [
     courseIntroContent:
       "You will learn Ut morbi iaculis mauris vitae. Pellentesque aliquet neque ipsum pulvinar ut interdum. Turpis lobortis fames tellus vitae. Ipsum elit nibh dignissim quisque. Ut turpis nullam nisi, sodales vitae tellus arcu sagittis faucibus. Ut gravida vestibulum augue scelerisque tellus purus morbi duis diam. Nisl in non vitae senectus turpis enim.",
     topics: "Banking, Investments",
+    category: "Finance",
     image: financialForest,
     percentage: 90,
     overview:
@@ -26,6 +27,7 @@ const cardData = [
     id: 2,
     header: "Business Bonanza",
     topics: "Business, Strategy",
+    category: "Business",
     image: businessBonanza,
     percentage: 35,
     overview:
@@ -39,6 +41,7 @@ const cardData = [
     id: 3,
     header: "Divine Design",
     topics: "UI/UX, Motion, Graphic Design",
+    category: "Design",
     image: divineDesign,
     percentage: 1,
     overview:
@@ -52,6 +55,7 @@ const cardData = [
     id: 4,
     header: "Magic Marketing",
     topics: "Digital Marketing, Copywriting",
+    category: "Digital Marketing",
     image: magicMarketing,
     percentage: 5,
     overview:
@@ -65,6 +69,7 @@ const cardData = [
     id: 5,
     header: "Coding Camp",
     topics: "Software, Web Development",
+    category: "Programming",
     image: codingCamp,
     percentage: 0,
     overview:
@@ -78,6 +83,7 @@ const cardData = [
     id: 6,
     header: "Epic Engineering",
     topics: "Civil, Aerospace Engineering",
+    category: "Engineering",
     image: epicEngineering,
     percentage: 0,
     overview:
