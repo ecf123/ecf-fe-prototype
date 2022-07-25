@@ -6,7 +6,7 @@ import Navigation from '../../components/Navigation/Navigation'
 
 // path: /
 
-const Home = ({ userProfile }) => {  
+const Home = ({ userProfile }) => {
     return (
         <div className='home-container'>
             <WelcomeHeader userProfile={userProfile} />
@@ -15,5 +15,4 @@ const Home = ({ userProfile }) => {
         </div>
     )
 }
-
 export default Home;
