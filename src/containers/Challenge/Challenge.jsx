@@ -1,6 +1,6 @@
 import { React, useState } from "react";
 import "./Challenge.scss";
-import quiz from "../../assets/data/dummyQuizData";
+import quizData from "../../assets/data/dummyQuizData";
 import QuizAnswerCardList from "../QuizAnswerCardList/QuizAnswerCardList";
 import Navigation from "../../components/Navigation/Navigation";
 import BackButton from "../../components/BackButton/BackButton";
@@ -12,9 +12,12 @@ import forwardArrow from "../../assets/images/forward-arrow.svg";
 // path: /challenge/:challengeId
 
 const Challenge = () => {
+  const [quiz, setQuiz] = useState(quizData);
   const [index, setIndex] = useState(0);
+
   const [isDisabled, setDisabled] = useState(true);
   const [userScore, setUserScore] = useState(0);
+  
   const [userPercentage, setUserPercentage] = useState(0);
   const [toggleClear, setToggleClear] = useState(true);
 
@@ -56,6 +59,25 @@ const Challenge = () => {
     }
   };
 
+  const handleAnswerSelect = (index, choice, hasGuessed) => {
+    if (hasGuessed) return;
+
+    const quizStateCopy = quiz.map((question, i) => {
+      const questionCopy = { ...question };
+
+      if (i === index) {
+        questionCopy.hasGuessed = true;
+        questionCopy.correctGuess = choice === quiz[index].correctAnswer;
+      }
+
+      questionCopy.answers = question.answers.map(answer => ({ ...answer }));
+
+      return questionCopy;
+    });
+
+    setQuiz(quizStateCopy);
+  };
+
   return (
     <div data-testid="challenge">
       <header className="challenge__header">
@@ -66,21 +88,13 @@ const Challenge = () => {
           <TrophyStats userProfile={userProfile} />
         </div>
       </header>
-      <div
-        data-testid="question-container"
-        className="challenge__question-container"
-      >
+      <div data-testid="question-container" className="challenge__question-container">
         <h1 className="challenge__question-number">
           Q{index + 1}/{quiz.length}
         </h1>
         <h2 className="challenge__question-text">{quiz[index].question}</h2>
-        <QuizAnswerCardList
-          quizData={quiz}
-          index={index}
-          increaseScore={increaseScore}
-          toggleClear={toggleClear}
-          onClickCard={onClickCard}
-        />
+
+        <QuizAnswerCardList quizData={quiz} index={index} handleAnswerSelect={handleAnswerSelect} />
       </div>
       <div className="challenge__button-container">
         <button

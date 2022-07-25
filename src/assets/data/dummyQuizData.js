@@ -1,304 +1,183 @@
 const quiz = [
   {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 3, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "C",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which equity?",
-    correctAnswer: 1, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "D",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 2, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "A",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 1, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "D",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 4, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "C",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 2, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "A",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 3, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "C",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 4, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "A",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 3, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "B",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 2, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "A",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 4, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "A",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 2, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "C",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 1, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "C",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 2, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
-  },{
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "A",
+  },
+  {
+    hasGuessed: false,
+    correctGuess: false,
     question: "Which of the following best defines the term equity?",
-    correctAnswer: 1, answers: [
-    {
-      choice: "A",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "B",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-    {
-      choice: "C",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-{
-      choice: "D",
-      answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs",
-    },
-]
+    answers: [
+      { choice: "A", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "B", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "C", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+      { choice: "D", answer: "loremj sjdsjdsdjs djdsjsdjsj  hsjjsdjsjsjbsj hsdjsdjs" },
+    ],
+    correctAnswer: "A",
   },
 ];
 

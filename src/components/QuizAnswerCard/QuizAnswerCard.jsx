@@ -1,33 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 import "./QuizAnswerCard.scss";
-import quiz from "../../assets/data/dummyQuizData";
 
-const QuizAnswerCard = ({
-  answer,
-  choice,
-  quizId,
-  index,
-  increaseScore,
-  toggleClear,
-  onClickCard,
-}) => {
-  const [cardClass, setCardClass] = useState("");
-
-  const onClickCheckAnswer = (quizId, e) => {
-    if (quizId.toString() === quiz[index].correctAnswer.toString()) {
-      setCardClass("correct");
-      increaseScore();
-    } else {
-      setCardClass("incorrect");
-    }
-    onClickCard();
-  };
+const QuizAnswerCard = ({ answer, choice, correctAnswer, handleAnswerSelect, hasGuessed, index }) => {
+    
+  const cardClass = correctAnswer === choice && hasGuessed ? "correct" : "incorrect";
 
   return (
     <div
       data-testid="answer-card"
-      className={toggleClear ? "quiz" : "quiz " + cardClass}
-      onClick={(e) => onClickCheckAnswer(quizId, e)}
+      className={hasGuessed ? "quiz " + cardClass : "quiz"}
+      onClick={() => handleAnswerSelect(index, choice, hasGuessed)}
     >
       <h1 data-testid="heading" className="quiz__question">
         {choice}

@@ -2,27 +2,20 @@ import React from "react";
 import QuizAnswerCard from "../../components/QuizAnswerCard/QuizAnswerCard";
 import "./QuizAnswerCardList.scss";
 
-const QuizAnswerCardList = ({
-  quizData,
-  index,
-  increaseScore,
-  toggleClear,
-  onClickCard,
-}) => {
-  const JSX = quizData[index].answers.map((item, i) => {
-    return (
-      <QuizAnswerCard
-        key={i}
-        quizId={i + 1}
-        choice={item.choice}
-        answer={item.answer}
-        index={index}
-        increaseScore={increaseScore}
-        toggleClear={toggleClear}
-        onClickCard={onClickCard}
-      />
-    );
-  });
+const QuizAnswerCardList = ({ quizData, index, handleAnswerSelect }) => {
+  const question = quizData[index];
+
+  const JSX = question.answers.map((answer, i) => (
+    <QuizAnswerCard
+      key={i}
+      answer={answer.answer}
+      choice={answer.choice}
+      correctAnswer={question.correctAnswer}
+      index={index}
+      hasGuessed={question.hasGuessed}
+      handleAnswerSelect={handleAnswerSelect}
+    />
+  ));
 
   return (
     <div data-testid="answer-list" className="answer-list">
