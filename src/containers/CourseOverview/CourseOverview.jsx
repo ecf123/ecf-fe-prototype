@@ -37,7 +37,7 @@ const CourseOverview = ({pathwayData}) => {
         </h1>
       </div>
 
-      <VideoCardList data-testid="video-card" videoData={dummyVideoData} id={parseInt(courseId)} />
+      <VideoCardList data-testid="video-card" videoData={dummyVideoData[courseId]} />
       <div className="course-overview__content">
         <h2 className="course-overview__sub-heading" data-testid="sub-heading">
           {pickedPathway.subHeading}
