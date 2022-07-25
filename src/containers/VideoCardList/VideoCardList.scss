@@ -1,0 +1,14 @@
+@use "../../assets/sass/variables" as *;
+
+.video-card-list {
+  position: relative;
+
+  & img {
+    position: absolute;
+    bottom: -45px;
+    left: 45px;
+    background: $white-color;
+    padding: 25px;
+    border-radius: 50%;
+  }
+}

@@ -14,7 +14,9 @@ const WelcomeHeader = ({ userProfile }) => {
                 <h1 className='welcome-header__welcome-message__title' >Welcome Back</h1>
                 <h2 className='welcome-header__welcome-message__username'>{capitalisedNames(firstName)} {capitalisedNames(lastName)}</h2>
             </div>
-            <UserIcon userIcon={userIcon}/>
+            <div className='welcome-header__icon'>
+                <UserIcon userIcon={userIcon}/>
+            </div>
         </div>
   )
 }

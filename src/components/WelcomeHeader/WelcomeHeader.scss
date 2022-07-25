@@ -19,4 +19,9 @@
             font-family: $primary-font-family;
         }
     }
+
+    &__icon {
+        margin: 30px;
+        align-self: end;
+    }
 }

@@ -1,9 +1,23 @@
 @use "../../assets/sass/mixins" as *;
 @use "../../assets/sass/variables" as *;
 
-.trophy-header-container {
+.trophy-header {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  @include light-green-background();
   align-items: center;
+  justify-content: space-between;
+
+  &__user-profile {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 3.5px;
+    bottom: -39px;
+    left: 30px;
+    width: 47px;
+    height: 47px;
+    background-color: $white-color;
+    border-radius: 25px;
+  }
 }
+
