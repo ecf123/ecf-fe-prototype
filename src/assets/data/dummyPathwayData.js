@@ -7,7 +7,7 @@ import epicEngineering from "../images/epic-engineering.svg";
 
 const cardData = [
   {
-    id: "card1",
+    id: 1,
     header: "Financial Forest",
     subHeading: "Commercial Banking with Barclays",
     courseIntroContent:
@@ -23,7 +23,7 @@ const cardData = [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",
   },
   {
-    id: "card2",
+    id: 2,
     header: "Business Bonanza",
     topics: "Business, Strategy",
     image: businessBonanza,
@@ -36,7 +36,7 @@ const cardData = [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",
   },
   {
-    id: "card3",
+    id: 3,
     header: "Divine Design",
     topics: "UI/UX, Motion, Graphic Design",
     image: divineDesign,
@@ -49,7 +49,7 @@ const cardData = [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",
   },
   {
-    id: "card4",
+    id: 4,
     header: "Magic Marketing",
     topics: "Digital Marketing, Copywriting",
     image: magicMarketing,
@@ -62,7 +62,7 @@ const cardData = [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",
   },
   {
-    id: "card5",
+    id: 5,
     header: "Coding Camp",
     topics: "Software, Web Development",
     image: codingCamp,
@@ -75,7 +75,7 @@ const cardData = [
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",
   },
   {
-    id: "card6",
+    id: 6,
     header: "Epic Engineering",
     topics: "Civil, Aerospace Engineering",
     image: epicEngineering,
