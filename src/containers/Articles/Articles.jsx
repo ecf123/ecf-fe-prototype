@@ -11,8 +11,22 @@ import "./Articles.scss";
 const Articles = ({ articleInfo, userProfile }) => {
   
   // eslint-disable-next-line no-unused-vars
-  const [searchCriteria, setSearchCriteria] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedTag, setSelectedTag] = useState(["All"])
 
+  const searchTermChange = event => {
+    event.preventDefault()
+    const cleanInput = event.target.search.value.toLowerCase();
+    setSearchTerm(cleanInput);
+  }
+
+  const filteredArticles = articleInfo.filter(article => {
+    const articleTitleLower = article.title.toLowerCase();    
+    
+    
+    return articleTitleLower.includes(searchTerm)
+  })
+  
   return (
     <div className='articles'>
       <header className="articles__header">
@@ -20,9 +34,9 @@ const Articles = ({ articleInfo, userProfile }) => {
       </header>
       <div className="articles__content">
         <h2 className='articles__title'>Articles</h2>
-        <SearchBar handleChange={setSearchCriteria} />
+        <SearchBar handleInput={searchTermChange} />
         <FilterTag />
-        <ArticleCardList articleInfo={articleInfo} />
+        <ArticleCardList articleInfo={filteredArticles} />
         <Navigation />
       </div>
     </div>
