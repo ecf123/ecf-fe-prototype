@@ -2,6 +2,16 @@
 
 # Overview
 
+As part of the client project phase of the nology 12 week full stack course, our cohort was asked to build a website for the Early Years Foundation which provided a set of courses aimed at careers within the financial services industry.
+
+We created the app in React and utilised skills learned in HTML, SCSS and JavaScript. To allow users to log in with their own profile and benefit from a more tailored experience, we used FireBase from google to provide the authentication.
+
+The project ran for four weeks, using Agile methodology to assign and manage workloads. Each week, a product owner was assigned to the sprint and it was their responsibility to plan and assign the tickets and write the acceptance criteria for completion.
+
+We split off in to pairs and ran a week long sprint during which time we were assigned tickets using Trello. At the start of each coding session, we held a stand up to run through progress made and planned work scheduled for that session.
+
+We were also able to run through any blockers to progress and talk through solution with team members. Each sprint ended with a demo to the clients. A git branching strategy was used to work on multiple features. Once a pull request was completed the feature would be added to the codebase.
+
 # Project Links
 
 - [Live Site](https://ecf-future-hub.web.app/)
