@@ -17,7 +17,6 @@ const CourseOverview = ({pathwayData}) => {
   const pickedPathway = pathwayData.find(
     ({ id }) => id === parseInt(courseId)
   );
-  console.log(pickedPathway);
 
   const capitalisedNames = (name) => {
     return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
