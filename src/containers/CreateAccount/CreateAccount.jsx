@@ -53,10 +53,10 @@ const CreateAccount = () => {
         updateProfile(auth.currentUser, {
           displayName: `${user.firstName} ${user.lastName}`,
         });
+        sessionStorage.setItem("displayName", `${user.firstName} ${user.lastName}`);
         setUser({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
         navigate("/");
       }
-      
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
