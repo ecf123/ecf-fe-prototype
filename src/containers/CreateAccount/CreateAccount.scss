@@ -56,3 +56,10 @@
     text-align: center;
   }
 }
+
+@media screen and (min-width: $max-mobile-view) {
+  .register-user {
+    width: 600px;
+    margin: 0px auto;
+  }
+}
