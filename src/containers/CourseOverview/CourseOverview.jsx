@@ -1,16 +1,14 @@
-import React, {useState} from "react";
-import CourseOverviewList from "../CourseOverviewList/CourseOverviewList";
-import VideoCardList from "../VideoCardList/VideoCardList";
-import "./CourseOverview.scss";
-import MenuBar from "../../components/MenuBar/MenuBar";
-import BackButton from "../../components/BackButton/BackButton";
-import Navigation from "../../components/Navigation/Navigation";
-import dummyVideoData from "../../assets/data/dummyVideoCardData";
+import React, { useState } from 'react';
+import CourseOverviewList from '../CourseOverviewList/CourseOverviewList';
+import './CourseOverview.scss';
+import MenuBar from '../../components/MenuBar/MenuBar';
+import BackButton from '../../components/BackButton/BackButton';
+import Navigation from '../../components/Navigation/Navigation';
 import { useParams } from "react-router-dom";
 
 // path: /courses/:courseId
 
-const CourseOverview = ({pathwayData}) => {
+const CourseOverview = ({ pathwayData }) => { 
   const [category, setCategory] = useState("lessons");
 
   const { courseId } = useParams();
@@ -35,9 +33,13 @@ const CourseOverview = ({pathwayData}) => {
           {pickedPathway.header}
         </h1>
       </div>
-
-      <VideoCardList data-testid="video-card" videoData={dummyVideoData[courseId]} />
       <div className="course-overview__content">
+        <img
+          data-testid="overview-image"
+          className="course-overview__image"
+          src={pathwayData[courseId].image}
+          alt=""
+        />
         <h2 className="course-overview__sub-heading" data-testid="sub-heading">
           {pickedPathway.subHeading}
         </h2>
@@ -45,11 +47,23 @@ const CourseOverview = ({pathwayData}) => {
           {pickedPathway.courseIntroContent}
         </p>
         <div className="course-overview__filters">
-          <MenuBar data-testid="course-overview" link1="Lessons" link2="Challenges" link3="Additional Info" onClickLink={handleCategoryChange} />
+          <MenuBar
+            data-testid="course-overview"
+            link1="Lessons"
+            link2="Challenges"
+            link3="Additional Info"
+            onClickLink={handleCategoryChange}
+          />
         </div>
 
-        <div data-testid="course-overview-list" className="course-overview__list">
-          <CourseOverviewList title={capitalisedNames(category)} category={category} />
+        <div
+          data-testid="course-overview-list"
+          className="course-overview__list"
+        >
+          <CourseOverviewList
+            title={capitalisedNames(category)}
+            category={category}
+          />
         </div>
       </div>
       <Navigation />
