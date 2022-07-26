@@ -4,11 +4,17 @@ import './CourseOverview.scss';
 import MenuBar from '../../components/MenuBar/MenuBar';
 import BackButton from '../../components/BackButton/BackButton';
 import Navigation from '../../components/Navigation/Navigation';
+import { useParams } from "react-router-dom";
 
 // path: /courses/:courseId
 
-const CourseOverview = ({ dummyPathwayData }) => {
-  const [category, setCategory] = useState('lessons');
+const CourseOverview = ({ pathwayData }) => { 
+  const [category, setCategory] = useState("lessons");
+
+  const { courseId } = useParams();
+  const pickedPathway = pathwayData.find(
+    ({ id }) => id === parseInt(courseId)
+  );
 
   const capitalisedNames = (name) => {
     return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
@@ -18,33 +24,27 @@ const CourseOverview = ({ dummyPathwayData }) => {
     setCategory(event.target.innerText.toLowerCase());
   };
 
+
   return (
     <div data-testid="course-overview" className="course-overview">
       <div className="course-overview__headerSection">
-        <BackButton
-          data-testid="back-button"
-          linkTo="/pathways/1/skills-tree"
-        />
-        <h1
-          data-testid="course-overview-heading"
-          className="course-overview__heading"
-        >
-          {dummyPathwayData[0].header}
+        <BackButton data-testid="back-button" linkTo="/pathways/1/skills-tree" />
+        <h1 data-testid="course-overview-heading" className="course-overview__heading">
+          {pickedPathway.header}
         </h1>
       </div>
-
       <div className="course-overview__content">
         <img
           data-testid="overview-image"
           className="course-overview__image"
-          src={dummyPathwayData[0].image}
+          src={pathwayData[courseId].image}
           alt=""
         />
         <h2 className="course-overview__sub-heading" data-testid="sub-heading">
-          {dummyPathwayData[0].subHeading}
+          {pickedPathway.subHeading}
         </h2>
         <p className="course-overview__paragraph" data-testid="paragraph-text">
-          {dummyPathwayData[0].courseIntroContent}
+          {pickedPathway.courseIntroContent}
         </p>
         <div className="course-overview__filters">
           <MenuBar
