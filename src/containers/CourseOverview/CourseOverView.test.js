@@ -45,7 +45,7 @@ describe("initial tests for course overview list container", () => {
   });
 
   it("Should render an overview image", () => {
-    customRender(<CourseOverview dummyPathwayData={dummyPathwayData} />);
+    customRender(<CourseOverview pathwayData={dummyPathwayData} />);
     const overviewImage = screen.getByTestId("overview-image");
     expect(overviewImage).toBeInTheDocument();
     expect(overviewImage).not.toBeNull();
