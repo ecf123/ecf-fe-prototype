@@ -68,9 +68,11 @@ const CreateAccount = () => {
     <div className="register-user">
       {page === 1 ? (
         <>
-          <BackButton linkTo="/splash" />
+          <div className="register-user__back-button">
+            <BackButton linkTo="/splash" />
+          </div>
           <h2 className="register-user__title">Create An Account</h2>
-          <form className="register-user__inputs--page-one">
+          <form className="register-user__inputs register-user__inputs--page-one">
             <InputField
               inputType="text"
               label="First Name"
@@ -92,9 +94,11 @@ const CreateAccount = () => {
         </>
       ) : (
         <>
-          <BackButton onClick={switchPage} linkTo="" />
+          <div className="register-user__back-button">
+            <BackButton onClick={switchPage} linkTo="" />
+          </div>
           <h2 className="register-user__title">Create An Account</h2>
-          <form className="register-user__inputs--pageTwo" onSubmit={handleSubmit}>
+          <form className="register-user__inputs register-user__inputs--page-two" onSubmit={handleSubmit}>
             <InputField
               inputType="email"
               label="Email Address"
@@ -123,13 +127,15 @@ const CreateAccount = () => {
           <Button linkTo="/" onClickButton={handleSubmit} buttonText="CREATE ACCOUNT" buttonType={"submit"} />
         </>
       )}
-      <p className="register-user__divider">
-        <span className="register-user__divider--text">Sign in with</span>
-      </p>
-      <div className="register-user__login-buttons">
-        <SocialLogin icon={facebookIcon} />
-        <SocialLogin icon={googleIcon} />
-        <SocialLogin icon={appleIcon} />
+      <div className="register-user__social-login-container">
+        <p className="register-user__divider">
+          <span className="register-user__divider--text">Sign in with</span>
+        </p>
+        <div className="register-user__login-buttons">
+          <SocialLogin icon={facebookIcon} />
+          <SocialLogin icon={googleIcon} />
+          <SocialLogin icon={appleIcon} />
+        </div>
       </div>
     </div>
   );
