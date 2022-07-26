@@ -8,25 +8,24 @@ import carActions from "../../assets/images/car-actions-icon.svg";
 import fileCode from "../../assets/images/file-code-icon.svg";
 
 const filtersArray = [
-  { id: "finance", name: "Finance", img: performanceMoney },
-  { id: "business", name: "Business", img: handshake },
-  { id: "design", name: "Design", img: paintingPalette },
-  { id: "digital marketing", name: "Digital Marketing", img: phoneWrite },
-  { id: "engineering", name: "Engineering", img: carActions },
-  { id: "programming", name: "Programming", img: fileCode },
+    { id: "finance", name: "Finance", img: performanceMoney },
+    { id: "business", name: "Business", img: handshake },
+    { id: "design", name: "Design", img: paintingPalette },
+    { id: "digital marketing", name: "Digital Marketing", img: phoneWrite },
+    { id: "engineering", name: "Engineering", img: carActions },
+    { id: "programming", name: "Programming", img: fileCode },
 ];
 
 const FilterTag = ({ filterArray }) => {
   const [selected, setSelected] = useState("all");
 
   const handleSelected = (event) => {
-    if (event.target.id === "all") {
-      setSelected("all");
+    if (event.currentTarget.id === "all") {
+      setSelected("all")
     } else {
       setSelected(
-        filtersArray.find((pathway) => pathway.id === event.target.id).id
-      );
-    }
+        filtersArray.find((pathway) => pathway.id === event.currentTarget.id).id)
+      };
   };
 
   const filterTagJsx = filtersArray.map((filter, index) => {
