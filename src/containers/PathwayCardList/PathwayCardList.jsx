@@ -11,7 +11,6 @@ const PathwayCardList = ({ cards }) => {
       image={card.image}
       topics={card.topics}
       percentage={card.percentage}
-      category={card.category}
     />
   ));
 
