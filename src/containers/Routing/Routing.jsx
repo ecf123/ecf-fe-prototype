@@ -52,8 +52,7 @@ const Routing = () => {
           <Route path="/sign-in" element={<SignIn />} />
           <Route path="/create-account" element={<CreateAccount />} />
         </Route>
-        {/* TODO: user={userToken} WHEN ALL ROUTING IS ADDED */}
-        <Route element={<ProtectedRoute user={true} navigateTo={"/"} />}>
+        <Route element={<ProtectedRoute user={userToken} navigateTo={"/"} />}>
           <Route path="/marketplace" element={<Marketplace userProfile={userProfile} marketData={marketData} />} />
 
           <Route

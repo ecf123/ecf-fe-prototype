@@ -2,12 +2,17 @@ import React from "react";
 import "./WelcomeHeader.scss";
 import UserIcon from "../UserIcon/UserIcon";
 
-const WelcomeHeader = ({ userProfile, displayName }) => {
-  const { firstName, lastName, userIcon } = userProfile;
+const capitalisedNames = name => {
+  return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
+};
 
-  const capitalisedNames = name => {
-    return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
-  };
+const WelcomeHeader = ({ userProfile }) => {
+  let displayName = userProfile.displayName || sessionStorage.getItem("displayName");
+  
+  displayName = displayName.split(" ").map(capitalisedNames).join(" ");
+
+  const userIcon = userProfile.photoURL;
+
   return (
     <div className="welcome-header">
       <div className="welcome-header__welcome-message">

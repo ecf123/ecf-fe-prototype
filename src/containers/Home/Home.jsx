@@ -10,14 +10,9 @@ import articleInfo from "../../assets/data/dummyArticleCardInformation";
 // path: /
 
 const Home = ({ userProfile }) => {
-  console.log(userProfile);
-  console.log(userProfile.displayName);
-
-  const displayName = userProfile.displayName || sessionStorage.getItem("displayName");
-  
   return (
     <div className="home-container">
-      <WelcomeHeader userProfile={userProfile} displayName={displayName} />
+      <WelcomeHeader userProfile={userProfile} />
       <SearchContainer title="Pathways" pathwaysLink="/pathways" />
       <div className="home-container__header">
         <ContentHeader title="Articles" link="/articles" />
