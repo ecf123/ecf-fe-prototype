@@ -17,25 +17,25 @@ const Challenge = () => {
 
   const [isDisabled, setDisabled] = useState(true);
   const [userScore, setUserScore] = useState(0);
-  
-  const [userPercentage, setUserPercentage] = useState(0);
-  const [toggleClear, setToggleClear] = useState(true);
 
-  const increaseScore = () => {
-    setUserScore(userScore + 1);
-  };
+  const [userPercentage, setUserPercentage] = useState(0);
 
   const calculatePercentage = () => {
-    const total = Math.floor((userScore / quiz.length) * 100);
+    let counter = 0;
+    for (let index = 0; index < quiz.length; index++) {
+      if (quiz[index].correctGuess) {
+        counter++;
+        console.log(counter);
+      }
+      return counter;
+    }
+
+    const total = Math.floor((counter / quiz.length) * 100);
     setUserPercentage(total);
   };
 
-  const onClickCard = () => {
-    setToggleClear(false);
-  };
-
   const onClickIncrease = () => {
-    setToggleClear(true);
+    calculatePercentage();
     if (index === 0) {
       setDisabled(false);
     }
@@ -47,6 +47,8 @@ const Challenge = () => {
       setIndex(index + 1);
     }
   };
+
+  console.log(userPercentage);
 
   const onClickDecrease = () => {
     if (index === 0) {
@@ -70,7 +72,7 @@ const Challenge = () => {
         questionCopy.correctGuess = choice === quiz[index].correctAnswer;
       }
 
-      questionCopy.answers = question.answers.map(answer => ({ ...answer }));
+      questionCopy.answers = question.answers.map((answer) => ({ ...answer }));
 
       return questionCopy;
     });
@@ -88,13 +90,20 @@ const Challenge = () => {
           <TrophyStats userProfile={userProfile} />
         </div>
       </header>
-      <div data-testid="question-container" className="challenge__question-container">
+      <div
+        data-testid="question-container"
+        className="challenge__question-container"
+      >
         <h1 className="challenge__question-number">
           Q{index + 1}/{quiz.length}
         </h1>
         <h2 className="challenge__question-text">{quiz[index].question}</h2>
 
-        <QuizAnswerCardList quizData={quiz} index={index} handleAnswerSelect={handleAnswerSelect} />
+        <QuizAnswerCardList
+          quizData={quiz}
+          index={index}
+          handleAnswerSelect={handleAnswerSelect}
+        />
       </div>
       <div className="challenge__button-container">
         <button
