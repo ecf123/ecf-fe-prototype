@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import ArticleCardList from '../ArticleCardList/ArticleCardList';
 import TrophyHeader from "../../components/TrophyHeader/TrophyHeader";
 import SearchBar from '../../components/SearchBar/SearchBar';
-import FilterTag from '../../components/FilterTag/FilterTag';
+// import FilterTag from '../../components/FilterTag/FilterTag';
 import Navigation from '../../components/Navigation/Navigation';
 import "./Articles.scss";
 

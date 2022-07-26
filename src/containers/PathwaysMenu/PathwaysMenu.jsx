@@ -12,12 +12,9 @@ import userProfile from "../../assets/data/dummyUserData.js";
 // path: /pathways
 
 const PathwaysMenu = () => {
-  const [filter, setFilter] = useState("all");
-
   const [filteredCardData, setFilteredCardData] = useState(cardData);
 
   const getFilteredCards = (newFilter) => {
-    console.log(newFilter);
     if (newFilter !== "all") {
       setFilteredCardData(
         cardData.filter((card) => card.category.toLowerCase() === newFilter)
@@ -28,8 +25,7 @@ const PathwaysMenu = () => {
   };
 
   const handleFilterChange = (event) => {
-    setFilter(event.target.id);
-    getFilteredCards(event.target.id);
+    getFilteredCards(event.currentTarget.id);
   };
 
   return (
