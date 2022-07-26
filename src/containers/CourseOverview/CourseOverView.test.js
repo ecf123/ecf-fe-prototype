@@ -6,10 +6,15 @@ import MenuBar from "../../components/MenuBar/MenuBar";
 import handleCategoryChange from "./CourseOverview";
 import dummyPathwayData from "../../assets/data/dummyPathwayData";
 
+jest.mock("react-router-dom", () => ({
+  ...jest.requireActual("react-router-dom"),
+  useParams: () => ({ courseId: 1 }),
+}));
+
 describe("initial tests for course overview list container", () => {
   it("Should render correct links", () => {
     customRender(
-      <CourseOverview dummyPathwayData={dummyPathwayData}>
+      <CourseOverview pathwayData={dummyPathwayData}>
         <CourseOverviewList>
           <MenuBar link1="Lessons" link2="Challenges" link3="Additional Info" onClickLink={handleCategoryChange} />
         </CourseOverviewList>
@@ -26,35 +31,35 @@ describe("initial tests for course overview list container", () => {
   });
 
   it("Should render correct title", () => {
-    customRender(<CourseOverview dummyPathwayData={dummyPathwayData} />);
+    customRender(<CourseOverview pathwayData={dummyPathwayData} />);
     const heading = screen.getByTestId("course-overview-heading");
     expect(heading).toBeInTheDocument();
     expect(heading).not.toBeNull();
   });
 
   it("Should render back button", () => {
-    customRender(<CourseOverview dummyPathwayData={dummyPathwayData} />);
+    customRender(<CourseOverview pathwayData={dummyPathwayData} />);
     const backBtn = screen.getByTestId("back-button");
     expect(backBtn).toBeInTheDocument();
     expect(backBtn).not.toBeNull();
   });
 
   it("Should render video card", () => {
-    customRender(<CourseOverview dummyPathwayData={dummyPathwayData} />);
+    customRender(<CourseOverview pathwayData={dummyPathwayData} />);
     const videoCard = screen.getByTestId("video-card");
     expect(videoCard).toBeInTheDocument();
     expect(videoCard).not.toBeNull();
   });
 
   it("Should render the sub-heading", () => {
-    customRender(<CourseOverview dummyPathwayData={dummyPathwayData} />);
+    customRender(<CourseOverview pathwayData={dummyPathwayData} />);
     const subHeading = screen.getByTestId("sub-heading");
     expect(subHeading).toBeInTheDocument();
     expect(subHeading).not.toBeNull();
   });
 
   it("Should render the paragraph text", () => {
-    customRender(<CourseOverview dummyPathwayData={dummyPathwayData} />);
+    customRender(<CourseOverview pathwayData={dummyPathwayData} />);
     const paragraph = screen.getByTestId("paragraph-text");
     expect(paragraph).toBeInTheDocument();
     expect(paragraph).not.toBeNull();

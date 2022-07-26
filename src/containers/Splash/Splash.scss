@@ -40,7 +40,11 @@
     &__sub-title{
       color: $secondary-color-lilac;
     }
-
   }
-
+}
+@media screen and (min-width: 760px) {
+  .splash-container{
+    width: 40vw;
+    margin: auto;
+  }
 }

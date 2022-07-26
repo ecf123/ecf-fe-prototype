@@ -27,7 +27,7 @@ The project is broken down into
 <img src="./image/component-tree-home.png" width="500px">
 
 <h2 id="pathways">Pathways</h2>
-<img src="./image/component-tree-pathways.png" width="500px">
+<img src="./image/component-tree-pathway.png" width="500px">
 
 <h2 id="course">Course</h2>
 <img src="./image/component-tree-course.png" width="500px">
