@@ -14,7 +14,7 @@ const articleContent = [
 const articleInfo = [
     {
         title: "Want a winning CV? Follow these 5 tips",
-        category: "Professional Development",
+        category: "Business",
         thumbnail: image,
         id: 1,
         isActive: false,
@@ -23,7 +23,7 @@ const articleInfo = [
         articleContent: articleContent
     },
     {
-        category: "test 2 category",
+        category: "Finance",
         thumbnail: image,
         id: 2,
         isActive: false,
@@ -33,7 +33,7 @@ const articleInfo = [
         articleContent: articleContent
     },
     {
-        category: "test 3 category",
+        category: "Engineering",
         thumbnail: image,
         id: 3,
         isActive: false,
@@ -44,7 +44,7 @@ const articleInfo = [
     },
     {
         title: "Want a winning CV? Follow these 5 tips",
-        category: "Professional Development",
+        category: "Design",
         thumbnail: image,
         id: 1,
         isActive: false,
@@ -53,7 +53,7 @@ const articleInfo = [
         articleContent: articleContent
     },
     {
-        category: "test 2 category",
+        category: "Digital Marketing",
         thumbnail: image,
         id: 2,
         isActive: false,
@@ -63,7 +63,7 @@ const articleInfo = [
         articleContent: articleContent
     },
     {
-        category: "test 3 category",
+        category: "Programming",
         thumbnail: image,
         id: 3,
         isActive: false,

@@ -53,10 +53,10 @@ const CreateAccount = () => {
         updateProfile(auth.currentUser, {
           displayName: `${user.firstName} ${user.lastName}`,
         });
+        sessionStorage.setItem("displayName", `${user.firstName} ${user.lastName}`);
         setUser({ firstName: "", lastName: "", email: "", password: "", confirmPassword: "" });
         navigate("/");
       }
-      
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -65,12 +65,14 @@ const CreateAccount = () => {
   };
 
   return (
-    <div className="register-user">
+    <div className="create-account">
       {page === 1 ? (
         <>
-          <BackButton linkTo="/splash" />
-          <h2 className="register-user__title">Create An Account</h2>
-          <form className="register-user__inputs--page-one">
+          <div className="create-account__back-button">
+            <BackButton linkTo="/" />
+          </div>
+          <h2 className="create-account__title">Create An Account</h2>
+          <form className="create-account__inputs create-account__inputs--page-one">
             <InputField
               inputType="text"
               label="First Name"
@@ -92,9 +94,11 @@ const CreateAccount = () => {
         </>
       ) : (
         <>
-          <BackButton onClick={switchPage} linkTo="" />
-          <h2 className="register-user__title">Create An Account</h2>
-          <form className="register-user__inputs--pageTwo" onSubmit={handleSubmit}>
+          <div className="create-account__back-button">
+            <BackButton onClick={switchPage} linkTo="" />
+          </div>
+          <h2 className="create-account__title">Create An Account</h2>
+          <form className="create-account__inputs create-account__inputs--page-two" onSubmit={handleSubmit}>
             <InputField
               inputType="email"
               label="Email Address"
@@ -123,13 +127,15 @@ const CreateAccount = () => {
           <Button linkTo="/" onClickButton={handleSubmit} buttonText="CREATE ACCOUNT" buttonType={"submit"} />
         </>
       )}
-      <p className="register-user__divider">
-        <span className="register-user__divider--text">Sign in with</span>
-      </p>
-      <div className="register-user__login-buttons">
-        <SocialLogin icon={facebookIcon} />
-        <SocialLogin icon={googleIcon} />
-        <SocialLogin icon={appleIcon} />
+      <div className="create-account__social-login-container">
+        <p className="create-account__divider">
+          <span className="create-account__divider--text">Sign up with</span>
+        </p>
+        <div className="create-account__login-buttons">
+          <SocialLogin icon={facebookIcon} />
+          <SocialLogin icon={googleIcon} />
+          <SocialLogin icon={appleIcon} />
+        </div>
       </div>
     </div>
   );

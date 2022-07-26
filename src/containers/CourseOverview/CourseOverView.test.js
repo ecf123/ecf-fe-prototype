@@ -44,11 +44,11 @@ describe("initial tests for course overview list container", () => {
     expect(backBtn).not.toBeNull();
   });
 
-  it("Should render video card", () => {
+  it("Should render an overview image", () => {
     customRender(<CourseOverview pathwayData={dummyPathwayData} />);
-    const videoCard = screen.getByTestId("video-card");
-    expect(videoCard).toBeInTheDocument();
-    expect(videoCard).not.toBeNull();
+    const overviewImage = screen.getByTestId("overview-image");
+    expect(overviewImage).toBeInTheDocument();
+    expect(overviewImage).not.toBeNull();
   });
 
   it("Should render the sub-heading", () => {
