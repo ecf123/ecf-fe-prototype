@@ -25,7 +25,7 @@ const PathwaysMenu = () => {
   };
 
   const handleFilterChange = (event) => {
-    getFilteredCards(event.target.id);
+    getFilteredCards(event.currentTarget.id);
   };
 
   return (
