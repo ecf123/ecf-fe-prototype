@@ -129,7 +129,7 @@ const CreateAccount = () => {
       )}
       <div className="create-account__social-login-container">
         <p className="create-account__divider">
-          <span className="create-account__divider--text">Sign in with</span>
+          <span className="create-account__divider--text">Sign up with</span>
         </p>
         <div className="create-account__login-buttons">
           <SocialLogin icon={facebookIcon} />
