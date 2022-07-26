@@ -58,3 +58,4 @@ The following students contributed to the app:
 # Additional Resources
 
 - View an md file of the component tree in Notes folder
+- View handover document in the Notes folder
