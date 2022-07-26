@@ -16,8 +16,6 @@ const Challenge = () => {
   const [index, setIndex] = useState(0);
 
   const [isDisabled, setDisabled] = useState(true);
-  const [userScore, setUserScore] = useState(0);
-
   const [userPercentage, setUserPercentage] = useState(0);
 
   const calculatePercentage = () => {
@@ -25,30 +23,23 @@ const Challenge = () => {
     for (let index = 0; index < quiz.length; index++) {
       if (quiz[index].correctGuess) {
         counter++;
-        console.log(counter);
       }
-      return counter;
     }
-
     const total = Math.floor((counter / quiz.length) * 100);
     setUserPercentage(total);
   };
 
   const onClickIncrease = () => {
-    calculatePercentage();
     if (index === 0) {
       setDisabled(false);
     }
-
     if (index === quiz.length - 1) {
-      setIndex(quiz.length - 1);
       calculatePercentage();
+      setIndex(quiz.length - 1);
     } else {
       setIndex(index + 1);
     }
   };
-
-  console.log(userPercentage);
 
   const onClickDecrease = () => {
     if (index === 0) {
