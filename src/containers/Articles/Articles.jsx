@@ -32,7 +32,7 @@ const Articles = ({ articleInfo, userProfile }) => {
       <TrophyHeader userProfile={userProfile} />
       <h1 className='articles__title'>Articles</h1>
       <div className="articles__content">
-        <SearchBar handleInput={searchTermChange} />
+        <SearchBar handleChange={searchTermChange} />
         <FilterTag />
         <ArticleCardList articleInfo={filteredArticles} />
         <Navigation />

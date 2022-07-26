@@ -8,159 +8,77 @@ import carActions from "../../assets/images/car-actions-icon.svg";
 import fileCode from "../../assets/images/file-code-icon.svg";
 
 const filtersArray = [
+<<<<<<< HEAD
     { id: "finance", name: "Finance", img: performanceMoney },
     { id: "business", name: "Business", img: handshake },
     { id: "design", name: "Design", img: paintingPalette },
     { id: "digital-marketing", name: "Digital Marketing", img: phoneWrite },
     { id: "engineering", name: "Engineering", img: carActions },
     { id: "programming", name: "Programming", img: fileCode },
+=======
+  { id: "finance", name: "Finance", img: performanceMoney },
+  { id: "business", name: "Business", img: handshake },
+  { id: "design", name: "Design", img: paintingPalette },
+  { id: "digital marketing", name: "Digital Marketing", img: phoneWrite },
+  { id: "engineering", name: "Engineering", img: carActions },
+  { id: "programming", name: "Programming", img: fileCode },
+>>>>>>> 7d2cf686070c7b30957b185d3ae08c197a057b75
 ];
 
-const FilterTag = () => {
-    const [activeArray, setActiveArray] = useState([
-        true,
-        false,
-        false,
-        false,
-        false,
-        false,
-        false,
-    ]);
+const FilterTag = ({ filterArray }) => {
 
-    const handleSelected = (event) => {
-        setActiveArray([false, false, false, false, false, false, false]);
-        switch (event.target.id) {
-            case "all":
-                setActiveArray([
-                    true,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                ]);
-                break;
-            case "finance":
-                setActiveArray([
-                    false,
-                    true,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                ]);
-                break;
-            case "business":
-                setActiveArray([
-                    false,
-                    false,
-                    true,
-                    false,
-                    false,
-                    false,
-                    false,
-                ]);
-                break;
-            case "design":
-                setActiveArray([
-                    false,
-                    false,
-                    false,
-                    true,
-                    false,
-                    false,
-                    false,
-                ]);
-                break;
-            case "digital-marketing":
-                setActiveArray([
-                    false,
-                    false,
-                    false,
-                    false,
-                    true,
-                    false,
-                    false,
-                ]);
-                break;
-            case "engineering":
-                setActiveArray([
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                    true,
-                    false,
-                ]);
-                break;
-            case "programming":
-                setActiveArray([
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                    true,
-                ]);
-                break;
-            default:
-                setActiveArray([
-                    true,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                    false,
-                ]);
-                break;
-        }
-    };
+  const [selected, setSelected] = useState("all");
 
-    const filterTagJsx = filtersArray.map((filter, index) => {
-        return (
-            <span
-                id={filter.id}
-                data-testid="filtertag-item"
-                key={index + 1}
-                className={
-                    activeArray[index + 1]
-                        ? "filter-tag__item filter-tag__active"
-                        : "filter-tag__item"
-                }
-                onClick={(event) => {
-                    handleSelected(event);
-                }}
-            >
-                <img src={filter.img} alt="" /> {filter.name}
-            </span>
-        );
-    });
+  const handleSelected = (event) => {
+    if (event.target.id === "all") {
+      setSelected("all")
+    } else {
+      setSelected(
+        filtersArray.find((pathway) => pathway.id === event.target.id).id)
+      };
+  };
 
+  const filterTagJsx = filtersArray.map((filter, index) => {
     return (
-        <div className="filter-tag">
-            <span
-                id="all"
-                data-testid="filtertag-item"
-                className={
-                    activeArray[0]
-                        ? "filter-tag__item filter-tag__active"
-                        : "filter-tag__item"
-                }
-                onClick={(event) => {
-                    handleSelected(event);
-                }}
-            >
-                {"    "}
-                All{"   "}
-            </span>
-            {filterTagJsx}
-        </div>
+      <span
+        id={filter.id}
+        data-testid="filtertag-item"
+        key={index + 1}
+        className={
+          (selected == filter.id)
+            ? "filter-tag__item filter-tag__active"
+            : "filter-tag__item"
+        }
+        onClick={(event) => {
+          handleSelected(event);
+          filterArray(event);
+        }}
+      >
+        <img src={filter.img} alt="" /> {filter.name}
+      </span>
     );
+  });
+
+  return (
+    <div className="filter-tag">
+      <span
+        id="all"
+        data-testid="filtertag-item"
+        className={
+          (selected == "all")
+            ? "filter-tag__item filter-tag__active"
+            : "filter-tag__item"
+        }
+        onClick={(event) => {
+          handleSelected(event);
+          filterArray(event);
+        }}
+      >
+        All
+      </span>
+      {filterTagJsx}
+    </div>
+  );
 };
 
 export default FilterTag;

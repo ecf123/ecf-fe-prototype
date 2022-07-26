@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import "react-circular-progressbar/dist/styles.css";
 import "./PathwaysCard.scss";
 
-const PathwaysCard = ({ header, topics, image, percentage, id }) => {
+const PathwaysCard = ({ header, topics, image, percentage, id, category }) => {
   return (
     <>
       <Link to={"/pathways/" + id}>
