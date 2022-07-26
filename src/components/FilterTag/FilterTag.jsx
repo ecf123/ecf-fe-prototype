@@ -17,26 +17,26 @@ const filtersArray = [
 ];
 
 const FilterTag = ({ filterArray }) => {
-
   const [selected, setSelected] = useState("all");
 
   const handleSelected = (event) => {
     if (event.target.id === "all") {
-      setSelected("all")
+      setSelected("all");
     } else {
       setSelected(
-        filtersArray.find((pathway) => pathway.id === event.target.id).id)
-      };
+        filtersArray.find((pathway) => pathway.id === event.target.id).id
+      );
+    }
   };
 
   const filterTagJsx = filtersArray.map((filter, index) => {
     return (
       <span
         id={filter.id}
-        data-testid="filtertag-item"
+        data-testid={`filtertag-${filter.id}`}
         key={index + 1}
         className={
-          (selected == filter.id)
+          selected === filter.id
             ? "filter-tag__item filter-tag__active"
             : "filter-tag__item"
         }
@@ -54,9 +54,9 @@ const FilterTag = ({ filterArray }) => {
     <div className="filter-tag">
       <span
         id="all"
-        data-testid="filtertag-item"
+        data-testid="filtertag-all"
         className={
-          (selected == "all")
+          selected === "all"
             ? "filter-tag__item filter-tag__active"
             : "filter-tag__item"
         }
