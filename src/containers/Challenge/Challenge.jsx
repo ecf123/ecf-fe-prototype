@@ -70,7 +70,7 @@ const Challenge = () => {
 
     setQuiz(quizStateCopy);
   };
-
+  console.log(userPercentage);
   return (
     <div data-testid="challenge">
       <header className="challenge__header">
