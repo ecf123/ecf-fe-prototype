@@ -5,7 +5,7 @@ import card from "../../assets/data/dummyPathwayData";
 
 describe("initial tests for pathway overview list container", () => {
   it("list renders on the page", () => {
-    customRender(<PathwayCardList />);
+    customRender(<PathwayCardList cards={card}/>);
     const cards = screen.getAllByTestId("pathwaycard")
     cards.forEach(card => {
         expect(card).toBeInTheDocument();
