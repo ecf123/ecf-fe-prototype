@@ -35,7 +35,7 @@ const SearchContainer = ({ title, pathwaysLink }) => {
 
   return (
     <div className="search-container">
-      <SearchBar handleChange={handleSearchChange} />
+      <SearchBar handleChange={handleSearchChange} placeholder='Search for pathways, articles...'/>
 
       {arr.length ? (
         searchTerm ? (
