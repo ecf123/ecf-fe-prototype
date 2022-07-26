@@ -9,22 +9,22 @@ import "./Articles.scss";
 // path: /articles
 
 const Articles = ({ articleInfo, userProfile }) => {
-  
-  // eslint-disable-next-line no-unused-vars
   const [searchTerm, setSearchTerm] = useState("");
-  const [selectedTag, setSelectedTag] = useState(["All"])
+  const [selectedTag, setSelectedTag] = useState("all")
 
-  const searchTermChange = event => {
+  const searchTermChange = (event) => {
     event.preventDefault()
     const cleanInput = event.target.search.value.toLowerCase();
     setSearchTerm(cleanInput);
   }
 
+  const handleFilterChange = (event) => {
+    setSelectedTag(event.currentTarget.id);
+  }
+
   const filteredArticles = articleInfo.filter(article => {
-    const articleTitleLower = article.title.toLowerCase();    
-    
-    
-    return articleTitleLower.includes(searchTerm)
+    const articleTitleLower = article.title.toLowerCase();     
+    return articleTitleLower.includes(searchTerm) && (selectedTag == "all" || selectedTag == article.category.toLowerCase())
   })
   
   return (
@@ -33,7 +33,7 @@ const Articles = ({ articleInfo, userProfile }) => {
       <h1 className='articles__title'>Articles</h1>
       <div className="articles__content">
         <SearchBar handleChange={searchTermChange} />
-        <FilterTag />
+        <FilterTag filterArray={handleFilterChange}/>
         <ArticleCardList articleInfo={filteredArticles} />
         <Navigation />
       </div>

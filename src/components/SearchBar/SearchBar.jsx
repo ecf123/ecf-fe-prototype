@@ -2,10 +2,10 @@ import React from 'react';
 import search from "./../../assets/images/search.svg";
 import "./SearchBar.scss"
 
-const SearchBar = ({handleInput}) => {
+const SearchBar = ({handleChange}) => {
 
   return (
-    <form className='search-bar' onSubmit={handleInput}>
+    <form className='search-bar' onSubmit={handleChange}>
         <label className='search-bar__label' htmlFor='search-button'>Search button</label>
         <input type="image" className='search-bar__image' id="search-button" src={search}  alt="search icon" />
         <label className='search-bar__label' htmlFor="search">Search</label>

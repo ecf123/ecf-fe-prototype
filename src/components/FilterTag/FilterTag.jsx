@@ -8,21 +8,12 @@ import carActions from "../../assets/images/car-actions-icon.svg";
 import fileCode from "../../assets/images/file-code-icon.svg";
 
 const filtersArray = [
-<<<<<<< HEAD
     { id: "finance", name: "Finance", img: performanceMoney },
     { id: "business", name: "Business", img: handshake },
     { id: "design", name: "Design", img: paintingPalette },
-    { id: "digital-marketing", name: "Digital Marketing", img: phoneWrite },
+    { id: "digital marketing", name: "Digital Marketing", img: phoneWrite },
     { id: "engineering", name: "Engineering", img: carActions },
     { id: "programming", name: "Programming", img: fileCode },
-=======
-  { id: "finance", name: "Finance", img: performanceMoney },
-  { id: "business", name: "Business", img: handshake },
-  { id: "design", name: "Design", img: paintingPalette },
-  { id: "digital marketing", name: "Digital Marketing", img: phoneWrite },
-  { id: "engineering", name: "Engineering", img: carActions },
-  { id: "programming", name: "Programming", img: fileCode },
->>>>>>> 7d2cf686070c7b30957b185d3ae08c197a057b75
 ];
 
 const FilterTag = ({ filterArray }) => {
@@ -30,11 +21,11 @@ const FilterTag = ({ filterArray }) => {
   const [selected, setSelected] = useState("all");
 
   const handleSelected = (event) => {
-    if (event.target.id === "all") {
+    if (event.currentTarget.id === "all") {
       setSelected("all")
     } else {
       setSelected(
-        filtersArray.find((pathway) => pathway.id === event.target.id).id)
+        filtersArray.find((pathway) => pathway.id === event.currentTarget.id).id)
       };
   };
 
