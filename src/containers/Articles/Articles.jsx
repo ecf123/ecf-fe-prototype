@@ -24,7 +24,7 @@ const Articles = ({ articleInfo, userProfile }) => {
 
   const filteredArticles = articleInfo.filter(article => {
     const articleTitleLower = article.title.toLowerCase();     
-    return articleTitleLower.includes(searchTerm) && (selectedTag == "all" || selectedTag == article.category.toLowerCase())
+    return articleTitleLower.includes(searchTerm) && (selectedTag === "all" || selectedTag === article.category.toLowerCase())
   })
   
   return (
