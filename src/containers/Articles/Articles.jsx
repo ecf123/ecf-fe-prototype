@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import ArticleCardList from '../ArticleCardList/ArticleCardList';
 import TrophyHeader from "../../components/TrophyHeader/TrophyHeader";
 import SearchBar from '../../components/SearchBar/SearchBar';
-// import FilterTag from '../../components/FilterTag/FilterTag';
+import FilterTag from '../../components/FilterTag/FilterTag';
 import Navigation from '../../components/Navigation/Navigation';
 import "./Articles.scss";
 
@@ -32,7 +32,7 @@ const Articles = ({ articleInfo, userProfile }) => {
       <TrophyHeader userProfile={userProfile} />
       <h1 className='articles__title'>Articles</h1>
       <div className="articles__content">
-        <SearchBar handleChange={searchTermChange} />
+        <SearchBar handleChange={searchTermChange} placeholder='Search for articles'/>
         <FilterTag filterArray={handleFilterChange}/>
         <ArticleCardList articleInfo={filteredArticles} />
         <Navigation />
