@@ -69,7 +69,7 @@ const CreateAccount = () => {
       {page === 1 ? (
         <>
           <div className="register-user__back-button">
-            <BackButton linkTo="/splash" />
+            <BackButton linkTo="/" />
           </div>
           <h2 className="register-user__title">Create An Account</h2>
           <form className="register-user__inputs register-user__inputs--page-one">
