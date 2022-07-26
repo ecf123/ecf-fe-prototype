@@ -1,6 +1,6 @@
 @use "../../assets/sass/variables" as *;
 
-.login-page {
+.sign-in {
   font-family: $primary-font-family;
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@
 }
 
 @media screen and (min-width: 600px) {
-  .login-page {
+  .sign-in {
     width: 600px;
     margin: 0px auto;
   }

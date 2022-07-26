@@ -1,6 +1,6 @@
 @use "../../assets/sass/variables" as *;
 
-.register-user {
+.create-account {
   font-family: $primary-font-family;
   display: flex;
   flex-direction: column;
@@ -58,7 +58,7 @@
 }
 
 @media screen and (min-width: 600px) {
-  .register-user {
+  .create-account {
     width: 600px;
     margin: 0px auto;
   }

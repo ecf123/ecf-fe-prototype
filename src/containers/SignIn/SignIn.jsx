@@ -11,15 +11,13 @@ import appleIcon from "../../assets/images/apple-logo.svg";
 // path: /sign-in
 
 const SignIn = (props) => {
-  const { welcomeMessage } = props;
-
   return (
-    <div className="login-page">
-      <div className="login-page__back-button">
+    <div className="sign-in">
+      <div className="sign-in__back-button">
         <BackButton linkTo="/" />
       </div>
-      <h2 className="login-page__welcome">{welcomeMessage}</h2>
-      <form className="login-page__inputs">
+      <h2 className="sign-in__title">Welcome Back</h2>
+      <form className="sign-in__inputs">
         <InputField
           inputType="email"
           label="Email Address"
@@ -32,10 +30,10 @@ const SignIn = (props) => {
         />
       </form>
       <Button buttonText="LOGIN" />
-      <p className="login-page__divider">
-        <span className="login-page__divider--text">Sign in with</span>
+      <p className="sign-in__divider">
+        <span className="sign-in__divider--text">Sign in with</span>
       </p>
-      <div className="login-page__login-buttons">
+      <div className="sign-in__login-buttons">
         <SocialLogin
           icon={facebookIcon}
         />
