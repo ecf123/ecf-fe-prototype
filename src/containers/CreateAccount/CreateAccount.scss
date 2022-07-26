@@ -57,7 +57,7 @@
   }
 }
 
-@media screen and (min-width: $max-mobile-view) {
+@media screen and (min-width: 600px) {
   .register-user {
     width: 600px;
     margin: 0px auto;

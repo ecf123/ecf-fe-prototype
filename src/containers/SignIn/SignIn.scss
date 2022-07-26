@@ -57,7 +57,7 @@
   }
 }
 
-@media screen and (min-width: $max-mobile-view) {
+@media screen and (min-width: 600px) {
   .login-page {
     width: 600px;
     margin: 0px auto;
