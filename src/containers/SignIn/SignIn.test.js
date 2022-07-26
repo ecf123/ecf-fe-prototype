@@ -3,12 +3,6 @@ import {  screen } from "@testing-library/react";
 import { customRender } from "../../test-utilities/test-utilities";
 
 describe("initial tests for sign in page", () => {
-    it("should customRender a heading passed through the welcomeMessage prop", () => {
-        customRender(<SignIn welcomeMessage="Test Welcome Message" />);
-        const welcomeMessage = screen.getByText("Test Welcome Message");
-        expect(welcomeMessage).toBeInTheDocument();
-    });
-
     it("should customRender a total of 5 buttons on the page", () => {
         customRender(<SignIn />);
 
