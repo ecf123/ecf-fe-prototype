@@ -44,8 +44,6 @@ const Routing = () => {
     return unsubscribe;
   }, []);
 
-  // https://github.dev/WebDevSimplified/React-Firebase-Auth
-
   return (
     <Router>
       <Routes>
@@ -90,22 +88,4 @@ const Routing = () => {
 
 export default Routing;
 
-{
-  /*
-<Route path="/marketplace" element={<Marketplace userProfile={userProfile} marketData={marketData} />} />
-<Route path="/marketplace/:marketplaceId" element={<MarketplaceIndex userProfile={userProfile} marketData={marketData} />} />
-<Route path="/pathways" element={<PathwaysMenu />} />
-<Route path="/pathways/:pathwayId" element={<PathwayOverview pathwaysData={pathwayOverviewData} userProfile={userProfile} />} />
-<Route path="/pathways/:pathwayId/skills-tree" element={<SkillsTreePage />} />
-<Route path="/splash" element={<Splash />} />
-<Route path="/sign-in" element={<SignIn />} />
-<Route path="/create-account" element={<CreateAccount />} />
-<Route path="/articles" element={<Articles userProfile={userProfile} articleInfo={articleInfo} />} />
-<Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
-<Route path="/courses/:courseId" element={<CourseOverview dummyPathwayData={pathwayOverviewData} />} />
-<Route path="/lesson/:lessonId" element={<LessonOverview userProfile={userProfile} lessonData={lessonsData[0]}/>} />
-<Route path="/challenge/:challengeId" element={<Challenge />} />
-<Route path="/challenge/multiple-choice-end-screen" element={<MultipleChoiceEndScreen/>} />
-<Route path="/profile" element={<Profile />} />
- */
-}
+
