@@ -8,15 +8,7 @@ import {signOut} from "firebase/auth";
 
 const Profile = () => {
   const logOut = () => {
-    signOut(auth)
-      .then(() => {
-        // Sign-out successful.
-        console.log("You are signed out");
-      })
-      .catch((error) => {
-        // An error happened.
-        console.log(error);
-      });
+    signOut(auth);
   };
 
   return (
