@@ -12,6 +12,7 @@ const CourseOverview = ({ pathwayData }) => {
   const [category, setCategory] = useState("lessons");
 
   const { courseId } = useParams();
+  console.log(pathwayData);
   const pickedPathway = pathwayData.find(
     ({ id }) => id === parseInt(courseId)
   );
