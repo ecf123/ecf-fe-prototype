@@ -44,6 +44,11 @@ const Routing = () => {
     return unsubscribe;
   }, []);
 
+  const handleLogoutUser = () => {
+    setUserToken(null);
+    setUserLoading(true);
+  };
+
   return (
     <Router>
       <Routes>
@@ -78,7 +83,7 @@ const Routing = () => {
           />
           <Route path="/challenge/:challengeId" element={<Challenge />} />
           <Route path="/challenge/multiple-choice-end-screen" element={<MultipleChoiceEndScreen />} />
-          <Route path="/profile" element={<Profile />} />
+          <Route path="/profile" element={<Profile handleLogoutUser={handleLogoutUser} />} />
         </Route>
       </Routes>
     </Router>
@@ -86,5 +91,3 @@ const Routing = () => {
 };
 
 export default Routing;
-
-
