@@ -9,6 +9,7 @@ import "./ArticleIndex.scss";
 
 
 const ArticleIndex = ({ articleArray }) => {
+  
   const { articleId } = useParams();
 
   const pickedArticle = articleArray.find(({ id }) => id === parseInt(articleId));

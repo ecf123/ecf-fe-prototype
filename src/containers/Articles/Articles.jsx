@@ -9,18 +9,32 @@ import "./Articles.scss";
 // path: /articles
 
 const Articles = ({ articleInfo, userProfile }) => {
-  
-  // eslint-disable-next-line no-unused-vars
-  const [searchCriteria, setSearchCriteria] = useState("");
+  const [searchTerm, setSearchTerm] = useState("");
+  const [selectedTag, setSelectedTag] = useState("all")
 
+  const searchTermChange = (event) => {
+    event.preventDefault()
+    const cleanInput = event.target.search.value.toLowerCase();
+    setSearchTerm(cleanInput);
+  }
+
+  const handleFilterChange = (event) => {
+    setSelectedTag(event.currentTarget.id);
+  }
+
+  const filteredArticles = articleInfo.filter(article => {
+    const articleTitleLower = article.title.toLowerCase();     
+    return articleTitleLower.includes(searchTerm) && (selectedTag === "all" || selectedTag === article.category.toLowerCase())
+  })
+  
   return (
     <div className='articles'>
       <TrophyHeader userProfile={userProfile} />
       <h1 className='articles__title'>Articles</h1>
       <div className="articles__content">
-        <SearchBar handleChange={setSearchCriteria} />
-        <FilterTag />
-        <ArticleCardList articleInfo={articleInfo} />
+        <SearchBar handleChange={searchTermChange} placeholder='Search for articles'/>
+        <FilterTag filterArray={handleFilterChange}/>
+        <ArticleCardList articleInfo={filteredArticles} />
         <Navigation />
       </div>
     </div>
