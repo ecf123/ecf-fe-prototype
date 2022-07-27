@@ -63,7 +63,7 @@ const Routing = () => {
           <Route path="/pathways" element={<PathwaysMenu />} />
           <Route
             path="/pathways/:pathwayId"
-            element={<PathwayOverview pathwaysData={pathwayOverviewData} userProfile={userProfile} />}
+            element={<PathwayOverview pathwayData={pathwayOverviewData} userProfile={userProfile} />}
           />
           <Route path="/pathways/:pathwayId/skills-tree" element={<SkillsTreePage />} />
 
