@@ -1,11 +1,11 @@
 const lessonOverview = [
     {
-        video: [{
+        video: {
             id: 0,
             name: "Barclays",
             url: "https://vimeo.com/90283590",
             icon: null
-          }],
+          },
         title: "The Role of Banking in the Financial System",
         bullets: "Id est ut ut fermentum nunc, a. Porttitor luctus pretium et enim metus eget.* Leo diam nibh cras ac nibh laoreet arcu donec. Quis diam tempus risus vitae orci, ultricies elementum, sed.* Egestas convallis faucibus at adipiscing turpis tincidunt facilisi massa, amet. Massa at ac quis orci. Morbi nisi, sit in lobortis.",
         headingOne: "Introduction",

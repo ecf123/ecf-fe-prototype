@@ -1,14 +1,14 @@
-import React from 'react';
-import VideoCard from '../../components/VideoCard/VideoCard';
-import BackButton from '../../components/BackButton/BackButton';
-import TrophyStats from '../../components/TrophyStats/TrophyStats';
-import Navigation from '../../components/Navigation/Navigation';
+import React from "react";
+import VideoCard from "../../components/VideoCard/VideoCard";
+import BackButton from "../../components/BackButton/BackButton";
+import TrophyStats from "../../components/TrophyStats/TrophyStats";
+import Navigation from "../../components/Navigation/Navigation";
 import "./LessonOverview.scss";
 
 // path: /lesson/:lessonId
 
 const LessonOverview = ({ userProfile, lessonData }) => {
-  const bulletPoints = lessonData.bullets.split("*").map((sentence,index) => <li key={index}>{sentence}</li>);
+  const bulletPoints = lessonData.bullets.split("*").map((sentence, index) => <li key={index}>{sentence}</li>);
   return (
     <div>
       <div className="lesson">
@@ -22,14 +22,14 @@ const LessonOverview = ({ userProfile, lessonData }) => {
         </header>
         <div className="contents">
           <div className="contents__video">
-            <VideoCard className="contents__video--temp" dummyVideoData={lessonData.video} id={0} />
+            <VideoCard className="contents__video--temp" videoData={lessonData.video} />
           </div>
           <h1 className="contents__title" data-testid="title">
-              {lessonData.title}
+            {lessonData.title}
           </h1>
           <h2 className="contents__header">Overview</h2>
           <div className="contents__paragraph">
-              <ul>{bulletPoints}</ul>
+            <ul>{bulletPoints}</ul>
           </div>
           <h2 className="contents__header">{lessonData.headingOne}</h2>
           <p className="contents__paragraph">{lessonData.paragraphOne}</p>
@@ -39,7 +39,7 @@ const LessonOverview = ({ userProfile, lessonData }) => {
         <Navigation />
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default LessonOverview;
