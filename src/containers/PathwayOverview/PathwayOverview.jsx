@@ -9,14 +9,14 @@ import { useParams, Link } from "react-router-dom";
 
 // path: /pathways/:pathwayId
 
-const PathwayOverview = ({ userProfile, pathwaysData }) => {
+const PathwayOverview = ({ userProfile, pathwayData }) => {
   const [category, setCategory] = useState('overview');
 
   // PROPS TO USE WHEN PATHWAY CARD LIST IS LINKED AND CAN GIVE AN ID
   // const { header, topics, image, id, overview, structure, careers } = card;
 
   const { pathwayId } = useParams();
-  const pickedPathway = pathwaysData.find(
+  const pickedPathway = pathwayData.find(
     ({ id }) => id === parseInt(pathwayId)
   );
 
