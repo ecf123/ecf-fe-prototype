@@ -75,7 +75,7 @@ const Challenge = () => {
     <div data-testid="challenge">
       <header className="challenge__header">
         <div className="challenge__backButton">
-          <BackButton linkTo="linkTo" />
+          <BackButton linkTo="/courses/0" />
         </div>
         <div data-testid="trophy" className="challenge__trophy">
           <TrophyStats userProfile={userProfile} />
