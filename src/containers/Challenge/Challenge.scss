@@ -1,0 +1,75 @@
+@use "../../assets/sass/variables" as *;
+@use "../../assets/sass/mixins" as *;
+.challenge {
+  &__header {
+    display: flex;
+    @include light-green-background();
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 69px;
+  }
+
+  &__question-number {
+    color: #b1b8cf;
+    font-size: $font-size-extra-large;
+  }
+
+  &__question-text {
+    color: black;
+    font-family: $primary-font-family;
+    font-size: $font-size-medium;
+    margin-top: 10px;
+    margin-bottom: 40px;
+    padding-left: 36px;
+    padding-right: 36px;
+  }
+
+  &__question-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  &__backButton {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 3.5px;
+    bottom: -39px;
+    left: 30px;
+    width: 47px;
+    height: 47px;
+    background-color: $white-color;
+    border-radius: 25px;
+  }
+
+  &__button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__back-button {
+    padding: 5px;
+    border: 1px solid $primary-color-blue-gray;
+    margin-right: 10px;
+    background-color: white;
+    height: 45px;
+    width: 45px;
+    margin-top: 20px;
+  }
+
+  &__forward-button {
+    padding: 5px;
+    border: 1px solid $primary-color-blue-gray;
+    background-color: white;
+    height: 45px;
+    width: 45px;
+    margin-top: 20px;
+  }
+}
+.disabled {
+  opacity: 0.2;
+}

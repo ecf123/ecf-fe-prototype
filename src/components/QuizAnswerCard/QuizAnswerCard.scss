@@ -1,0 +1,51 @@
+@use "../../assets/sass/variables" as *;
+
+.quiz {
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  border: solid 1px lightgray;
+  border-radius: 20px;
+  height: 80px;
+  text-align: center;
+  align-items: center;
+  max-width: 80%;
+  margin-top: 5px;
+  margin-bottom: 5px;
+
+  &__question {
+    font-family: $primary-font-family;
+    font-size: 20px;
+    color: $black-color;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  &__answer {
+    font-family: $primary-font-family;
+    font-size: $font-size-extra-small;
+    color: $primary-color-blue-gray;
+  }
+}
+
+.correct {
+  background-color: #b3dec0;
+  color: $white-color;
+  border: solid 1px #b3dec0;
+
+  h1,
+  p {
+    color: white;
+  }
+}
+
+.incorrect {
+  background-color: #fe6e6e;
+  color: $white-color;
+  border: solid 1px #fe6e6e;
+
+  h1,
+  p {
+    color: white;
+  }
+}
