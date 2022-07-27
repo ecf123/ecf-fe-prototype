@@ -17,7 +17,6 @@ const Home = ({ userProfile }) => {
       <div className="home-container__header">
         <ContentHeader title="Articles" link="/articles" />
       </div>
-      <ArticleCardList articleInfo={articleInfo} />
       <Navigation />
     </div>
   );
