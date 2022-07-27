@@ -1,6 +1,11 @@
 .profile-page {
   height: 100vh;
   display: flex;
-  place-items: center;
-  margin: 0 30px;
+  justify-content: center;
+  align-items: center;
+
+  &__button {
+    width: 100%;
+    padding: 30px;
+  }
 }
