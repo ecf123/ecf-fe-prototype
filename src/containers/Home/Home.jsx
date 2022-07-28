@@ -12,9 +12,6 @@ const Home = ({ userProfile }) => {
         <div className="home-container">
             <WelcomeHeader userProfile={userProfile} />
             <SearchContainer title="Pathways" pathwaysLink="/pathways" />
-            <div className="home-container__header">
-                <ContentHeader title="Articles" link="/articles" />
-            </div>
             <Navigation />
         </div>
     );
