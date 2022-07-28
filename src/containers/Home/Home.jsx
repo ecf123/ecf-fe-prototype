@@ -3,7 +3,6 @@ import "./Home.scss";
 import WelcomeHeader from "../../components/WelcomeHeader/WelcomeHeader";
 import SearchContainer from "../../containers/SearchContainer/SearchContainer";
 import Navigation from "../../components/Navigation/Navigation";
-import ContentHeader from "../../components/ContentHeader/ContentHeader";
 
 // path: /
 
