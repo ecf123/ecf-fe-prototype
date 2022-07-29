@@ -68,6 +68,8 @@ This page contains a list of articles that can be searched or filtered. An artic
 
 - The project is not connected to any back end so all of the data has been mocked.
 - Only designed for a mobile view point.
+- Users can't use the google/apple/facebook sign-in options.
+- The quiz is not connected to the landing page as yet.
 
 # Resources
 
