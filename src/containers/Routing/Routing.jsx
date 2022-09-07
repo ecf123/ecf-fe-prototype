@@ -15,10 +15,10 @@ import Splash from "../Splash/Splash";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTreePage from "../SkillsTreePage/SkillsTreePage";
-import { auth } from "../../firebase";
+import { auth, database } from "../../firebase";
+import { getDocs, collection } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
-import articleInfo from "../../assets/data/dummyArticleCardInformation";
 import MultipleChoiceEndScreen from "../MultipleChoiceEndScreen/MultipleChoiceEndScreen";
 import marketData from "../../assets/data/dummyMarketData.js";
 import lessonsData from "../../assets/data/dummyLessonOverview.js";
@@ -28,6 +28,16 @@ import pathwayOverviewData from "../../assets/data/dummyPathwayData";
 const Routing = () => {
   const [userToken, setUserToken] = useState(null);
   const [userLoading, setUserLoading] = useState(true);
+  const [articles, setArticles] = useState([]);
+
+  const getArticles = async () => {
+    const articleData = await getDocs(collection(database, "articles"));
+    const articleObjects = [];
+    articleData.forEach(doc => {
+      articleObjects.push(doc.data());
+    });
+    setArticles(articleObjects);
+  };
 
   useEffect(() => {
     if (userToken && userLoading) {
@@ -42,6 +52,10 @@ const Routing = () => {
       }
     });
     return unsubscribe;
+  }, []);
+
+  useEffect(() => {
+    getArticles();
   }, []);
 
   const handleLogoutUser = () => {
@@ -72,10 +86,10 @@ const Routing = () => {
           />
           <Route path="/pathways/:pathwayId/skills-tree" element={<SkillsTreePage />} />
 
-          {!userLoading && <Route path="/" element={<Home userProfile={userToken} />} />}
+          {!userLoading && <Route path="/" element={<Home userProfile={userToken} articles={articles} />} />}
 
-          <Route path="/articles" element={<Articles userProfile={userProfile} articleInfo={articleInfo} />} />
-          <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articleInfo} />} />
+          <Route path="/articles" element={<Articles userProfile={userProfile} articleInfo={articles} />} />
+          <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articles} />} />
           <Route path="/courses/:courseId" element={<CourseOverview pathwayData={pathwayOverviewData} />} />
           <Route
             path="/lesson/:lessonId"
