@@ -12,6 +12,7 @@ const App = () => {
      - DELETE FIRE STORE IMPORTS ONCE INTEGRATED
      */
 
+  // eslint-disable-next-line no-unused-vars
   const logImageUrlFromStorage = async storageLocation => {
     const storage = getStorage();
     const url = await getDownloadURL(ref(storage, storageLocation));
@@ -21,6 +22,7 @@ const App = () => {
     console.log("---");
   };
 
+  // eslint-disable-next-line no-unused-vars
   const addCollectionToFirestore = async (collectionName, data) => {
     const docRef = await addDoc(collection(database, collectionName), data);
     console.dir(docRef);
