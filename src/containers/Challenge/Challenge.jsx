@@ -16,6 +16,8 @@ const Challenge = () => {
   const [index, setIndex] = useState(0);
 
   const [isDisabled, setDisabled] = useState(true);
+
+  // eslint-disable-next-line no-unused-vars
   const [userPercentage, setUserPercentage] = useState(0);
 
   const calculatePercentage = () => {
