@@ -1,29 +1,35 @@
-import React, { useState } from 'react';
-import CourseOverviewList from '../CourseOverviewList/CourseOverviewList';
-import './CourseOverview.scss';
-import MenuBar from '../../components/MenuBar/MenuBar';
-import BackButton from '../../components/BackButton/BackButton';
-import Navigation from '../../components/Navigation/Navigation';
+/* eslint-disable no-unreachable */
+import React, { useState } from "react";
+import CourseOverviewList from "../CourseOverviewList/CourseOverviewList";
+import "./CourseOverview.scss";
+import MenuBar from "../../components/MenuBar/MenuBar";
+import BackButton from "../../components/BackButton/BackButton";
+import Navigation from "../../components/Navigation/Navigation";
 import { useParams } from "react-router-dom";
 
 // path: /courses/:courseId
 
-const CourseOverview = ({ pathwayData }) => { 
+const CourseOverview = ({ pathwayData }) => {
   const [category, setCategory] = useState("lessons");
 
-  const { courseId } = useParams();
-  const pickedPathway = pathwayData.find(
-    ({ id }) => id === parseInt(courseId)
-  );
+  /* 
+  TODO:
+    - THIS IS CURRENTLY READING FROM THE PATHWAY DATA :S
+    - WE WILL NEED TO ADD COURSE SPECIFIC DATA
+    - REMOVE DISABLE CODE AT TOP
+  */
+  return <p>NEEDS REFACTORING</p>;
 
-  const capitalisedNames = (name) => {
+  const { courseId } = useParams();
+  const pickedPathway = pathwayData.find(({ id }) => id === courseId);
+
+  const capitalisedNames = name => {
     return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
   };
 
-  const handleCategoryChange = (event) => {
+  const handleCategoryChange = event => {
     setCategory(event.target.innerText.toLowerCase());
   };
-
 
   return (
     <div data-testid="course-overview" className="course-overview">
@@ -34,12 +40,7 @@ const CourseOverview = ({ pathwayData }) => {
         </h1>
       </div>
       <div className="course-overview__content">
-        <img
-          data-testid="overview-image"
-          className="course-overview__image"
-          src={pathwayData[courseId].image}
-          alt=""
-        />
+        <img data-testid="overview-image" className="course-overview__image" src={pathwayData[courseId].image} alt="" />
         <h2 className="course-overview__sub-heading" data-testid="sub-heading">
           {pickedPathway.subHeading}
         </h2>
@@ -56,14 +57,8 @@ const CourseOverview = ({ pathwayData }) => {
           />
         </div>
 
-        <div
-          data-testid="course-overview-list"
-          className="course-overview__list"
-        >
-          <CourseOverviewList
-            title={capitalisedNames(category)}
-            category={category}
-          />
+        <div data-testid="course-overview-list" className="course-overview__list">
+          <CourseOverviewList title={capitalisedNames(category)} category={category} />
         </div>
       </div>
       <Navigation />

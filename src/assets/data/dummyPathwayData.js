@@ -1,10 +1,3 @@
-import financialForest from "../images/financial-forest.svg";
-import businessBonanza from "../images/business-bonanza.svg";
-import divineDesign from "../images/divine-design.svg";
-import magicMarketing from "../images/margin-marketing.svg";
-import codingCamp from "../images/coding-camp.svg";
-import epicEngineering from "../images/epic-engineering.svg";
-
 const cardData = [
   {
     id: 0,
@@ -14,7 +7,8 @@ const cardData = [
       "You will learn Ut morbi iaculis mauris vitae. Pellentesque aliquet neque ipsum pulvinar ut interdum. Turpis lobortis fames tellus vitae. Ipsum elit nibh dignissim quisque. Ut turpis nullam nisi, sodales vitae tellus arcu sagittis faucibus. Ut gravida vestibulum augue scelerisque tellus purus morbi duis diam. Nisl in non vitae senectus turpis enim.",
     topics: "Banking, Investments",
     category: "Finance",
-    image: financialForest,
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ffinancial-forest.svg?alt=media&token=714631e7-333b-479d-a054-0f3f2d421b15",
     percentage: 90,
     overview:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",
@@ -31,7 +25,8 @@ const cardData = [
       "You will learn Ut morbi iaculis mauris vitae. Pellentesque aliquet neque ipsum pulvinar ut interdum. Turpis lobortis fames tellus vitae. Ipsum elit nibh dignissim quisque. Ut turpis nullam nisi, sodales vitae tellus arcu sagittis faucibus. Ut gravida vestibulum augue scelerisque tellus purus morbi duis diam. Nisl in non vitae senectus turpis enim.",
     topics: "Banking, Investments",
     category: "Finance",
-    image: financialForest,
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Ffinancial-forest.svg?alt=media&token=714631e7-333b-479d-a054-0f3f2d421b15",
     percentage: 90,
     overview:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",
@@ -45,7 +40,8 @@ const cardData = [
     header: "Business Bonanza",
     topics: "Business, Strategy",
     category: "Business",
-    image: businessBonanza,
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Fbusiness-bonanza.svg?alt=media&token=e62d59b7-55e3-43ce-a17f-779ba7dfacc8",
     percentage: 35,
     overview:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",
@@ -59,7 +55,8 @@ const cardData = [
     header: "Divine Design",
     topics: "UI/UX, Motion, Graphic Design",
     category: "Design",
-    image: divineDesign,
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Fdivine-design.svg?alt=media&token=8d7871a4-ab00-4d29-81ee-2fcf84ae301a",
     percentage: 1,
     overview:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",
@@ -73,7 +70,8 @@ const cardData = [
     header: "Magic Marketing",
     topics: "Digital Marketing, Copywriting",
     category: "Digital Marketing",
-    image: magicMarketing,
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Fmagic-marketing.svg?alt=media&token=e41a0123-8cd0-48fe-a812-beffa229400e",
     percentage: 5,
     overview:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",
@@ -87,7 +85,8 @@ const cardData = [
     header: "Coding Camp",
     topics: "Software, Web Development",
     category: "Programming",
-    image: codingCamp,
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Fcoding-camp.svg?alt=media&token=dc2fe431-d549-4846-93db-0de3f886138b",
     percentage: 0,
     overview:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",
@@ -101,7 +100,8 @@ const cardData = [
     header: "Epic Engineering",
     topics: "Civil, Aerospace Engineering",
     category: "Engineering",
-    image: epicEngineering,
+    image:
+      "https://firebasestorage.googleapis.com/v0/b/ecf-future-hub.appspot.com/o/pathway%2Fepic-engineering.svg?alt=media&token=e284e228-d493-42df-bf1f-62991b8aaf47",
     percentage: 0,
     overview:
       "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi Lorem ipsum dolor sit, amet consectetur adipisicing elit. Asperiores porro impedit pariatur iure cum, nemo vel autem voluptate. Deserunt iusto eum impedit a doloribus ipsam debitis illum suscipit quod? Quasi",

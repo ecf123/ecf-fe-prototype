@@ -22,31 +22,21 @@ import Challenge from "../Challenge/Challenge";
 import MultipleChoiceEndScreen from "../MultipleChoiceEndScreen/MultipleChoiceEndScreen";
 import lessonsData from "../../assets/data/dummyLessonOverview.js";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
-import pathwayOverviewData from "../../assets/data/dummyPathwayData";
 
 const Routing = () => {
   const [userToken, setUserToken] = useState(null);
   const [userLoading, setUserLoading] = useState(true);
   const [articles, setArticles] = useState([]);
-  const [marketPlaceData, setMarketPlaceData] = useState([]);
+  const [marketplaces, setMarketplaces] = useState([]);
+  const [pathways, setPathways] = useState([]);
 
-  const getArticles = async () => {
-    const articleData = await getDocs(collection(database, "articles"));
-    const articleObjects = [];
-    articleData.forEach(doc => {
-      articleObjects.push(doc.data());
+  const getCollectionAddToState = async (collectionName, setState) => {
+    const collectionData = await getDocs(collection(database, collectionName));
+    const collectionObjects = [];
+    collectionData.forEach(doc => {
+      collectionObjects.push(doc.data());
     });
-    setArticles(articleObjects);
-  };
-
-  const getMarketplaceData = async () => {
-    const marketplaceData = await getDocs(collection(database, "marketplace"));
-
-    const marketplaceObjects = [];
-    marketplaceData.forEach(doc => {
-      marketplaceObjects.push(doc.data());
-    });
-    setMarketPlaceData(marketplaceObjects);
+    setState(collectionObjects);
   };
 
   useEffect(() => {
@@ -65,8 +55,9 @@ const Routing = () => {
   }, []);
 
   useEffect(() => {
-    getMarketplaceData();
-    getArticles();
+    getCollectionAddToState("articles", setArticles);
+    getCollectionAddToState("marketplace", setMarketplaces);
+    getCollectionAddToState("pathways", setPathways);
   }, []);
 
   const handleLogoutUser = () => {
@@ -83,25 +74,27 @@ const Routing = () => {
           <Route path="/create-account" element={<CreateAccount />} />
         </Route>
         <Route element={<ProtectedRoute user={userToken} navigateTo={"/"} />}>
-          <Route path="/marketplace" element={<Marketplace userProfile={userProfile} marketData={marketPlaceData} />} />
+          <Route path="/marketplace" element={<Marketplace userProfile={userProfile} marketData={marketplaces} />} />
 
           <Route
             path="/marketplace/:marketplaceId"
-            element={<MarketplaceIndex userProfile={userProfile} marketData={marketPlaceData} />}
+            element={<MarketplaceIndex userProfile={userProfile} marketData={marketplaces} />}
           />
 
-          <Route path="/pathways" element={<PathwaysMenu />} />
+          <Route path="/pathways" element={<PathwaysMenu pathways={pathways} />} />
           <Route
             path="/pathways/:pathwayId"
-            element={<PathwayOverview pathwayData={pathwayOverviewData} userProfile={userProfile} />}
+            element={<PathwayOverview pathwayData={pathways} userProfile={userProfile} />}
           />
           <Route path="/pathways/:pathwayId/skills-tree" element={<SkillsTreePage />} />
 
-          {!userLoading && <Route path="/" element={<Home userProfile={userToken} articles={articles} />} />}
+          {!userLoading && (
+            <Route path="/" element={<Home userProfile={userToken} articles={articles} pathways={pathways} />} />
+          )}
 
           <Route path="/articles" element={<Articles userProfile={userProfile} articleInfo={articles} />} />
           <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articles} />} />
-          <Route path="/courses/:courseId" element={<CourseOverview pathwayData={pathwayOverviewData} />} />
+          <Route path="/courses/:courseId" element={<CourseOverview pathwayData={pathways} />} />
           <Route
             path="/lesson/:lessonId"
             element={<LessonOverview userProfile={userProfile} lessonData={lessonsData[0]} />}

@@ -63,14 +63,13 @@ const Challenge = () => {
         questionCopy.correctGuess = choice === quiz[index].correctAnswer;
       }
 
-      questionCopy.answers = question.answers.map((answer) => ({ ...answer }));
+      questionCopy.answers = question.answers.map(answer => ({ ...answer }));
 
       return questionCopy;
     });
 
     setQuiz(quizStateCopy);
   };
-  console.log(userPercentage);
   return (
     <div data-testid="challenge">
       <header className="challenge__header">
@@ -81,20 +80,13 @@ const Challenge = () => {
           <TrophyStats userProfile={userProfile} />
         </div>
       </header>
-      <div
-        data-testid="question-container"
-        className="challenge__question-container"
-      >
+      <div data-testid="question-container" className="challenge__question-container">
         <h1 className="challenge__question-number">
           Q{index + 1}/{quiz.length}
         </h1>
         <h2 className="challenge__question-text">{quiz[index].question}</h2>
 
-        <QuizAnswerCardList
-          quizData={quiz}
-          index={index}
-          handleAnswerSelect={handleAnswerSelect}
-        />
+        <QuizAnswerCardList quizData={quiz} index={index} handleAnswerSelect={handleAnswerSelect} />
       </div>
       <div className="challenge__button-container">
         <button

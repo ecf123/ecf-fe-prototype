@@ -3,7 +3,6 @@ import TrophyHeader from "../../components/TrophyHeader/TrophyHeader.jsx";
 import FilterTag from "../../components/FilterTag/FilterTag.jsx";
 import PathwayCardList from "../PathwayCardList/PathwayCardList";
 import Navigation from "../../components/Navigation/Navigation.jsx";
-import cardData from "../../assets/data/dummyPathwayData";
 import "./PathwaysMenu.scss";
 
 // Link to dummy data
@@ -11,41 +10,31 @@ import userProfile from "../../assets/data/dummyUserData.js";
 
 // path: /pathways
 
-const PathwaysMenu = () => {
-  const [filteredCardData, setFilteredCardData] = useState(cardData);
+const PathwaysMenu = ({ pathways }) => {
+  const [filterTag, setFilterTag] = useState("all");
 
-  const getFilteredCards = (newFilter) => {
-    if (newFilter !== "all") {
-      setFilteredCardData(
-        cardData.filter((card) => card.category.toLowerCase() === newFilter)
-      );
-    } else {
-      setFilteredCardData(cardData);
-    }
+  const handleFilterChange = event => {
+    setFilterTag(event.currentTarget.id);
   };
 
-  const handleFilterChange = (event) => {
-    getFilteredCards(event.currentTarget.id);
-  };
+  let filteredPathways = pathways;
+
+  if (filterTag !== "all") {
+    filteredPathways = pathways.filter(card => card.category.toLowerCase() === filterTag);
+  }
 
   return (
     <div className="pathways-menu">
       <TrophyHeader userProfile={userProfile} />
-      <h1
-        data-testid="pathways-menu-heading"
-        className="pathways-menu__heading"
-      >
+      <h1 data-testid="pathways-menu-heading" className="pathways-menu__heading">
         Pathways
       </h1>
-      <div
-        data-testid="pathways-menu-filters"
-        className="pathways-menu__filters"
-      >
+      <div data-testid="pathways-menu-filters" className="pathways-menu__filters">
         <FilterTag filterArray={handleFilterChange} />
       </div>
 
       <div data-testid="pathways-menu-list" className="pathways-menu__list">
-        <PathwayCardList cards={filteredCardData} />
+        <PathwayCardList cards={filteredPathways} />
       </div>
 
       <div data-testid="pathways-menu-navbar" className="pathways-menu__navbar">

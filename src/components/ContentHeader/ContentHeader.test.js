@@ -27,7 +27,10 @@ describe("initial tests for content header", () => {
     //This test loads a single card when the View All link is clicked because the component to display all results has not been completed, this can be updated once the component has been made.
     const toRender = (
       <Routes>
-        <Route path="/" element={<SearchContainer pathwaysLink="/test" articleInfo={articleData} />} />
+        <Route
+          path="/"
+          element={<SearchContainer pathwaysLink="/test" articles={articleData} pathways={dummyPathwayData} />}
+        />
         <Route path="/test" element={<PathwaysCard card={dummyPathwayData} />} />
       </Routes>
     );

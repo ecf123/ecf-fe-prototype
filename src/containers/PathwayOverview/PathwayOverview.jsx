@@ -1,56 +1,53 @@
-import React, { useState } from 'react';
-import BackButton from '../../components/BackButton/BackButton';
-import TrophyStats from '../../components/TrophyStats/TrophyStats';
-import Button from '../../components/Button/Button';
-import './PathwayOverview.scss';
-import MenuBar from '../../components/MenuBar/MenuBar';
+import React, { useState } from "react";
+import BackButton from "../../components/BackButton/BackButton";
+import TrophyStats from "../../components/TrophyStats/TrophyStats";
+import Button from "../../components/Button/Button";
+import "./PathwayOverview.scss";
+import MenuBar from "../../components/MenuBar/MenuBar";
 import { useParams, Link } from "react-router-dom";
-
 
 // path: /pathways/:pathwayId
 
 const PathwayOverview = ({ userProfile, pathwayData }) => {
-  const [category, setCategory] = useState('overview');
+  const [category, setCategory] = useState("overview");
 
   // PROPS TO USE WHEN PATHWAY CARD LIST IS LINKED AND CAN GIVE AN ID
   // const { header, topics, image, id, overview, structure, careers } = card;
 
   const { pathwayId } = useParams();
-  const pickedPathway = pathwayData.find(
-    ({ id }) => id === parseInt(pathwayId)
-  );
 
+  const pickedPathway = pathwayData.find(({ id }) => id === pathwayId);
 
   // --------------- (id.overview)
-  const overviewJSX = pickedPathway.overview.split('.').map((sentence, index) => {
+  const overviewJSX = pickedPathway.overview.split(".").map((sentence, index) => {
     return <p key={index}>{sentence}</p>;
   });
 
-  const structureJSX = pickedPathway.structure.split('.').map((sentence, index) => {
+  const structureJSX = pickedPathway.structure.split(".").map((sentence, index) => {
     return <p key={index}>{sentence}</p>;
   });
 
-  const careersJSX = pickedPathway.careers.split('.').map((sentence, index) => {
+  const careersJSX = pickedPathway.careers.split(".").map((sentence, index) => {
     return <p key={index}>{sentence}</p>;
   });
 
-  const handleCategoryChange = (event) => {
+  const handleCategoryChange = event => {
     setCategory(event.target.innerText.toLowerCase());
   };
 
   const changeCategory = () => {
     switch (category) {
-      case 'overview':
+      case "overview":
         return overviewJSX;
-      case 'structure':
+      case "structure":
         return structureJSX;
-      case 'careers':
+      case "careers":
         return careersJSX;
       default:
         return;
     }
   };
-  
+
   return (
     <div className="pathway-overview">
       <header className="pathway-overview__header">
@@ -67,18 +64,13 @@ const PathwayOverview = ({ userProfile, pathwayData }) => {
         alt={pickedPathway.topics}
       />
       <div className="pathway-overview__filters">
-        <MenuBar
-          link1="Overview"
-          link2="Structure"
-          link3="Careers"
-          onClickLink={handleCategoryChange}
-        />
+        <MenuBar link1="Overview" link2="Structure" link3="Careers" onClickLink={handleCategoryChange} />
       </div>
       <div className="pathway-overview__content" data-testid="main-content">
         {changeCategory()}
       </div>
       <Link to={"/pathways/" + pathwayId + "/skills-tree"} className="pathway-overview__button">
-        <Button buttonText={'START PATHWAYS'} />
+        <Button buttonText={"START PATHWAYS"} />
       </Link>
     </div>
   );

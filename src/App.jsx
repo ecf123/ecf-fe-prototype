@@ -2,7 +2,7 @@ import "./App.scss";
 import Routing from "./containers/Routing/Routing";
 import { getStorage, ref, getDownloadURL } from "firebase/storage";
 import { useEffect } from "react";
-import { collection, addDoc } from "firebase/firestore";
+import { collection, addDoc, getDocs, setDoc, doc } from "firebase/firestore";
 import { database } from "./firebase";
 
 const App = () => {
@@ -26,6 +26,15 @@ const App = () => {
   const addCollectionToFirestore = async (collectionName, data) => {
     const docRef = await addDoc(collection(database, collectionName), data);
     console.dir(docRef);
+  };
+
+  // eslint-disable-next-line no-unused-vars
+  const updateAllInCollectionWithDocId = async collectionName => {
+    const querySnapshot = await getDocs(collection(database, collectionName));
+    querySnapshot.forEach(async document => {
+      const updated = { ...document.data(), id: document.id };
+      await setDoc(doc(database, collectionName, document.id), updated);
+    });
   };
 
   useEffect(() => {}, []);
