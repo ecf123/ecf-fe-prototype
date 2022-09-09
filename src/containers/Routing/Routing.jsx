@@ -20,7 +20,6 @@ import { getDocs, collection } from "firebase/firestore";
 import { onAuthStateChanged } from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
 import MultipleChoiceEndScreen from "../MultipleChoiceEndScreen/MultipleChoiceEndScreen";
-import marketData from "../../assets/data/dummyMarketData.js";
 import lessonsData from "../../assets/data/dummyLessonOverview.js";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 import pathwayOverviewData from "../../assets/data/dummyPathwayData";
@@ -29,6 +28,7 @@ const Routing = () => {
   const [userToken, setUserToken] = useState(null);
   const [userLoading, setUserLoading] = useState(true);
   const [articles, setArticles] = useState([]);
+  const [marketPlaceData, setMarketPlaceData] = useState([]);
 
   const getArticles = async () => {
     const articleData = await getDocs(collection(database, "articles"));
@@ -37,6 +37,16 @@ const Routing = () => {
       articleObjects.push(doc.data());
     });
     setArticles(articleObjects);
+  };
+
+  const getMarketplaceData = async () => {
+    const marketplaceData = await getDocs(collection(database, "marketplace"));
+
+    const marketplaceObjects = [];
+    marketplaceData.forEach(doc => {
+      marketplaceObjects.push(doc.data());
+    });
+    setMarketPlaceData(marketplaceObjects);
   };
 
   useEffect(() => {
@@ -55,6 +65,7 @@ const Routing = () => {
   }, []);
 
   useEffect(() => {
+    getMarketplaceData();
     getArticles();
   }, []);
 
@@ -72,11 +83,11 @@ const Routing = () => {
           <Route path="/create-account" element={<CreateAccount />} />
         </Route>
         <Route element={<ProtectedRoute user={userToken} navigateTo={"/"} />}>
-          <Route path="/marketplace" element={<Marketplace userProfile={userProfile} marketData={marketData} />} />
+          <Route path="/marketplace" element={<Marketplace userProfile={userProfile} marketData={marketPlaceData} />} />
 
           <Route
             path="/marketplace/:marketplaceId"
-            element={<MarketplaceIndex userProfile={userProfile} marketData={marketData} />}
+            element={<MarketplaceIndex userProfile={userProfile} marketData={marketPlaceData} />}
           />
 
           <Route path="/pathways" element={<PathwaysMenu />} />
