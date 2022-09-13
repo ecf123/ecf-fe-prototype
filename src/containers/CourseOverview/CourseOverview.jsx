@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable no-unreachable */
 import React, { useState } from "react";
 import CourseOverviewList from "../CourseOverviewList/CourseOverviewList";
