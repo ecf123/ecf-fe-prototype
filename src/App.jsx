@@ -13,6 +13,15 @@ const App = () => {
      */
 
   // eslint-disable-next-line no-unused-vars
+  const logCollectionIds = async collectionName => {
+    const querySnapshot = await getDocs(collection(database, collectionName));
+    querySnapshot.forEach(doc => {
+      console.log(doc.data().id);
+      console.log(doc.data().title);
+    });
+  };
+
+  // eslint-disable-next-line no-unused-vars
   const logImageUrlFromStorage = async storageLocation => {
     const storage = getStorage();
     const url = await getDownloadURL(ref(storage, storageLocation));
@@ -34,6 +43,14 @@ const App = () => {
     querySnapshot.forEach(async document => {
       const updated = { ...document.data(), id: document.id };
       await setDoc(doc(database, collectionName, document.id), updated);
+    });
+  };
+
+  // eslint-disable-next-line no-unused-vars
+  const updateAllInCollection = async (collectionName, dataObject) => {
+    const querySnapshot = await getDocs(collection(database, collectionName));
+    querySnapshot.forEach(async document => {
+      await setDoc(doc(database, collectionName, document.id), dataObject, { merge: true });
     });
   };
 
