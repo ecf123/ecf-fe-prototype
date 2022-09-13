@@ -1,32 +1,29 @@
 import Xarrow from "react-xarrows";
 import SkillsTreeNode from "../../components/SkillsTreeNode/SkillsTreeNode";
-import { data } from "./../../assets/data/dummySkillsMap";
 import React from "react";
 import "./SkillsTree.scss";
 import FinishTreeNode from "../../components/FinishTreeNode/FinishTreeNode";
 
-const SkillsTree = (props) => {
+const SkillsTree = ({ handleNodeClick, title, skillsTree }) => {
   let levels = [];
-  const { handleNodeClick, title } = props;
   const getNodes = (node, level) => {
     if (!levels[level]) {
       levels[level] = [];
     }
     levels[level].push(node);
-    node.children.forEach((childNode) => getNodes(childNode, level + 1));
+    node.children.forEach(childNode => getNodes(childNode, level + 1));
   };
 
-  getNodes(data[0], 0);
+  getNodes(skillsTree, 0);
 
-  const getNodeJsx = (node) => {
-    const { icon, title, locked, description, link, id, parentId } = node;
+  const getNodeJsx = node => {
+    const { icon, title, locked, description, id, parentId } = node;
     return (
       <div key={id}>
         <SkillsTreeNode
           id={id}
           image={icon}
           title={title}
-          link={link}
           locked={locked}
           description={description}
           handleNodeClick={handleNodeClick}
@@ -69,7 +66,7 @@ const SkillsTree = (props) => {
   const getLevelJsx = (level, index) => {
     let levelJsx = (
       <div className="skills-tree__level" key={"level-" + index}>
-        {level.map((node) => {
+        {level.map(node => {
           return getNodeJsx(node);
         })}
       </div>
@@ -81,10 +78,27 @@ const SkillsTree = (props) => {
     return getLevelJsx(level, index);
   });
 
+  const getChildNodesDepthAndParentIds = (nodes, givenDepth = 0) => {
+    let parentIds = [];
+    for (let index = 0; index < nodes.length; index++) {
+      if (nodes[index].children.length) {
+        parentIds = [...getChildNodesDepthAndParentIds(nodes[index].children, givenDepth + 1)];
+      } else {
+        parentIds.push({ parentId: nodes[index].parentId, depth: givenDepth });
+      }
+    }
+    return parentIds;
+  };
+
+  const getLastNodesParentId = () => {
+    const nodes = getChildNodesDepthAndParentIds(skillsTree.children);
+    return nodes.reduce((acc, cur) => (acc.depth > cur.depth ? acc : cur)).parentId;
+  };
+
   return (
     <div className="skills-tree" data-testid="skills-tree">
       {levelsJsx}
-      <FinishTreeNode parentId="santander" title={title} finished={true} />
+      <FinishTreeNode parentId={getLastNodesParentId()} title={title} finished={false} />
     </div>
   );
 };

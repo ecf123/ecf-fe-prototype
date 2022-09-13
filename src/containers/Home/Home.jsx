@@ -6,11 +6,11 @@ import Navigation from "../../components/Navigation/Navigation";
 
 // path: /
 
-const Home = ({ userProfile, articles }) => {
+const Home = ({ userProfile, articles, pathways }) => {
   return (
     <div className="home-container">
       <WelcomeHeader userProfile={userProfile} />
-      <SearchContainer title="Pathways" pathwaysLink="/pathways" articleInfo={articles} />
+      <SearchContainer title="Pathways" pathwaysLink="/pathways" articles={articles} pathways={pathways} />
       <Navigation />
     </div>
   );
