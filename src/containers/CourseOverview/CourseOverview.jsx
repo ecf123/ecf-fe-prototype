@@ -7,6 +7,7 @@ import BackButton from "../../components/BackButton/BackButton";
 import Navigation from "../../components/Navigation/Navigation";
 import { useParams } from "react-router-dom";
 
+// path: /:pathwayId/courses/:courseId
 // path: /courses/:courseId
 
 const CourseOverview = ({ pathwayData }) => {
@@ -18,9 +19,13 @@ const CourseOverview = ({ pathwayData }) => {
     - WE WILL NEED TO ADD COURSE SPECIFIC DATA
     - REMOVE DISABLE CODE AT TOP
   */
-  return <p>NEEDS REFACTORING</p>;
+    return <p>NEEDS REFACTORING</p>;
 
-  const { courseId } = useParams();
+  //   const { courseId } = useParams();
+  if (pathwayData.length === 0) return <p>LOADING</p>;
+
+  
+  const courseId = "BIgqxcHeXHRoQepfNPl4";
   const pickedPathway = pathwayData.find(({ id }) => id === courseId);
 
   const capitalisedNames = name => {
@@ -40,7 +45,7 @@ const CourseOverview = ({ pathwayData }) => {
         </h1>
       </div>
       <div className="course-overview__content">
-        <img data-testid="overview-image" className="course-overview__image" src={pathwayData[courseId].image} alt="" />
+        <img data-testid="overview-image" className="course-overview__image" src={pickedPathway.image} alt="" />
         <h2 className="course-overview__sub-heading" data-testid="sub-heading">
           {pickedPathway.subHeading}
         </h2>

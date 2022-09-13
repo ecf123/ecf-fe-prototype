@@ -55,10 +55,12 @@ const Routing = () => {
   }, []);
 
   useEffect(() => {
-    getCollectionAddToState("articles", setArticles);
-    getCollectionAddToState("marketplace", setMarketplaces);
-    getCollectionAddToState("pathways", setPathways);
-  }, []);
+    if (userToken) {
+      getCollectionAddToState("articles", setArticles);
+      getCollectionAddToState("marketplace", setMarketplaces);
+      getCollectionAddToState("pathways", setPathways);
+    }
+  }, [userToken]);
 
   const handleLogoutUser = () => {
     setUserToken(null);
@@ -86,7 +88,7 @@ const Routing = () => {
             path="/pathways/:pathwayId"
             element={<PathwayOverview pathwayData={pathways} userProfile={userProfile} />}
           />
-          <Route path="/pathways/:pathwayId/skills-tree" element={<SkillsTreePage />} />
+          <Route path="/pathways/:pathwayId/skills-tree" element={<SkillsTreePage pathways={pathways} />} />
 
           {!userLoading && (
             <Route path="/" element={<Home userProfile={userToken} articles={articles} pathways={pathways} />} />
