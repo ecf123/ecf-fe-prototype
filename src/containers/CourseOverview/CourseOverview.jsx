@@ -1,18 +1,22 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable no-unreachable */
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import CourseOverviewList from "../CourseOverviewList/CourseOverviewList";
 import "./CourseOverview.scss";
 import MenuBar from "../../components/MenuBar/MenuBar";
 import BackButton from "../../components/BackButton/BackButton";
 import Navigation from "../../components/Navigation/Navigation";
 import { useParams } from "react-router-dom";
+import { doc, getDoc } from "firebase/firestore";
+import { database } from "../../firebase";
 
 // path: /:pathwayId/courses/:courseId
 // path: /courses/:courseId
 
-const CourseOverview = ({ pathwayData }) => {
+const CourseOverview = () => {
+  const { courseId, pathwayId } = useParams();
   const [category, setCategory] = useState("lessons");
+  const [course, setCourse] = useState(null);
 
   /* 
   TODO:
@@ -20,14 +24,22 @@ const CourseOverview = ({ pathwayData }) => {
     - WE WILL NEED TO ADD COURSE SPECIFIC DATA
     - REMOVE DISABLE CODE AT TOP
   */
-    return <p>NEEDS REFACTORING</p>;
 
-  //   const { courseId } = useParams();
-  if (pathwayData.length === 0) return <p>LOADING</p>;
+  const getDocById = async (collectionName, id, setter) => {
+    const docRef = doc(database, collectionName, id);
+    const courseDoc = await getDoc(docRef);
+    if (courseDoc.exists()) {
+      setter(courseDoc.data());
+    } else {
+      console.log("No such document!");
+    }
+  };
 
-  
-  const courseId = "BIgqxcHeXHRoQepfNPl4";
-  const pickedPathway = pathwayData.find(({ id }) => id === courseId);
+  useEffect(() => {
+    getDocById("courses", courseId, setCourse);
+  }, [courseId]);
+
+  if (!course) return <p></p>;
 
   const capitalisedNames = name => {
     return name.charAt(0).toUpperCase() + name.slice(1).toLowerCase();
@@ -40,18 +52,18 @@ const CourseOverview = ({ pathwayData }) => {
   return (
     <div data-testid="course-overview" className="course-overview">
       <div className="course-overview__headerSection">
-        <BackButton data-testid="back-button" linkTo="/pathways/1/skills-tree" />
+        <BackButton data-testid="back-button" linkTo={`/pathways/${pathwayId}/skills-tree`} />
         <h1 data-testid="course-overview-heading" className="course-overview__heading">
-          {pickedPathway.header}
+          {course.title}
         </h1>
       </div>
       <div className="course-overview__content">
-        <img data-testid="overview-image" className="course-overview__image" src={pickedPathway.image} alt="" />
+        <img data-testid="overview-image" className="course-overview__image" src={course.image} alt="" />
         <h2 className="course-overview__sub-heading" data-testid="sub-heading">
-          {pickedPathway.subHeading}
+          {course.title}
         </h2>
         <p className="course-overview__paragraph" data-testid="paragraph-text">
-          {pickedPathway.courseIntroContent}
+          {course.description}
         </p>
         <div className="course-overview__filters">
           <MenuBar
@@ -64,7 +76,12 @@ const CourseOverview = ({ pathwayData }) => {
         </div>
 
         <div data-testid="course-overview-list" className="course-overview__list">
-          <CourseOverviewList title={capitalisedNames(category)} category={category} />
+          <CourseOverviewList
+            title={capitalisedNames(category)}
+            category={category}
+            lessons={course.lessons}
+            challenges={course.challenges}
+          />
         </div>
       </div>
       <Navigation />

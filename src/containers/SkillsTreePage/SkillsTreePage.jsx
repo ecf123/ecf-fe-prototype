@@ -53,7 +53,7 @@ const SkillsTreePage = ({ pathways }) => {
         <PopUp
           description={node.description}
           title={node.title}
-          link={`${pathwayId}/courses/${node.id}`}
+          link={`/${pathwayId}/courses/${node.id}`}
           onOverlayClick={handleOverlayClick}
         />
       )}
