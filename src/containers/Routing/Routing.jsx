@@ -96,7 +96,7 @@ const Routing = () => {
 
           <Route path="/articles" element={<Articles userProfile={userProfile} articleInfo={articles} />} />
           <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articles} />} />
-          <Route path="/courses/:courseId" element={<CourseOverview pathwayData={pathways} />} />
+          <Route path="/:pathwayId/courses/:courseId" element={<CourseOverview />} />
           <Route
             path="/lesson/:lessonId"
             element={<LessonOverview userProfile={userProfile} lessonData={lessonsData[0]} />}

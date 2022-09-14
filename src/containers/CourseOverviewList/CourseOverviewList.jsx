@@ -1,12 +1,10 @@
 import React from "react";
 import CourseOverviewListItem from "../../components/CourseOverviewListItem/CourseOverviewListItem";
-import lessonData from "../../assets/data/dummyLessonData";
-import challengeData from "../../assets/data/dummyChallengeData";
 
 import "./CourseOverviewList.scss";
 
-const CourseOverviewList = ({ title, category }) => {
-  const challengeJSX = challengeData.map((item, index) => {
+const CourseOverviewList = ({ title, category, challenges, lessons }) => {
+  const challengeJSX = challenges.map((item, index) => {
     return (
       <CourseOverviewListItem
         id={index}
@@ -19,7 +17,7 @@ const CourseOverviewList = ({ title, category }) => {
     );
   });
 
-  const lessonJSX = lessonData.map((item, index) => {
+  const lessonJSX = lessons.map((item, index) => {
     return (
       <CourseOverviewListItem
         data-testid="course-list-items"
