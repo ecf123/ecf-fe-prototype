@@ -1,5 +1,3 @@
-/* eslint-disable no-unused-vars */
-/* eslint-disable no-unreachable */
 import React, { useState, useEffect } from "react";
 import CourseOverviewList from "../CourseOverviewList/CourseOverviewList";
 import "./CourseOverview.scss";
@@ -11,19 +9,11 @@ import { doc, getDoc } from "firebase/firestore";
 import { database } from "../../firebase";
 
 // path: /:pathwayId/courses/:courseId
-// path: /courses/:courseId
 
 const CourseOverview = () => {
   const { courseId, pathwayId } = useParams();
   const [category, setCategory] = useState("lessons");
   const [course, setCourse] = useState(null);
-
-  /* 
-  TODO:
-    - THIS IS CURRENTLY READING FROM THE PATHWAY DATA :S
-    - WE WILL NEED TO ADD COURSE SPECIFIC DATA
-    - REMOVE DISABLE CODE AT TOP
-  */
 
   const getDocById = async (collectionName, id, setter) => {
     const docRef = doc(database, collectionName, id);
@@ -39,6 +29,7 @@ const CourseOverview = () => {
     getDocById("courses", courseId, setCourse);
   }, [courseId]);
 
+  // LOADING
   if (!course) return <p></p>;
 
   const capitalisedNames = name => {
