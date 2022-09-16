@@ -8,10 +8,12 @@ import TrophyStats from "../../components/TrophyStats/TrophyStats";
 import userProfile from "../../assets/data/dummyUserData";
 import backArrow from "../../assets/images/back-arrow.svg";
 import forwardArrow from "../../assets/images/forward-arrow.svg";
+import { useParams } from "react-router-dom";
 
-// path: /challenge/:challengeId
+// path: /:pathwayId/courses/:courseId/challenge/:challengeId
 
 const Challenge = () => {
+  const { pathwayId, courseId } = useParams(0);
   const [quiz, setQuiz] = useState(quizData);
   const [index, setIndex] = useState(0);
 
@@ -76,7 +78,7 @@ const Challenge = () => {
     <div data-testid="challenge">
       <header className="challenge__header">
         <div className="challenge__backButton">
-          <BackButton linkTo="/courses/1" />
+          <BackButton linkTo={`/${pathwayId}/courses/${courseId}`} />
         </div>
         <div data-testid="trophy" className="challenge__trophy">
           <TrophyStats userProfile={userProfile} />

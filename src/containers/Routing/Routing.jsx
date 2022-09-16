@@ -100,7 +100,7 @@ const Routing = () => {
             path="/:pathwayId/courses/:courseId/lesson/:lessonId"
             element={<LessonOverview userProfile={userProfile} />}
           />
-          <Route path="/challenge/:challengeId" element={<Challenge />} />
+          <Route path="/:pathwayId/courses/:courseId/challenge/:challengeId" element={<Challenge />} />
           <Route path="/challenge/multiple-choice-end-screen" element={<MultipleChoiceEndScreen />} />
           <Route path="/profile" element={<Profile handleLogoutUser={handleLogoutUser} />} />
         </Route>

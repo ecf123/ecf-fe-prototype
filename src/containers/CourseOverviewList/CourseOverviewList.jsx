@@ -8,7 +8,7 @@ const CourseOverviewList = ({ previousURL, title, category, challenges, lessons 
     return (
       <CourseOverviewListItem
         previousURL={previousURL}
-        id={item.id}
+        id={item.id || "quiz"}
         key={index}
         title={item.title}
         duration={item.duration}

@@ -27,7 +27,7 @@ const CourseOverviewListItem = ({ previousURL, title, duration, id, category, ty
     if (category === "lessons") {
       return `${previousURL}/lesson/${id}`;
     } else if (category === "challenges") {
-      return `/challenge/${id}`;
+      return `${previousURL}/challenge/${id}`;
     } else if (category === "additional") {
       return "/";
     } else {
