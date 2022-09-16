@@ -4,7 +4,7 @@ import "./CourseOverview.scss";
 import MenuBar from "../../components/MenuBar/MenuBar";
 import BackButton from "../../components/BackButton/BackButton";
 import Navigation from "../../components/Navigation/Navigation";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { database } from "../../firebase";
 
@@ -12,22 +12,24 @@ import { database } from "../../firebase";
 
 const CourseOverview = () => {
   const { courseId, pathwayId } = useParams();
+  const navigate = useNavigate();
   const [category, setCategory] = useState("lessons");
   const [course, setCourse] = useState(null);
 
-  const getDocById = async (collectionName, id, setter) => {
+  const getDocById = async (collectionName, id, setter, handleError) => {
     const docRef = doc(database, collectionName, id);
     const courseDoc = await getDoc(docRef);
     if (courseDoc.exists()) {
       setter(courseDoc.data());
     } else {
-      console.log("No such document!");
+      console.log("No Course found");
+      handleError();
     }
   };
 
   useEffect(() => {
-    getDocById("courses", courseId, setCourse);
-  }, [courseId]);
+    getDocById("courses", courseId, setCourse, () => navigate("/"));
+  }, [courseId, navigate]);
 
   // LOADING
   if (!course) return <p></p>;

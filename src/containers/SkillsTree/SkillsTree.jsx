@@ -19,7 +19,7 @@ const SkillsTree = ({ handleNodeClick, title, skillsTree }) => {
   const getNodeJsx = node => {
     const { icon, title, locked, description, id, parentId } = node;
     return (
-      <div key={id}>
+      <div>
         <SkillsTreeNode
           id={id}
           image={icon}
@@ -84,21 +84,23 @@ const SkillsTree = ({ handleNodeClick, title, skillsTree }) => {
       if (nodes[index].children.length) {
         parentIds = [...getChildNodesDepthAndParentIds(nodes[index].children, givenDepth + 1)];
       } else {
-        parentIds.push({ parentId: nodes[index].parentId, depth: givenDepth });
+        parentIds.push({ parentId: nodes[index].parentId, depth: givenDepth, locked: nodes[index].locked });
       }
     }
     return parentIds;
   };
 
-  const getLastNodesParentId = () => {
+  const getLastNode = () => {
     const nodes = getChildNodesDepthAndParentIds(skillsTree.children);
-    return nodes.reduce((acc, cur) => (acc.depth > cur.depth ? acc : cur)).parentId;
+    return nodes.reduce((acc, cur) => (acc.depth > cur.depth ? acc : cur));
   };
+
+  const lastNode = getLastNode();
 
   return (
     <div className="skills-tree" data-testid="skills-tree">
       {levelsJsx}
-      <FinishTreeNode parentId={getLastNodesParentId()} title={title} finished={false} />
+      <FinishTreeNode parentId={lastNode.parentId} title={title} locked={lastNode.locked} />
     </div>
   );
 };
