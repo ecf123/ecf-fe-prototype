@@ -39,7 +39,7 @@ const CourseOverview = () => {
   const handleCategoryChange = event => {
     setCategory(event.target.innerText.toLowerCase());
   };
-
+  const previousURL = `/${pathwayId}/courses/${courseId}`;
   return (
     <div data-testid="course-overview" className="course-overview">
       <div className="course-overview__headerSection">
@@ -68,6 +68,7 @@ const CourseOverview = () => {
 
         <div data-testid="course-overview-list" className="course-overview__list">
           <CourseOverviewList
+            previousURL={previousURL}
             title={capitalisedNames(category)}
             category={category}
             lessons={course.lessons}

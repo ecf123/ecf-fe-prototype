@@ -3,11 +3,12 @@ import CourseOverviewListItem from "../../components/CourseOverviewListItem/Cour
 
 import "./CourseOverviewList.scss";
 
-const CourseOverviewList = ({ title, category, challenges, lessons }) => {
+const CourseOverviewList = ({ previousURL, title, category, challenges, lessons }) => {
   const challengeJSX = challenges.map((item, index) => {
     return (
       <CourseOverviewListItem
-        id={index}
+        previousURL={previousURL}
+        id={item.id}
         key={index}
         title={item.title}
         duration={item.duration}
@@ -21,7 +22,8 @@ const CourseOverviewList = ({ title, category, challenges, lessons }) => {
     return (
       <CourseOverviewListItem
         data-testid="course-list-items"
-        id={index}
+        previousURL={previousURL}
+        id={item.id}
         key={index}
         title={item.title}
         duration={item.duration}
