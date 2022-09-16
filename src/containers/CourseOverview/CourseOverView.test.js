@@ -4,7 +4,7 @@ import CourseOverview from "./CourseOverview";
 
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
-  useParams: () => ({ courseId: 1 }),
+  useParams: () => ({ courseId: "" , pathwayId : ""}),
 }));
 
 jest.mock("firebase/firestore", () => ({

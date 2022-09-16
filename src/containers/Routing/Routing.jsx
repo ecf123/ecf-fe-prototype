@@ -1,4 +1,8 @@
+import React, { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { auth, database } from "../../firebase";
+import { getDocs, collection } from "firebase/firestore";
+import { onAuthStateChanged } from "firebase/auth";
 import Home from "../Home/Home";
 import Profile from "../Profile/Profile";
 import userProfile from "../../assets/data/dummyUserData";
@@ -6,7 +10,6 @@ import PathwaysMenu from "../PathwaysMenu/PathwaysMenu";
 import Marketplace from "../Marketplace/Marketplace";
 import CourseOverview from "../CourseOverview/CourseOverview";
 import ArticleIndex from "../ArticleIndex/ArticleIndex";
-import React, { useState, useEffect } from "react";
 import LessonOverview from "../LessonOverview/LessonOverview";
 import MarketplaceIndex from "../MarketplaceIndex/MarketplaceIndex";
 import PathwayOverview from "../PathwayOverview/PathwayOverview";
@@ -15,12 +18,8 @@ import Splash from "../Splash/Splash";
 import CreateAccount from "../CreateAccount/CreateAccount";
 import Articles from "../Articles/Articles";
 import SkillsTreePage from "../SkillsTreePage/SkillsTreePage";
-import { auth, database } from "../../firebase";
-import { getDocs, collection } from "firebase/firestore";
-import { onAuthStateChanged } from "firebase/auth";
 import Challenge from "../Challenge/Challenge";
 import MultipleChoiceEndScreen from "../MultipleChoiceEndScreen/MultipleChoiceEndScreen";
-import lessonsData from "../../assets/data/dummyLessonOverview.js";
 import ProtectedRoute from "../../components/ProtectedRoute/ProtectedRoute";
 
 const Routing = () => {
@@ -98,10 +97,10 @@ const Routing = () => {
           <Route path="/articles/:articleId" element={<ArticleIndex articleArray={articles} />} />
           <Route path="/:pathwayId/courses/:courseId" element={<CourseOverview />} />
           <Route
-            path="/lesson/:lessonId"
-            element={<LessonOverview userProfile={userProfile} lessonData={lessonsData[0]} />}
+            path="/:pathwayId/courses/:courseId/lesson/:lessonId"
+            element={<LessonOverview userProfile={userProfile} />}
           />
-          <Route path="/challenge/:challengeId" element={<Challenge />} />
+          <Route path="/:pathwayId/courses/:courseId/challenge/:challengeId" element={<Challenge />} />
           <Route path="/challenge/multiple-choice-end-screen" element={<MultipleChoiceEndScreen />} />
           <Route path="/profile" element={<Profile handleLogoutUser={handleLogoutUser} />} />
         </Route>
