@@ -4,7 +4,7 @@ import BackButton from "../../components/BackButton/BackButton";
 import TrophyStats from "../../components/TrophyStats/TrophyStats";
 import Navigation from "../../components/Navigation/Navigation";
 import "./LessonOverview.scss";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { doc, getDoc } from "firebase/firestore";
 import { database } from "../../firebase";
 
@@ -13,20 +13,22 @@ import { database } from "../../firebase";
 const LessonOverview = ({ userProfile }) => {
   const { pathwayId, courseId, lessonId } = useParams();
   const [lesson, setLesson] = useState(null);
+  const navigate = useNavigate();
 
-  const getDocById = async (collectionName, id, setter) => {
+  const getDocById = async (collectionName, id, setter, handleError) => {
     const docRef = doc(database, collectionName, id);
     const courseDoc = await getDoc(docRef);
     if (courseDoc.exists()) {
       setter(courseDoc.data());
     } else {
       console.log("No such document!");
+      handleError();
     }
   };
 
   useEffect(() => {
-    getDocById("lessons", lessonId, setLesson);
-  }, [lessonId]);
+    getDocById("lessons", lessonId, setLesson, () => navigate("/"));
+  }, [lessonId, navigate]);
 
   if (!lesson) return <p>Loading</p>;
 
