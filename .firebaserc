@@ -1,5 +1,15 @@
 {
   "projects": {
     "default": "ecf-future-hub"
-  }
+  },
+  "targets": {
+    "ecf-future-hub": {
+      "hosting": {
+        "ecf-future-hub": [
+          "ecf-future-hub"
+        ]
+      }
+    }
+  },
+  "etags": {}
 }
