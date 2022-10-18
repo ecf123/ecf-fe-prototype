@@ -47,13 +47,13 @@ const CourseOverview = () => {
       <div className="course-overview__headerSection">
         <BackButton data-testid="back-button" linkTo={`/pathways/${pathwayId}/skills-tree`} />
         <h1 data-testid="course-overview-heading" className="course-overview__heading">
-          {course.title}
+          {course.provider}
         </h1>
       </div>
       <div className="course-overview__content">
         <img data-testid="overview-image" className="course-overview__image" src={course.image} alt="" />
         <h2 className="course-overview__sub-heading" data-testid="sub-heading">
-          {course.title}
+          {course.name}
         </h2>
         <p className="course-overview__paragraph" data-testid="paragraph-text">
           {course.description}

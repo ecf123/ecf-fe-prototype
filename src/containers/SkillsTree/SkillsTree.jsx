@@ -17,13 +17,13 @@ const SkillsTree = ({ handleNodeClick, title, skillsTree }) => {
   getNodes(skillsTree, 0);
 
   const getNodeJsx = node => {
-    const { icon, title, locked, description, id, parentId } = node;
+    const { icon, name, locked, description, id, parentId } = node;
     return (
-      <div>
+      <div key={id}>
         <SkillsTreeNode
           id={id}
           image={icon}
-          title={title}
+          title={name}
           locked={locked}
           description={description}
           handleNodeClick={handleNodeClick}
