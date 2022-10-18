@@ -32,10 +32,10 @@ const SkillsTreePage = ({ pathways }) => {
     for (let i = 0; i < childNodes.length; i++) {
       if (childNodes[i].id === id) {
         return childNodes[i];
-      } else {
-        if (findNodeInArray(childNodes[i].children, id)) {
-          return findNodeInArray(childNodes[i].children, id);
-        }
+      }
+
+      if (childNodes[i].children.length > 0) {
+        return findNodeInArray(childNodes[i], id);
       }
     }
   };
@@ -52,7 +52,7 @@ const SkillsTreePage = ({ pathways }) => {
       {displayPopUp && (
         <PopUp
           description={node.description}
-          title={node.title}
+          title={node.name}
           link={`/${pathwayId}/courses/${node.id}`}
           onOverlayClick={handleOverlayClick}
         />
